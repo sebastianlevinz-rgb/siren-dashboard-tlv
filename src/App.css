@@ -311,42 +311,56 @@ html, body {
   margin-bottom: 8px;
 }
 
-.top5-row {
+.top5-group {
+  margin-bottom: 8px;
+  padding: 8px;
+  background: var(--bg-card);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.top5-group-header {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 6px 8px;
-  background: var(--bg-card);
-  border-radius: 5px;
-  margin-bottom: 3px;
-  cursor: pointer;
-  transition: border-color 0.15s;
-  border: 1px solid transparent;
-  font-size: 10px;
-}
-
-.top5-row:hover {
-  border-color: var(--accent);
+  margin-bottom: 6px;
 }
 
 .top5-rank {
   color: var(--text-muted);
   font-weight: 700;
-  min-width: 20px;
-}
-
-.top5-when {
-  flex: 1;
-  color: var(--text-secondary);
+  font-size: 10px;
 }
 
 .top5-count {
   font-weight: 700;
-  font-size: 10px;
+  font-size: 11px;
 }
 
 .top5-count.worst { color: var(--risk-danger); }
 .top5-count.best { color: var(--success); }
+
+.top5-group-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.top5-tag {
+  font-size: 9px;
+  padding: 3px 8px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.top5-tag:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
 
 .heatmap-day-label {
   font-size: 10px;

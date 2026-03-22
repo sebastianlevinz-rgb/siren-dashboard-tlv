@@ -105,28 +105,70 @@ export default function Heatmap({ alerts }: Props) {
         </div>
       </div>
 
-      {/* TOP 5 WORST + BEST */}
+      {/* TOP WORST + BEST — grouped by count */}
       <div className="top5-container">
         <div className="top5-col worst">
-          <h3>Top 5 peores momentos</h3>
-          {worst5.map((c, i) => (
-            <div key={i} className="top5-row" onClick={() => setSelectedCell(c)}>
-              <span className="top5-rank">#{i + 1}</span>
-              <span className="top5-when">{DAY_NAMES_FULL[c.day]} {formatHour(c.hour)}</span>
-              <span className="top5-count worst">{c.count} alertas</span>
-            </div>
-          ))}
+          <h3>Peores momentos</h3>
+          {(() => {
+            const groups: { count: number; cells: HeatmapCell[] }[] = [];
+            for (const c of worst5) {
+              const g = groups.find((g) => g.count === c.count);
+              if (g) g.cells.push(c);
+              else groups.push({ count: c.count, cells: [c] });
+            }
+            let rank = 1;
+            return groups.map((g) => {
+              const r = rank;
+              rank += g.cells.length;
+              return (
+                <div key={g.count} className="top5-group">
+                  <div className="top5-group-header">
+                    <span className="top5-rank">#{r}</span>
+                    <span className="top5-count worst">{g.count} alertas</span>
+                  </div>
+                  <div className="top5-group-items">
+                    {g.cells.map((c, j) => (
+                      <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
+                        {DAY_NAMES[c.day]} {formatHour(c.hour)}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            });
+          })()}
         </div>
         <div className="top5-col best">
-          <h3>Top 5 mejores momentos</h3>
+          <h3>Mejores momentos</h3>
           <p className="top5-note">Horario diurno (06-22hs)</p>
-          {best5.map((c, i) => (
-            <div key={i} className="top5-row" onClick={() => setSelectedCell(c)}>
-              <span className="top5-rank">#{i + 1}</span>
-              <span className="top5-when">{DAY_NAMES_FULL[c.day]} {formatHour(c.hour)}</span>
-              <span className="top5-count best">{c.count} alertas</span>
-            </div>
-          ))}
+          {(() => {
+            const groups: { count: number; cells: HeatmapCell[] }[] = [];
+            for (const c of best5) {
+              const g = groups.find((g) => g.count === c.count);
+              if (g) g.cells.push(c);
+              else groups.push({ count: c.count, cells: [c] });
+            }
+            let rank = 1;
+            return groups.map((g) => {
+              const r = rank;
+              rank += g.cells.length;
+              return (
+                <div key={g.count} className="top5-group">
+                  <div className="top5-group-header">
+                    <span className="top5-rank">#{r}</span>
+                    <span className="top5-count best">{g.count} alertas</span>
+                  </div>
+                  <div className="top5-group-items">
+                    {g.cells.map((c, j) => (
+                      <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
+                        {DAY_NAMES[c.day]} {formatHour(c.hour)}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            });
+          })()}
         </div>
       </div>
 
