@@ -17,72 +17,64 @@ export default function Heatmap({ alerts }: Props) {
     [grid]
   );
 
-  // Top 5 worst and best (only cells with data, for best filter waking hours 06-22)
   const allCells = useMemo(() => {
     const cells: HeatmapCell[] = [];
-    for (let d = 0; d < 7; d++) {
-      for (let h = 0; h < 24; h++) {
-        cells.push(grid[d][h]);
-      }
-    }
+    for (let d = 0; d < 7; d++) for (let h = 0; h < 24; h++) cells.push(grid[d][h]);
     return cells;
   }, [grid]);
 
-  const worst5 = useMemo(
-    () => [...allCells].filter((c) => c.count > 0).sort((a, b) => b.count - a.count).slice(0, 5),
-    [allCells]
-  );
+  // Top worst: 5 distinct count levels
+  const worstGroups = useMemo(() => {
+    const sorted = [...allCells].filter((c) => c.count > 0).sort((a, b) => b.count - a.count);
+    const groups: { count: number; cells: HeatmapCell[] }[] = [];
+    for (const c of sorted) {
+      const g = groups.find((g) => g.count === c.count);
+      if (g) g.cells.push(c);
+      else groups.push({ count: c.count, cells: [c] });
+    }
+    return groups.slice(0, 5);
+  }, [allCells]);
 
-  const best5 = useMemo(
-    () => [...allCells]
-      .filter((c) => c.hour >= 6 && c.hour <= 22) // waking hours only
-      .sort((a, b) => a.count - b.count)
-      .slice(0, 5),
-    [allCells]
-  );
-
-  const dayOrder = [0, 1, 2, 3, 4, 5, 6];
+  // Top best: 5 distinct count levels, waking hours only
+  const bestGroups = useMemo(() => {
+    const waking = allCells.filter((c) => c.hour >= 6 && c.hour <= 22);
+    const sorted = [...waking].sort((a, b) => a.count - b.count);
+    const groups: { count: number; cells: HeatmapCell[] }[] = [];
+    for (const c of sorted) {
+      const g = groups.find((g) => g.count === c.count);
+      if (g) g.cells.push(c);
+      else groups.push({ count: c.count, cells: [c] });
+    }
+    return groups.slice(0, 5);
+  }, [allCells]);
 
   return (
     <div className="panel heatmap-panel">
-      <h2>Alertas por Dia x Hora</h2>
+      <h2>Alerts by Day x Hour</h2>
       <p className="panel-subtitle">
-        Acumulado total — cada celda suma todas las alertas. Empieza a las 06:00.
+        Cumulative total — each cell sums all alerts for that day/hour combo. Starts at 06:00.
       </p>
 
       <div className="heatmap-container">
         <div className="heatmap-grid">
           <div className="heatmap-corner" />
           {HOUR_ORDER.map((h) => (
-            <div key={h} className={`heatmap-hour-label ${h < 6 ? "night" : ""}`}>
-              {h}
-            </div>
+            <div key={h} className={`heatmap-hour-label ${h < 6 ? "night" : ""}`}>{h}</div>
           ))}
 
-          {dayOrder.map((day) => (
+          {[0, 1, 2, 3, 4, 5, 6].map((day) => (
             <React.Fragment key={day}>
-              <div className="heatmap-day-label">
-                {DAY_NAMES[day]}
-              </div>
+              <div className="heatmap-day-label">{DAY_NAMES[day]}</div>
               {HOUR_ORDER.map((hour) => {
                 const cell = grid[day][hour];
                 return (
                   <div
                     key={`${day}-${hour}`}
-                    className={`heatmap-cell ${
-                      selectedCell?.day === day && selectedCell?.hour === hour ? "selected" : ""
-                    } ${hour < 6 ? "night" : ""}`}
+                    className={`heatmap-cell ${selectedCell?.day === day && selectedCell?.hour === hour ? "selected" : ""} ${hour < 6 ? "night" : ""}`}
                     style={{ backgroundColor: getRiskColor(cell.count, maxCount) }}
-                    onClick={() =>
-                      setSelectedCell(
-                        selectedCell?.day === day && selectedCell?.hour === hour ? null : cell
-                      )
-                    }
-                    title={`${DAY_NAMES[day]} ${formatHour(hour)}: ${cell.count} alertas`}
+                    onClick={() => setSelectedCell(selectedCell?.day === day && selectedCell?.hour === hour ? null : cell)}
                   >
-                    {cell.count > 0 && (
-                      <span className="heatmap-count">{cell.count}</span>
-                    )}
+                    {cell.count > 0 && <span className="heatmap-count">{cell.count}</span>}
                   </div>
                 );
               })}
@@ -91,110 +83,69 @@ export default function Heatmap({ alerts }: Props) {
         </div>
 
         <div className="heatmap-legend">
-          <span>Calma</span>
+          <span>Safe</span>
           <div className="legend-bar">
-            {[0, 0.1, 0.25, 0.4, 0.55, 0.7, 0.85, 1].map((r) => (
-              <div
-                key={r}
-                className="legend-swatch"
-                style={{ backgroundColor: getRiskColor(r * maxCount, maxCount) }}
-              />
+            {[0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1].map((r) => (
+              <div key={r} className="legend-swatch" style={{ backgroundColor: getRiskColor(r * maxCount, maxCount) }} />
             ))}
           </div>
-          <span>Peligro</span>
+          <span>Danger</span>
         </div>
       </div>
 
-      {/* TOP WORST + BEST — grouped by count */}
+      {/* TOP WORST + BEST */}
       <div className="top5-container">
         <div className="top5-col worst">
-          <h3>Peores momentos</h3>
-          {(() => {
-            const groups: { count: number; cells: HeatmapCell[] }[] = [];
-            for (const c of worst5) {
-              const g = groups.find((g) => g.count === c.count);
-              if (g) g.cells.push(c);
-              else groups.push({ count: c.count, cells: [c] });
-            }
-            let rank = 1;
-            return groups.map((g) => {
-              const r = rank;
-              rank += g.cells.length;
-              return (
-                <div key={g.count} className="top5-group">
-                  <div className="top5-group-header">
-                    <span className="top5-rank">#{r}</span>
-                    <span className="top5-count worst">{g.count} alertas</span>
-                  </div>
-                  <div className="top5-group-items">
-                    {g.cells.map((c, j) => (
-                      <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
-                        {DAY_NAMES[c.day]} {formatHour(c.hour)}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            });
-          })()}
+          <h3>Most dangerous</h3>
+          {worstGroups.map((g, i) => (
+            <div key={g.count} className="top5-group">
+              <div className="top5-group-header">
+                <span className="top5-rank">#{i + 1}</span>
+                <span className="top5-count worst">{g.count} alert{g.count !== 1 ? "s" : ""}</span>
+              </div>
+              <div className="top5-group-items">
+                {g.cells.map((c, j) => (
+                  <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
+                    {DAY_NAMES[c.day]} {formatHour(c.hour)}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
         <div className="top5-col best">
-          <h3>Mejores momentos</h3>
-          <p className="top5-note">Horario diurno (06-22hs)</p>
-          {(() => {
-            const groups: { count: number; cells: HeatmapCell[] }[] = [];
-            for (const c of best5) {
-              const g = groups.find((g) => g.count === c.count);
-              if (g) g.cells.push(c);
-              else groups.push({ count: c.count, cells: [c] });
-            }
-            let rank = 1;
-            return groups.map((g) => {
-              const r = rank;
-              rank += g.cells.length;
-              return (
-                <div key={g.count} className="top5-group">
-                  <div className="top5-group-header">
-                    <span className="top5-rank">#{r}</span>
-                    <span className="top5-count best">{g.count} alertas</span>
-                  </div>
-                  <div className="top5-group-items">
-                    {g.cells.map((c, j) => (
-                      <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
-                        {DAY_NAMES[c.day]} {formatHour(c.hour)}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              );
-            });
-          })()}
+          <h3>Safest windows</h3>
+          <p className="top5-note">Daytime only (06-22h)</p>
+          {bestGroups.map((g, i) => (
+            <div key={g.count} className="top5-group">
+              <div className="top5-group-header">
+                <span className="top5-rank">#{i + 1}</span>
+                <span className="top5-count best">{g.count} alert{g.count !== 1 ? "s" : ""}</span>
+              </div>
+              <div className="top5-group-items">
+                {g.cells.map((c, j) => (
+                  <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
+                    {DAY_NAMES[c.day]} {formatHour(c.hour)}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Detail panel on cell click */}
       {selectedCell && selectedCell.alerts.length > 0 && (
         <div className="heatmap-detail">
-          <h3>
-            {DAY_NAMES_FULL[selectedCell.day]} a las {formatHour(selectedCell.hour)} — {selectedCell.count} alertas
-          </h3>
+          <h3>{DAY_NAMES_FULL[selectedCell.day]} at {formatHour(selectedCell.hour)} — {selectedCell.count} alerts</h3>
           <div className="detail-list">
             {selectedCell.alerts.slice(0, 20).map((a) => (
               <div key={a.id} className="detail-item">
                 <span className="detail-time">
-                  {new Date(a.timestamp).toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit" })}
+                  {new Date(a.timestamp).toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit" })}
                 </span>
-                <span className={`detail-threat ${a.threat}`}>
-                  {a.threat === "missiles" ? "MISIL" : "DRONE"}
-                </span>
-                <span className="detail-cities">
-                  {a.cities_en.slice(0, 3).join(", ")}
-                </span>
+                <span className="detail-cities">{a.cities_en.join(", ")}</span>
               </div>
             ))}
-            {selectedCell.alerts.length > 20 && (
-              <div className="detail-more">+{selectedCell.alerts.length - 20} mas</div>
-            )}
           </div>
         </div>
       )}

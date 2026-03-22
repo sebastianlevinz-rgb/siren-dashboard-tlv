@@ -10,19 +10,16 @@ export default function Header({ alerts }: Props) {
   const days = useMemo(() => buildDailySummaries(alerts), [alerts]);
   const totalAlerts = alerts.length;
   const totalDays = days.length;
-  const missiles = alerts.filter((a) => a.threat === "missiles").length;
-  const aircraft = alerts.filter((a) => a.threat === "hostile_aircraft").length;
 
   const handleShare = async () => {
     const shareText = [
-      "🚨 Siren Dashboard — Tel Aviv / Gush Dan",
+      "Missile Probability — Tel Aviv / Gush Dan",
       "",
-      `${totalAlerts} alertas en ${totalDays} dias`,
-      `Misiles: ${missiles} | Drones: ${aircraft}`,
-      `Promedio: ${(totalAlerts / (totalDays || 1)).toFixed(1)} alertas/dia`,
+      `${totalAlerts} alerts in ${totalDays} days`,
+      `Avg: ${(totalAlerts / (totalDays || 1)).toFixed(1)} alerts/day`,
       "",
-      "Heatmap dia x hora, tendencias y recomendaciones",
-      "Datos: Tzofar Telegram @tzevaadom_en",
+      "Day x Hour heatmap, trends & recommendations",
+      "Data: Tzofar Telegram @tzevaadom_en",
       "",
       "https://www.missileprobability.com",
     ].join("\n");
@@ -30,14 +27,14 @@ export default function Header({ alerts }: Props) {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: "Siren Dashboard — Tel Aviv",
+          title: "Missile Probability — Tel Aviv",
           text: shareText,
           url: "https://www.missileprobability.com",
         });
       } catch { /* cancelled */ }
     } else {
       await navigator.clipboard.writeText(shareText);
-      alert("Copiado al portapapeles — pegalo en WhatsApp");
+      alert("Copied to clipboard");
     }
   };
 
@@ -45,43 +42,32 @@ export default function Header({ alerts }: Props) {
     <header className="dashboard-header">
       <div className="header-top">
         <div className="header-title">
-          <h1>
-            <span className="title-icon">&#x1F6A8;</span>
-            SIREN DASHBOARD
-          </h1>
+          <h1>MISSILE PROBABILITY</h1>
           <span className="header-subtitle">
-            Tel Aviv / Gush Dan — Alertas de misiles y drones
+            Tel Aviv / Gush Dan — Feb 28 to Mar 23, 2026
           </span>
         </div>
         <button className="btn-share" onClick={handleShare}>
-          Compartir
+          Share
         </button>
       </div>
 
       <div className="header-stats">
         <div className="stat">
           <span className="stat-value">{totalAlerts}</span>
-          <span className="stat-label">Alertas TLV</span>
+          <span className="stat-label">Alerts</span>
         </div>
         <div className="stat">
           <span className="stat-value">{totalDays}d</span>
-          <span className="stat-label">Periodo</span>
-        </div>
-        <div className="stat">
-          <span className="stat-value missiles">{missiles}</span>
-          <span className="stat-label">Misiles</span>
-        </div>
-        <div className="stat">
-          <span className="stat-value aircraft">{aircraft}</span>
-          <span className="stat-label">Drones</span>
+          <span className="stat-label">Period</span>
         </div>
         <div className="stat">
           <span className="stat-value">{(totalAlerts / (totalDays || 1)).toFixed(1)}</span>
-          <span className="stat-label">Prom/dia</span>
+          <span className="stat-label">Avg/day</span>
         </div>
         <div className="stat">
-          <span className="stat-value small">23/03 01:00</span>
-          <span className="stat-label">Actualiz.</span>
+          <span className="stat-value small">Mar 23, 01:00</span>
+          <span className="stat-label">Updated</span>
         </div>
       </div>
     </header>

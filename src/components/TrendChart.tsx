@@ -41,9 +41,9 @@ export default function TrendChart({ alerts }: Props) {
 
   return (
     <div className="panel trend-panel">
-      <h2>Tendencia</h2>
+      <h2>Trend</h2>
       <p className="panel-subtitle">
-        Alertas/día con media móvil de 3 días. Separado por tipo.
+        Alerts/day with 3-day moving average.
       </p>
 
       <div className="trend-chart-container">
@@ -145,19 +145,11 @@ export default function TrendChart({ alerts }: Props) {
       <div className="trend-legend">
         <span className="legend-item">
           <span className="legend-line total" />
-          Total alertas
+          Total alerts
         </span>
         <span className="legend-item">
           <span className="legend-line ma" />
-          Media móvil 3d
-        </span>
-        <span className="legend-item">
-          <span className="legend-line missiles" />
-          Misiles
-        </span>
-        <span className="legend-item">
-          <span className="legend-line aircraft" />
-          Drones/Aviones
+          3-day avg
         </span>
       </div>
     </div>

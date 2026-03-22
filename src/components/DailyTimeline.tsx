@@ -9,116 +9,67 @@ interface Props {
 export default function DailyTimeline({ alerts }: Props) {
   const [selectedDay, setSelectedDay] = useState<DailySummary | null>(null);
   const days = useMemo(() => buildDailySummaries(alerts), [alerts]);
-  const maxCount = useMemo(
-    () => Math.max(...days.map((d) => d.count), 1),
-    [days]
-  );
+  const maxCount = useMemo(() => Math.max(...days.map((d) => d.count), 1), [days]);
+
+  const dayNames: Record<string, string> = {
+    "0": "Sun", "1": "Mon", "2": "Tue", "3": "Wed", "4": "Thu", "5": "Fri", "6": "Sat",
+  };
 
   return (
     <div className="panel timeline-panel">
-      <h2>Día por Día</h2>
-      <p className="panel-subtitle">
-        Cada barra = alertas Gush Dan ese día. Click para ver desglose por hora.
-      </p>
+      <h2>Daily Timeline</h2>
+      <p className="panel-subtitle">Each row = one day. Tap for hourly breakdown.</p>
 
-      <div className="timeline-bars">
+      <div className="v-timeline">
         {days.map((day) => {
-          const heightPct = (day.count / maxCount) * 100;
-          const missilePct = day.count > 0 ? (day.missiles / day.count) * 100 : 0;
+          const widthPct = (day.count / maxCount) * 100;
+          const dow = new Date(day.date + "T12:00:00+02:00").getDay();
+          const isSelected = selectedDay?.date === day.date;
 
           return (
             <div
               key={day.date}
-              className={`timeline-bar-wrapper ${
-                selectedDay?.date === day.date ? "selected" : ""
-              }`}
-              onClick={() =>
-                setSelectedDay(
-                  selectedDay?.date === day.date ? null : day
-                )
-              }
+              className={`v-timeline-row ${isSelected ? "selected" : ""}`}
+              onClick={() => setSelectedDay(isSelected ? null : day)}
             >
-              <div className="bar-count">{day.count}</div>
-              <div className="bar-container">
+              <span className="v-tl-date">{formatDate(day.date)}</span>
+              <span className="v-tl-day">{dayNames[String(dow)]}</span>
+              <div className="v-tl-bar-track">
                 <div
-                  className="bar-fill"
+                  className="v-tl-bar-fill"
                   style={{
-                    height: `${heightPct}%`,
+                    width: `${widthPct}%`,
                     backgroundColor: getRiskColor(day.count, maxCount),
                   }}
-                >
-                  <div
-                    className="bar-missiles"
-                    style={{ height: `${missilePct}%` }}
-                  />
-                </div>
+                />
               </div>
-              <div className="bar-date">{formatDate(day.date)}</div>
+              <span className="v-tl-count">{day.count}</span>
             </div>
           );
         })}
       </div>
 
-      {/* Day detail */}
       {selectedDay && (
         <div className="timeline-detail">
           <h3>
-            {new Date(selectedDay.date + "T00:00:00").toLocaleDateString(
-              "es-AR",
-              {
-                weekday: "long",
-                day: "numeric",
-                month: "long",
-              }
-            )}{" "}
-            — {selectedDay.count} alertas
+            {new Date(selectedDay.date + "T12:00:00").toLocaleDateString("en-US", {
+              weekday: "long", day: "numeric", month: "long",
+            })} — {selectedDay.count} alerts
           </h3>
-          <div className="detail-breakdown">
-            <span className="missiles-badge">
-              Misiles: {selectedDay.missiles}
-            </span>
-            <span className="aircraft-badge">
-              Drones/Aviones: {selectedDay.hostile_aircraft}
-            </span>
-          </div>
-
-          {/* Hourly breakdown for selected day */}
           <div className="hourly-breakdown">
             {Array.from({ length: 24 }, (_, h) => {
-              const hourAlerts = selectedDay.alerts.filter(
-                (a) => a.hour === h
-              );
+              const hourAlerts = selectedDay.alerts.filter((a) => a.hour === h);
               if (hourAlerts.length === 0) return null;
+              const maxH = Math.max(...Array.from({ length: 24 }, (_, hh) =>
+                selectedDay.alerts.filter((a) => a.hour === hh).length));
               return (
                 <div key={h} className="hourly-row">
-                  <span className="hourly-time">
-                    {String(h).padStart(2, "0")}:00
-                  </span>
+                  <span className="hourly-time">{String(h).padStart(2, "0")}:00</span>
                   <div className="hourly-bar-container">
-                    <div
-                      className="hourly-bar"
-                      style={{
-                        width: `${
-                          (hourAlerts.length /
-                            Math.max(
-                              ...Array.from({ length: 24 }, (_, hh) =>
-                                selectedDay.alerts.filter((a) => a.hour === hh)
-                                  .length
-                              )
-                            )) *
-                          100
-                        }%`,
-                        backgroundColor: getRiskColor(
-                          hourAlerts.length,
-                          Math.max(
-                            ...Array.from({ length: 24 }, (_, hh) =>
-                              selectedDay.alerts.filter((a) => a.hour === hh)
-                                .length
-                            )
-                          )
-                        ),
-                      }}
-                    />
+                    <div className="hourly-bar" style={{
+                      width: `${(hourAlerts.length / maxH) * 100}%`,
+                      backgroundColor: getRiskColor(hourAlerts.length, maxH),
+                    }} />
                   </div>
                   <span className="hourly-count">{hourAlerts.length}</span>
                 </div>

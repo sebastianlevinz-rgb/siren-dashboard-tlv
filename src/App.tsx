@@ -9,14 +9,14 @@ import Recommendations from "./components/Recommendations";
 import { fetchFromLocalCSV } from "./utils/sheets";
 import "./App.css";
 
-type TabId = "heatmap" | "timeline" | "histogram" | "trend" | "recommendations";
+type TabId = "heatmap" | "timeline" | "histogram" | "trend" | "tips";
 
-const TABS: { id: TabId; label: string; icon: string }[] = [
-  { id: "heatmap", label: "Heatmap", icon: "\u25A6" },
-  { id: "timeline", label: "Timeline", icon: "\u2502" },
-  { id: "histogram", label: "Prob/Hora", icon: "\u2581" },
-  { id: "trend", label: "Tendencia", icon: "\u2191" },
-  { id: "recommendations", label: "Tips", icon: "\u2605" },
+const TABS: { id: TabId; label: string }[] = [
+  { id: "heatmap", label: "Heatmap" },
+  { id: "timeline", label: "Timeline" },
+  { id: "histogram", label: "By Hour" },
+  { id: "trend", label: "Trend" },
+  { id: "tips", label: "Tips" },
 ];
 
 function App() {
@@ -36,18 +36,21 @@ function App() {
 
   useEffect(() => { loadData(); }, [loadData]);
 
+  const showHeader = activeTab === "heatmap";
+
   return (
     <div className="app">
-      <Header alerts={alerts} />
+      {showHeader && <Header alerts={alerts} />}
 
       <nav className="tab-nav">
+        <span className="tab-brand">MISSILE PROBABILITY</span>
         {TABS.map((tab) => (
           <button
             key={tab.id}
             className={`tab-btn ${activeTab === tab.id ? "active" : ""}`}
             onClick={() => setActiveTab(tab.id)}
           >
-            <span>{tab.icon}</span> {tab.label}
+            {tab.label}
           </button>
         ))}
       </nav>
@@ -57,12 +60,13 @@ function App() {
         {activeTab === "timeline" && <DailyTimeline alerts={alerts} />}
         {activeTab === "histogram" && <HourlyHistogram alerts={alerts} />}
         {activeTab === "trend" && <TrendChart alerts={alerts} />}
-        {activeTab === "recommendations" && <Recommendations alerts={alerts} />}
+        {activeTab === "tips" && <Recommendations alerts={alerts} />}
       </main>
 
       <footer className="dashboard-footer">
-        <span>Datos: Tzofar Telegram @tzevaadom_en | Solo Gush Dan/TLV</span>
-        <span>Dashboard personal — no reemplaza al Pikud HaOref</span>
+        <span>Data: Tzofar Telegram @tzevaadom_en | Gush Dan only</span>
+        <span>Made by Sebastian Levin Z</span>
+        <span>Personal dashboard — does not replace Pikud HaOref</span>
       </footer>
     </div>
   );
