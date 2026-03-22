@@ -1,3227 +1,2282 @@
 [
   {
-    "id": "hist-00004",
-    "timestamp": "2026-02-28T06:49:28.000Z",
-    "unix": 1772261368,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "רמת גן"
-    ],
+    "id": "avg-00001",
+    "timestamp": "2026-02-28T07:30:00+02:00",
+    "unix": 1772256600,
+    "cities": [],
     "cities_en": [
-      "Tel Aviv - City Center",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 8,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00001",
-    "timestamp": "2026-02-28T08:05:34.000Z",
-    "unix": 1772265934,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - City Center",
-      "Tel Aviv - North"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 6,
-    "hour": 10,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00010",
-    "timestamp": "2026-02-28T08:13:41.000Z",
-    "unix": 1772266421,
-    "cities": [
-      "חולון",
-      "גבעתיים",
-      "בת ים",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Holon",
-      "Givatayim",
-      "Bat Yam",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 10,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00008",
-    "timestamp": "2026-02-28T09:07:58.000Z",
-    "unix": 1772269678,
-    "cities": [
-      "פתח תקווה",
-      "חולון"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 11,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00013",
-    "timestamp": "2026-02-28T10:00:38.000Z",
-    "unix": 1772272838,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - יפו",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 12,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00007",
-    "timestamp": "2026-02-28T10:52:57.000Z",
-    "unix": 1772275977,
-    "cities": [
-      "בת ים",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Bat Yam",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 12,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00006",
-    "timestamp": "2026-02-28T11:07:46.000Z",
-    "unix": 1772276866,
-    "cities": [
-      "חולון",
-      "תל אביב - דרום",
-      "תל אביב - יפו",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - South",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 13,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00014",
-    "timestamp": "2026-02-28T12:36:13.000Z",
-    "unix": 1772282173,
-    "cities": [
-      "תל אביב - צפון",
-      "פתח תקווה",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Petah Tikva",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 14,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00012",
-    "timestamp": "2026-02-28T12:50:54.000Z",
-    "unix": 1772283054,
-    "cities": [
-      "תל אביב - יפו",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 14,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00009",
-    "timestamp": "2026-02-28T15:18:07.000Z",
-    "unix": 1772291887,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "תל אביב - יפו",
-      "בני ברק",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Tel Aviv - Yafo",
-      "Bnei Brak",
-      "Givatayim"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 17,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00005",
-    "timestamp": "2026-02-28T18:40:22.000Z",
-    "unix": 1772304022,
-    "cities": [
-      "גבעתיים",
-      "ראשון לציון",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Rishon LeZion",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 20,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00002",
-    "timestamp": "2026-02-28T18:59:51.000Z",
-    "unix": 1772305191,
-    "cities": [
-      "בני ברק",
-      "בת ים",
-      "רמת גן",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Bnei Brak",
-      "Bat Yam",
-      "Ramat Gan",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 20,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00015",
-    "timestamp": "2026-02-28T20:34:55.000Z",
-    "unix": 1772310895,
-    "cities": [
-      "תל אביב - יפו",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 22,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00003",
-    "timestamp": "2026-02-28T20:55:53.000Z",
-    "unix": 1772312153,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "רמת גן",
-      "תל אביב - יפו",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Ramat Gan",
-      "Tel Aviv - Yafo",
-      "Petah Tikva"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 22,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00016",
-    "timestamp": "2026-02-28T20:58:42.000Z",
-    "unix": 1772312322,
-    "cities": [
-      "תל אביב - יפו",
-      "רמת גן",
-      "גבעתיים",
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Ramat Gan",
-      "Givatayim",
-      "Tel Aviv - City Center",
-      "Tel Aviv - South",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 22,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00017",
-    "timestamp": "2026-02-28T21:02:34.000Z",
-    "unix": 1772312554,
-    "cities": [
-      "בני ברק",
-      "תל אביב - צפון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Bnei Brak",
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 23,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00011",
-    "timestamp": "2026-02-28T21:25:44.000Z",
-    "unix": 1772313944,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "ראשון לציון",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Holon",
-      "Rishon LeZion",
-      "Tel Aviv - South"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 23,
-    "date": "2026-02-28"
-  },
-  {
-    "id": "hist-00019",
-    "timestamp": "2026-03-01T04:32:36.000Z",
-    "unix": 1772339556,
-    "cities": [
-      "גבעתיים",
-      "תל אביב - מרכז העיר",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Tel Aviv - City Center",
-      "Petah Tikva"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 6,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00036",
-    "timestamp": "2026-03-01T05:42:52.000Z",
-    "unix": 1772343772,
-    "cities": [
-      "חולון",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Tel Aviv - South",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
     "hour": 7,
-    "date": "2026-03-01"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00021",
-    "timestamp": "2026-03-01T06:06:15.000Z",
-    "unix": 1772345175,
-    "cities": [
-      "רמת גן",
-      "תל אביב - צפון",
-      "ראשון לציון"
-    ],
+    "id": "avg-00002",
+    "timestamp": "2026-02-28T09:30:00+02:00",
+    "unix": 1772263800,
+    "cities": [],
     "cities_en": [
-      "Ramat Gan",
-      "Tel Aviv - North",
-      "Rishon LeZion"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 8,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00038",
-    "timestamp": "2026-03-01T06:31:12.000Z",
-    "unix": 1772346672,
-    "cities": [
-      "תל אביב - יפו",
-      "ראשון לציון",
-      "תל אביב - צפון",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Rishon LeZion",
-      "Tel Aviv - North",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 8,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00037",
-    "timestamp": "2026-03-01T08:02:02.000Z",
-    "unix": 1772352122,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - צפון",
-      "בת ים",
-      "רמת גן",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - North",
-      "Bat Yam",
-      "Ramat Gan",
-      "Tel Aviv - Yafo"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
-    "day_of_week": 0,
+    "day_of_week": 6,
+    "hour": 9,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00003",
+    "timestamp": "2026-02-28T10:30:00+02:00",
+    "unix": 1772267400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
     "hour": 10,
-    "date": "2026-03-01"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00029",
-    "timestamp": "2026-03-01T08:13:05.000Z",
-    "unix": 1772352785,
-    "cities": [
-      "ראשון לציון",
-      "תל אביב - דרום",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "בת ים",
-      "תל אביב - יפו"
-    ],
+    "id": "avg-00004",
+    "timestamp": "2026-02-28T11:05:00+02:00",
+    "unix": 1772269500,
+    "cities": [],
     "cities_en": [
-      "Rishon LeZion",
-      "Tel Aviv - South",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Bat Yam",
-      "Tel Aviv - Yafo"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
-    "day_of_week": 0,
-    "hour": 10,
-    "date": "2026-03-01"
+    "day_of_week": 6,
+    "hour": 11,
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00033",
-    "timestamp": "2026-03-01T09:15:51.000Z",
-    "unix": 1772356551,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "תל אביב - יפו",
-      "גבעתיים",
-      "תל אביב - דרום"
-    ],
+    "id": "avg-00005",
+    "timestamp": "2026-02-28T11:30:00+02:00",
+    "unix": 1772271000,
+    "cities": [],
     "cities_en": [
-      "Tel Aviv - City Center",
-      "Holon",
-      "Tel Aviv - Yafo",
-      "Givatayim",
-      "Tel Aviv - South"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "hostile_aircraft",
     "threat_code": 5,
     "isDrill": false,
-    "day_of_week": 0,
+    "day_of_week": 6,
     "hour": 11,
-    "date": "2026-03-01"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00025",
-    "timestamp": "2026-03-01T09:48:57.000Z",
-    "unix": 1772358537,
-    "cities": [
-      "בת ים",
-      "תל אביב - מרכז העיר",
-      "רמת גן",
-      "גבעתיים",
-      "תל אביב - צפון"
-    ],
+    "id": "avg-00006",
+    "timestamp": "2026-02-28T12:05:00+02:00",
+    "unix": 1772273100,
+    "cities": [],
     "cities_en": [
-      "Bat Yam",
-      "Tel Aviv - City Center",
-      "Ramat Gan",
-      "Givatayim",
-      "Tel Aviv - North"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
-    "day_of_week": 0,
-    "hour": 11,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00020",
-    "timestamp": "2026-03-01T10:34:34.000Z",
-    "unix": 1772361274,
-    "cities": [
-      "תל אביב - צפון",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
+    "day_of_week": 6,
     "hour": 12,
-    "date": "2026-03-01"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00024",
-    "timestamp": "2026-03-01T11:46:38.000Z",
-    "unix": 1772365598,
-    "cities": [
-      "תל אביב - יפו",
-      "גבעתיים",
-      "תל אביב - צפון",
-      "תל אביב - דרום",
-      "רמת גן",
-      "חולון"
-    ],
+    "id": "avg-00007",
+    "timestamp": "2026-02-28T12:17:00+02:00",
+    "unix": 1772273820,
+    "cities": [],
     "cities_en": [
-      "Tel Aviv - Yafo",
-      "Givatayim",
-      "Tel Aviv - North",
-      "Tel Aviv - South",
-      "Ramat Gan",
-      "Holon"
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00008",
+    "timestamp": "2026-02-28T12:30:00+02:00",
+    "unix": 1772274600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00009",
+    "timestamp": "2026-02-28T12:42:00+02:00",
+    "unix": 1772275320,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "hostile_aircraft",
     "threat_code": 5,
     "isDrill": false,
-    "day_of_week": 0,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00010",
+    "timestamp": "2026-02-28T13:30:00+02:00",
+    "unix": 1772278200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
     "hour": 13,
-    "date": "2026-03-01"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00018",
-    "timestamp": "2026-03-01T12:02:50.000Z",
-    "unix": 1772366570,
-    "cities": [
-      "פתח תקווה",
-      "גבעתיים",
-      "רמת גן",
-      "ראשון לציון",
-      "בני ברק"
-    ],
+    "id": "avg-00011",
+    "timestamp": "2026-02-28T14:05:00+02:00",
+    "unix": 1772280300,
+    "cities": [],
     "cities_en": [
-      "Petah Tikva",
-      "Givatayim",
-      "Ramat Gan",
-      "Rishon LeZion",
-      "Bnei Brak"
+      "Tel Aviv / Gush Dan"
     ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
+    "threat": "missiles",
+    "threat_code": 0,
     "isDrill": false,
-    "day_of_week": 0,
+    "day_of_week": 6,
     "hour": 14,
-    "date": "2026-03-01"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00022",
-    "timestamp": "2026-03-01T13:21:42.000Z",
-    "unix": 1772371302,
-    "cities": [
-      "פתח תקווה",
-      "בת ים",
-      "רמת גן"
-    ],
+    "id": "avg-00012",
+    "timestamp": "2026-02-28T14:30:00+02:00",
+    "unix": 1772281800,
+    "cities": [],
     "cities_en": [
-      "Petah Tikva",
-      "Bat Yam",
-      "Ramat Gan"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "hostile_aircraft",
     "threat_code": 5,
     "isDrill": false,
-    "day_of_week": 0,
-    "hour": 15,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00030",
-    "timestamp": "2026-03-01T13:21:43.000Z",
-    "unix": 1772371303,
-    "cities": [
-      "תל אביב - יפו",
-      "ראשון לציון",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Rishon LeZion",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 15,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00027",
-    "timestamp": "2026-03-01T16:07:13.000Z",
-    "unix": 1772381233,
-    "cities": [
-      "בת ים",
-      "תל אביב - מרכז העיר",
-      "בני ברק",
-      "פתח תקווה",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Bat Yam",
-      "Tel Aviv - City Center",
-      "Bnei Brak",
-      "Petah Tikva",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 18,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00034",
-    "timestamp": "2026-03-01T16:26:30.000Z",
-    "unix": 1772382390,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "רמת גן",
-      "בני ברק",
-      "ראשון לציון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Ramat Gan",
-      "Bnei Brak",
-      "Rishon LeZion",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 18,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00023",
-    "timestamp": "2026-03-01T16:35:16.000Z",
-    "unix": 1772382916,
-    "cities": [
-      "תל אביב - יפו",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 18,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00028",
-    "timestamp": "2026-03-01T16:45:26.000Z",
-    "unix": 1772383526,
-    "cities": [
-      "תל אביב - יפו",
-      "תל אביב - צפון",
-      "רמת גן",
-      "תל אביב - מרכז העיר",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Tel Aviv - North",
-      "Ramat Gan",
-      "Tel Aviv - City Center",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 18,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00032",
-    "timestamp": "2026-03-01T17:26:53.000Z",
-    "unix": 1772386013,
-    "cities": [
-      "גבעתיים",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 19,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00031",
-    "timestamp": "2026-03-01T18:11:18.000Z",
-    "unix": 1772388678,
-    "cities": [
-      "פתח תקווה",
-      "חולון",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Holon",
-      "Tel Aviv - North"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 20,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00026",
-    "timestamp": "2026-03-01T18:13:23.000Z",
-    "unix": 1772388803,
-    "cities": [
-      "בני ברק",
-      "תל אביב - מרכז העיר",
-      "תל אביב - צפון",
-      "רמת גן",
-      "פתח תקווה",
-      "חולון"
-    ],
-    "cities_en": [
-      "Bnei Brak",
-      "Tel Aviv - City Center",
-      "Tel Aviv - North",
-      "Ramat Gan",
-      "Petah Tikva",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 20,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00035",
-    "timestamp": "2026-03-01T18:35:16.000Z",
-    "unix": 1772390116,
-    "cities": [
-      "ראשון לציון",
-      "בני ברק",
-      "תל אביב - דרום",
-      "תל אביב - יפו",
-      "חולון",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Rishon LeZion",
-      "Bnei Brak",
-      "Tel Aviv - South",
-      "Tel Aviv - Yafo",
-      "Holon",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 20,
-    "date": "2026-03-01"
-  },
-  {
-    "id": "hist-00042",
-    "timestamp": "2026-03-02T06:03:44.000Z",
-    "unix": 1772431424,
-    "cities": [
-      "חולון",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - North"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 8,
-    "date": "2026-03-02"
-  },
-  {
-    "id": "hist-00040",
-    "timestamp": "2026-03-02T09:58:20.000Z",
-    "unix": 1772445500,
-    "cities": [
-      "גבעתיים",
-      "חולון"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 11,
-    "date": "2026-03-02"
-  },
-  {
-    "id": "hist-00041",
-    "timestamp": "2026-03-02T12:39:10.000Z",
-    "unix": 1772455150,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - דרום",
-      "בת ים",
-      "גבעתיים",
-      "תל אביב - יפו",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - South",
-      "Bat Yam",
-      "Givatayim",
-      "Tel Aviv - Yafo",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
+    "day_of_week": 6,
     "hour": 14,
-    "date": "2026-03-02"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00039",
-    "timestamp": "2026-03-02T13:49:16.000Z",
-    "unix": 1772459356,
-    "cities": [
-      "פתח תקווה",
-      "רמת גן",
-      "תל אביב - יפו"
-    ],
+    "id": "avg-00013",
+    "timestamp": "2026-02-28T15:05:00+02:00",
+    "unix": 1772283900,
+    "cities": [],
     "cities_en": [
-      "Petah Tikva",
-      "Ramat Gan",
-      "Tel Aviv - Yafo"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
-    "day_of_week": 1,
+    "day_of_week": 6,
     "hour": 15,
-    "date": "2026-03-02"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00045",
-    "timestamp": "2026-03-02T14:22:04.000Z",
-    "unix": 1772461324,
-    "cities": [
-      "בת ים",
-      "רמת גן"
-    ],
+    "id": "avg-00014",
+    "timestamp": "2026-02-28T15:30:00+02:00",
+    "unix": 1772285400,
+    "cities": [],
     "cities_en": [
-      "Bat Yam",
-      "Ramat Gan"
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 15,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00015",
+    "timestamp": "2026-02-28T16:30:00+02:00",
+    "unix": 1772289000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
-    "day_of_week": 1,
+    "day_of_week": 6,
     "hour": 16,
-    "date": "2026-03-02"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00043",
-    "timestamp": "2026-03-02T15:07:02.000Z",
-    "unix": 1772464022,
-    "cities": [
-      "גבעתיים",
-      "בת ים",
-      "תל אביב - דרום",
-      "ראשון לציון"
-    ],
+    "id": "avg-00016",
+    "timestamp": "2026-02-28T19:30:00+02:00",
+    "unix": 1772299800,
+    "cities": [],
     "cities_en": [
-      "Givatayim",
-      "Bat Yam",
-      "Tel Aviv - South",
-      "Rishon LeZion"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 17,
-    "date": "2026-03-02"
-  },
-  {
-    "id": "hist-00044",
-    "timestamp": "2026-03-02T17:12:55.000Z",
-    "unix": 1772471575,
-    "cities": [
-      "תל אביב - יפו",
-      "בת ים",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Bat Yam",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 19,
-    "date": "2026-03-02"
-  },
-  {
-    "id": "hist-00047",
-    "timestamp": "2026-03-03T09:59:20.000Z",
-    "unix": 1772531960,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "בת ים",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Holon",
-      "Bat Yam",
-      "Givatayim"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 11,
-    "date": "2026-03-03"
-  },
-  {
-    "id": "hist-00048",
-    "timestamp": "2026-03-03T10:14:03.000Z",
-    "unix": 1772532843,
-    "cities": [
-      "חולון",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 12,
-    "date": "2026-03-03"
-  },
-  {
-    "id": "hist-00051",
-    "timestamp": "2026-03-03T11:12:36.000Z",
-    "unix": 1772536356,
-    "cities": [
-      "פתח תקווה",
-      "תל אביב - יפו",
-      "תל אביב - מרכז העיר",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - City Center",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 13,
-    "date": "2026-03-03"
-  },
-  {
-    "id": "hist-00049",
-    "timestamp": "2026-03-03T12:34:20.000Z",
-    "unix": 1772541260,
-    "cities": [
-      "בת ים",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Bat Yam",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 14,
-    "date": "2026-03-03"
-  },
-  {
-    "id": "hist-00050",
-    "timestamp": "2026-03-03T15:53:46.000Z",
-    "unix": 1772553226,
-    "cities": [
-      "רמת גן",
-      "תל אביב - מרכז העיר",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Ramat Gan",
-      "Tel Aviv - City Center",
-      "Bnei Brak"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 17,
-    "date": "2026-03-03"
-  },
-  {
-    "id": "hist-00046",
-    "timestamp": "2026-03-03T19:23:51.000Z",
-    "unix": 1772565831,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 21,
-    "date": "2026-03-03"
-  },
-  {
-    "id": "hist-00056",
-    "timestamp": "2026-03-04T05:43:07.000Z",
-    "unix": 1772602987,
-    "cities": [
-      "פתח תקווה",
-      "תל אביב - יפו",
-      "בת ים",
-      "תל אביב - מרכז העיר",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Tel Aviv - Yafo",
-      "Bat Yam",
-      "Tel Aviv - City Center",
-      "Givatayim"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 7,
-    "date": "2026-03-04"
-  },
-  {
-    "id": "hist-00053",
-    "timestamp": "2026-03-04T10:21:10.000Z",
-    "unix": 1772619670,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - דרום",
-      "רמת גן",
-      "ראשון לציון",
-      "תל אביב - יפו",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - South",
-      "Ramat Gan",
-      "Rishon LeZion",
-      "Tel Aviv - Yafo",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 12,
-    "date": "2026-03-04"
-  },
-  {
-    "id": "hist-00054",
-    "timestamp": "2026-03-04T12:08:13.000Z",
-    "unix": 1772626093,
-    "cities": [
-      "ראשון לציון",
-      "תל אביב - מרכז העיר",
-      "גבעתיים",
-      "פתח תקווה",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Rishon LeZion",
-      "Tel Aviv - City Center",
-      "Givatayim",
-      "Petah Tikva",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 14,
-    "date": "2026-03-04"
-  },
-  {
-    "id": "hist-00055",
-    "timestamp": "2026-03-04T13:24:45.000Z",
-    "unix": 1772630685,
-    "cities": [
-      "תל אביב - יפו",
-      "רמת גן",
-      "פתח תקווה",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Ramat Gan",
-      "Petah Tikva",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 15,
-    "date": "2026-03-04"
-  },
-  {
-    "id": "hist-00052",
-    "timestamp": "2026-03-04T18:37:35.000Z",
-    "unix": 1772649455,
-    "cities": [
-      "חולון",
-      "תל אביב - דרום",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - South",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 20,
-    "date": "2026-03-04"
-  },
-  {
-    "id": "hist-00059",
-    "timestamp": "2026-03-05T05:27:15.000Z",
-    "unix": 1772688435,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "גבעתיים",
-      "בני ברק",
-      "בת ים",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Holon",
-      "Givatayim",
-      "Bnei Brak",
-      "Bat Yam",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 7,
-    "date": "2026-03-05"
-  },
-  {
-    "id": "hist-00057",
-    "timestamp": "2026-03-05T11:08:58.000Z",
-    "unix": 1772708938,
-    "cities": [
-      "תל אביב - דרום",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Givatayim"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 13,
-    "date": "2026-03-05"
-  },
-  {
-    "id": "hist-00060",
-    "timestamp": "2026-03-05T11:31:32.000Z",
-    "unix": 1772710292,
-    "cities": [
-      "פתח תקווה",
-      "בת ים",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Bat Yam",
-      "Tel Aviv - South"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 13,
-    "date": "2026-03-05"
-  },
-  {
-    "id": "hist-00058",
-    "timestamp": "2026-03-05T21:19:52.000Z",
-    "unix": 1772745592,
-    "cities": [
-      "בני ברק",
-      "בת ים",
-      "ראשון לציון",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Bnei Brak",
-      "Bat Yam",
-      "Rishon LeZion",
-      "Tel Aviv - North"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 23,
-    "date": "2026-03-05"
-  },
-  {
-    "id": "hist-00062",
-    "timestamp": "2026-03-06T06:15:37.000Z",
-    "unix": 1772777737,
-    "cities": [
-      "רמת גן",
-      "בת ים",
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Ramat Gan",
-      "Bat Yam",
-      "Tel Aviv - City Center",
-      "Tel Aviv - South"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 8,
-    "date": "2026-03-06"
-  },
-  {
-    "id": "hist-00063",
-    "timestamp": "2026-03-06T11:34:30.000Z",
-    "unix": 1772796870,
-    "cities": [
-      "תל אביב - צפון",
-      "רמת גן",
-      "תל אביב - דרום",
-      "גבעתיים",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Ramat Gan",
-      "Tel Aviv - South",
-      "Givatayim",
-      "Petah Tikva"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 13,
-    "date": "2026-03-06"
-  },
-  {
-    "id": "hist-00061",
-    "timestamp": "2026-03-06T16:44:30.000Z",
-    "unix": 1772815470,
-    "cities": [
-      "תל אביב - דרום",
-      "חולון",
-      "תל אביב - יפו",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Holon",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 18,
-    "date": "2026-03-06"
-  },
-  {
-    "id": "hist-00065",
-    "timestamp": "2026-03-07T07:18:03.000Z",
-    "unix": 1772867883,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר",
-      "בת ים",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - City Center",
-      "Bat Yam",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 9,
-    "date": "2026-03-07"
-  },
-  {
-    "id": "hist-00067",
-    "timestamp": "2026-03-07T09:31:23.000Z",
-    "unix": 1772875883,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום",
-      "גבעתיים",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Tel Aviv - South",
-      "Givatayim",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 11,
-    "date": "2026-03-07"
-  },
-  {
-    "id": "hist-00064",
-    "timestamp": "2026-03-07T13:31:01.000Z",
-    "unix": 1772890261,
-    "cities": [
-      "גבעתיים",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 15,
-    "date": "2026-03-07"
-  },
-  {
-    "id": "hist-00066",
-    "timestamp": "2026-03-07T15:55:35.000Z",
-    "unix": 1772898935,
-    "cities": [
-      "תל אביב - צפון",
-      "בת ים",
-      "גבעתיים",
-      "ראשון לציון",
-      "בני ברק",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Bat Yam",
-      "Givatayim",
-      "Rishon LeZion",
-      "Bnei Brak",
-      "Tel Aviv - South"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 17,
-    "date": "2026-03-07"
-  },
-  {
-    "id": "hist-00068",
-    "timestamp": "2026-03-07T20:15:37.000Z",
-    "unix": 1772914537,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - יפו",
-      "רמת גן",
-      "פתח תקווה",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - Yafo",
-      "Ramat Gan",
-      "Petah Tikva",
-      "Givatayim"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 22,
-    "date": "2026-03-07"
-  },
-  {
-    "id": "hist-00071",
-    "timestamp": "2026-03-08T09:34:29.000Z",
-    "unix": 1772962469,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר",
-      "ראשון לציון",
-      "רמת גן",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - City Center",
-      "Rishon LeZion",
-      "Ramat Gan",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 11,
-    "date": "2026-03-08"
-  },
-  {
-    "id": "hist-00070",
-    "timestamp": "2026-03-08T14:30:55.000Z",
-    "unix": 1772980255,
-    "cities": [
-      "חולון",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 16,
-    "date": "2026-03-08"
-  },
-  {
-    "id": "hist-00069",
-    "timestamp": "2026-03-08T15:16:34.000Z",
-    "unix": 1772982994,
-    "cities": [
-      "תל אביב - יפו",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 17,
-    "date": "2026-03-08"
-  },
-  {
-    "id": "hist-00072",
-    "timestamp": "2026-03-08T18:41:10.000Z",
-    "unix": 1772995270,
-    "cities": [
-      "פתח תקווה",
-      "בני ברק",
-      "רמת גן",
-      "תל אביב - צפון",
-      "תל אביב - יפו",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Bnei Brak",
-      "Ramat Gan",
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - South"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 20,
-    "date": "2026-03-08"
-  },
-  {
-    "id": "hist-00077",
-    "timestamp": "2026-03-09T05:14:52.000Z",
-    "unix": 1773033292,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "ראשון לציון",
-      "חולון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Rishon LeZion",
-      "Holon",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 7,
-    "date": "2026-03-09"
-  },
-  {
-    "id": "hist-00075",
-    "timestamp": "2026-03-09T05:42:14.000Z",
-    "unix": 1773034934,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "פתח תקווה",
-      "תל אביב - יפו",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Petah Tikva",
-      "Tel Aviv - Yafo",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 7,
-    "date": "2026-03-09"
-  },
-  {
-    "id": "hist-00073",
-    "timestamp": "2026-03-09T09:12:53.000Z",
-    "unix": 1773047573,
-    "cities": [
-      "גבעתיים",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 11,
-    "date": "2026-03-09"
-  },
-  {
-    "id": "hist-00074",
-    "timestamp": "2026-03-09T09:36:02.000Z",
-    "unix": 1773048962,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "גבעתיים",
-      "רמת גן",
-      "חולון",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Givatayim",
-      "Ramat Gan",
-      "Holon",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 11,
-    "date": "2026-03-09"
-  },
-  {
-    "id": "hist-00076",
-    "timestamp": "2026-03-09T15:45:39.000Z",
-    "unix": 1773071139,
-    "cities": [
-      "חולון",
-      "תל אביב - יפו",
-      "ראשון לציון"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - Yafo",
-      "Rishon LeZion"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 17,
-    "date": "2026-03-09"
-  },
-  {
-    "id": "hist-00081",
-    "timestamp": "2026-03-10T08:22:36.000Z",
-    "unix": 1773130956,
-    "cities": [
-      "ראשון לציון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Rishon LeZion",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 10,
-    "date": "2026-03-10"
-  },
-  {
-    "id": "hist-00078",
-    "timestamp": "2026-03-10T10:06:39.000Z",
-    "unix": 1773137199,
-    "cities": [
-      "רמת גן",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Ramat Gan",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 12,
-    "date": "2026-03-10"
-  },
-  {
-    "id": "hist-00079",
-    "timestamp": "2026-03-10T13:08:35.000Z",
-    "unix": 1773148115,
-    "cities": [
-      "גבעתיים",
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "תל אביב - דרום",
-      "ראשון לציון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Tel Aviv - City Center",
-      "Holon",
-      "Tel Aviv - South",
-      "Rishon LeZion",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 15,
-    "date": "2026-03-10"
-  },
-  {
-    "id": "hist-00080",
-    "timestamp": "2026-03-10T21:14:29.000Z",
-    "unix": 1773177269,
-    "cities": [
-      "פתח תקווה",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 23,
-    "date": "2026-03-10"
-  },
-  {
-    "id": "hist-00084",
-    "timestamp": "2026-03-11T04:44:37.000Z",
-    "unix": 1773204277,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "גבעתיים",
-      "תל אביב - יפו",
-      "תל אביב - דרום",
-      "חולון",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Givatayim",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - South",
-      "Holon",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 6,
-    "date": "2026-03-11"
-  },
-  {
-    "id": "hist-00085",
-    "timestamp": "2026-03-11T12:43:06.000Z",
-    "unix": 1773232986,
-    "cities": [
-      "חולון",
-      "תל אביב - מרכז העיר",
-      "ראשון לציון",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - City Center",
-      "Rishon LeZion",
-      "Petah Tikva"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 14,
-    "date": "2026-03-11"
-  },
-  {
-    "id": "hist-00082",
-    "timestamp": "2026-03-11T13:07:17.000Z",
-    "unix": 1773234437,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Petah Tikva"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 15,
-    "date": "2026-03-11"
-  },
-  {
-    "id": "hist-00083",
-    "timestamp": "2026-03-11T19:29:38.000Z",
-    "unix": 1773257378,
-    "cities": [
-      "בת ים",
-      "חולון"
-    ],
-    "cities_en": [
-      "Bat Yam",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 21,
-    "date": "2026-03-11"
-  },
-  {
-    "id": "hist-00088",
-    "timestamp": "2026-03-11T23:25:45.000Z",
-    "unix": 1773271545,
-    "cities": [
-      "תל אביב - צפון",
-      "רמת גן",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Ramat Gan",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 1,
-    "date": "2026-03-12"
-  },
-  {
-    "id": "hist-00087",
-    "timestamp": "2026-03-12T16:57:32.000Z",
-    "unix": 1773334652,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "בת ים"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Bat Yam"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 18,
-    "date": "2026-03-12"
-  },
-  {
-    "id": "hist-00086",
-    "timestamp": "2026-03-12T18:33:32.000Z",
-    "unix": 1773340412,
-    "cities": [
-      "תל אביב - צפון",
-      "רמת גן",
-      "תל אביב - מרכז העיר",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Ramat Gan",
-      "Tel Aviv - City Center",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 20,
-    "date": "2026-03-12"
-  },
-  {
-    "id": "hist-00089",
-    "timestamp": "2026-03-12T20:12:02.000Z",
-    "unix": 1773346322,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 22,
-    "date": "2026-03-12"
-  },
-  {
-    "id": "hist-00093",
-    "timestamp": "2026-03-12T23:57:52.000Z",
-    "unix": 1773359872,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - יפו",
-      "בני ברק",
-      "תל אביב - מרכז העיר",
-      "רמת גן",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo",
-      "Bnei Brak",
-      "Tel Aviv - City Center",
-      "Ramat Gan",
-      "Tel Aviv - South"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 1,
-    "date": "2026-03-13"
-  },
-  {
-    "id": "hist-00091",
-    "timestamp": "2026-03-13T09:37:08.000Z",
-    "unix": 1773394628,
-    "cities": [
-      "פתח תקווה",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 11,
-    "date": "2026-03-13"
-  },
-  {
-    "id": "hist-00092",
-    "timestamp": "2026-03-13T10:34:27.000Z",
-    "unix": 1773398067,
-    "cities": [
-      "גבעתיים",
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר",
-      "חולון"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Tel Aviv - South",
-      "Tel Aviv - City Center",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 12,
-    "date": "2026-03-13"
-  },
-  {
-    "id": "hist-00090",
-    "timestamp": "2026-03-13T11:56:53.000Z",
-    "unix": 1773403013,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "רמת גן",
-      "בת ים",
-      "תל אביב - דרום",
-      "תל אביב - צפון",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Ramat Gan",
-      "Bat Yam",
-      "Tel Aviv - South",
-      "Tel Aviv - North",
-      "Petah Tikva"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 13,
-    "date": "2026-03-13"
-  },
-  {
-    "id": "hist-00098",
-    "timestamp": "2026-03-14T09:57:34.000Z",
-    "unix": 1773482254,
-    "cities": [
-      "בני ברק",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "ראשון לציון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Bnei Brak",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Holon",
-      "Rishon LeZion",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 11,
-    "date": "2026-03-14"
-  },
-  {
-    "id": "hist-00094",
-    "timestamp": "2026-03-14T11:34:54.000Z",
-    "unix": 1773488094,
-    "cities": [
-      "תל אביב - צפון",
-      "בת ים",
-      "תל אביב - מרכז העיר",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Bat Yam",
-      "Tel Aviv - City Center",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 13,
-    "date": "2026-03-14"
-  },
-  {
-    "id": "hist-00095",
-    "timestamp": "2026-03-14T13:33:25.000Z",
-    "unix": 1773495205,
-    "cities": [
-      "תל אביב - יפו",
-      "בני ברק",
-      "תל אביב - מרכז העיר",
-      "תל אביב - צפון",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Bnei Brak",
-      "Tel Aviv - City Center",
-      "Tel Aviv - North",
-      "Petah Tikva"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 15,
-    "date": "2026-03-14"
-  },
-  {
-    "id": "hist-00096",
-    "timestamp": "2026-03-14T15:24:16.000Z",
-    "unix": 1773501856,
-    "cities": [
-      "רמת גן",
-      "פתח תקווה",
-      "בת ים",
-      "תל אביב - מרכז העיר",
-      "תל אביב - צפון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Ramat Gan",
-      "Petah Tikva",
-      "Bat Yam",
-      "Tel Aviv - City Center",
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 17,
-    "date": "2026-03-14"
-  },
-  {
-    "id": "hist-00097",
-    "timestamp": "2026-03-14T18:12:13.000Z",
-    "unix": 1773511933,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - יפו",
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - City Center",
-      "Tel Aviv - South",
-      "Givatayim"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 20,
-    "date": "2026-03-14"
-  },
-  {
-    "id": "hist-00101",
-    "timestamp": "2026-03-15T04:37:10.000Z",
-    "unix": 1773549430,
-    "cities": [
-      "תל אביב - צפון",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Holon"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 6,
-    "date": "2026-03-15"
-  },
-  {
-    "id": "hist-00102",
-    "timestamp": "2026-03-15T09:33:49.000Z",
-    "unix": 1773567229,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "רמת גן",
-      "פתח תקווה",
-      "גבעתיים",
-      "חולון",
-      "ראשון לציון"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Ramat Gan",
-      "Petah Tikva",
-      "Givatayim",
-      "Holon",
-      "Rishon LeZion"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 11,
-    "date": "2026-03-15"
-  },
-  {
-    "id": "hist-00100",
-    "timestamp": "2026-03-15T11:59:13.000Z",
-    "unix": 1773575953,
-    "cities": [
-      "תל אביב - צפון",
-      "חולון",
-      "ראשון לציון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Holon",
-      "Rishon LeZion",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 13,
-    "date": "2026-03-15"
-  },
-  {
-    "id": "hist-00099",
-    "timestamp": "2026-03-15T12:18:53.000Z",
-    "unix": 1773577133,
-    "cities": [
-      "בני ברק",
-      "פתח תקווה",
-      "חולון",
-      "תל אביב - דרום",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Bnei Brak",
-      "Petah Tikva",
-      "Holon",
-      "Tel Aviv - South",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 0,
-    "hour": 14,
-    "date": "2026-03-15"
-  },
-  {
-    "id": "hist-00106",
-    "timestamp": "2026-03-15T22:39:39.000Z",
-    "unix": 1773614379,
-    "cities": [
-      "רמת גן",
-      "בני ברק",
-      "גבעתיים",
-      "חולון",
-      "תל אביב - צפון",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Ramat Gan",
-      "Bnei Brak",
-      "Givatayim",
-      "Holon",
-      "Tel Aviv - North",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 0,
-    "date": "2026-03-16"
-  },
-  {
-    "id": "hist-00107",
-    "timestamp": "2026-03-16T06:07:51.000Z",
-    "unix": 1773641271,
-    "cities": [
-      "ראשון לציון",
-      "רמת גן",
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Rishon LeZion",
-      "Ramat Gan",
-      "Tel Aviv - City Center",
-      "Holon",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 8,
-    "date": "2026-03-16"
-  },
-  {
-    "id": "hist-00103",
-    "timestamp": "2026-03-16T09:28:09.000Z",
-    "unix": 1773653289,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Tel Aviv - South",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 11,
-    "date": "2026-03-16"
-  },
-  {
-    "id": "hist-00104",
-    "timestamp": "2026-03-16T15:31:20.000Z",
-    "unix": 1773675080,
-    "cities": [
-      "תל אביב - יפו",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 17,
-    "date": "2026-03-16"
-  },
-  {
-    "id": "hist-00105",
-    "timestamp": "2026-03-16T21:26:12.000Z",
-    "unix": 1773696372,
-    "cities": [
-      "ראשון לציון",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Rishon LeZion",
-      "Givatayim"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 23,
-    "date": "2026-03-16"
-  },
-  {
-    "id": "hist-00111",
-    "timestamp": "2026-03-17T09:06:19.000Z",
-    "unix": 1773738379,
-    "cities": [
-      "תל אביב - יפו",
-      "תל אביב - דרום",
-      "בני ברק",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Tel Aviv - South",
-      "Bnei Brak",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 11,
-    "date": "2026-03-17"
-  },
-  {
-    "id": "hist-00112",
-    "timestamp": "2026-03-17T11:35:29.000Z",
-    "unix": 1773747329,
-    "cities": [
-      "פתח תקווה",
-      "בת ים",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Bat Yam",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 13,
-    "date": "2026-03-17"
-  },
-  {
-    "id": "hist-00110",
-    "timestamp": "2026-03-17T12:39:27.000Z",
-    "unix": 1773751167,
-    "cities": [
-      "גבעתיים",
-      "ראשון לציון",
-      "תל אביב - יפו",
-      "בת ים",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Rishon LeZion",
-      "Tel Aviv - Yafo",
-      "Bat Yam",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 14,
-    "date": "2026-03-17"
-  },
-  {
-    "id": "hist-00108",
-    "timestamp": "2026-03-17T14:59:21.000Z",
-    "unix": 1773759561,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "ראשון לציון",
-      "בני ברק",
-      "רמת גן",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Rishon LeZion",
-      "Bnei Brak",
-      "Ramat Gan",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 16,
-    "date": "2026-03-17"
-  },
-  {
-    "id": "hist-00109",
-    "timestamp": "2026-03-17T15:10:51.000Z",
-    "unix": 1773760251,
-    "cities": [
-      "תל אביב - צפון",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Ramat Gan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 2,
-    "hour": 17,
-    "date": "2026-03-17"
-  },
-  {
-    "id": "hist-00114",
-    "timestamp": "2026-03-18T05:32:52.000Z",
-    "unix": 1773811972,
-    "cities": [
-      "תל אביב - צפון",
-      "חולון",
-      "גבעתיים",
-      "בני ברק",
-      "ראשון לציון",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Holon",
-      "Givatayim",
-      "Bnei Brak",
-      "Rishon LeZion",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 7,
-    "date": "2026-03-18"
-  },
-  {
-    "id": "hist-00113",
-    "timestamp": "2026-03-18T15:15:26.000Z",
-    "unix": 1773846926,
-    "cities": [
-      "בני ברק",
-      "פתח תקווה",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Bnei Brak",
-      "Petah Tikva",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 17,
-    "date": "2026-03-18"
-  },
-  {
-    "id": "hist-00116",
-    "timestamp": "2026-03-18T15:48:51.000Z",
-    "unix": 1773848931,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "רמת גן",
-      "תל אביב - יפו"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Ramat Gan",
-      "Tel Aviv - Yafo"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 17,
-    "date": "2026-03-18"
-  },
-  {
-    "id": "hist-00115",
-    "timestamp": "2026-03-18T19:42:37.000Z",
-    "unix": 1773862957,
-    "cities": [
-      "חולון",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Holon",
-      "Tel Aviv - South"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 21,
-    "date": "2026-03-18"
-  },
-  {
-    "id": "hist-00118",
-    "timestamp": "2026-03-19T04:36:34.000Z",
-    "unix": 1773894994,
-    "cities": [
-      "בת ים",
-      "בני ברק",
-      "תל אביב - דרום",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Bat Yam",
-      "Bnei Brak",
-      "Tel Aviv - South",
-      "Tel Aviv - North"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 6,
-    "date": "2026-03-19"
-  },
-  {
-    "id": "hist-00119",
-    "timestamp": "2026-03-19T10:03:00.000Z",
-    "unix": 1773914580,
-    "cities": [
-      "תל אביב - יפו",
-      "ראשון לציון",
-      "גבעתיים",
-      "רמת גן",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Rishon LeZion",
-      "Givatayim",
-      "Ramat Gan",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 12,
-    "date": "2026-03-19"
-  },
-  {
-    "id": "hist-00117",
-    "timestamp": "2026-03-19T10:30:06.000Z",
-    "unix": 1773916206,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "ראשון לציון"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Holon",
-      "Rishon LeZion"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 12,
-    "date": "2026-03-19"
-  },
-  {
-    "id": "hist-00121",
-    "timestamp": "2026-03-19T12:11:58.000Z",
-    "unix": 1773922318,
-    "cities": [
-      "תל אביב - יפו",
-      "חולון",
-      "בני ברק",
-      "תל אביב - דרום"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Holon",
-      "Bnei Brak",
-      "Tel Aviv - South"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 14,
-    "date": "2026-03-19"
-  },
-  {
-    "id": "hist-00120",
-    "timestamp": "2026-03-19T12:41:00.000Z",
-    "unix": 1773924060,
-    "cities": [
-      "תל אביב - צפון",
-      "רמת גן",
-      "תל אביב - מרכז העיר",
-      "פתח תקווה",
-      "חולון"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Ramat Gan",
-      "Tel Aviv - City Center",
-      "Petah Tikva",
-      "Holon"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 14,
-    "date": "2026-03-19"
-  },
-  {
-    "id": "hist-00122",
-    "timestamp": "2026-03-20T07:07:17.000Z",
-    "unix": 1773990437,
-    "cities": [
-      "רמת גן",
-      "תל אביב - יפו",
-      "בני ברק",
-      "ראשון לציון",
-      "תל אביב - מרכז העיר",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Ramat Gan",
-      "Tel Aviv - Yafo",
-      "Bnei Brak",
-      "Rishon LeZion",
-      "Tel Aviv - City Center",
-      "Givatayim"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 9,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "hist-00123",
-    "timestamp": "2026-03-20T07:29:57.000Z",
-    "unix": 1773991797,
-    "cities": [
-      "תל אביב - יפו",
-      "תל אביב - צפון",
-      "חולון",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Tel Aviv - Yafo",
-      "Tel Aviv - North",
-      "Holon",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 9,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "hist-00126",
-    "timestamp": "2026-03-20T08:43:12.000Z",
-    "unix": 1773996192,
-    "cities": [
-      "בת ים",
-      "תל אביב - דרום",
-      "ראשון לציון",
-      "גבעתיים",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Bat Yam",
-      "Tel Aviv - South",
-      "Rishon LeZion",
-      "Givatayim",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 10,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "hist-00128",
-    "timestamp": "2026-03-20T10:06:54.000Z",
-    "unix": 1774001214,
-    "cities": [
-      "גבעתיים",
-      "ראשון לציון",
-      "בני ברק",
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Rishon LeZion",
-      "Bnei Brak",
-      "Tel Aviv - North",
-      "Tel Aviv - City Center"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 12,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "hist-00127",
-    "timestamp": "2026-03-20T16:24:37.000Z",
-    "unix": 1774023877,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "תל אביב - יפו",
-      "בת ים"
-    ],
-    "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - City Center",
-      "Holon",
-      "Tel Aviv - Yafo",
-      "Bat Yam"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 18,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "hist-00125",
-    "timestamp": "2026-03-20T19:26:15.000Z",
-    "unix": 1774034775,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום",
-      "בני ברק"
-    ],
-    "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Tel Aviv - South",
-      "Bnei Brak"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 21,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "hist-00124",
-    "timestamp": "2026-03-20T20:15:11.000Z",
-    "unix": 1774037711,
-    "cities": [
-      "חולון",
-      "בני ברק",
-      "גבעתיים",
-      "תל אביב - מרכז העיר",
-      "רמת גן"
-    ],
-    "cities_en": [
-      "Holon",
-      "Bnei Brak",
-      "Givatayim",
-      "Tel Aviv - City Center",
-      "Ramat Gan"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 22,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "hist-00132",
-    "timestamp": "2026-03-21T07:51:41.000Z",
-    "unix": 1774079501,
-    "cities": [
-      "רמת גן",
-      "פתח תקווה"
-    ],
-    "cities_en": [
-      "Ramat Gan",
-      "Petah Tikva"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 9,
-    "date": "2026-03-21"
-  },
-  {
-    "id": "hist-00130",
-    "timestamp": "2026-03-21T08:27:34.000Z",
-    "unix": 1774081654,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "חולון",
-      "גבעתיים",
-      "פתח תקווה",
-      "תל אביב - דרום",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Holon",
-      "Givatayim",
-      "Petah Tikva",
-      "Tel Aviv - South",
-      "Tel Aviv - North"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 10,
-    "date": "2026-03-21"
-  },
-  {
-    "id": "hist-00134",
-    "timestamp": "2026-03-21T09:51:34.000Z",
-    "unix": 1774086694,
-    "cities": [
-      "ראשון לציון",
-      "גבעתיים",
-      "חולון",
-      "תל אביב - יפו",
-      "בת ים",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Rishon LeZion",
-      "Givatayim",
-      "Holon",
-      "Tel Aviv - Yafo",
-      "Bat Yam",
-      "Tel Aviv - North"
-    ],
-    "threat": "hostile_aircraft",
-    "threat_code": 5,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 11,
-    "date": "2026-03-21"
-  },
-  {
-    "id": "hist-00133",
-    "timestamp": "2026-03-21T12:27:59.000Z",
-    "unix": 1774096079,
-    "cities": [
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום",
-      "רמת גן",
-      "חולון",
-      "בני ברק",
-      "גבעתיים"
-    ],
-    "cities_en": [
-      "Tel Aviv - City Center",
-      "Tel Aviv - South",
-      "Ramat Gan",
-      "Holon",
-      "Bnei Brak",
-      "Givatayim"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 14,
-    "date": "2026-03-21"
-  },
-  {
-    "id": "hist-00135",
-    "timestamp": "2026-03-21T15:55:30.000Z",
-    "unix": 1774108530,
-    "cities": [
-      "גבעתיים",
-      "תל אביב - צפון"
-    ],
-    "cities_en": [
-      "Givatayim",
-      "Tel Aviv - North"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 17,
-    "date": "2026-03-21"
-  },
-  {
-    "id": "hist-00129",
-    "timestamp": "2026-03-21T17:11:50.000Z",
-    "unix": 1774113110,
-    "cities": [
-      "פתח תקווה",
-      "בת ים",
-      "רמת גן",
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר"
-    ],
-    "cities_en": [
-      "Petah Tikva",
-      "Bat Yam",
-      "Ramat Gan",
-      "Tel Aviv - South",
-      "Tel Aviv - City Center"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 6,
     "hour": 19,
-    "date": "2026-03-21"
+    "date": "2026-02-28"
   },
   {
-    "id": "hist-00131",
-    "timestamp": "2026-03-21T20:30:12.000Z",
-    "unix": 1774125012,
-    "cities": [
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר",
-      "פתח תקווה",
-      "ראשון לציון"
-    ],
+    "id": "avg-00017",
+    "timestamp": "2026-02-28T20:30:00+02:00",
+    "unix": 1772303400,
+    "cities": [],
     "cities_en": [
-      "Tel Aviv - South",
-      "Tel Aviv - City Center",
-      "Petah Tikva",
-      "Rishon LeZion"
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 20,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00018",
+    "timestamp": "2026-02-28T23:30:00+02:00",
+    "unix": 1772314200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 23,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00019",
+    "timestamp": "2026-03-01T07:05:00+02:00",
+    "unix": 1772341500,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00020",
+    "timestamp": "2026-03-01T07:30:00+02:00",
+    "unix": 1772343000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "hostile_aircraft",
     "threat_code": 5,
     "isDrill": false,
-    "day_of_week": 6,
-    "hour": 22,
-    "date": "2026-03-21"
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-01"
   },
   {
-    "id": "hist-00140",
-    "timestamp": "2026-03-22T07:20:20.000Z",
-    "unix": 1774164020,
-    "cities": [
-      "רמת גן",
-      "תל אביב - דרום",
-      "תל אביב - מרכז העיר"
-    ],
+    "id": "avg-00021",
+    "timestamp": "2026-03-01T08:30:00+02:00",
+    "unix": 1772346600,
+    "cities": [],
     "cities_en": [
-      "Ramat Gan",
-      "Tel Aviv - South",
-      "Tel Aviv - City Center"
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 8,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00022",
+    "timestamp": "2026-03-01T09:30:00+02:00",
+    "unix": 1772350200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 0,
     "hour": 9,
-    "date": "2026-03-22"
+    "date": "2026-03-01"
   },
   {
-    "id": "hist-00137",
-    "timestamp": "2026-03-22T10:18:28.000Z",
-    "unix": 1774174708,
-    "cities": [
-      "פתח תקווה",
-      "תל אביב - יפו",
-      "תל אביב - מרכז העיר",
-      "גבעתיים",
-      "בני ברק"
-    ],
+    "id": "avg-00023",
+    "timestamp": "2026-03-01T10:30:00+02:00",
+    "unix": 1772353800,
+    "cities": [],
     "cities_en": [
-      "Petah Tikva",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - City Center",
-      "Givatayim",
-      "Bnei Brak"
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 10,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00024",
+    "timestamp": "2026-03-01T11:05:00+02:00",
+    "unix": 1772355900,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 11,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00025",
+    "timestamp": "2026-03-01T11:30:00+02:00",
+    "unix": 1772357400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 11,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00026",
+    "timestamp": "2026-03-01T12:05:00+02:00",
+    "unix": 1772359500,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 0,
     "hour": 12,
-    "date": "2026-03-22"
+    "date": "2026-03-01"
   },
   {
-    "id": "hist-00138",
-    "timestamp": "2026-03-22T11:51:27.000Z",
-    "unix": 1774180287,
-    "cities": [
-      "תל אביב - צפון",
-      "תל אביב - מרכז העיר",
-      "ראשון לציון"
-    ],
+    "id": "avg-00027",
+    "timestamp": "2026-03-01T12:17:00+02:00",
+    "unix": 1772360220,
+    "cities": [],
     "cities_en": [
-      "Tel Aviv - North",
-      "Tel Aviv - City Center",
-      "Rishon LeZion"
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00028",
+    "timestamp": "2026-03-01T12:30:00+02:00",
+    "unix": 1772361000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00029",
+    "timestamp": "2026-03-01T12:42:00+02:00",
+    "unix": 1772361720,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00030",
+    "timestamp": "2026-03-01T13:30:00+02:00",
+    "unix": 1772364600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 0,
     "hour": 13,
-    "date": "2026-03-22"
+    "date": "2026-03-01"
   },
   {
-    "id": "hist-00136",
-    "timestamp": "2026-03-22T12:03:20.000Z",
-    "unix": 1774181000,
-    "cities": [
-      "תל אביב - צפון",
-      "גבעתיים",
-      "תל אביב - יפו",
-      "תל אביב - מרכז העיר",
-      "תל אביב - דרום"
-    ],
+    "id": "avg-00031",
+    "timestamp": "2026-03-01T14:05:00+02:00",
+    "unix": 1772366700,
+    "cities": [],
     "cities_en": [
-      "Tel Aviv - North",
-      "Givatayim",
-      "Tel Aviv - Yafo",
-      "Tel Aviv - City Center",
-      "Tel Aviv - South"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 0,
     "hour": 14,
-    "date": "2026-03-22"
+    "date": "2026-03-01"
   },
   {
-    "id": "hist-00139",
-    "timestamp": "2026-03-22T13:45:38.000Z",
-    "unix": 1774187138,
-    "cities": [
-      "רמת גן",
-      "בני ברק",
-      "תל אביב - דרום",
-      "תל אביב - יפו"
-    ],
+    "id": "avg-00032",
+    "timestamp": "2026-03-01T14:30:00+02:00",
+    "unix": 1772368200,
+    "cities": [],
     "cities_en": [
-      "Ramat Gan",
-      "Bnei Brak",
-      "Tel Aviv - South",
-      "Tel Aviv - Yafo"
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00033",
+    "timestamp": "2026-03-01T15:05:00+02:00",
+    "unix": 1772370300,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00034",
+    "timestamp": "2026-03-01T15:30:00+02:00",
+    "unix": 1772371800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "hostile_aircraft",
     "threat_code": 5,
     "isDrill": false,
     "day_of_week": 0,
     "hour": 15,
-    "date": "2026-03-22"
+    "date": "2026-03-01"
   },
   {
-    "id": "hist-00141",
-    "timestamp": "2026-03-22T18:43:26.000Z",
-    "unix": 1774205006,
-    "cities": [
-      "רמת גן",
-      "בני ברק",
-      "תל אביב - צפון",
-      "פתח תקווה"
-    ],
+    "id": "avg-00035",
+    "timestamp": "2026-03-01T16:30:00+02:00",
+    "unix": 1772375400,
+    "cities": [],
     "cities_en": [
-      "Ramat Gan",
-      "Bnei Brak",
-      "Tel Aviv - North",
-      "Petah Tikva"
+      "Tel Aviv / Gush Dan"
     ],
     "threat": "missiles",
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 0,
+    "hour": 16,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00036",
+    "timestamp": "2026-03-01T17:30:00+02:00",
+    "unix": 1772379000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 17,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00037",
+    "timestamp": "2026-03-01T19:30:00+02:00",
+    "unix": 1772386200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 19,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00038",
+    "timestamp": "2026-03-01T23:05:00+02:00",
+    "unix": 1772399100,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 23,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00039",
+    "timestamp": "2026-03-01T23:30:00+02:00",
+    "unix": 1772400600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 23,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00040",
+    "timestamp": "2026-03-02T07:30:00+02:00",
+    "unix": 1772429400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 7,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00041",
+    "timestamp": "2026-03-02T12:30:00+02:00",
+    "unix": 1772447400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00042",
+    "timestamp": "2026-03-02T14:30:00+02:00",
+    "unix": 1772454600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 14,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00043",
+    "timestamp": "2026-03-02T15:30:00+02:00",
+    "unix": 1772458200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 15,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00044",
+    "timestamp": "2026-03-02T23:05:00+02:00",
+    "unix": 1772485500,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 23,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00045",
+    "timestamp": "2026-03-02T23:30:00+02:00",
+    "unix": 1772487000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 23,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00046",
+    "timestamp": "2026-03-03T07:30:00+02:00",
+    "unix": 1772515800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 7,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00047",
+    "timestamp": "2026-03-03T10:30:00+02:00",
+    "unix": 1772526600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 10,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00048",
+    "timestamp": "2026-03-03T11:30:00+02:00",
+    "unix": 1772530200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 11,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00049",
+    "timestamp": "2026-03-03T12:05:00+02:00",
+    "unix": 1772532300,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00050",
+    "timestamp": "2026-03-03T12:30:00+02:00",
+    "unix": 1772533800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00051",
+    "timestamp": "2026-03-03T14:30:00+02:00",
+    "unix": 1772541000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 14,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00052",
+    "timestamp": "2026-03-03T15:30:00+02:00",
+    "unix": 1772544600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 15,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00053",
+    "timestamp": "2026-03-04T12:30:00+02:00",
+    "unix": 1772620200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00054",
+    "timestamp": "2026-03-04T14:30:00+02:00",
+    "unix": 1772627400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 14,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00055",
+    "timestamp": "2026-03-04T23:05:00+02:00",
+    "unix": 1772658300,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 23,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00056",
+    "timestamp": "2026-03-04T23:30:00+02:00",
+    "unix": 1772659800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 23,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00057",
+    "timestamp": "2026-03-05T07:30:00+02:00",
+    "unix": 1772688600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 7,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00058",
+    "timestamp": "2026-03-05T10:30:00+02:00",
+    "unix": 1772699400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 10,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00059",
+    "timestamp": "2026-03-05T12:05:00+02:00",
+    "unix": 1772705100,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00060",
+    "timestamp": "2026-03-05T12:30:00+02:00",
+    "unix": 1772706600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00061",
+    "timestamp": "2026-03-05T13:30:00+02:00",
+    "unix": 1772710200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 13,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00062",
+    "timestamp": "2026-03-05T14:30:00+02:00",
+    "unix": 1772713800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 14,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00063",
+    "timestamp": "2026-03-05T15:30:00+02:00",
+    "unix": 1772717400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 15,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00064",
+    "timestamp": "2026-03-06T10:30:00+02:00",
+    "unix": 1772785800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 10,
+    "date": "2026-03-06"
+  },
+  {
+    "id": "avg-00065",
+    "timestamp": "2026-03-06T12:30:00+02:00",
+    "unix": 1772793000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 12,
+    "date": "2026-03-06"
+  },
+  {
+    "id": "avg-00066",
+    "timestamp": "2026-03-06T14:30:00+02:00",
+    "unix": 1772800200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 14,
+    "date": "2026-03-06"
+  },
+  {
+    "id": "avg-00067",
+    "timestamp": "2026-03-06T15:30:00+02:00",
+    "unix": 1772803800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 15,
+    "date": "2026-03-06"
+  },
+  {
+    "id": "avg-00068",
+    "timestamp": "2026-03-06T19:30:00+02:00",
+    "unix": 1772818200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 19,
+    "date": "2026-03-06"
+  },
+  {
+    "id": "avg-00069",
+    "timestamp": "2026-03-06T20:30:00+02:00",
+    "unix": 1772821800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
     "hour": 20,
+    "date": "2026-03-06"
+  },
+  {
+    "id": "avg-00070",
+    "timestamp": "2026-03-06T21:30:00+02:00",
+    "unix": 1772825400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 21,
+    "date": "2026-03-06"
+  },
+  {
+    "id": "avg-00071",
+    "timestamp": "2026-03-07T12:30:00+02:00",
+    "unix": 1772879400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00072",
+    "timestamp": "2026-03-07T23:05:00+02:00",
+    "unix": 1772917500,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 23,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00073",
+    "timestamp": "2026-03-07T23:21:00+02:00",
+    "unix": 1772918460,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 23,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00074",
+    "timestamp": "2026-03-07T23:38:00+02:00",
+    "unix": 1772919480,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 23,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00075",
+    "timestamp": "2026-03-08T07:30:00+02:00",
+    "unix": 1772947800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-08"
+  },
+  {
+    "id": "avg-00076",
+    "timestamp": "2026-03-08T10:30:00+02:00",
+    "unix": 1772958600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 10,
+    "date": "2026-03-08"
+  },
+  {
+    "id": "avg-00077",
+    "timestamp": "2026-03-08T12:30:00+02:00",
+    "unix": 1772965800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-08"
+  },
+  {
+    "id": "avg-00078",
+    "timestamp": "2026-03-08T14:30:00+02:00",
+    "unix": 1772973000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-08"
+  },
+  {
+    "id": "avg-00079",
+    "timestamp": "2026-03-08T15:30:00+02:00",
+    "unix": 1772976600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-08"
+  },
+  {
+    "id": "avg-00080",
+    "timestamp": "2026-03-09T12:30:00+02:00",
+    "unix": 1773052200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00081",
+    "timestamp": "2026-03-09T14:30:00+02:00",
+    "unix": 1773059400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 14,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00082",
+    "timestamp": "2026-03-09T23:05:00+02:00",
+    "unix": 1773090300,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 23,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00083",
+    "timestamp": "2026-03-09T23:30:00+02:00",
+    "unix": 1773091800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 23,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00084",
+    "timestamp": "2026-03-10T07:30:00+02:00",
+    "unix": 1773120600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 7,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "avg-00085",
+    "timestamp": "2026-03-10T10:30:00+02:00",
+    "unix": 1773131400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 10,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "avg-00086",
+    "timestamp": "2026-03-10T12:30:00+02:00",
+    "unix": 1773138600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "avg-00087",
+    "timestamp": "2026-03-10T13:30:00+02:00",
+    "unix": 1773142200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 13,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "avg-00088",
+    "timestamp": "2026-03-10T14:30:00+02:00",
+    "unix": 1773145800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 14,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "avg-00089",
+    "timestamp": "2026-03-10T15:30:00+02:00",
+    "unix": 1773149400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 15,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "avg-00090",
+    "timestamp": "2026-03-11T07:30:00+02:00",
+    "unix": 1773207000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 7,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00091",
+    "timestamp": "2026-03-11T11:30:00+02:00",
+    "unix": 1773221400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 11,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00092",
+    "timestamp": "2026-03-11T12:05:00+02:00",
+    "unix": 1773223500,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00093",
+    "timestamp": "2026-03-11T12:30:00+02:00",
+    "unix": 1773225000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00094",
+    "timestamp": "2026-03-11T14:30:00+02:00",
+    "unix": 1773232200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 14,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00095",
+    "timestamp": "2026-03-11T15:30:00+02:00",
+    "unix": 1773235800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 15,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00096",
+    "timestamp": "2026-03-12T07:30:00+02:00",
+    "unix": 1773293400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 7,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00097",
+    "timestamp": "2026-03-12T10:30:00+02:00",
+    "unix": 1773304200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 10,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00098",
+    "timestamp": "2026-03-12T11:30:00+02:00",
+    "unix": 1773307800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 11,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00099",
+    "timestamp": "2026-03-12T12:30:00+02:00",
+    "unix": 1773311400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00100",
+    "timestamp": "2026-03-12T14:30:00+02:00",
+    "unix": 1773318600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 14,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00101",
+    "timestamp": "2026-03-12T15:30:00+02:00",
+    "unix": 1773322200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 15,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00102",
+    "timestamp": "2026-03-13T12:30:00+02:00",
+    "unix": 1773397800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 12,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00103",
+    "timestamp": "2026-03-13T23:30:00+02:00",
+    "unix": 1773437400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 23,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00104",
+    "timestamp": "2026-03-14T12:30:00+02:00",
+    "unix": 1773484200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00105",
+    "timestamp": "2026-03-14T23:30:00+02:00",
+    "unix": 1773523800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 23,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00106",
+    "timestamp": "2026-03-15T07:30:00+02:00",
+    "unix": 1773552600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00107",
+    "timestamp": "2026-03-15T09:30:00+02:00",
+    "unix": 1773559800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 9,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00108",
+    "timestamp": "2026-03-15T11:30:00+02:00",
+    "unix": 1773567000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 11,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00109",
+    "timestamp": "2026-03-15T12:30:00+02:00",
+    "unix": 1773570600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00110",
+    "timestamp": "2026-03-15T13:30:00+02:00",
+    "unix": 1773574200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 13,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00111",
+    "timestamp": "2026-03-15T14:30:00+02:00",
+    "unix": 1773577800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00112",
+    "timestamp": "2026-03-15T15:30:00+02:00",
+    "unix": 1773581400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00113",
+    "timestamp": "2026-03-16T12:30:00+02:00",
+    "unix": 1773657000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00114",
+    "timestamp": "2026-03-16T14:30:00+02:00",
+    "unix": 1773664200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 14,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00115",
+    "timestamp": "2026-03-16T23:05:00+02:00",
+    "unix": 1773695100,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 23,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00116",
+    "timestamp": "2026-03-16T23:21:00+02:00",
+    "unix": 1773696060,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 23,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00117",
+    "timestamp": "2026-03-16T23:38:00+02:00",
+    "unix": 1773697080,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 23,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00118",
+    "timestamp": "2026-03-17T07:30:00+02:00",
+    "unix": 1773725400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 7,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00119",
+    "timestamp": "2026-03-17T09:30:00+02:00",
+    "unix": 1773732600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 9,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00120",
+    "timestamp": "2026-03-17T10:30:00+02:00",
+    "unix": 1773736200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 10,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00121",
+    "timestamp": "2026-03-17T11:30:00+02:00",
+    "unix": 1773739800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 11,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00122",
+    "timestamp": "2026-03-17T12:05:00+02:00",
+    "unix": 1773741900,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00123",
+    "timestamp": "2026-03-17T12:30:00+02:00",
+    "unix": 1773743400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00124",
+    "timestamp": "2026-03-17T13:30:00+02:00",
+    "unix": 1773747000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 13,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00125",
+    "timestamp": "2026-03-17T14:30:00+02:00",
+    "unix": 1773750600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 14,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00126",
+    "timestamp": "2026-03-17T15:30:00+02:00",
+    "unix": 1773754200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 15,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00127",
+    "timestamp": "2026-03-18T07:30:00+02:00",
+    "unix": 1773811800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 7,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00128",
+    "timestamp": "2026-03-18T09:30:00+02:00",
+    "unix": 1773819000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 9,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00129",
+    "timestamp": "2026-03-18T10:30:00+02:00",
+    "unix": 1773822600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 10,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00130",
+    "timestamp": "2026-03-18T11:30:00+02:00",
+    "unix": 1773826200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 11,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00131",
+    "timestamp": "2026-03-18T12:30:00+02:00",
+    "unix": 1773829800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00132",
+    "timestamp": "2026-03-18T13:30:00+02:00",
+    "unix": 1773833400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 13,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00133",
+    "timestamp": "2026-03-18T14:30:00+02:00",
+    "unix": 1773837000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 14,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00134",
+    "timestamp": "2026-03-18T15:30:00+02:00",
+    "unix": 1773840600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 15,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00135",
+    "timestamp": "2026-03-18T19:30:00+02:00",
+    "unix": 1773855000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 19,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00136",
+    "timestamp": "2026-03-19T07:30:00+02:00",
+    "unix": 1773898200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 7,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00137",
+    "timestamp": "2026-03-19T12:30:00+02:00",
+    "unix": 1773916200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00138",
+    "timestamp": "2026-03-19T14:30:00+02:00",
+    "unix": 1773923400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 14,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00139",
+    "timestamp": "2026-03-19T15:30:00+02:00",
+    "unix": 1773927000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 15,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00140",
+    "timestamp": "2026-03-19T23:05:00+02:00",
+    "unix": 1773954300,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 23,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00141",
+    "timestamp": "2026-03-19T23:30:00+02:00",
+    "unix": 1773955800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 23,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00142",
+    "timestamp": "2026-03-20T07:30:00+02:00",
+    "unix": 1773984600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 7,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00143",
+    "timestamp": "2026-03-20T10:30:00+02:00",
+    "unix": 1773995400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 10,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00144",
+    "timestamp": "2026-03-20T12:30:00+02:00",
+    "unix": 1774002600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 12,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00145",
+    "timestamp": "2026-03-20T13:30:00+02:00",
+    "unix": 1774006200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 13,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00146",
+    "timestamp": "2026-03-20T15:30:00+02:00",
+    "unix": 1774013400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 15,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00147",
+    "timestamp": "2026-03-20T23:05:00+02:00",
+    "unix": 1774040700,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 23,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00148",
+    "timestamp": "2026-03-20T23:30:00+02:00",
+    "unix": 1774042200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 23,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00149",
+    "timestamp": "2026-03-21T12:30:00+02:00",
+    "unix": 1774089000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00150",
+    "timestamp": "2026-03-21T23:30:00+02:00",
+    "unix": 1774128600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 23,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00151",
+    "timestamp": "2026-03-22T07:30:00+02:00",
+    "unix": 1774157400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-22"
+  },
+  {
+    "id": "avg-00152",
+    "timestamp": "2026-03-22T12:30:00+02:00",
+    "unix": 1774175400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
     "date": "2026-03-22"
   }
 ]

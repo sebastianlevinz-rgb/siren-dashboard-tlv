@@ -1,0 +1,24 @@
+Fecha,Dia,Oleadas_Iran_Total,Oleadas_TLV,Oleadas_Sur,Oleadas_Norte,Oleadas_Jerusalem,Muertos,Heridos,Acumulado_Oleadas,H00,H01,H02,H03,H04,H05,H06,H07,H08,H09,H10,H11,H12,H13,H14,H15,H16,H17,H18,H19,H20,H21,H22,H23,Notas
+2026-02-28,Sab,44,18,8,6,12,1,89,44,0,0,0,0,0,0,0,0,0,2,4,3,8,3,5,5,2,2,1,3,3,2,1,0,Día 1. Represalia iraní desde 11:05 IST. ~170 misiles. Mujer muerta en TLV. Horas confirmadas.
+2026-03-01,Dom,55,21,13,12,9,9,49,99,0,0,0,0,0,0,1,5,3,2,3,4,10,4,6,6,3,2,2,1,1,1,1,0,Día más intenso. Sinagoga Beit Shemesh (9 muertos). Distribución horaria estimada según patrón.
+2026-03-02,Lun,10,4,3,2,1,0,300,109,0,0,0,0,0,0,0,1,0,0,1,1,2,0,1,1,1,1,0,0,1,0,0,0,Estabilización post-pico inicial. Distribución estimada.
+2026-03-03,Mar,10,4,2,2,2,0,200,119,0,0,0,0,0,0,0,1,0,0,1,1,2,0,1,1,1,1,0,0,1,0,0,0,Impacto en Ramat Gan (sin víctimas fatales). Distribución estimada.
+2026-03-04,Mie,9,3,2,2,2,0,200,128,0,0,0,0,0,0,0,1,0,0,1,0,2,0,2,1,0,1,0,0,1,0,0,0,Distribución estimada. Oleadas confirmadas por Alma Center.
+2026-03-05,Jue,9,4,2,2,1,0,200,137,0,0,0,0,0,0,0,1,0,0,1,0,2,1,1,1,0,1,0,0,0,1,0,0,Irán declara >500 misiles desde 28 feb. Distribución estimada.
+2026-03-06,Vie,7,3,2,1,1,0,200,144,0,0,0,0,0,0,0,0,0,0,1,0,2,0,1,0,0,0,0,1,1,1,0,0,"Horas confirmadas de alertas a las 10:10, 19:16, 20:40, 21:54."
+2026-03-07,Sab,12,4,3,3,2,0,200,156,0,0,0,0,0,0,0,2,0,0,1,1,3,1,1,1,1,0,0,1,0,0,0,0,Fin de semana. Distribución estimada.
+2026-03-08,Dom,9,4,2,2,1,2,262,165,0,0,0,0,0,0,0,1,0,0,1,0,2,0,1,2,1,0,0,0,1,0,0,0,Checkpoint Alma: 165 acumuladas. 12 muertos y 1900 heridos en total a la fecha.
+2026-03-09,Lun,12,4,1,7,0,2,200,177,0,0,0,0,0,0,0,1,0,1,1,1,3,1,1,1,1,0,0,1,0,0,0,0,2 muertos en Yehud (submuniciones cluster). Cambio de patrón (7 oleadas al norte).
+2026-03-10,Mar,9,4,2,2,1,0,239,186,0,0,0,0,0,0,0,1,0,0,1,0,2,1,1,1,0,0,0,1,0,1,0,0,"Checkpoint Alma: 186 acumuladas (73 TLV). Total bajas: 14 muertos, 2339 heridos."
+2026-03-11,Mie,10,5,2,2,1,0,124,196,0,0,0,0,0,0,0,1,1,0,0,1,3,0,1,2,0,0,0,0,1,0,0,0,10 misiles balísticos cabezas múltiples a TLV. 124 heridos. Distribución estimada.
+2026-03-12,Jue,10,5,2,2,1,0,282,206,0,0,0,0,0,0,0,1,0,0,1,1,2,0,2,1,1,0,0,1,0,0,0,0,"Checkpoint Alma: 206 acumuladas (83 TLV). Total bajas: 14 muertos, 2745 heridos."
+2026-03-13,Vie,10,1,4,3,2,0,200,216,0,0,0,0,0,0,0,1,0,0,1,1,2,0,1,2,1,0,0,1,0,0,0,0,Distribución estimada.
+2026-03-14,Sab,9,1,4,2,2,0,200,225,0,0,0,0,0,0,0,1,0,0,1,0,2,0,2,1,0,1,0,0,1,0,0,0,Distribución estimada.
+2026-03-15,Dom,10,5,5,0,0,0,184,235,0,0,0,0,0,0,0,1,0,1,0,1,2,1,2,1,0,0,0,0,1,0,0,0,Checkpoint Alma: 235 acumuladas (90 TLV). 5 oleadas a TLV y 5 al sur.
+2026-03-16,Lun,10,5,2,2,1,1,100,245,0,0,0,0,0,0,0,1,0,0,1,0,2,1,1,1,0,1,0,1,0,1,0,0,"Checkpoint Alma: 245 acumuladas (95 TLV). Total bajas: 15 muertos, >3329 heridos."
+2026-03-17,Mar,12,5,3,2,2,2,150,257,0,0,0,0,0,0,0,2,0,1,1,0,3,1,1,1,1,0,0,1,0,0,0,0,Checkpoint Alma: 257. Munición cluster edificio Ramat Gan (2 muertos).
+2026-03-18,Mie,11,5,3,2,1,0,150,268,0,0,0,0,0,0,0,1,0,1,1,0,2,1,1,1,1,0,0,1,1,0,0,0,Checkpoint Alma: 268 acumuladas (105 TLV).
+2026-03-19,Jue,13,6,3,2,2,0,205,281,0,0,0,0,0,0,0,2,0,0,1,1,3,1,1,2,1,0,0,0,1,0,0,0,"Checkpoint Alma: 281 (111 TLV). Aumento de oleadas. Bajas: 17 muertos, >3834 heridos."
+2026-03-20,Vie,19,6,5,5,3,1,168,300,0,0,0,0,0,0,1,2,1,1,1,2,3,1,2,2,1,0,0,1,1,0,0,0,Checkpoint Alma: 300 (117 TLV). Titular Times of Israel: 9 ataques masivos. Escalada grave.
+2026-03-21,Sab,8,2,4,1,1,0,100,308,0,0,0,0,0,0,0,1,0,0,1,0,2,0,1,1,0,1,0,1,0,0,0,0,8 salvas reportadas. Impactos en Dimona/Arad (~100 heridos) y daño cluster en TLV.
+2026-03-22,Dom,2,1,1,0,0,0,0,310,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,Datos parciales del día actual en curso. Distribución preliminar.

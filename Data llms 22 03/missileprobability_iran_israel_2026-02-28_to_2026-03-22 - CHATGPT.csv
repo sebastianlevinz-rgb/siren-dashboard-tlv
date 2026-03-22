@@ -1,0 +1,24 @@
+Fecha,Dia,Oleadas_Iran_Total,Oleadas_TLV,Oleadas_Sur,Oleadas_Norte,Oleadas_Jerusalem,Muertos,Heridos,Acumulado_Oleadas,H00,H01,H02,H03,H04,H05,H06,H07,H08,H09,H10,H11,H12,H13,H14,H15,H16,H17,H18,H19,H20,H21,H22,H23,Notas
+2026-02-28,Sab,44,18,8,6,12,1,260,44,1,0,0,0,0,0,0,2,1,1,2,6,11,2,3,3,2,1,2,2,2,1,1,1,CONF Alma total. Horas ancladas: 11:05 inicio represalia; 12:15 primeros impactos. Resto horario y reparto regional EST.
+2026-03-01,Dom,55,21,13,13,8,9,720,99,1,0,0,0,0,0,0,6,1,1,2,2,13,1,8,8,1,1,1,6,1,1,1,0,"CONF Alma total. Beit Shemesh: sinagoga impactada, 9 muertos y 49 heridos. Horario EST por patrón Tzofar."
+2026-03-02,Lun,16,7,4,3,2,0,240,115,0,0,0,0,0,0,0,2,0,0,1,1,4,0,3,3,0,0,0,1,1,0,0,0,CONF Alma total. Horario y regiones EST por retrocálculo acumulado Alma/Tzofar.
+2026-03-03,Mar,10,4,2,2,2,0,140,125,0,0,0,0,0,0,0,1,0,0,0,1,3,0,2,2,0,0,0,1,0,0,0,0,CONF Alma total. Impacto reportado en Ramat Gan. Horario y regiones EST.
+2026-03-04,Mié,10,4,2,2,2,0,140,135,0,0,0,0,0,0,0,2,0,0,0,1,3,0,2,2,0,0,0,0,0,0,0,0,CONF Alma total. Sirenas en Jerusalén/TLV/centro reportadas. Horario y regiones EST.
+2026-03-05,Jue,11,5,2,3,1,0,155,146,0,0,0,0,0,0,0,2,0,0,0,0,3,0,3,2,0,0,0,1,0,0,0,0,CONF Alma total. ToI reportó 8 salvas visibles ese día; Alma 11 oleadas. Horario parcialmente EST.
+2026-03-06,Vie,7,3,2,1,1,0,120,153,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,0,0,0,1,1,1,0,0,"CONF Alma total. Horas ancladas por alertas/ sirenas: 10:10, 19:16, 20:40, 21:54. Reparto regional EST."
+2026-03-07,Sab,12,2,4,5,1,0,186,165,1,0,1,0,1,1,1,1,0,0,0,1,1,0,1,1,0,0,0,1,1,0,0,0,"CONF Alma total. ToI: 5ª oleada desde medianoche a las 06:24. Patrón horario mixto madrugada+diurno, resto EST."
+2026-03-08,Dom,9,5,3,1,0,2,181,174,0,0,0,0,0,0,0,1,0,0,0,0,3,0,3,1,0,0,0,1,0,0,0,0,CONF Alma total y regiones. Horario EST por patrón Tzofar. ~181 heridos reportados en 24h.
+2026-03-09,Lun,12,4,1,7,0,2,197,186,1,0,0,0,0,0,0,2,0,0,0,1,3,0,2,1,0,0,0,1,1,0,0,0,CONF Alma total y regiones. Dos trabajadores muertos en Yehud; fuerte desvío de fuego al norte.
+2026-03-10,Mar,9,5,1,2,1,0,218,195,0,0,0,0,0,0,0,2,0,0,0,0,3,0,2,2,0,0,0,0,0,0,0,0,CONF Alma total y regiones. Horario EST por patrón Tzofar.
+2026-03-11,Mié,11,5,2,2,2,0,188,206,0,0,0,0,0,0,0,1,0,0,0,2,4,0,3,1,0,0,0,0,0,0,0,0,CONF Alma total y regiones. Lanzamiento de misiles multiojiva hacia TLV; heridos estimados por diferencia acumulada.
+2026-03-12,Jue,8,3,2,1,2,1,230,214,0,0,0,0,0,0,0,2,0,0,0,0,3,0,2,1,0,0,0,0,0,0,0,0,CONF 8 oleadas y regiones; la cifra acumulada pública de Alma parece tener un typo (206 vs 214). Horario EST.
+2026-03-13,Vie,10,2,3,4,1,0,100,224,0,0,0,0,0,0,0,1,0,0,0,1,3,0,2,1,0,0,0,2,0,0,0,0,EST. Alma fin de semana 13-14 tiene inconsistencia interna; aquí se usa reconciliación de acumulados. ToI registra daños vespertinos en centro.
+2026-03-14,Sab,11,2,4,4,1,0,120,235,0,0,0,0,0,0,0,2,0,0,0,1,3,0,3,1,0,0,0,1,0,0,0,0,EST. Alma fin de semana 13-14 parece subcontar; total diario inferido por acumulados posteriores. Horario/regiones EST.
+2026-03-15,Dom,10,5,5,0,0,0,134,245,1,1,0,1,0,1,0,2,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0,0,"CONF Alma total y regiones. ToI reportó múltiples salvas de madrugada; horas iniciales ancladas, resto EST."
+2026-03-16,Lun,12,4,4,2,2,0,135,257,0,0,0,0,0,0,0,2,0,0,0,1,3,0,3,2,0,0,0,1,0,0,0,0,CONF Alma total y regiones. Heridos diarios EST por diferencia de acumulados.
+2026-03-17,Mar,11,6,2,2,1,0,140,268,0,0,0,0,0,0,0,2,0,0,0,1,3,0,3,1,0,0,0,0,1,0,0,0,CONF Alma total y regiones. Horario EST; daño cluster previo reflejado al día siguiente.
+2026-03-18,Mié,13,6,4,1,2,2,230,281,0,0,1,0,0,0,0,2,0,0,0,1,3,0,3,1,0,0,0,2,0,0,0,0,CONF Alma total y regiones. Ataque de madrugada con warhead cluster en Ramat Gan; 2 muertos.
+2026-03-19,Jue,19,6,2,6,5,1,168,300,1,0,0,0,0,0,0,1,0,0,1,1,3,1,3,1,1,0,3,1,1,1,0,0,CONF Alma total y regiones. Día excepcional: 19 oleadas; 1 trabajador extranjero muerto en centro.
+2026-03-20,Vie,21,8,6,3,4,0,150,321,1,1,1,0,0,0,1,1,1,0,3,0,2,2,0,1,0,2,1,0,2,2,0,0,"EST. Alma da 29 oleadas para 20-21 y ToI fija 21/03=8, por lo que 20/03=21 por diferencia; ToI también tituló '9 ataques el viernes' (contradicción abierta)."
+2026-03-21,Sab,8,1,6,1,0,0,412,329,1,0,0,1,0,1,0,0,1,0,0,0,0,0,0,0,1,1,0,0,1,0,1,0,"MIXTO. ToI fija al menos 8 oleadas ese día; horas ancladas 05:30, 08:20, 16:56, 17:07, 18:59, 20:39, 22:28. Reparto regional EST."
+2026-03-22,Dom,8,4,4,0,0,0,195,337,0,0,0,0,0,0,0,1,0,1,0,0,1,0,1,1,0,1,0,1,1,0,0,0,"PROV. Alma 22/03 aún resume sólo 20-21; aquí se usa ToI/Reuters: 8 salvas, 15 heridos por cluster en centro y ~200 heridos en sur."
