@@ -6,33 +6,19 @@ import DailyTimeline from "./components/DailyTimeline";
 import HourlyHistogram from "./components/HourlyHistogram";
 import TrendChart from "./components/TrendChart";
 import Recommendations from "./components/Recommendations";
+import { fetchFromGoogleSheet, fetchFromLocalCSV } from "./utils/sheets";
 import "./App.css";
 
-const GUSH_DAN_KEYWORDS = [
-  "\u05EA\u05DC \u05D0\u05D1\u05D9\u05D1",
-  "\u05E8\u05DE\u05EA \u05D2\u05DF",
-  "\u05D1\u05E0\u05D9 \u05D1\u05E8\u05E7",
-  "\u05D2\u05D1\u05E2\u05EA\u05D9\u05D9\u05DD",
-  "\u05D7\u05D5\u05DC\u05D5\u05DF",
-  "\u05D1\u05EA \u05D9\u05DD",
-  "\u05E4\u05EA\u05D7 \u05EA\u05E7\u05D5\u05D5\u05D4",
-  "\u05E8\u05D0\u05E9\u05D5\u05DF \u05DC\u05E6\u05D9\u05D5\u05DF",
-  "\u05D4\u05E8\u05E6\u05DC\u05D9\u05D4",
-  "\u05D2\u05D1\u05E2\u05EA \u05E9\u05DE\u05D5\u05D0\u05DC",
-  "\u05E7\u05E8\u05D9\u05EA \u05D0\u05D5\u05E0\u05D5",
-  "\u05D0\u05D5\u05E8 \u05D9\u05D4\u05D5\u05D3\u05D4",
-  "\u05D9\u05D4\u05D5\u05D3",
-];
+/**
+ * DATA SOURCE PRIORITY:
+ * 1. Google Sheets (if SHEET_URL is set) — you edit the sheet, dashboard updates
+ * 2. Local CSV (public/data/alerts-by-day-hour.csv)
+ * 3. Local JSON (public/data/alerts.json) — original generated data
+ */
 
-function isGushDan(city: string): boolean {
-  return GUSH_DAN_KEYWORDS.some((kw) => city.includes(kw));
-}
-
-const THREAT_MAP: Record<number, string> = {
-  0: "missiles",
-  1: "missiles",
-  5: "hostile_aircraft",
-};
+// To connect Google Sheets: paste your published CSV URL here
+// Instructions in the README / at the bottom of this file
+const SHEET_URL = "";
 
 type TabId = "heatmap" | "timeline" | "histogram" | "trend" | "recommendations";
 
@@ -48,69 +34,61 @@ function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
   const [loading, setLoading] = useState(true);
   const [lastUpdate, setLastUpdate] = useState("\u2014");
+  const [dataSource, setDataSource] = useState("");
   const [activeTab, setActiveTab] = useState<TabId>("heatmap");
 
   const loadData = useCallback(async () => {
     setLoading(true);
+
+    // 1. Try Google Sheets
+    if (SHEET_URL) {
+      try {
+        const data = await fetchFromGoogleSheet(SHEET_URL);
+        if (data.length > 0) {
+          setAlerts(data);
+          setDataSource("Google Sheets");
+          setLastUpdate(new Date().toLocaleString("es-AR"));
+          setLoading(false);
+          return;
+        }
+      } catch (e) {
+        console.warn("Google Sheets fetch failed, trying local CSV:", e);
+      }
+    }
+
+    // 2. Try local CSV
+    try {
+      const data = await fetchFromLocalCSV();
+      if (data.length > 0) {
+        setAlerts(data);
+        setDataSource("CSV local");
+        setLastUpdate(new Date().toLocaleString("es-AR"));
+        setLoading(false);
+        return;
+      }
+    } catch (e) {
+      console.warn("Local CSV failed, trying JSON:", e);
+    }
+
+    // 3. Fallback to JSON
     try {
       const res = await fetch("/data/alerts.json");
       if (res.ok) {
         const data: Alert[] = await res.json();
         setAlerts(data);
+        setDataSource("JSON local");
         setLastUpdate(new Date().toLocaleString("es-AR"));
       }
     } catch (e) {
-      console.error("Failed to load alerts:", e);
+      console.error("All data sources failed:", e);
     }
+
     setLoading(false);
   }, []);
 
-  const fetchLive = useCallback(async () => {
-    setLoading(true);
-    try {
-      const res = await fetch("https://api.tzevaadom.co.il/alerts-history");
-      if (!res.ok) throw new Error("Tzofar API error");
-      const data = await res.json();
-
-      const existingIds = new Set(alerts.map((a) => a.id));
-      const newAlerts: Alert[] = [];
-
-      for (const group of data) {
-        for (const alert of group.alerts) {
-          const gushDanCities = alert.cities.filter(isGushDan);
-          if (gushDanCities.length === 0) continue;
-
-          const id = `tzofar-${group.id}-${alert.time}`;
-          if (existingIds.has(id)) continue;
-
-          const dt = new Date(alert.time * 1000);
-          newAlerts.push({
-            id,
-            timestamp: dt.toISOString(),
-            unix: alert.time,
-            cities: gushDanCities,
-            cities_en: gushDanCities,
-            threat: (THREAT_MAP[alert.threat] || "unknown") as Alert["threat"],
-            threat_code: alert.threat,
-            isDrill: alert.isDrill,
-            day_of_week: dt.getDay(),
-            hour: dt.getHours(),
-            date: dt.toISOString().split("T")[0],
-          });
-        }
-      }
-
-      if (newAlerts.length > 0) {
-        const merged = [...alerts, ...newAlerts].sort((a, b) => a.unix - b.unix);
-        setAlerts(merged);
-      }
-
-      setLastUpdate(new Date().toLocaleString("es-AR"));
-    } catch (e) {
-      console.error("Live fetch error:", e);
-    }
-    setLoading(false);
-  }, [alerts]);
+  const refreshData = useCallback(async () => {
+    await loadData();
+  }, [loadData]);
 
   useEffect(() => {
     loadData();
@@ -121,7 +99,8 @@ function App() {
       <Header
         alerts={alerts}
         lastUpdate={lastUpdate}
-        onRefresh={fetchLive}
+        dataSource={dataSource}
+        onRefresh={refreshData}
         loading={loading}
       />
 
@@ -147,7 +126,7 @@ function App() {
 
       <footer className="dashboard-footer">
         <span>
-          Datos: Tzofar + Pikud HaOref | Stats: Alma Center / ACLED
+          Fuente: {dataSource || "cargando..."} | Tzofar + Alma Center
         </span>
         <span>Dashboard personal — no reemplaza al Pikud HaOref</span>
       </footer>

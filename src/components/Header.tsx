@@ -5,6 +5,7 @@ import { buildDailySummaries } from "../utils/data";
 interface Props {
   alerts: Alert[];
   lastUpdate: string;
+  dataSource: string;
   onRefresh: () => void;
   loading: boolean;
 }
@@ -12,6 +13,7 @@ interface Props {
 export default function Header({
   alerts,
   lastUpdate,
+  dataSource,
   onRefresh,
   loading,
 }: Props) {
@@ -21,13 +23,8 @@ export default function Header({
   const missiles = alerts.filter((a) => a.threat === "missiles").length;
   const aircraft = alerts.filter((a) => a.threat === "hostile_aircraft").length;
 
-  const dateRange =
-    days.length > 0
-      ? `${days[0].date.split("-").reverse().join("/")} - ${days[days.length - 1].date.split("-").reverse().join("/")}`
-      : "-";
-
   const handleShare = async () => {
-    const text = `Siren Dashboard TLV: ${totalAlerts} alertas en ${totalDays} dias (${dateRange})`;
+    const text = `Siren Dashboard TLV: ${totalAlerts} alertas en ${totalDays} dias`;
     const url = window.location.href;
     if (navigator.share) {
       try {
@@ -87,8 +84,8 @@ export default function Header({
           <span className="stat-label">Prom/dia</span>
         </div>
         <div className="stat">
-          <span className="stat-value small">{lastUpdate}</span>
-          <span className="stat-label">Actualiz.</span>
+          <span className="stat-value small">{dataSource}</span>
+          <span className="stat-label">Fuente</span>
         </div>
       </div>
     </header>
