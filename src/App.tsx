@@ -126,7 +126,7 @@ function App() {
 
       <footer className="dashboard-footer">
         <span>
-          Fuente: Tzofar Telegram (tzevaadom.co.il) | {dataSource || "cargando..."}
+          Fuente: Tzofar Telegram @tzevaadom_en | {dataSource || "cargando..."}
         </span>
         <span>Dashboard personal — no reemplaza al Pikud HaOref</span>
       </footer>
