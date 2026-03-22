@@ -266,6 +266,25 @@ html, body {
   padding: 2px 0;
 }
 
+.heatmap-hour-label.night {
+  color: var(--text-muted);
+  opacity: 0.5;
+}
+
+.heatmap-cell.night {
+  opacity: 0.7;
+}
+
+.legend-separator {
+  color: var(--border);
+  margin: 0 4px;
+}
+
+.night-indicator {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 .heatmap-day-label {
   font-size: 10px;
   color: var(--text-secondary);
@@ -553,12 +572,19 @@ html, body {
 
 /* ===== HISTOGRAM ===== */
 
+.histogram-panel {
+  overflow: hidden;
+}
+
 .histogram-chart {
   display: flex;
   gap: 2px;
   align-items: flex-end;
   height: 220px;
   padding-bottom: 28px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  min-width: 0;
 }
 
 .histogram-bar-wrapper {
@@ -775,7 +801,7 @@ html, body {
 .trend-svg {
   width: 100%;
   height: auto;
-  min-width: 550px;
+  min-width: 400px;
 }
 
 .trend-legend {
@@ -1040,14 +1066,32 @@ html, body {
     height: 120px;
   }
 
-  /* Histogram */
+  /* Histogram: contained, no overflow */
   .histogram-chart {
     height: 180px;
+    overflow: visible;
+    gap: 1px;
   }
 
-  /* Trend */
+  .histogram-bar-wrapper {
+    min-width: 0;
+  }
+
+  .histogram-pct {
+    font-size: 6px;
+  }
+
+  .histogram-hour {
+    font-size: 6px;
+  }
+
+  /* Trend: smaller, readable */
   .trend-svg {
-    min-width: 450px;
+    min-width: 340px;
+  }
+
+  .trend-panel .panel-subtitle {
+    margin-bottom: 8px;
   }
 
   /* Recommendations */
@@ -1057,6 +1101,11 @@ html, body {
 
   .rec-franja-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .heatmap-legend {
+    flex-wrap: wrap;
+    gap: 4px;
   }
 
   .routine-windows {

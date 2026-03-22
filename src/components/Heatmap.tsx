@@ -6,6 +6,9 @@ interface Props {
   alerts: Alert[];
 }
 
+// Start at 6:00, wrap around so order is 6,7,...,23,0,1,2,3,4,5
+const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
+
 export default function Heatmap({ alerts }: Props) {
   const [selectedCell, setSelectedCell] = useState<HeatmapCell | null>(null);
 
@@ -15,23 +18,20 @@ export default function Heatmap({ alerts }: Props) {
     [grid]
   );
 
-  // Israel order: Sunday first
   const dayOrder = [0, 1, 2, 3, 4, 5, 6];
 
   return (
     <div className="panel heatmap-panel">
-      <h2>Alertas por Día × Hora</h2>
+      <h2>Alertas por Dia x Hora</h2>
       <p className="panel-subtitle">
-        Acumulado total — cada celda suma todas las alertas para esa combinación
-        día/hora
+        Acumulado total — cada celda suma todas las alertas. Empieza a las 06:00.
       </p>
 
       <div className="heatmap-container">
-        {/* Hour labels on top */}
         <div className="heatmap-grid">
           <div className="heatmap-corner" />
-          {Array.from({ length: 24 }, (_, h) => (
-            <div key={h} className="heatmap-hour-label">
+          {HOUR_ORDER.map((h) => (
+            <div key={h} className={`heatmap-hour-label ${h < 6 ? "night" : ""}`}>
               {h}
             </div>
           ))}
@@ -41,24 +41,18 @@ export default function Heatmap({ alerts }: Props) {
               <div className="heatmap-day-label">
                 {DAY_NAMES[day]}
               </div>
-              {Array.from({ length: 24 }, (_, hour) => {
+              {HOUR_ORDER.map((hour) => {
                 const cell = grid[day][hour];
                 return (
                   <div
                     key={`${day}-${hour}`}
                     className={`heatmap-cell ${
-                      selectedCell?.day === day && selectedCell?.hour === hour
-                        ? "selected"
-                        : ""
-                    }`}
-                    style={{
-                      backgroundColor: getRiskColor(cell.count, maxCount),
-                    }}
+                      selectedCell?.day === day && selectedCell?.hour === hour ? "selected" : ""
+                    } ${hour < 6 ? "night" : ""}`}
+                    style={{ backgroundColor: getRiskColor(cell.count, maxCount) }}
                     onClick={() =>
                       setSelectedCell(
-                        selectedCell?.day === day && selectedCell?.hour === hour
-                          ? null
-                          : cell
+                        selectedCell?.day === day && selectedCell?.hour === hour ? null : cell
                       )
                     }
                     title={`${DAY_NAMES[day]} ${formatHour(hour)}: ${cell.count} alertas`}
@@ -73,7 +67,6 @@ export default function Heatmap({ alerts }: Props) {
           ))}
         </div>
 
-        {/* Color legend */}
         <div className="heatmap-legend">
           <span>Calma</span>
           <div className="legend-bar">
@@ -86,28 +79,23 @@ export default function Heatmap({ alerts }: Props) {
             ))}
           </div>
           <span>Peligro</span>
+          <span className="legend-separator">|</span>
+          <span className="night-indicator">Zona gris = madrugada</span>
         </div>
       </div>
 
-      {/* Detail panel */}
       {selectedCell && selectedCell.alerts.length > 0 && (
         <div className="heatmap-detail">
           <h3>
-            {DAY_NAMES[selectedCell.day]} a las {formatHour(selectedCell.hour)} —{" "}
-            {selectedCell.count} alertas
+            {DAY_NAMES[selectedCell.day]} a las {formatHour(selectedCell.hour)} — {selectedCell.count} alertas
           </h3>
           <div className="detail-list">
             {selectedCell.alerts.slice(0, 20).map((a) => (
               <div key={a.id} className="detail-item">
                 <span className="detail-time">
-                  {new Date(a.timestamp).toLocaleDateString("es-AR", {
-                    day: "2-digit",
-                    month: "2-digit",
-                  })}
+                  {new Date(a.timestamp).toLocaleDateString("es-AR", { day: "2-digit", month: "2-digit" })}
                 </span>
-                <span
-                  className={`detail-threat ${a.threat}`}
-                >
+                <span className={`detail-threat ${a.threat}`}>
                   {a.threat === "missiles" ? "MISIL" : "DRONE"}
                 </span>
                 <span className="detail-cities">
@@ -116,9 +104,7 @@ export default function Heatmap({ alerts }: Props) {
               </div>
             ))}
             {selectedCell.alerts.length > 20 && (
-              <div className="detail-more">
-                +{selectedCell.alerts.length - 20} más
-              </div>
+              <div className="detail-more">+{selectedCell.alerts.length - 20} mas</div>
             )}
           </div>
         </div>

@@ -15,10 +15,10 @@ export default function TrendChart({ alerts }: Props) {
   const ma3 = movingAverage(counts, 3);
   const maxVal = Math.max(...counts, 1);
 
-  // SVG dimensions
-  const W = 800;
-  const H = 250;
-  const PAD = 40;
+  // SVG dimensions — compact for mobile
+  const W = 600;
+  const H = 220;
+  const PAD = 35;
   const chartW = W - PAD * 2;
   const chartH = H - PAD * 2;
 

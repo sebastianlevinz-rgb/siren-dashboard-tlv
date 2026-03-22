@@ -1,8 +1,23 @@
 [
   {
     "id": "avg-00001",
-    "timestamp": "2026-02-28T07:30:00+02:00",
-    "unix": 1772256600,
+    "timestamp": "2026-02-28T00:30:00+02:00",
+    "unix": 1772231400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 0,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00002",
+    "timestamp": "2026-02-28T07:05:00+02:00",
+    "unix": 1772255100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -15,9 +30,39 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00002",
-    "timestamp": "2026-02-28T09:30:00+02:00",
-    "unix": 1772263800,
+    "id": "avg-00003",
+    "timestamp": "2026-02-28T07:30:00+02:00",
+    "unix": 1772256600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 7,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00004",
+    "timestamp": "2026-02-28T08:30:00+02:00",
+    "unix": 1772260200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 8,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00005",
+    "timestamp": "2026-02-28T09:05:00+02:00",
+    "unix": 1772262300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -30,9 +75,24 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00003",
-    "timestamp": "2026-02-28T10:30:00+02:00",
-    "unix": 1772267400,
+    "id": "avg-00006",
+    "timestamp": "2026-02-28T09:30:00+02:00",
+    "unix": 1772263800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 9,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00007",
+    "timestamp": "2026-02-28T10:05:00+02:00",
+    "unix": 1772265900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -45,7 +105,37 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00004",
+    "id": "avg-00008",
+    "timestamp": "2026-02-28T10:21:00+02:00",
+    "unix": 1772266860,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 10,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00009",
+    "timestamp": "2026-02-28T10:38:00+02:00",
+    "unix": 1772267880,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 10,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00010",
     "timestamp": "2026-02-28T11:05:00+02:00",
     "unix": 1772269500,
     "cities": [],
@@ -60,9 +150,39 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00005",
+    "id": "avg-00011",
+    "timestamp": "2026-02-28T11:17:00+02:00",
+    "unix": 1772270220,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 11,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00012",
     "timestamp": "2026-02-28T11:30:00+02:00",
     "unix": 1772271000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 11,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00013",
+    "timestamp": "2026-02-28T11:42:00+02:00",
+    "unix": 1772271720,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -75,7 +195,7 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00006",
+    "id": "avg-00014",
     "timestamp": "2026-02-28T12:05:00+02:00",
     "unix": 1772273100,
     "cities": [],
@@ -90,9 +210,9 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00007",
-    "timestamp": "2026-02-28T12:17:00+02:00",
-    "unix": 1772273820,
+    "id": "avg-00015",
+    "timestamp": "2026-02-28T12:10:00+02:00",
+    "unix": 1772273400,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -105,9 +225,9 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00008",
-    "timestamp": "2026-02-28T12:30:00+02:00",
-    "unix": 1772274600,
+    "id": "avg-00016",
+    "timestamp": "2026-02-28T12:16:00+02:00",
+    "unix": 1772273760,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -120,9 +240,54 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00009",
-    "timestamp": "2026-02-28T12:42:00+02:00",
-    "unix": 1772275320,
+    "id": "avg-00017",
+    "timestamp": "2026-02-28T12:21:00+02:00",
+    "unix": 1772274060,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00018",
+    "timestamp": "2026-02-28T12:27:00+02:00",
+    "unix": 1772274420,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00019",
+    "timestamp": "2026-02-28T12:32:00+02:00",
+    "unix": 1772274720,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00020",
+    "timestamp": "2026-02-28T12:38:00+02:00",
+    "unix": 1772275080,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -135,9 +300,39 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00010",
-    "timestamp": "2026-02-28T13:30:00+02:00",
-    "unix": 1772278200,
+    "id": "avg-00021",
+    "timestamp": "2026-02-28T12:43:00+02:00",
+    "unix": 1772275380,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00022",
+    "timestamp": "2026-02-28T12:49:00+02:00",
+    "unix": 1772275740,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00023",
+    "timestamp": "2026-02-28T13:05:00+02:00",
+    "unix": 1772276700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -150,7 +345,37 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00011",
+    "id": "avg-00024",
+    "timestamp": "2026-02-28T13:21:00+02:00",
+    "unix": 1772277660,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 13,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00025",
+    "timestamp": "2026-02-28T13:38:00+02:00",
+    "unix": 1772278680,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 13,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00026",
     "timestamp": "2026-02-28T14:05:00+02:00",
     "unix": 1772280300,
     "cities": [],
@@ -165,9 +390,39 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00012",
+    "id": "avg-00027",
+    "timestamp": "2026-02-28T14:17:00+02:00",
+    "unix": 1772281020,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 14,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00028",
     "timestamp": "2026-02-28T14:30:00+02:00",
     "unix": 1772281800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 14,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00029",
+    "timestamp": "2026-02-28T14:42:00+02:00",
+    "unix": 1772282520,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -180,7 +435,7 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00013",
+    "id": "avg-00030",
     "timestamp": "2026-02-28T15:05:00+02:00",
     "unix": 1772283900,
     "cities": [],
@@ -195,9 +450,39 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00014",
+    "id": "avg-00031",
+    "timestamp": "2026-02-28T15:17:00+02:00",
+    "unix": 1772284620,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 15,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00032",
     "timestamp": "2026-02-28T15:30:00+02:00",
     "unix": 1772285400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 15,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00033",
+    "timestamp": "2026-02-28T15:42:00+02:00",
+    "unix": 1772286120,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -210,9 +495,9 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00015",
-    "timestamp": "2026-02-28T16:30:00+02:00",
-    "unix": 1772289000,
+    "id": "avg-00034",
+    "timestamp": "2026-02-28T16:05:00+02:00",
+    "unix": 1772287500,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -225,9 +510,54 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00016",
-    "timestamp": "2026-02-28T19:30:00+02:00",
-    "unix": 1772299800,
+    "id": "avg-00035",
+    "timestamp": "2026-02-28T16:30:00+02:00",
+    "unix": 1772289000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 16,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00036",
+    "timestamp": "2026-02-28T17:30:00+02:00",
+    "unix": 1772292600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 17,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00037",
+    "timestamp": "2026-02-28T18:30:00+02:00",
+    "unix": 1772296200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 18,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00038",
+    "timestamp": "2026-02-28T19:05:00+02:00",
+    "unix": 1772298300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -240,9 +570,24 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00017",
-    "timestamp": "2026-02-28T20:30:00+02:00",
-    "unix": 1772303400,
+    "id": "avg-00039",
+    "timestamp": "2026-02-28T19:30:00+02:00",
+    "unix": 1772299800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 19,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00040",
+    "timestamp": "2026-02-28T20:05:00+02:00",
+    "unix": 1772301900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -255,9 +600,24 @@
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00018",
-    "timestamp": "2026-02-28T23:30:00+02:00",
-    "unix": 1772314200,
+    "id": "avg-00041",
+    "timestamp": "2026-02-28T20:30:00+02:00",
+    "unix": 1772303400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 20,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00042",
+    "timestamp": "2026-02-28T21:30:00+02:00",
+    "unix": 1772307000,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -266,11 +626,56 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 6,
-    "hour": 23,
+    "hour": 21,
     "date": "2026-02-28"
   },
   {
-    "id": "avg-00019",
+    "id": "avg-00043",
+    "timestamp": "2026-02-28T22:30:00+02:00",
+    "unix": 1772310600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 22,
+    "date": "2026-02-28"
+  },
+  {
+    "id": "avg-00044",
+    "timestamp": "2026-03-01T00:30:00+02:00",
+    "unix": 1772317800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 0,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00045",
+    "timestamp": "2026-03-01T06:30:00+02:00",
+    "unix": 1772339400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 6,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00046",
     "timestamp": "2026-03-01T07:05:00+02:00",
     "unix": 1772341500,
     "cities": [],
@@ -285,9 +690,39 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00020",
-    "timestamp": "2026-03-01T07:30:00+02:00",
-    "unix": 1772343000,
+    "id": "avg-00047",
+    "timestamp": "2026-03-01T07:15:00+02:00",
+    "unix": 1772342100,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00048",
+    "timestamp": "2026-03-01T07:25:00+02:00",
+    "unix": 1772342700,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00049",
+    "timestamp": "2026-03-01T07:35:00+02:00",
+    "unix": 1772343300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -300,9 +735,24 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00021",
-    "timestamp": "2026-03-01T08:30:00+02:00",
-    "unix": 1772346600,
+    "id": "avg-00050",
+    "timestamp": "2026-03-01T07:45:00+02:00",
+    "unix": 1772343900,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 7,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00051",
+    "timestamp": "2026-03-01T08:05:00+02:00",
+    "unix": 1772345100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -315,9 +765,24 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00022",
-    "timestamp": "2026-03-01T09:30:00+02:00",
-    "unix": 1772350200,
+    "id": "avg-00052",
+    "timestamp": "2026-03-01T08:30:00+02:00",
+    "unix": 1772346600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 8,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00053",
+    "timestamp": "2026-03-01T09:05:00+02:00",
+    "unix": 1772348700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -330,9 +795,24 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00023",
-    "timestamp": "2026-03-01T10:30:00+02:00",
-    "unix": 1772353800,
+    "id": "avg-00054",
+    "timestamp": "2026-03-01T09:30:00+02:00",
+    "unix": 1772350200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 9,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00055",
+    "timestamp": "2026-03-01T10:05:00+02:00",
+    "unix": 1772352300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -345,7 +825,37 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00024",
+    "id": "avg-00056",
+    "timestamp": "2026-03-01T10:21:00+02:00",
+    "unix": 1772353260,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 10,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00057",
+    "timestamp": "2026-03-01T10:38:00+02:00",
+    "unix": 1772354280,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 10,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00058",
     "timestamp": "2026-03-01T11:05:00+02:00",
     "unix": 1772355900,
     "cities": [],
@@ -360,9 +870,39 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00025",
+    "id": "avg-00059",
+    "timestamp": "2026-03-01T11:17:00+02:00",
+    "unix": 1772356620,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 11,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00060",
     "timestamp": "2026-03-01T11:30:00+02:00",
     "unix": 1772357400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 11,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00061",
+    "timestamp": "2026-03-01T11:42:00+02:00",
+    "unix": 1772358120,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -375,7 +915,7 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00026",
+    "id": "avg-00062",
     "timestamp": "2026-03-01T12:05:00+02:00",
     "unix": 1772359500,
     "cities": [],
@@ -390,9 +930,9 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00027",
-    "timestamp": "2026-03-01T12:17:00+02:00",
-    "unix": 1772360220,
+    "id": "avg-00063",
+    "timestamp": "2026-03-01T12:10:00+02:00",
+    "unix": 1772359800,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -405,7 +945,52 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00028",
+    "id": "avg-00064",
+    "timestamp": "2026-03-01T12:15:00+02:00",
+    "unix": 1772360100,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00065",
+    "timestamp": "2026-03-01T12:20:00+02:00",
+    "unix": 1772360400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00066",
+    "timestamp": "2026-03-01T12:25:00+02:00",
+    "unix": 1772360700,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00067",
     "timestamp": "2026-03-01T12:30:00+02:00",
     "unix": 1772361000,
     "cities": [],
@@ -420,9 +1005,24 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00029",
-    "timestamp": "2026-03-01T12:42:00+02:00",
-    "unix": 1772361720,
+    "id": "avg-00068",
+    "timestamp": "2026-03-01T12:35:00+02:00",
+    "unix": 1772361300,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00069",
+    "timestamp": "2026-03-01T12:40:00+02:00",
+    "unix": 1772361600,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -435,9 +1035,39 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00030",
-    "timestamp": "2026-03-01T13:30:00+02:00",
-    "unix": 1772364600,
+    "id": "avg-00070",
+    "timestamp": "2026-03-01T12:45:00+02:00",
+    "unix": 1772361900,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00071",
+    "timestamp": "2026-03-01T12:50:00+02:00",
+    "unix": 1772362200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00072",
+    "timestamp": "2026-03-01T13:05:00+02:00",
+    "unix": 1772363100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -450,7 +1080,37 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00031",
+    "id": "avg-00073",
+    "timestamp": "2026-03-01T13:21:00+02:00",
+    "unix": 1772364060,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 13,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00074",
+    "timestamp": "2026-03-01T13:38:00+02:00",
+    "unix": 1772365080,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 13,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00075",
     "timestamp": "2026-03-01T14:05:00+02:00",
     "unix": 1772366700,
     "cities": [],
@@ -465,9 +1125,54 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00032",
+    "id": "avg-00076",
+    "timestamp": "2026-03-01T14:13:00+02:00",
+    "unix": 1772367180,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00077",
+    "timestamp": "2026-03-01T14:21:00+02:00",
+    "unix": 1772367660,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00078",
     "timestamp": "2026-03-01T14:30:00+02:00",
     "unix": 1772368200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00079",
+    "timestamp": "2026-03-01T14:38:00+02:00",
+    "unix": 1772368680,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -480,7 +1185,22 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00033",
+    "id": "avg-00080",
+    "timestamp": "2026-03-01T14:46:00+02:00",
+    "unix": 1772369160,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00081",
     "timestamp": "2026-03-01T15:05:00+02:00",
     "unix": 1772370300,
     "cities": [],
@@ -495,9 +1215,54 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00034",
+    "id": "avg-00082",
+    "timestamp": "2026-03-01T15:13:00+02:00",
+    "unix": 1772370780,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00083",
+    "timestamp": "2026-03-01T15:21:00+02:00",
+    "unix": 1772371260,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00084",
     "timestamp": "2026-03-01T15:30:00+02:00",
     "unix": 1772371800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00085",
+    "timestamp": "2026-03-01T15:38:00+02:00",
+    "unix": 1772372280,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -510,9 +1275,24 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00035",
-    "timestamp": "2026-03-01T16:30:00+02:00",
-    "unix": 1772375400,
+    "id": "avg-00086",
+    "timestamp": "2026-03-01T15:46:00+02:00",
+    "unix": 1772372760,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00087",
+    "timestamp": "2026-03-01T16:05:00+02:00",
+    "unix": 1772373900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -525,9 +1305,24 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00036",
-    "timestamp": "2026-03-01T17:30:00+02:00",
-    "unix": 1772379000,
+    "id": "avg-00088",
+    "timestamp": "2026-03-01T16:30:00+02:00",
+    "unix": 1772375400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 16,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00089",
+    "timestamp": "2026-03-01T17:05:00+02:00",
+    "unix": 1772377500,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -540,9 +1335,39 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00037",
-    "timestamp": "2026-03-01T19:30:00+02:00",
-    "unix": 1772386200,
+    "id": "avg-00090",
+    "timestamp": "2026-03-01T17:30:00+02:00",
+    "unix": 1772379000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 17,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00091",
+    "timestamp": "2026-03-01T18:30:00+02:00",
+    "unix": 1772382600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 18,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00092",
+    "timestamp": "2026-03-01T19:05:00+02:00",
+    "unix": 1772384700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -555,9 +1380,9 @@
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00038",
-    "timestamp": "2026-03-01T23:05:00+02:00",
-    "unix": 1772399100,
+    "id": "avg-00093",
+    "timestamp": "2026-03-01T19:21:00+02:00",
+    "unix": 1772385660,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -566,13 +1391,13 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 0,
-    "hour": 23,
+    "hour": 19,
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00039",
-    "timestamp": "2026-03-01T23:30:00+02:00",
-    "unix": 1772400600,
+    "id": "avg-00094",
+    "timestamp": "2026-03-01T19:38:00+02:00",
+    "unix": 1772386680,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -581,13 +1406,58 @@
     "threat_code": 5,
     "isDrill": false,
     "day_of_week": 0,
-    "hour": 23,
+    "hour": 19,
     "date": "2026-03-01"
   },
   {
-    "id": "avg-00040",
-    "timestamp": "2026-03-02T07:30:00+02:00",
-    "unix": 1772429400,
+    "id": "avg-00095",
+    "timestamp": "2026-03-01T20:30:00+02:00",
+    "unix": 1772389800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 20,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00096",
+    "timestamp": "2026-03-01T21:30:00+02:00",
+    "unix": 1772393400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 21,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00097",
+    "timestamp": "2026-03-01T22:30:00+02:00",
+    "unix": 1772397000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 22,
+    "date": "2026-03-01"
+  },
+  {
+    "id": "avg-00098",
+    "timestamp": "2026-03-02T07:05:00+02:00",
+    "unix": 1772427900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -600,9 +1470,54 @@
     "date": "2026-03-02"
   },
   {
-    "id": "avg-00041",
-    "timestamp": "2026-03-02T12:30:00+02:00",
-    "unix": 1772447400,
+    "id": "avg-00099",
+    "timestamp": "2026-03-02T07:30:00+02:00",
+    "unix": 1772429400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 7,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00100",
+    "timestamp": "2026-03-02T10:30:00+02:00",
+    "unix": 1772440200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 10,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00101",
+    "timestamp": "2026-03-02T11:30:00+02:00",
+    "unix": 1772443800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 11,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00102",
+    "timestamp": "2026-03-02T12:05:00+02:00",
+    "unix": 1772445900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -615,9 +1530,54 @@
     "date": "2026-03-02"
   },
   {
-    "id": "avg-00042",
-    "timestamp": "2026-03-02T14:30:00+02:00",
-    "unix": 1772454600,
+    "id": "avg-00103",
+    "timestamp": "2026-03-02T12:21:00+02:00",
+    "unix": 1772446860,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00104",
+    "timestamp": "2026-03-02T12:38:00+02:00",
+    "unix": 1772447880,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00105",
+    "timestamp": "2026-03-02T13:30:00+02:00",
+    "unix": 1772451000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 13,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00106",
+    "timestamp": "2026-03-02T14:05:00+02:00",
+    "unix": 1772453100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -630,9 +1590,24 @@
     "date": "2026-03-02"
   },
   {
-    "id": "avg-00043",
-    "timestamp": "2026-03-02T15:30:00+02:00",
-    "unix": 1772458200,
+    "id": "avg-00107",
+    "timestamp": "2026-03-02T14:30:00+02:00",
+    "unix": 1772454600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 14,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00108",
+    "timestamp": "2026-03-02T15:05:00+02:00",
+    "unix": 1772456700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -645,24 +1620,9 @@
     "date": "2026-03-02"
   },
   {
-    "id": "avg-00044",
-    "timestamp": "2026-03-02T23:05:00+02:00",
-    "unix": 1772485500,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 23,
-    "date": "2026-03-02"
-  },
-  {
-    "id": "avg-00045",
-    "timestamp": "2026-03-02T23:30:00+02:00",
-    "unix": 1772487000,
+    "id": "avg-00109",
+    "timestamp": "2026-03-02T15:30:00+02:00",
+    "unix": 1772458200,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -671,11 +1631,26 @@
     "threat_code": 5,
     "isDrill": false,
     "day_of_week": 1,
-    "hour": 23,
+    "hour": 15,
     "date": "2026-03-02"
   },
   {
-    "id": "avg-00046",
+    "id": "avg-00110",
+    "timestamp": "2026-03-02T20:30:00+02:00",
+    "unix": 1772476200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 20,
+    "date": "2026-03-02"
+  },
+  {
+    "id": "avg-00111",
     "timestamp": "2026-03-03T07:30:00+02:00",
     "unix": 1772515800,
     "cities": [],
@@ -690,7 +1665,7 @@
     "date": "2026-03-03"
   },
   {
-    "id": "avg-00047",
+    "id": "avg-00112",
     "timestamp": "2026-03-03T10:30:00+02:00",
     "unix": 1772526600,
     "cities": [],
@@ -705,7 +1680,7 @@
     "date": "2026-03-03"
   },
   {
-    "id": "avg-00048",
+    "id": "avg-00113",
     "timestamp": "2026-03-03T11:30:00+02:00",
     "unix": 1772530200,
     "cities": [],
@@ -720,7 +1695,7 @@
     "date": "2026-03-03"
   },
   {
-    "id": "avg-00049",
+    "id": "avg-00114",
     "timestamp": "2026-03-03T12:05:00+02:00",
     "unix": 1772532300,
     "cities": [],
@@ -735,9 +1710,9 @@
     "date": "2026-03-03"
   },
   {
-    "id": "avg-00050",
-    "timestamp": "2026-03-03T12:30:00+02:00",
-    "unix": 1772533800,
+    "id": "avg-00115",
+    "timestamp": "2026-03-03T12:21:00+02:00",
+    "unix": 1772533260,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -750,7 +1725,22 @@
     "date": "2026-03-03"
   },
   {
-    "id": "avg-00051",
+    "id": "avg-00116",
+    "timestamp": "2026-03-03T12:38:00+02:00",
+    "unix": 1772534280,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-03"
+  },
+  {
+    "id": "avg-00117",
     "timestamp": "2026-03-03T14:30:00+02:00",
     "unix": 1772541000,
     "cities": [],
@@ -765,7 +1755,7 @@
     "date": "2026-03-03"
   },
   {
-    "id": "avg-00052",
+    "id": "avg-00118",
     "timestamp": "2026-03-03T15:30:00+02:00",
     "unix": 1772544600,
     "cities": [],
@@ -780,9 +1770,54 @@
     "date": "2026-03-03"
   },
   {
-    "id": "avg-00053",
-    "timestamp": "2026-03-04T12:30:00+02:00",
-    "unix": 1772620200,
+    "id": "avg-00119",
+    "timestamp": "2026-03-04T07:30:00+02:00",
+    "unix": 1772602200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 7,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00120",
+    "timestamp": "2026-03-04T10:30:00+02:00",
+    "unix": 1772613000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 10,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00121",
+    "timestamp": "2026-03-04T11:30:00+02:00",
+    "unix": 1772616600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 11,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00122",
+    "timestamp": "2026-03-04T12:05:00+02:00",
+    "unix": 1772618700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -795,9 +1830,39 @@
     "date": "2026-03-04"
   },
   {
-    "id": "avg-00054",
-    "timestamp": "2026-03-04T14:30:00+02:00",
-    "unix": 1772627400,
+    "id": "avg-00123",
+    "timestamp": "2026-03-04T12:21:00+02:00",
+    "unix": 1772619660,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00124",
+    "timestamp": "2026-03-04T12:38:00+02:00",
+    "unix": 1772620680,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00125",
+    "timestamp": "2026-03-04T14:05:00+02:00",
+    "unix": 1772625900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -810,9 +1875,24 @@
     "date": "2026-03-04"
   },
   {
-    "id": "avg-00055",
-    "timestamp": "2026-03-04T23:05:00+02:00",
-    "unix": 1772658300,
+    "id": "avg-00126",
+    "timestamp": "2026-03-04T14:30:00+02:00",
+    "unix": 1772627400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 14,
+    "date": "2026-03-04"
+  },
+  {
+    "id": "avg-00127",
+    "timestamp": "2026-03-04T15:30:00+02:00",
+    "unix": 1772631000,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -821,26 +1901,11 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 3,
-    "hour": 23,
+    "hour": 15,
     "date": "2026-03-04"
   },
   {
-    "id": "avg-00056",
-    "timestamp": "2026-03-04T23:30:00+02:00",
-    "unix": 1772659800,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 3,
-    "hour": 23,
-    "date": "2026-03-04"
-  },
-  {
-    "id": "avg-00057",
+    "id": "avg-00128",
     "timestamp": "2026-03-05T07:30:00+02:00",
     "unix": 1772688600,
     "cities": [],
@@ -855,7 +1920,7 @@
     "date": "2026-03-05"
   },
   {
-    "id": "avg-00058",
+    "id": "avg-00129",
     "timestamp": "2026-03-05T10:30:00+02:00",
     "unix": 1772699400,
     "cities": [],
@@ -870,7 +1935,7 @@
     "date": "2026-03-05"
   },
   {
-    "id": "avg-00059",
+    "id": "avg-00130",
     "timestamp": "2026-03-05T12:05:00+02:00",
     "unix": 1772705100,
     "cities": [],
@@ -885,9 +1950,24 @@
     "date": "2026-03-05"
   },
   {
-    "id": "avg-00060",
-    "timestamp": "2026-03-05T12:30:00+02:00",
-    "unix": 1772706600,
+    "id": "avg-00131",
+    "timestamp": "2026-03-05T12:21:00+02:00",
+    "unix": 1772706060,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00132",
+    "timestamp": "2026-03-05T12:38:00+02:00",
+    "unix": 1772707080,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -900,7 +1980,7 @@
     "date": "2026-03-05"
   },
   {
-    "id": "avg-00061",
+    "id": "avg-00133",
     "timestamp": "2026-03-05T13:30:00+02:00",
     "unix": 1772710200,
     "cities": [],
@@ -915,9 +1995,9 @@
     "date": "2026-03-05"
   },
   {
-    "id": "avg-00062",
-    "timestamp": "2026-03-05T14:30:00+02:00",
-    "unix": 1772713800,
+    "id": "avg-00134",
+    "timestamp": "2026-03-05T14:05:00+02:00",
+    "unix": 1772712300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -930,7 +2010,22 @@
     "date": "2026-03-05"
   },
   {
-    "id": "avg-00063",
+    "id": "avg-00135",
+    "timestamp": "2026-03-05T14:30:00+02:00",
+    "unix": 1772713800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 14,
+    "date": "2026-03-05"
+  },
+  {
+    "id": "avg-00136",
     "timestamp": "2026-03-05T15:30:00+02:00",
     "unix": 1772717400,
     "cities": [],
@@ -945,7 +2040,7 @@
     "date": "2026-03-05"
   },
   {
-    "id": "avg-00064",
+    "id": "avg-00137",
     "timestamp": "2026-03-06T10:30:00+02:00",
     "unix": 1772785800,
     "cities": [],
@@ -960,7 +2055,7 @@
     "date": "2026-03-06"
   },
   {
-    "id": "avg-00065",
+    "id": "avg-00138",
     "timestamp": "2026-03-06T12:30:00+02:00",
     "unix": 1772793000,
     "cities": [],
@@ -975,7 +2070,7 @@
     "date": "2026-03-06"
   },
   {
-    "id": "avg-00066",
+    "id": "avg-00139",
     "timestamp": "2026-03-06T14:30:00+02:00",
     "unix": 1772800200,
     "cities": [],
@@ -990,7 +2085,7 @@
     "date": "2026-03-06"
   },
   {
-    "id": "avg-00067",
+    "id": "avg-00140",
     "timestamp": "2026-03-06T15:30:00+02:00",
     "unix": 1772803800,
     "cities": [],
@@ -1005,7 +2100,7 @@
     "date": "2026-03-06"
   },
   {
-    "id": "avg-00068",
+    "id": "avg-00141",
     "timestamp": "2026-03-06T19:30:00+02:00",
     "unix": 1772818200,
     "cities": [],
@@ -1020,7 +2115,7 @@
     "date": "2026-03-06"
   },
   {
-    "id": "avg-00069",
+    "id": "avg-00142",
     "timestamp": "2026-03-06T20:30:00+02:00",
     "unix": 1772821800,
     "cities": [],
@@ -1035,7 +2130,7 @@
     "date": "2026-03-06"
   },
   {
-    "id": "avg-00070",
+    "id": "avg-00143",
     "timestamp": "2026-03-06T21:30:00+02:00",
     "unix": 1772825400,
     "cities": [],
@@ -1050,9 +2145,114 @@
     "date": "2026-03-06"
   },
   {
-    "id": "avg-00071",
-    "timestamp": "2026-03-07T12:30:00+02:00",
-    "unix": 1772879400,
+    "id": "avg-00144",
+    "timestamp": "2026-03-07T00:30:00+02:00",
+    "unix": 1772836200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 0,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00145",
+    "timestamp": "2026-03-07T02:30:00+02:00",
+    "unix": 1772843400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 2,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00146",
+    "timestamp": "2026-03-07T04:30:00+02:00",
+    "unix": 1772850600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 4,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00147",
+    "timestamp": "2026-03-07T05:30:00+02:00",
+    "unix": 1772854200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 5,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00148",
+    "timestamp": "2026-03-07T07:30:00+02:00",
+    "unix": 1772861400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 7,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00149",
+    "timestamp": "2026-03-07T10:30:00+02:00",
+    "unix": 1772872200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 10,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00150",
+    "timestamp": "2026-03-07T11:30:00+02:00",
+    "unix": 1772875800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 11,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00151",
+    "timestamp": "2026-03-07T12:05:00+02:00",
+    "unix": 1772877900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1065,39 +2265,9 @@
     "date": "2026-03-07"
   },
   {
-    "id": "avg-00072",
-    "timestamp": "2026-03-07T23:05:00+02:00",
-    "unix": 1772917500,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 23,
-    "date": "2026-03-07"
-  },
-  {
-    "id": "avg-00073",
-    "timestamp": "2026-03-07T23:21:00+02:00",
-    "unix": 1772918460,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 6,
-    "hour": 23,
-    "date": "2026-03-07"
-  },
-  {
-    "id": "avg-00074",
-    "timestamp": "2026-03-07T23:38:00+02:00",
-    "unix": 1772919480,
+    "id": "avg-00152",
+    "timestamp": "2026-03-07T12:30:00+02:00",
+    "unix": 1772879400,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1106,11 +2276,71 @@
     "threat_code": 5,
     "isDrill": false,
     "day_of_week": 6,
-    "hour": 23,
+    "hour": 12,
     "date": "2026-03-07"
   },
   {
-    "id": "avg-00075",
+    "id": "avg-00153",
+    "timestamp": "2026-03-07T13:30:00+02:00",
+    "unix": 1772883000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 13,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00154",
+    "timestamp": "2026-03-07T14:30:00+02:00",
+    "unix": 1772886600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 14,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00155",
+    "timestamp": "2026-03-07T15:30:00+02:00",
+    "unix": 1772890200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 15,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00156",
+    "timestamp": "2026-03-07T19:30:00+02:00",
+    "unix": 1772904600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 19,
+    "date": "2026-03-07"
+  },
+  {
+    "id": "avg-00157",
     "timestamp": "2026-03-08T07:30:00+02:00",
     "unix": 1772947800,
     "cities": [],
@@ -1125,7 +2355,7 @@
     "date": "2026-03-08"
   },
   {
-    "id": "avg-00076",
+    "id": "avg-00158",
     "timestamp": "2026-03-08T10:30:00+02:00",
     "unix": 1772958600,
     "cities": [],
@@ -1140,9 +2370,9 @@
     "date": "2026-03-08"
   },
   {
-    "id": "avg-00077",
-    "timestamp": "2026-03-08T12:30:00+02:00",
-    "unix": 1772965800,
+    "id": "avg-00159",
+    "timestamp": "2026-03-08T12:05:00+02:00",
+    "unix": 1772964300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1155,9 +2385,24 @@
     "date": "2026-03-08"
   },
   {
-    "id": "avg-00078",
-    "timestamp": "2026-03-08T14:30:00+02:00",
-    "unix": 1772973000,
+    "id": "avg-00160",
+    "timestamp": "2026-03-08T12:30:00+02:00",
+    "unix": 1772965800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-08"
+  },
+  {
+    "id": "avg-00161",
+    "timestamp": "2026-03-08T14:05:00+02:00",
+    "unix": 1772971500,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1170,7 +2415,22 @@
     "date": "2026-03-08"
   },
   {
-    "id": "avg-00079",
+    "id": "avg-00162",
+    "timestamp": "2026-03-08T14:30:00+02:00",
+    "unix": 1772973000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 14,
+    "date": "2026-03-08"
+  },
+  {
+    "id": "avg-00163",
     "timestamp": "2026-03-08T15:30:00+02:00",
     "unix": 1772976600,
     "cities": [],
@@ -1185,9 +2445,84 @@
     "date": "2026-03-08"
   },
   {
-    "id": "avg-00080",
-    "timestamp": "2026-03-09T12:30:00+02:00",
-    "unix": 1773052200,
+    "id": "avg-00164",
+    "timestamp": "2026-03-09T00:30:00+02:00",
+    "unix": 1773009000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 0,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00165",
+    "timestamp": "2026-03-09T07:30:00+02:00",
+    "unix": 1773034200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 7,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00166",
+    "timestamp": "2026-03-09T09:30:00+02:00",
+    "unix": 1773041400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 9,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00167",
+    "timestamp": "2026-03-09T10:30:00+02:00",
+    "unix": 1773045000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 10,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00168",
+    "timestamp": "2026-03-09T11:30:00+02:00",
+    "unix": 1773048600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 11,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00169",
+    "timestamp": "2026-03-09T12:05:00+02:00",
+    "unix": 1773050700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1200,9 +2535,54 @@
     "date": "2026-03-09"
   },
   {
-    "id": "avg-00081",
-    "timestamp": "2026-03-09T14:30:00+02:00",
-    "unix": 1773059400,
+    "id": "avg-00170",
+    "timestamp": "2026-03-09T12:21:00+02:00",
+    "unix": 1773051660,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00171",
+    "timestamp": "2026-03-09T12:38:00+02:00",
+    "unix": 1773052680,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00172",
+    "timestamp": "2026-03-09T13:30:00+02:00",
+    "unix": 1773055800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 13,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00173",
+    "timestamp": "2026-03-09T14:05:00+02:00",
+    "unix": 1773057900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1215,9 +2595,24 @@
     "date": "2026-03-09"
   },
   {
-    "id": "avg-00082",
-    "timestamp": "2026-03-09T23:05:00+02:00",
-    "unix": 1773090300,
+    "id": "avg-00174",
+    "timestamp": "2026-03-09T14:30:00+02:00",
+    "unix": 1773059400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 14,
+    "date": "2026-03-09"
+  },
+  {
+    "id": "avg-00175",
+    "timestamp": "2026-03-09T15:30:00+02:00",
+    "unix": 1773063000,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1226,13 +2621,13 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 1,
-    "hour": 23,
+    "hour": 15,
     "date": "2026-03-09"
   },
   {
-    "id": "avg-00083",
-    "timestamp": "2026-03-09T23:30:00+02:00",
-    "unix": 1773091800,
+    "id": "avg-00176",
+    "timestamp": "2026-03-09T19:30:00+02:00",
+    "unix": 1773077400,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1241,11 +2636,11 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 1,
-    "hour": 23,
+    "hour": 19,
     "date": "2026-03-09"
   },
   {
-    "id": "avg-00084",
+    "id": "avg-00177",
     "timestamp": "2026-03-10T07:30:00+02:00",
     "unix": 1773120600,
     "cities": [],
@@ -1260,7 +2655,7 @@
     "date": "2026-03-10"
   },
   {
-    "id": "avg-00085",
+    "id": "avg-00178",
     "timestamp": "2026-03-10T10:30:00+02:00",
     "unix": 1773131400,
     "cities": [],
@@ -1275,9 +2670,9 @@
     "date": "2026-03-10"
   },
   {
-    "id": "avg-00086",
-    "timestamp": "2026-03-10T12:30:00+02:00",
-    "unix": 1773138600,
+    "id": "avg-00179",
+    "timestamp": "2026-03-10T12:05:00+02:00",
+    "unix": 1773137100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1290,7 +2685,22 @@
     "date": "2026-03-10"
   },
   {
-    "id": "avg-00087",
+    "id": "avg-00180",
+    "timestamp": "2026-03-10T12:30:00+02:00",
+    "unix": 1773138600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-10"
+  },
+  {
+    "id": "avg-00181",
     "timestamp": "2026-03-10T13:30:00+02:00",
     "unix": 1773142200,
     "cities": [],
@@ -1305,7 +2715,7 @@
     "date": "2026-03-10"
   },
   {
-    "id": "avg-00088",
+    "id": "avg-00182",
     "timestamp": "2026-03-10T14:30:00+02:00",
     "unix": 1773145800,
     "cities": [],
@@ -1320,7 +2730,7 @@
     "date": "2026-03-10"
   },
   {
-    "id": "avg-00089",
+    "id": "avg-00183",
     "timestamp": "2026-03-10T15:30:00+02:00",
     "unix": 1773149400,
     "cities": [],
@@ -1335,7 +2745,7 @@
     "date": "2026-03-10"
   },
   {
-    "id": "avg-00090",
+    "id": "avg-00184",
     "timestamp": "2026-03-11T07:30:00+02:00",
     "unix": 1773207000,
     "cities": [],
@@ -1350,7 +2760,7 @@
     "date": "2026-03-11"
   },
   {
-    "id": "avg-00091",
+    "id": "avg-00185",
     "timestamp": "2026-03-11T11:30:00+02:00",
     "unix": 1773221400,
     "cities": [],
@@ -1365,7 +2775,7 @@
     "date": "2026-03-11"
   },
   {
-    "id": "avg-00092",
+    "id": "avg-00186",
     "timestamp": "2026-03-11T12:05:00+02:00",
     "unix": 1773223500,
     "cities": [],
@@ -1380,9 +2790,9 @@
     "date": "2026-03-11"
   },
   {
-    "id": "avg-00093",
-    "timestamp": "2026-03-11T12:30:00+02:00",
-    "unix": 1773225000,
+    "id": "avg-00187",
+    "timestamp": "2026-03-11T12:21:00+02:00",
+    "unix": 1773224460,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1395,9 +2805,24 @@
     "date": "2026-03-11"
   },
   {
-    "id": "avg-00094",
-    "timestamp": "2026-03-11T14:30:00+02:00",
-    "unix": 1773232200,
+    "id": "avg-00188",
+    "timestamp": "2026-03-11T12:38:00+02:00",
+    "unix": 1773225480,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00189",
+    "timestamp": "2026-03-11T14:05:00+02:00",
+    "unix": 1773230700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1410,7 +2835,22 @@
     "date": "2026-03-11"
   },
   {
-    "id": "avg-00095",
+    "id": "avg-00190",
+    "timestamp": "2026-03-11T14:30:00+02:00",
+    "unix": 1773232200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 14,
+    "date": "2026-03-11"
+  },
+  {
+    "id": "avg-00191",
     "timestamp": "2026-03-11T15:30:00+02:00",
     "unix": 1773235800,
     "cities": [],
@@ -1425,7 +2865,7 @@
     "date": "2026-03-11"
   },
   {
-    "id": "avg-00096",
+    "id": "avg-00192",
     "timestamp": "2026-03-12T07:30:00+02:00",
     "unix": 1773293400,
     "cities": [],
@@ -1440,7 +2880,7 @@
     "date": "2026-03-12"
   },
   {
-    "id": "avg-00097",
+    "id": "avg-00193",
     "timestamp": "2026-03-12T10:30:00+02:00",
     "unix": 1773304200,
     "cities": [],
@@ -1455,7 +2895,7 @@
     "date": "2026-03-12"
   },
   {
-    "id": "avg-00098",
+    "id": "avg-00194",
     "timestamp": "2026-03-12T11:30:00+02:00",
     "unix": 1773307800,
     "cities": [],
@@ -1470,9 +2910,9 @@
     "date": "2026-03-12"
   },
   {
-    "id": "avg-00099",
-    "timestamp": "2026-03-12T12:30:00+02:00",
-    "unix": 1773311400,
+    "id": "avg-00195",
+    "timestamp": "2026-03-12T12:05:00+02:00",
+    "unix": 1773309900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1485,9 +2925,24 @@
     "date": "2026-03-12"
   },
   {
-    "id": "avg-00100",
-    "timestamp": "2026-03-12T14:30:00+02:00",
-    "unix": 1773318600,
+    "id": "avg-00196",
+    "timestamp": "2026-03-12T12:30:00+02:00",
+    "unix": 1773311400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00197",
+    "timestamp": "2026-03-12T14:05:00+02:00",
+    "unix": 1773317100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1500,7 +2955,22 @@
     "date": "2026-03-12"
   },
   {
-    "id": "avg-00101",
+    "id": "avg-00198",
+    "timestamp": "2026-03-12T14:30:00+02:00",
+    "unix": 1773318600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 14,
+    "date": "2026-03-12"
+  },
+  {
+    "id": "avg-00199",
     "timestamp": "2026-03-12T15:30:00+02:00",
     "unix": 1773322200,
     "cities": [],
@@ -1515,9 +2985,54 @@
     "date": "2026-03-12"
   },
   {
-    "id": "avg-00102",
-    "timestamp": "2026-03-13T12:30:00+02:00",
-    "unix": 1773397800,
+    "id": "avg-00200",
+    "timestamp": "2026-03-13T07:30:00+02:00",
+    "unix": 1773379800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 7,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00201",
+    "timestamp": "2026-03-13T10:30:00+02:00",
+    "unix": 1773390600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 10,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00202",
+    "timestamp": "2026-03-13T11:30:00+02:00",
+    "unix": 1773394200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 11,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00203",
+    "timestamp": "2026-03-13T12:05:00+02:00",
+    "unix": 1773396300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1530,9 +3045,9 @@
     "date": "2026-03-13"
   },
   {
-    "id": "avg-00103",
-    "timestamp": "2026-03-13T23:30:00+02:00",
-    "unix": 1773437400,
+    "id": "avg-00204",
+    "timestamp": "2026-03-13T12:21:00+02:00",
+    "unix": 1773397260,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1541,13 +3056,163 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 5,
-    "hour": 23,
+    "hour": 12,
     "date": "2026-03-13"
   },
   {
-    "id": "avg-00104",
-    "timestamp": "2026-03-14T12:30:00+02:00",
-    "unix": 1773484200,
+    "id": "avg-00205",
+    "timestamp": "2026-03-13T12:38:00+02:00",
+    "unix": 1773398280,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 12,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00206",
+    "timestamp": "2026-03-13T14:05:00+02:00",
+    "unix": 1773403500,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 14,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00207",
+    "timestamp": "2026-03-13T14:30:00+02:00",
+    "unix": 1773405000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 14,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00208",
+    "timestamp": "2026-03-13T15:30:00+02:00",
+    "unix": 1773408600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 15,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00209",
+    "timestamp": "2026-03-13T19:30:00+02:00",
+    "unix": 1773423000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 19,
+    "date": "2026-03-13"
+  },
+  {
+    "id": "avg-00210",
+    "timestamp": "2026-03-14T07:05:00+02:00",
+    "unix": 1773464700,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 7,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00211",
+    "timestamp": "2026-03-14T07:30:00+02:00",
+    "unix": 1773466200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 7,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00212",
+    "timestamp": "2026-03-14T09:30:00+02:00",
+    "unix": 1773473400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 9,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00213",
+    "timestamp": "2026-03-14T10:30:00+02:00",
+    "unix": 1773477000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 10,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00214",
+    "timestamp": "2026-03-14T11:30:00+02:00",
+    "unix": 1773480600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 11,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00215",
+    "timestamp": "2026-03-14T12:05:00+02:00",
+    "unix": 1773482700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1560,9 +3225,9 @@
     "date": "2026-03-14"
   },
   {
-    "id": "avg-00105",
-    "timestamp": "2026-03-14T23:30:00+02:00",
-    "unix": 1773523800,
+    "id": "avg-00216",
+    "timestamp": "2026-03-14T12:21:00+02:00",
+    "unix": 1773483660,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1571,11 +3236,146 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 6,
-    "hour": 23,
+    "hour": 12,
     "date": "2026-03-14"
   },
   {
-    "id": "avg-00106",
+    "id": "avg-00217",
+    "timestamp": "2026-03-14T12:38:00+02:00",
+    "unix": 1773484680,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00218",
+    "timestamp": "2026-03-14T13:30:00+02:00",
+    "unix": 1773487800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 13,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00219",
+    "timestamp": "2026-03-14T14:05:00+02:00",
+    "unix": 1773489900,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 14,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00220",
+    "timestamp": "2026-03-14T14:30:00+02:00",
+    "unix": 1773491400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 14,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00221",
+    "timestamp": "2026-03-14T15:30:00+02:00",
+    "unix": 1773495000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 15,
+    "date": "2026-03-14"
+  },
+  {
+    "id": "avg-00222",
+    "timestamp": "2026-03-15T00:30:00+02:00",
+    "unix": 1773527400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 0,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00223",
+    "timestamp": "2026-03-15T01:30:00+02:00",
+    "unix": 1773531000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 1,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00224",
+    "timestamp": "2026-03-15T03:30:00+02:00",
+    "unix": 1773538200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 3,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00225",
+    "timestamp": "2026-03-15T05:30:00+02:00",
+    "unix": 1773545400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 5,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00226",
     "timestamp": "2026-03-15T07:30:00+02:00",
     "unix": 1773552600,
     "cities": [],
@@ -1590,7 +3390,7 @@
     "date": "2026-03-15"
   },
   {
-    "id": "avg-00107",
+    "id": "avg-00227",
     "timestamp": "2026-03-15T09:30:00+02:00",
     "unix": 1773559800,
     "cities": [],
@@ -1605,7 +3405,7 @@
     "date": "2026-03-15"
   },
   {
-    "id": "avg-00108",
+    "id": "avg-00228",
     "timestamp": "2026-03-15T11:30:00+02:00",
     "unix": 1773567000,
     "cities": [],
@@ -1620,9 +3420,9 @@
     "date": "2026-03-15"
   },
   {
-    "id": "avg-00109",
-    "timestamp": "2026-03-15T12:30:00+02:00",
-    "unix": 1773570600,
+    "id": "avg-00229",
+    "timestamp": "2026-03-15T12:05:00+02:00",
+    "unix": 1773569100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1635,7 +3435,22 @@
     "date": "2026-03-15"
   },
   {
-    "id": "avg-00110",
+    "id": "avg-00230",
+    "timestamp": "2026-03-15T12:30:00+02:00",
+    "unix": 1773570600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 12,
+    "date": "2026-03-15"
+  },
+  {
+    "id": "avg-00231",
     "timestamp": "2026-03-15T13:30:00+02:00",
     "unix": 1773574200,
     "cities": [],
@@ -1650,7 +3465,7 @@
     "date": "2026-03-15"
   },
   {
-    "id": "avg-00111",
+    "id": "avg-00232",
     "timestamp": "2026-03-15T14:30:00+02:00",
     "unix": 1773577800,
     "cities": [],
@@ -1665,7 +3480,7 @@
     "date": "2026-03-15"
   },
   {
-    "id": "avg-00112",
+    "id": "avg-00233",
     "timestamp": "2026-03-15T15:30:00+02:00",
     "unix": 1773581400,
     "cities": [],
@@ -1680,9 +3495,54 @@
     "date": "2026-03-15"
   },
   {
-    "id": "avg-00113",
-    "timestamp": "2026-03-16T12:30:00+02:00",
-    "unix": 1773657000,
+    "id": "avg-00234",
+    "timestamp": "2026-03-16T07:30:00+02:00",
+    "unix": 1773639000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 7,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00235",
+    "timestamp": "2026-03-16T10:30:00+02:00",
+    "unix": 1773649800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 10,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00236",
+    "timestamp": "2026-03-16T11:30:00+02:00",
+    "unix": 1773653400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 11,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00237",
+    "timestamp": "2026-03-16T12:05:00+02:00",
+    "unix": 1773655500,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1695,9 +3555,54 @@
     "date": "2026-03-16"
   },
   {
-    "id": "avg-00114",
-    "timestamp": "2026-03-16T14:30:00+02:00",
-    "unix": 1773664200,
+    "id": "avg-00238",
+    "timestamp": "2026-03-16T12:21:00+02:00",
+    "unix": 1773656460,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00239",
+    "timestamp": "2026-03-16T12:38:00+02:00",
+    "unix": 1773657480,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 12,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00240",
+    "timestamp": "2026-03-16T13:30:00+02:00",
+    "unix": 1773660600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 13,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00241",
+    "timestamp": "2026-03-16T14:05:00+02:00",
+    "unix": 1773662700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1710,39 +3615,9 @@
     "date": "2026-03-16"
   },
   {
-    "id": "avg-00115",
-    "timestamp": "2026-03-16T23:05:00+02:00",
-    "unix": 1773695100,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 23,
-    "date": "2026-03-16"
-  },
-  {
-    "id": "avg-00116",
-    "timestamp": "2026-03-16T23:21:00+02:00",
-    "unix": 1773696060,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 1,
-    "hour": 23,
-    "date": "2026-03-16"
-  },
-  {
-    "id": "avg-00117",
-    "timestamp": "2026-03-16T23:38:00+02:00",
-    "unix": 1773697080,
+    "id": "avg-00242",
+    "timestamp": "2026-03-16T14:30:00+02:00",
+    "unix": 1773664200,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1751,13 +3626,43 @@
     "threat_code": 5,
     "isDrill": false,
     "day_of_week": 1,
-    "hour": 23,
+    "hour": 14,
     "date": "2026-03-16"
   },
   {
-    "id": "avg-00118",
-    "timestamp": "2026-03-17T07:30:00+02:00",
-    "unix": 1773725400,
+    "id": "avg-00243",
+    "timestamp": "2026-03-16T15:30:00+02:00",
+    "unix": 1773667800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 15,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00244",
+    "timestamp": "2026-03-16T19:30:00+02:00",
+    "unix": 1773682200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 1,
+    "hour": 19,
+    "date": "2026-03-16"
+  },
+  {
+    "id": "avg-00245",
+    "timestamp": "2026-03-17T07:05:00+02:00",
+    "unix": 1773723900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1770,7 +3675,22 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00119",
+    "id": "avg-00246",
+    "timestamp": "2026-03-17T07:30:00+02:00",
+    "unix": 1773725400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 7,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00247",
     "timestamp": "2026-03-17T09:30:00+02:00",
     "unix": 1773732600,
     "cities": [],
@@ -1785,7 +3705,7 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00120",
+    "id": "avg-00248",
     "timestamp": "2026-03-17T10:30:00+02:00",
     "unix": 1773736200,
     "cities": [],
@@ -1800,7 +3720,7 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00121",
+    "id": "avg-00249",
     "timestamp": "2026-03-17T11:30:00+02:00",
     "unix": 1773739800,
     "cities": [],
@@ -1815,7 +3735,7 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00122",
+    "id": "avg-00250",
     "timestamp": "2026-03-17T12:05:00+02:00",
     "unix": 1773741900,
     "cities": [],
@@ -1830,9 +3750,24 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00123",
-    "timestamp": "2026-03-17T12:30:00+02:00",
-    "unix": 1773743400,
+    "id": "avg-00251",
+    "timestamp": "2026-03-17T12:21:00+02:00",
+    "unix": 1773742860,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 12,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00252",
+    "timestamp": "2026-03-17T12:38:00+02:00",
+    "unix": 1773743880,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1845,7 +3780,7 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00124",
+    "id": "avg-00253",
     "timestamp": "2026-03-17T13:30:00+02:00",
     "unix": 1773747000,
     "cities": [],
@@ -1860,9 +3795,9 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00125",
-    "timestamp": "2026-03-17T14:30:00+02:00",
-    "unix": 1773750600,
+    "id": "avg-00254",
+    "timestamp": "2026-03-17T14:05:00+02:00",
+    "unix": 1773749100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1875,7 +3810,22 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00126",
+    "id": "avg-00255",
+    "timestamp": "2026-03-17T14:30:00+02:00",
+    "unix": 1773750600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 2,
+    "hour": 14,
+    "date": "2026-03-17"
+  },
+  {
+    "id": "avg-00256",
     "timestamp": "2026-03-17T15:30:00+02:00",
     "unix": 1773754200,
     "cities": [],
@@ -1890,7 +3840,22 @@
     "date": "2026-03-17"
   },
   {
-    "id": "avg-00127",
+    "id": "avg-00257",
+    "timestamp": "2026-03-18T02:30:00+02:00",
+    "unix": 1773793800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 2,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00258",
     "timestamp": "2026-03-18T07:30:00+02:00",
     "unix": 1773811800,
     "cities": [],
@@ -1905,7 +3870,7 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00128",
+    "id": "avg-00259",
     "timestamp": "2026-03-18T09:30:00+02:00",
     "unix": 1773819000,
     "cities": [],
@@ -1920,7 +3885,7 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00129",
+    "id": "avg-00260",
     "timestamp": "2026-03-18T10:30:00+02:00",
     "unix": 1773822600,
     "cities": [],
@@ -1935,7 +3900,7 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00130",
+    "id": "avg-00261",
     "timestamp": "2026-03-18T11:30:00+02:00",
     "unix": 1773826200,
     "cities": [],
@@ -1950,9 +3915,9 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00131",
-    "timestamp": "2026-03-18T12:30:00+02:00",
-    "unix": 1773829800,
+    "id": "avg-00262",
+    "timestamp": "2026-03-18T12:05:00+02:00",
+    "unix": 1773828300,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1965,7 +3930,22 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00132",
+    "id": "avg-00263",
+    "timestamp": "2026-03-18T12:30:00+02:00",
+    "unix": 1773829800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 12,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00264",
     "timestamp": "2026-03-18T13:30:00+02:00",
     "unix": 1773833400,
     "cities": [],
@@ -1980,9 +3960,9 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00133",
-    "timestamp": "2026-03-18T14:30:00+02:00",
-    "unix": 1773837000,
+    "id": "avg-00265",
+    "timestamp": "2026-03-18T14:05:00+02:00",
+    "unix": 1773835500,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -1995,7 +3975,22 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00134",
+    "id": "avg-00266",
+    "timestamp": "2026-03-18T14:30:00+02:00",
+    "unix": 1773837000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 3,
+    "hour": 14,
+    "date": "2026-03-18"
+  },
+  {
+    "id": "avg-00267",
     "timestamp": "2026-03-18T15:30:00+02:00",
     "unix": 1773840600,
     "cities": [],
@@ -2010,7 +4005,7 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00135",
+    "id": "avg-00268",
     "timestamp": "2026-03-18T19:30:00+02:00",
     "unix": 1773855000,
     "cities": [],
@@ -2025,9 +4020,24 @@
     "date": "2026-03-18"
   },
   {
-    "id": "avg-00136",
-    "timestamp": "2026-03-19T07:30:00+02:00",
-    "unix": 1773898200,
+    "id": "avg-00269",
+    "timestamp": "2026-03-19T00:30:00+02:00",
+    "unix": 1773873000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 0,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00270",
+    "timestamp": "2026-03-19T07:05:00+02:00",
+    "unix": 1773896700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2040,7 +4050,97 @@
     "date": "2026-03-19"
   },
   {
-    "id": "avg-00137",
+    "id": "avg-00271",
+    "timestamp": "2026-03-19T07:30:00+02:00",
+    "unix": 1773898200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 7,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00272",
+    "timestamp": "2026-03-19T09:30:00+02:00",
+    "unix": 1773905400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 9,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00273",
+    "timestamp": "2026-03-19T10:30:00+02:00",
+    "unix": 1773909000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 10,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00274",
+    "timestamp": "2026-03-19T11:30:00+02:00",
+    "unix": 1773912600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 11,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00275",
+    "timestamp": "2026-03-19T12:05:00+02:00",
+    "unix": 1773914700,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00276",
+    "timestamp": "2026-03-19T12:17:00+02:00",
+    "unix": 1773915420,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00277",
     "timestamp": "2026-03-19T12:30:00+02:00",
     "unix": 1773916200,
     "cities": [],
@@ -2055,9 +4155,39 @@
     "date": "2026-03-19"
   },
   {
-    "id": "avg-00138",
-    "timestamp": "2026-03-19T14:30:00+02:00",
-    "unix": 1773923400,
+    "id": "avg-00278",
+    "timestamp": "2026-03-19T12:42:00+02:00",
+    "unix": 1773916920,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 12,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00279",
+    "timestamp": "2026-03-19T13:30:00+02:00",
+    "unix": 1773919800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 13,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00280",
+    "timestamp": "2026-03-19T14:05:00+02:00",
+    "unix": 1773921900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2070,9 +4200,24 @@
     "date": "2026-03-19"
   },
   {
-    "id": "avg-00139",
-    "timestamp": "2026-03-19T15:30:00+02:00",
-    "unix": 1773927000,
+    "id": "avg-00281",
+    "timestamp": "2026-03-19T14:30:00+02:00",
+    "unix": 1773923400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 14,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00282",
+    "timestamp": "2026-03-19T15:05:00+02:00",
+    "unix": 1773925500,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2085,24 +4230,9 @@
     "date": "2026-03-19"
   },
   {
-    "id": "avg-00140",
-    "timestamp": "2026-03-19T23:05:00+02:00",
-    "unix": 1773954300,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 4,
-    "hour": 23,
-    "date": "2026-03-19"
-  },
-  {
-    "id": "avg-00141",
-    "timestamp": "2026-03-19T23:30:00+02:00",
-    "unix": 1773955800,
+    "id": "avg-00283",
+    "timestamp": "2026-03-19T15:30:00+02:00",
+    "unix": 1773927000,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2111,13 +4241,118 @@
     "threat_code": 5,
     "isDrill": false,
     "day_of_week": 4,
-    "hour": 23,
+    "hour": 15,
     "date": "2026-03-19"
   },
   {
-    "id": "avg-00142",
-    "timestamp": "2026-03-20T07:30:00+02:00",
-    "unix": 1773984600,
+    "id": "avg-00284",
+    "timestamp": "2026-03-19T16:30:00+02:00",
+    "unix": 1773930600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 16,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00285",
+    "timestamp": "2026-03-19T18:30:00+02:00",
+    "unix": 1773937800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 18,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00286",
+    "timestamp": "2026-03-19T20:30:00+02:00",
+    "unix": 1773945000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 20,
+    "date": "2026-03-19"
+  },
+  {
+    "id": "avg-00287",
+    "timestamp": "2026-03-20T00:30:00+02:00",
+    "unix": 1773959400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 0,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00288",
+    "timestamp": "2026-03-20T01:30:00+02:00",
+    "unix": 1773963000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 1,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00289",
+    "timestamp": "2026-03-20T02:30:00+02:00",
+    "unix": 1773966600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 2,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00290",
+    "timestamp": "2026-03-20T06:30:00+02:00",
+    "unix": 1773981000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 6,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00291",
+    "timestamp": "2026-03-20T07:05:00+02:00",
+    "unix": 1773983100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2130,9 +4365,54 @@
     "date": "2026-03-20"
   },
   {
-    "id": "avg-00143",
-    "timestamp": "2026-03-20T10:30:00+02:00",
-    "unix": 1773995400,
+    "id": "avg-00292",
+    "timestamp": "2026-03-20T07:30:00+02:00",
+    "unix": 1773984600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 7,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00293",
+    "timestamp": "2026-03-20T08:30:00+02:00",
+    "unix": 1773988200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 8,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00294",
+    "timestamp": "2026-03-20T09:30:00+02:00",
+    "unix": 1773991800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 9,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00295",
+    "timestamp": "2026-03-20T10:05:00+02:00",
+    "unix": 1773993900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2145,9 +4425,39 @@
     "date": "2026-03-20"
   },
   {
-    "id": "avg-00144",
-    "timestamp": "2026-03-20T12:30:00+02:00",
-    "unix": 1774002600,
+    "id": "avg-00296",
+    "timestamp": "2026-03-20T10:30:00+02:00",
+    "unix": 1773995400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 10,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00297",
+    "timestamp": "2026-03-20T11:30:00+02:00",
+    "unix": 1773999000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 11,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00298",
+    "timestamp": "2026-03-20T12:05:00+02:00",
+    "unix": 1774001100,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2160,9 +4470,39 @@
     "date": "2026-03-20"
   },
   {
-    "id": "avg-00145",
-    "timestamp": "2026-03-20T13:30:00+02:00",
-    "unix": 1774006200,
+    "id": "avg-00299",
+    "timestamp": "2026-03-20T12:21:00+02:00",
+    "unix": 1774002060,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 12,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00300",
+    "timestamp": "2026-03-20T12:38:00+02:00",
+    "unix": 1774003080,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 12,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00301",
+    "timestamp": "2026-03-20T13:05:00+02:00",
+    "unix": 1774004700,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2175,9 +4515,39 @@
     "date": "2026-03-20"
   },
   {
-    "id": "avg-00146",
-    "timestamp": "2026-03-20T15:30:00+02:00",
-    "unix": 1774013400,
+    "id": "avg-00302",
+    "timestamp": "2026-03-20T13:30:00+02:00",
+    "unix": 1774006200,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 13,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00303",
+    "timestamp": "2026-03-20T14:30:00+02:00",
+    "unix": 1774009800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 14,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00304",
+    "timestamp": "2026-03-20T15:05:00+02:00",
+    "unix": 1774011900,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2190,24 +4560,9 @@
     "date": "2026-03-20"
   },
   {
-    "id": "avg-00147",
-    "timestamp": "2026-03-20T23:05:00+02:00",
-    "unix": 1774040700,
-    "cities": [],
-    "cities_en": [
-      "Tel Aviv / Gush Dan"
-    ],
-    "threat": "missiles",
-    "threat_code": 0,
-    "isDrill": false,
-    "day_of_week": 5,
-    "hour": 23,
-    "date": "2026-03-20"
-  },
-  {
-    "id": "avg-00148",
-    "timestamp": "2026-03-20T23:30:00+02:00",
-    "unix": 1774042200,
+    "id": "avg-00305",
+    "timestamp": "2026-03-20T15:30:00+02:00",
+    "unix": 1774013400,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2216,13 +4571,133 @@
     "threat_code": 5,
     "isDrill": false,
     "day_of_week": 5,
-    "hour": 23,
+    "hour": 15,
     "date": "2026-03-20"
   },
   {
-    "id": "avg-00149",
-    "timestamp": "2026-03-21T12:30:00+02:00",
-    "unix": 1774089000,
+    "id": "avg-00306",
+    "timestamp": "2026-03-20T17:30:00+02:00",
+    "unix": 1774020600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 17,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00307",
+    "timestamp": "2026-03-20T20:30:00+02:00",
+    "unix": 1774031400,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 20,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00308",
+    "timestamp": "2026-03-20T21:30:00+02:00",
+    "unix": 1774035000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 21,
+    "date": "2026-03-20"
+  },
+  {
+    "id": "avg-00309",
+    "timestamp": "2026-03-21T00:30:00+02:00",
+    "unix": 1774045800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 0,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00310",
+    "timestamp": "2026-03-21T03:30:00+02:00",
+    "unix": 1774056600,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 3,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00311",
+    "timestamp": "2026-03-21T05:30:00+02:00",
+    "unix": 1774063800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 5,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00312",
+    "timestamp": "2026-03-21T07:30:00+02:00",
+    "unix": 1774071000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 7,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00313",
+    "timestamp": "2026-03-21T10:30:00+02:00",
+    "unix": 1774081800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 10,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00314",
+    "timestamp": "2026-03-21T12:05:00+02:00",
+    "unix": 1774087500,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2235,9 +4710,24 @@
     "date": "2026-03-21"
   },
   {
-    "id": "avg-00150",
-    "timestamp": "2026-03-21T23:30:00+02:00",
-    "unix": 1774128600,
+    "id": "avg-00315",
+    "timestamp": "2026-03-21T12:30:00+02:00",
+    "unix": 1774089000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 12,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00316",
+    "timestamp": "2026-03-21T14:30:00+02:00",
+    "unix": 1774096200,
     "cities": [],
     "cities_en": [
       "Tel Aviv / Gush Dan"
@@ -2246,11 +4736,41 @@
     "threat_code": 0,
     "isDrill": false,
     "day_of_week": 6,
-    "hour": 23,
+    "hour": 14,
     "date": "2026-03-21"
   },
   {
-    "id": "avg-00151",
+    "id": "avg-00317",
+    "timestamp": "2026-03-21T15:30:00+02:00",
+    "unix": 1774099800,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 15,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00318",
+    "timestamp": "2026-03-21T17:30:00+02:00",
+    "unix": 1774107000,
+    "cities": [],
+    "cities_en": [
+      "Tel Aviv / Gush Dan"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 17,
+    "date": "2026-03-21"
+  },
+  {
+    "id": "avg-00319",
     "timestamp": "2026-03-22T07:30:00+02:00",
     "unix": 1774157400,
     "cities": [],
@@ -2265,7 +4785,7 @@
     "date": "2026-03-22"
   },
   {
-    "id": "avg-00152",
+    "id": "avg-00320",
     "timestamp": "2026-03-22T12:30:00+02:00",
     "unix": 1774175400,
     "cities": [],
