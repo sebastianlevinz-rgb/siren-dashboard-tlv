@@ -18,7 +18,7 @@ import "./App.css";
 
 // To connect Google Sheets: paste your published CSV URL here
 // Instructions in the README / at the bottom of this file
-const SHEET_URL = "";
+const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTYIajuxSFPt3EX788gFhFxgbrulyQYM6myZWmeoI9OgLV0xH1QrqNQNg0vb71OSDmgutbPCzup07qw/pub?gid=1228521043&single=true&output=csv";
 
 type TabId = "heatmap" | "timeline" | "histogram" | "trend" | "recommendations";
 
