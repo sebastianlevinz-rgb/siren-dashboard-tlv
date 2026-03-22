@@ -576,15 +576,79 @@ html, body {
   overflow: hidden;
 }
 
-.histogram-chart {
+/* Horizontal bar histogram — mobile-first */
+.h-histogram {
   display: flex;
-  gap: 2px;
-  align-items: flex-end;
-  height: 220px;
-  padding-bottom: 28px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.h-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 20px;
+}
+
+.h-bar-row.night {
+  opacity: 0.6;
+}
+
+.h-bar-row.routine .h-bar-hour {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.h-bar-hour {
+  font-size: 9px;
+  color: var(--text-muted);
+  min-width: 36px;
+  text-align: right;
+}
+
+.h-bar-track {
+  flex: 1;
+  height: 16px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.h-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.h-bar-routine-dot {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 4px var(--accent);
+}
+
+.h-bar-pct {
+  font-size: 9px;
+  color: var(--text-secondary);
+  min-width: 34px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.h-bar-count {
+  font-size: 8px;
+  color: var(--text-muted);
+  min-width: 24px;
+}
+
+.histogram-chart {
+  display: none; /* replaced by h-histogram */
 }
 
 .histogram-bar-wrapper {
