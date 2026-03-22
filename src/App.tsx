@@ -6,20 +6,8 @@ import DailyTimeline from "./components/DailyTimeline";
 import HourlyHistogram from "./components/HourlyHistogram";
 import TrendChart from "./components/TrendChart";
 import Recommendations from "./components/Recommendations";
-import { fetchFromGoogleSheet, fetchFromLocalCSV } from "./utils/sheets";
+import { fetchFromLocalCSV } from "./utils/sheets";
 import "./App.css";
-
-/**
- * DATA SOURCE PRIORITY:
- * 1. Google Sheets (if SHEET_URL is set) — you edit the sheet, dashboard updates
- * 2. Local CSV (public/data/alerts-by-day-hour.csv)
- * 3. Local JSON (public/data/alerts.json) — original generated data
- */
-
-// To connect Google Sheets: paste your published CSV URL here
-// Instructions in the README / at the bottom of this file
-// Google Sheet disabled — using real Tzofar Telegram data from CSV
-const SHEET_URL = "";
 
 type TabId = "heatmap" | "timeline" | "histogram" | "trend" | "recommendations";
 
@@ -33,77 +21,24 @@ const TABS: { id: TabId; label: string; icon: string }[] = [
 
 function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [lastUpdate, setLastUpdate] = useState("\u2014");
-  const [dataSource, setDataSource] = useState("");
   const [activeTab, setActiveTab] = useState<TabId>("heatmap");
 
   const loadData = useCallback(async () => {
-    setLoading(true);
-
-    // 1. Try Google Sheets
-    if (SHEET_URL) {
-      try {
-        const data = await fetchFromGoogleSheet(SHEET_URL);
-        if (data.length > 0) {
-          setAlerts(data);
-          setDataSource("Google Sheets");
-          setLastUpdate(new Date().toLocaleString("es-AR"));
-          setLoading(false);
-          return;
-        }
-      } catch (e) {
-        console.warn("Google Sheets fetch failed, trying local CSV:", e);
-      }
-    }
-
-    // 2. Try local CSV
     try {
       const data = await fetchFromLocalCSV();
-      if (data.length > 0) {
-        setAlerts(data);
-        setDataSource("CSV local");
-        setLastUpdate(new Date().toLocaleString("es-AR"));
-        setLoading(false);
-        return;
-      }
-    } catch (e) {
-      console.warn("Local CSV failed, trying JSON:", e);
-    }
-
-    // 3. Fallback to JSON
+      if (data.length > 0) { setAlerts(data); return; }
+    } catch { /* fallback */ }
     try {
       const res = await fetch("/data/alerts.json");
-      if (res.ok) {
-        const data: Alert[] = await res.json();
-        setAlerts(data);
-        setDataSource("JSON local");
-        setLastUpdate(new Date().toLocaleString("es-AR"));
-      }
-    } catch (e) {
-      console.error("All data sources failed:", e);
-    }
-
-    setLoading(false);
+      if (res.ok) setAlerts(await res.json());
+    } catch (e) { console.error("Data load failed:", e); }
   }, []);
 
-  const refreshData = useCallback(async () => {
-    await loadData();
-  }, [loadData]);
-
-  useEffect(() => {
-    loadData();
-  }, [loadData]);
+  useEffect(() => { loadData(); }, [loadData]);
 
   return (
     <div className="app">
-      <Header
-        alerts={alerts}
-        lastUpdate={lastUpdate}
-        dataSource={dataSource}
-        onRefresh={refreshData}
-        loading={loading}
-      />
+      <Header alerts={alerts} />
 
       <nav className="tab-nav">
         {TABS.map((tab) => (
@@ -126,9 +61,7 @@ function App() {
       </main>
 
       <footer className="dashboard-footer">
-        <span>
-          Fuente: Tzofar Telegram @tzevaadom_en | {dataSource || "cargando..."}
-        </span>
+        <span>Datos: Tzofar Telegram @tzevaadom_en | Solo Gush Dan/TLV</span>
         <span>Dashboard personal — no reemplaza al Pikud HaOref</span>
       </footer>
     </div>

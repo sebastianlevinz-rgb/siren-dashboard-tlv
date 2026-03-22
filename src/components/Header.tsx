@@ -4,19 +4,9 @@ import { buildDailySummaries } from "../utils/data";
 
 interface Props {
   alerts: Alert[];
-  lastUpdate: string;
-  dataSource: string;
-  onRefresh: () => void;
-  loading: boolean;
 }
 
-export default function Header({
-  alerts,
-  lastUpdate,
-  dataSource,
-  onRefresh,
-  loading,
-}: Props) {
+export default function Header({ alerts }: Props) {
   const days = useMemo(() => buildDailySummaries(alerts), [alerts]);
   const totalAlerts = alerts.length;
   const totalDays = days.length;
@@ -24,15 +14,30 @@ export default function Header({
   const aircraft = alerts.filter((a) => a.threat === "hostile_aircraft").length;
 
   const handleShare = async () => {
-    const text = `Siren Dashboard TLV: ${totalAlerts} alertas en ${totalDays} dias`;
-    const url = window.location.href;
+    const shareText = [
+      "🚨 Siren Dashboard — Tel Aviv / Gush Dan",
+      "",
+      `${totalAlerts} alertas en ${totalDays} dias`,
+      `Misiles: ${missiles} | Drones: ${aircraft}`,
+      `Promedio: ${(totalAlerts / (totalDays || 1)).toFixed(1)} alertas/dia`,
+      "",
+      "Heatmap dia x hora, tendencias y recomendaciones",
+      "Datos: Tzofar Telegram @tzevaadom_en",
+      "",
+      "https://www.missileprobability.com",
+    ].join("\n");
+
     if (navigator.share) {
       try {
-        await navigator.share({ title: "Siren Dashboard - Tel Aviv", text, url });
-      } catch { /* user cancelled */ }
+        await navigator.share({
+          title: "Siren Dashboard — Tel Aviv",
+          text: shareText,
+          url: "https://www.missileprobability.com",
+        });
+      } catch { /* cancelled */ }
     } else {
-      await navigator.clipboard.writeText(`${text}\n${url}`);
-      alert("Link copiado al portapapeles");
+      await navigator.clipboard.writeText(shareText);
+      alert("Copiado al portapapeles — pegalo en WhatsApp");
     }
   };
 
@@ -48,24 +53,15 @@ export default function Header({
             Tel Aviv / Gush Dan — Alertas de misiles y drones
           </span>
         </div>
-        <div className="header-controls">
-          <button className="btn-share" onClick={handleShare}>
-            Compartir
-          </button>
-          <button
-            className={`btn-refresh ${loading ? "loading" : ""}`}
-            onClick={onRefresh}
-            disabled={loading}
-          >
-            {loading ? "..." : "Actualizar"}
-          </button>
-        </div>
+        <button className="btn-share" onClick={handleShare}>
+          Compartir
+        </button>
       </div>
 
       <div className="header-stats">
         <div className="stat">
           <span className="stat-value">{totalAlerts}</span>
-          <span className="stat-label">Alertas</span>
+          <span className="stat-label">Alertas TLV</span>
         </div>
         <div className="stat">
           <span className="stat-value">{totalDays}d</span>
@@ -84,8 +80,8 @@ export default function Header({
           <span className="stat-label">Prom/dia</span>
         </div>
         <div className="stat">
-          <span className="stat-value small">{dataSource}</span>
-          <span className="stat-label">Fuente</span>
+          <span className="stat-value small">23/03 01:00</span>
+          <span className="stat-label">Actualiz.</span>
         </div>
       </div>
     </header>

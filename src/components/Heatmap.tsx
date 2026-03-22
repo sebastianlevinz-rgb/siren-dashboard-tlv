@@ -1,12 +1,11 @@
 import React, { useState, useMemo } from "react";
 import type { Alert, HeatmapCell } from "../types";
-import { buildHeatmap, DAY_NAMES, formatHour, getRiskColor } from "../utils/data";
+import { buildHeatmap, DAY_NAMES, DAY_NAMES_FULL, formatHour, getRiskColor } from "../utils/data";
 
 interface Props {
   alerts: Alert[];
 }
 
-// Start at 6:00, wrap around so order is 6,7,...,23,0,1,2,3,4,5
 const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
 
 export default function Heatmap({ alerts }: Props) {
@@ -16,6 +15,30 @@ export default function Heatmap({ alerts }: Props) {
   const maxCount = useMemo(
     () => Math.max(...grid.flat().map((c) => c.count), 1),
     [grid]
+  );
+
+  // Top 5 worst and best (only cells with data, for best filter waking hours 06-22)
+  const allCells = useMemo(() => {
+    const cells: HeatmapCell[] = [];
+    for (let d = 0; d < 7; d++) {
+      for (let h = 0; h < 24; h++) {
+        cells.push(grid[d][h]);
+      }
+    }
+    return cells;
+  }, [grid]);
+
+  const worst5 = useMemo(
+    () => [...allCells].filter((c) => c.count > 0).sort((a, b) => b.count - a.count).slice(0, 5),
+    [allCells]
+  );
+
+  const best5 = useMemo(
+    () => [...allCells]
+      .filter((c) => c.hour >= 6 && c.hour <= 22) // waking hours only
+      .sort((a, b) => a.count - b.count)
+      .slice(0, 5),
+    [allCells]
   );
 
   const dayOrder = [0, 1, 2, 3, 4, 5, 6];
@@ -79,15 +102,39 @@ export default function Heatmap({ alerts }: Props) {
             ))}
           </div>
           <span>Peligro</span>
-          <span className="legend-separator">|</span>
-          <span className="night-indicator">Zona gris = madrugada</span>
         </div>
       </div>
 
+      {/* TOP 5 WORST + BEST */}
+      <div className="top5-container">
+        <div className="top5-col worst">
+          <h3>Top 5 peores momentos</h3>
+          {worst5.map((c, i) => (
+            <div key={i} className="top5-row" onClick={() => setSelectedCell(c)}>
+              <span className="top5-rank">#{i + 1}</span>
+              <span className="top5-when">{DAY_NAMES_FULL[c.day]} {formatHour(c.hour)}</span>
+              <span className="top5-count worst">{c.count} alertas</span>
+            </div>
+          ))}
+        </div>
+        <div className="top5-col best">
+          <h3>Top 5 mejores momentos</h3>
+          <p className="top5-note">Horario diurno (06-22hs)</p>
+          {best5.map((c, i) => (
+            <div key={i} className="top5-row" onClick={() => setSelectedCell(c)}>
+              <span className="top5-rank">#{i + 1}</span>
+              <span className="top5-when">{DAY_NAMES_FULL[c.day]} {formatHour(c.hour)}</span>
+              <span className="top5-count best">{c.count} alertas</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Detail panel on cell click */}
       {selectedCell && selectedCell.alerts.length > 0 && (
         <div className="heatmap-detail">
           <h3>
-            {DAY_NAMES[selectedCell.day]} a las {formatHour(selectedCell.hour)} — {selectedCell.count} alertas
+            {DAY_NAMES_FULL[selectedCell.day]} a las {formatHour(selectedCell.hour)} — {selectedCell.count} alertas
           </h3>
           <div className="detail-list">
             {selectedCell.alerts.slice(0, 20).map((a) => (
