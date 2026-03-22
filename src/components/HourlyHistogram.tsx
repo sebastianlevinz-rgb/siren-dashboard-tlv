@@ -4,6 +4,7 @@ import { buildHourlyDistribution, formatHour } from "../utils/data";
 
 interface Props {
   alerts: Alert[];
+  lang?: string;
 }
 
 const DEFAULT_ROUTINE: RoutineWindow[] = [

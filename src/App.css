@@ -174,16 +174,35 @@ html, body {
 
 .tab-nav::-webkit-scrollbar { display: none; }
 
-.tab-brand {
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--text-muted);
-  padding: 12px 16px;
-  white-space: nowrap;
+.lang-toggle {
   display: flex;
   align-items: center;
+  margin-left: auto;
+  padding: 0 8px;
+  gap: 2px;
+}
+
+.lang-btn {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.lang-btn:hover {
+  color: var(--text-primary);
+}
+
+.lang-btn.active {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
 }
 
 .tab-btn {
@@ -299,28 +318,22 @@ html, body {
 
 /* ===== TOP 5 BEST/WORST ===== */
 
-.top5-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.top-worst {
   margin-top: 20px;
 }
 
-.top5-col h3 {
+.top-worst h3 {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
+  color: var(--risk-danger);
 }
 
-.top5-col.worst h3 { color: var(--risk-danger); }
-.top5-col.best h3 { color: var(--success); }
-
-.top5-note {
-  font-size: 8px;
-  color: var(--text-muted);
-  margin-top: -6px;
-  margin-bottom: 8px;
+.top-worst-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .top5-group {
@@ -1254,10 +1267,7 @@ html, body {
     gap: 4px;
   }
 
-  .top5-container {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
+  /* top worst already single column */
 
   .routine-windows {
     flex-direction: column;

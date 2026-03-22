@@ -87,19 +87,19 @@ export function getRiskColor(value: number, max: number): string {
 }
 
 export function getRiskLevel(ratio: number): string {
-  if (ratio >= 0.75) return "EXTREMO";
-  if (ratio >= 0.5) return "ALTO";
-  if (ratio >= 0.25) return "MEDIO";
-  return "BAJO";
+  if (ratio >= 0.75) return "EXTREME";
+  if (ratio >= 0.5) return "HIGH";
+  if (ratio >= 0.25) return "MEDIUM";
+  return "LOW";
 }
 
 export function getRiskBadgeColor(risk: string): string {
   switch (risk) {
-    case "EXTREMO":
+    case "EXTREME":
       return "#c93d3d";
-    case "ALTO":
+    case "HIGH":
       return "#d4822a";
-    case "MEDIO":
+    case "MEDIUM":
       return "#b8a02e";
     default:
       return "#1a6b4a";

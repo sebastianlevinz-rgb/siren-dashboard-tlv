@@ -11,6 +11,7 @@ import {
 
 interface Props {
   alerts: Alert[];
+  lang?: string;
 }
 
 export default function Recommendations({ alerts }: Props) {

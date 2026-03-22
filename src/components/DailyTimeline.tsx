@@ -4,6 +4,7 @@ import { buildDailySummaries, formatDate, getRiskColor } from "../utils/data";
 
 interface Props {
   alerts: Alert[];
+  lang?: string;
 }
 
 export default function DailyTimeline({ alerts }: Props) {
