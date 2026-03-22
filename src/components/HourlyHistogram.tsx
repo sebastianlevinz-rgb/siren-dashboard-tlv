@@ -1,16 +1,7 @@
 import { useState, useMemo } from "react";
 import type { Alert, RoutineWindow } from "../types";
+import { type Lang, t } from "../i18n";
 import { buildHourlyDistribution, formatHour } from "../utils/data";
-
-interface Props {
-  alerts: Alert[];
-  lang?: string;
-}
-
-const DEFAULT_ROUTINE: RoutineWindow[] = [
-  { label: "Commute to work", startHour: 7, endHour: 9 },
-  { label: "Commute home", startHour: 17, endHour: 19 },
-];
 
 const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
 
@@ -23,8 +14,17 @@ function riskColor(risk: string): string {
   }
 }
 
-export default function HourlyHistogram({ alerts }: Props) {
-  const [routine, setRoutine] = useState<RoutineWindow[]>(DEFAULT_ROUTINE);
+const RISK_LABELS: Record<string, "low" | "medium" | "high" | "extreme"> = {
+  low: "low", medium: "medium", high: "high", extreme: "extreme",
+};
+
+interface Props { alerts: Alert[]; lang: Lang; }
+
+export default function HourlyHistogram({ alerts, lang }: Props) {
+  const [routine, setRoutine] = useState<RoutineWindow[]>([
+    { label: t("commute_to", lang), startHour: 7, endHour: 9 },
+    { label: t("commute_home", lang), startHour: 17, endHour: 19 },
+  ]);
   const [editingRoutine, setEditingRoutine] = useState(false);
   const [newStart, setNewStart] = useState(8);
   const [newEnd, setNewEnd] = useState(17);
@@ -40,8 +40,8 @@ export default function HourlyHistogram({ alerts }: Props) {
 
   return (
     <div className="panel histogram-panel">
-      <h2>Probability by Hour</h2>
-      <p className="panel-subtitle">% of total alerts per hour. Starts at 06:00.</p>
+      <h2>{t("hist_title", lang)}</h2>
+      <p className="panel-subtitle">{t("hist_sub", lang)}</p>
 
       <div className="h-histogram">
         {HOUR_ORDER.map((h) => {
@@ -62,43 +62,44 @@ export default function HourlyHistogram({ alerts }: Props) {
       </div>
 
       <div className="histogram-legend">
-        <span className="legend-item"><span className="legend-dot" style={{ backgroundColor: "#1a6b4a" }} />Low</span>
-        <span className="legend-item"><span className="legend-dot" style={{ backgroundColor: "#b8a02e" }} />Medium</span>
-        <span className="legend-item"><span className="legend-dot" style={{ backgroundColor: "#d4822a" }} />High</span>
-        <span className="legend-item"><span className="legend-dot" style={{ backgroundColor: "#c93d3d" }} />Extreme</span>
-        <span className="legend-item"><span className="legend-dot routine-dot" />Your routine</span>
+        {(["low", "medium", "high", "extreme"] as const).map((level) => (
+          <span key={level} className="legend-item">
+            <span className="legend-dot" style={{ backgroundColor: riskColor(level) }} />
+            {t(RISK_LABELS[level], lang)}
+          </span>
+        ))}
+        <span className="legend-item"><span className="legend-dot routine-dot" />{t("your_routine", lang)}</span>
       </div>
 
       <div className="routine-section">
-        <h3>My Routine</h3>
+        <h3>{t("my_routine", lang)}</h3>
         <div className="routine-windows">
           {routineRisks.map((w, i) => (
             <div key={i} className="routine-card">
               <div className="routine-label">{w.label}</div>
               <div className="routine-time">{formatHour(w.startHour)} - {formatHour(w.endHour)}</div>
-              <div className="routine-risk">Cumulative risk: {w.totalPct.toFixed(1)}%</div>
+              <div className="routine-risk">{t("cumulative_risk", lang)}: {w.totalPct.toFixed(1)}%</div>
               <button className="routine-remove" onClick={() => setRoutine(routine.filter((_, j) => j !== i))}>x</button>
             </div>
           ))}
         </div>
-
         {editingRoutine ? (
           <div className="routine-form">
-            <input type="text" placeholder="Label" value={newLabel} onChange={(e) => setNewLabel(e.target.value)} />
+            <input type="text" placeholder={t("label", lang)} value={newLabel} onChange={(e) => setNewLabel(e.target.value)} />
             <select value={newStart} onChange={(e) => setNewStart(Number(e.target.value))}>
               {Array.from({ length: 24 }, (_, h) => <option key={h} value={h}>{formatHour(h)}</option>)}
             </select>
-            <span>to</span>
+            <span>{t("to", lang)}</span>
             <select value={newEnd} onChange={(e) => setNewEnd(Number(e.target.value))}>
               {Array.from({ length: 24 }, (_, h) => <option key={h} value={h}>{formatHour(h)}</option>)}
             </select>
             <button className="btn-add" onClick={() => {
               if (newLabel && newEnd > newStart) { setRoutine([...routine, { label: newLabel, startHour: newStart, endHour: newEnd }]); setNewLabel(""); setEditingRoutine(false); }
-            }}>Add</button>
-            <button className="btn-cancel" onClick={() => setEditingRoutine(false)}>Cancel</button>
+            }}>{t("add", lang)}</button>
+            <button className="btn-cancel" onClick={() => setEditingRoutine(false)}>{t("cancel", lang)}</button>
           </div>
         ) : (
-          <button className="btn-add-routine" onClick={() => setEditingRoutine(true)}>+ Add time window</button>
+          <button className="btn-add-routine" onClick={() => setEditingRoutine(true)}>{t("add_window", lang)}</button>
         )}
       </div>
     </div>

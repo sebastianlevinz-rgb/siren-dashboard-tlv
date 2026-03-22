@@ -35,6 +35,17 @@ html, body {
   overscroll-behavior: none;
 }
 
+/* ===== LANGUAGE BAR — top of page ===== */
+
+.lang-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+  padding: 6px 16px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
+}
+
 /* ===== HEADER ===== */
 
 .dashboard-header {
@@ -173,14 +184,6 @@ html, body {
 }
 
 .tab-nav::-webkit-scrollbar { display: none; }
-
-.lang-toggle {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  padding: 0 8px;
-  gap: 2px;
-}
 
 .lang-btn {
   font-family: var(--font-mono);

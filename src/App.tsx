@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import type { Alert } from "./types";
+import { type Lang, t } from "./i18n";
 import Header from "./components/Header";
 import Heatmap from "./components/Heatmap";
 import DailyTimeline from "./components/DailyTimeline";
@@ -10,34 +11,16 @@ import { fetchFromLocalCSV } from "./utils/sheets";
 import "./App.css";
 
 type TabId = "heatmap" | "timeline" | "histogram" | "trend" | "tips";
-type Lang = "en" | "es" | "he";
 
-const TABS: Record<Lang, { id: TabId; label: string }[]> = {
-  en: [
-    { id: "heatmap", label: "Heatmap" },
-    { id: "timeline", label: "Timeline" },
-    { id: "histogram", label: "By Hour" },
-    { id: "trend", label: "Trend" },
-    { id: "tips", label: "Tips" },
-  ],
-  es: [
-    { id: "heatmap", label: "Heatmap" },
-    { id: "timeline", label: "Timeline" },
-    { id: "histogram", label: "Por Hora" },
-    { id: "trend", label: "Tendencia" },
-    { id: "tips", label: "Tips" },
-  ],
-  he: [
-    { id: "heatmap", label: "Heatmap" },
-    { id: "timeline", label: "Timeline" },
-    { id: "histogram", label: "לפי שעה" },
-    { id: "trend", label: "מגמה" },
-    { id: "tips", label: "טיפים" },
-  ],
-};
+const TAB_KEYS: { id: TabId; key: "tab_heatmap" | "tab_timeline" | "tab_byhour" | "tab_trend" | "tab_tips" }[] = [
+  { id: "heatmap", key: "tab_heatmap" },
+  { id: "timeline", key: "tab_timeline" },
+  { id: "histogram", key: "tab_byhour" },
+  { id: "trend", key: "tab_trend" },
+  { id: "tips", key: "tab_tips" },
+];
 
-const LANG_LABELS: Record<Lang, string> = { en: "EN", es: "ES", he: "HE" };
-const LANG_ORDER: Lang[] = ["en", "es", "he"];
+const LANGS: Lang[] = ["en", "es", "he"];
 
 function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
@@ -57,40 +40,36 @@ function App() {
 
   useEffect(() => { loadData(); }, [loadData]);
 
-  const showHeader = activeTab === "heatmap";
-
   return (
     <div className="app">
-      {showHeader && <Header alerts={alerts} lang={lang} />}
+      {/* Language toggle at the very top */}
+      <div className="lang-bar">
+        {LANGS.map((l) => (
+          <button key={l} className={`lang-btn ${lang === l ? "active" : ""}`} onClick={() => setLang(l)}>
+            {l.toUpperCase()}
+          </button>
+        ))}
+      </div>
+
+      {activeTab === "heatmap" && <Header alerts={alerts} lang={lang} />}
 
       <nav className="tab-nav">
-        {TABS[lang].map((tab) => (
+        {TAB_KEYS.map((tab) => (
           <button
             key={tab.id}
             className={`tab-btn ${activeTab === tab.id ? "active" : ""}`}
             onClick={() => setActiveTab(tab.id)}
           >
-            {tab.label}
+            {t(tab.key, lang)}
           </button>
         ))}
-        <div className="lang-toggle">
-          {LANG_ORDER.map((l) => (
-            <button
-              key={l}
-              className={`lang-btn ${lang === l ? "active" : ""}`}
-              onClick={() => setLang(l)}
-            >
-              {LANG_LABELS[l]}
-            </button>
-          ))}
-        </div>
       </nav>
 
       <main className="dashboard-main">
         {activeTab === "heatmap" && <Heatmap alerts={alerts} lang={lang} />}
         {activeTab === "timeline" && <DailyTimeline alerts={alerts} lang={lang} />}
         {activeTab === "histogram" && <HourlyHistogram alerts={alerts} lang={lang} />}
-        {activeTab === "trend" && <TrendChart alerts={alerts} />}
+        {activeTab === "trend" && <TrendChart alerts={alerts} lang={lang} />}
         {activeTab === "tips" && <Recommendations alerts={alerts} lang={lang} />}
       </main>
 
