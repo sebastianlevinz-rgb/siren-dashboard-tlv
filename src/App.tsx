@@ -51,27 +51,30 @@ function App() {
 
   return (
     <div className="app">
-      {/* Top nav: tabs + lang */}
-      <nav className="top-nav">
-        <div className="top-nav-tabs">
-          {TABS.map((tab) => (
-            <button
-              key={tab.id}
-              className={`top-tab ${activeTab === tab.id ? "active" : ""}`}
-              onClick={() => setActiveTab(tab.id)}
-            >
-              <span className="top-tab-icon">{tab.icon}</span>
-              <span className="top-tab-label">{t(tab.key, lang)}</span>
-            </button>
-          ))}
-        </div>
-        <div className="top-nav-lang">
+      {/* Header bar: brand + lang */}
+      <div className="header-bar">
+        <span className="header-brand">🚀 MISSILE PROBABILITY</span>
+        <div className="header-lang">
           {LANGS.map((l) => (
             <button key={l} className={`lang-btn ${lang === l ? "active" : ""}`} onClick={() => setLang(l)}>
               {l.toUpperCase()}
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Tab nav */}
+      <nav className="tab-nav">
+        {TABS.map((tab) => (
+          <button
+            key={tab.id}
+            className={`top-tab ${activeTab === tab.id ? "active" : ""}`}
+            onClick={() => setActiveTab(tab.id)}
+          >
+            <span className="top-tab-icon">{tab.icon}</span>
+            <span className="top-tab-label">{t(tab.key, lang)}</span>
+          </button>
+        ))}
       </nav>
 
       {/* Main content */}
