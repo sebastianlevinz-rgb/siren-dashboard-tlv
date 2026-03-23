@@ -1,16 +1,24 @@
 {
-  "name": "Siren Dashboard — Tel Aviv",
-  "short_name": "Siren TLV",
-  "description": "Dashboard de alertas de misiles y drones - Tel Aviv / Gush Dan",
+  "name": "MissileCast — Tel Aviv",
+  "short_name": "MissileCast",
+  "description": "Missile alert probability dashboard for Tel Aviv / Gush Dan. Offline-capable.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#0a0a0a",
+  "background_color": "#0a0a0f",
+  "theme_color": "#0a0a0f",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚨</text></svg>",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }

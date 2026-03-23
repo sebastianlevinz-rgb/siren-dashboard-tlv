@@ -1,9 +1,12 @@
-import { useState, useEffect, useCallback, lazy, Suspense } from "react";
+import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react";
 import type { Alert } from "./types";
 import { type Lang, t } from "./i18n";
 import { buildDailySummaries } from "./utils/data";
 import { fetchFromLocalCSV } from "./utils/sheets";
 import "./App.css";
+
+const CACHE_KEY = "missilecast-alerts";
+const CACHE_TS_KEY = "missilecast-alerts-ts";
 
 const Heatmap = lazy(() => import("./components/Heatmap"));
 const Now = lazy(() => import("./components/Now"));
@@ -15,8 +18,8 @@ const Recommendations = lazy(() => import("./components/Recommendations"));
 type TabId = "heatmap" | "now" | "timeline" | "histogram" | "trend" | "tips";
 
 const TABS: { id: TabId; icon: string; key: "tab_heatmap" | "tab_now" | "tab_timeline" | "tab_byhour" | "tab_trend" | "tab_tips" }[] = [
-  { id: "heatmap", icon: "🟧", key: "tab_heatmap" },
   { id: "now", icon: "⚡", key: "tab_now" },
+  { id: "heatmap", icon: "🟧", key: "tab_heatmap" },
   { id: "timeline", icon: "📊", key: "tab_timeline" },
   { id: "histogram", icon: "🕐", key: "tab_byhour" },
   { id: "trend", icon: "📈", key: "tab_trend" },
@@ -27,24 +30,48 @@ const LANGS: Lang[] = ["en", "es", "he"];
 
 function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
-  const [activeTab, setActiveTab] = useState<TabId>("heatmap");
+  const [activeTab, setActiveTab] = useState<TabId>("now");
   const [lang, setLang] = useState<Lang>("en");
 
   const loadData = useCallback(async () => {
+    // Show cached data instantly
+    try {
+      const cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        const parsed = JSON.parse(cached) as Alert[];
+        if (parsed.length > 0) setAlerts(parsed);
+      }
+    } catch { /* ignore corrupt cache */ }
+
+    // Fetch fresh data in background
     try {
       const data = await fetchFromLocalCSV();
-      if (data.length > 0) { setAlerts(data); return; }
+      if (data.length > 0) {
+        setAlerts(data);
+        try {
+          localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+          localStorage.setItem(CACHE_TS_KEY, String(Date.now()));
+        } catch { /* storage full */ }
+        return;
+      }
     } catch { /* fallback */ }
     try {
       const res = await fetch("/data/alerts.json");
-      if (res.ok) setAlerts(await res.json());
-    } catch (e) { console.error(e); }
+      if (res.ok) {
+        const data = await res.json();
+        setAlerts(data);
+        try {
+          localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+          localStorage.setItem(CACHE_TS_KEY, String(Date.now()));
+        } catch { /* storage full */ }
+      }
+    } catch { /* offline — cached data already shown */ }
   }, []);
 
   useEffect(() => { loadData(); }, [loadData]);
   useEffect(() => { document.documentElement.dir = lang === "he" ? "rtl" : "ltr"; }, [lang]);
 
-  const days = buildDailySummaries(alerts);
+  const days = useMemo(() => buildDailySummaries(alerts), [alerts]);
   const total = alerts.length;
   const totalDays = days.length;
   const avg = (total / (totalDays || 1)).toFixed(1);
@@ -79,7 +106,14 @@ function App() {
 
       {/* Main content */}
       <main className="dashboard-main">
-        <Suspense fallback={<div className="loading-tab">...</div>}>
+        <Suspense fallback={
+          <div className="loading-skeleton">
+            <div className="skel-block skel-hero" />
+            <div className="skel-block skel-row" />
+            <div className="skel-block skel-row" />
+            <div className="skel-block skel-row short" />
+          </div>
+        }>
           {activeTab === "heatmap" && <Heatmap alerts={alerts} lang={lang} total={total} totalDays={totalDays} avg={avg} />}
           {activeTab === "now" && <Now alerts={alerts} lang={lang} />}
           {activeTab === "timeline" && <DailyTimeline alerts={alerts} lang={lang} />}
