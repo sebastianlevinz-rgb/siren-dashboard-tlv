@@ -252,8 +252,12 @@ interface Props {
   avg: string;
 }
 
+const COLLAPSE_THRESHOLD = 6;
+const COLLAPSE_SHOW = 4;
+
 export default function Heatmap({ alerts, lang, total, totalDays, avg }: Props) {
   const [selectedCell, setSelectedCell] = useState<HeatmapCell | null>(null);
+  const [expandedGroups, setExpandedGroups] = useState<Set<number>>(new Set());
   const grid = useMemo(() => buildHeatmap(alerts), [alerts]);
   const maxCount = useMemo(() => Math.max(...grid.flat().map((c) => c.count), 1), [grid]);
 
@@ -365,21 +369,38 @@ export default function Heatmap({ alerts, lang, total, totalDays, avg }: Props) 
       <div className="top-worst">
         <h3>{t("most_dangerous", lang)}</h3>
         <div className="top-worst-list">
-          {worstGroups.map((g, i) => (
-            <div key={g.count} className="top5-group">
-              <div className="top5-group-header">
-                <span className="top5-rank">#{i + 1}</span>
-                <span className="top5-count worst">{g.count} {plural(g.count)}</span>
+          {worstGroups.map((g, i) => {
+            const isExpanded = expandedGroups.has(i);
+            const needsCollapse = g.cells.length > COLLAPSE_THRESHOLD;
+            const visibleCells = needsCollapse && !isExpanded ? g.cells.slice(0, COLLAPSE_SHOW) : g.cells;
+            return (
+              <div key={g.count} className="top5-group">
+                <div className="top5-group-header">
+                  <span className="top5-rank">#{i + 1}</span>
+                  <span className="top5-count worst">{g.count} {plural(g.count)}</span>
+                </div>
+                <div className="top5-group-items">
+                  {visibleCells.map((c, j) => (
+                    <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
+                      {dayShort(c.day, lang)} {formatHour(c.hour)}
+                    </span>
+                  ))}
+                </div>
+                {needsCollapse && (
+                  <button className="top5-toggle" onClick={() => {
+                    const next = new Set(expandedGroups);
+                    if (isExpanded) next.delete(i); else next.add(i);
+                    setExpandedGroups(next);
+                  }}>
+                    {isExpanded
+                      ? (lang === "he" ? "הצג פחות" : lang === "es" ? "Mostrar menos" : "Show less") + " \u25B2"
+                      : (lang === "he" ? `הצג הכל (${g.cells.length})` : lang === "es" ? `Mostrar todos (${g.cells.length})` : `Show all (${g.cells.length})`) + " \u25BC"
+                    }
+                  </button>
+                )}
               </div>
-              <div className="top5-group-items">
-                {g.cells.map((c, j) => (
-                  <span key={j} className="top5-tag" onClick={() => setSelectedCell(c)}>
-                    {dayShort(c.day, lang)} {formatHour(c.hour)}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

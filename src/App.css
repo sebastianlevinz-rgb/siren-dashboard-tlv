@@ -325,6 +325,22 @@ html, body {
   color: var(--accent);
 }
 
+.top5-toggle {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  color: var(--text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-top: 4px;
+  transition: color 0.15s;
+}
+
+.top5-toggle:hover {
+  color: var(--accent);
+}
+
 .heatmap-day-label {
   font-size: 10px;
   color: var(--text-secondary);

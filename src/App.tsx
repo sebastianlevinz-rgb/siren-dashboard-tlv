@@ -18,8 +18,8 @@ const Recommendations = lazy(() => import("./components/Recommendations"));
 type TabId = "heatmap" | "now" | "timeline" | "histogram" | "trend" | "tips";
 
 const TABS: { id: TabId; icon: string; key: "tab_heatmap" | "tab_now" | "tab_timeline" | "tab_byhour" | "tab_trend" | "tab_tips" }[] = [
-  { id: "now", icon: "⚡", key: "tab_now" },
   { id: "heatmap", icon: "🟧", key: "tab_heatmap" },
+  { id: "now", icon: "⚡", key: "tab_now" },
   { id: "timeline", icon: "📊", key: "tab_timeline" },
   { id: "histogram", icon: "🕐", key: "tab_byhour" },
   { id: "trend", icon: "📈", key: "tab_trend" },
@@ -30,7 +30,7 @@ const LANGS: Lang[] = ["en", "es", "he"];
 
 function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
-  const [activeTab, setActiveTab] = useState<TabId>("now");
+  const [activeTab, setActiveTab] = useState<TabId>("heatmap");
   const [lang, setLang] = useState<Lang>("en");
 
   const loadData = useCallback(async () => {
