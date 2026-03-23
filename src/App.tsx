@@ -3,6 +3,7 @@ import type { Alert } from "./types";
 import { type Lang, t } from "./i18n";
 import { buildDailySummaries } from "./utils/data";
 import { fetchFromLocalCSV } from "./utils/sheets";
+import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 const CACHE_KEY = "missilecast-alerts";
@@ -127,6 +128,7 @@ function App() {
         <span>Data: Tzofar Telegram @tzevaadom_en | Gush Dan only</span>
         <span>Desarrollado por Sebastian Levin Z 🇦🇷</span>
       </footer>
+      <Analytics />
     </div>
   );
 }
