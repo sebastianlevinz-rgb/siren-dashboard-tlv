@@ -1102,6 +1102,229 @@ html, body {
   color: var(--text-secondary);
 }
 
+/* ===== NOW / AccuWeather ===== */
+
+.now-hero {
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.now-time {
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.now-risk-label {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin: 8px 0 4px;
+  letter-spacing: 3px;
+}
+
+.now-advice {
+  font-size: 13px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 8px;
+}
+
+.now-stat {
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+}
+
+.now-section {
+  margin-bottom: 20px;
+}
+
+.now-section h3 {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+/* Hourly forecast strip */
+.now-forecast {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
+}
+
+.forecast-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-width: 36px;
+  flex-shrink: 0;
+}
+
+.forecast-cell.current {
+  background: rgba(106, 168, 215, 0.1);
+  border-radius: 6px;
+  padding: 4px 2px;
+  outline: 1px solid var(--accent);
+}
+
+.forecast-hour {
+  font-size: 8px;
+  color: var(--text-muted);
+}
+
+.forecast-bar {
+  width: 20px;
+  border-radius: 3px;
+  min-height: 4px;
+}
+
+.forecast-count {
+  font-size: 9px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Today full breakdown */
+.now-today {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.today-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 20px;
+  padding: 0 4px;
+  border-radius: 3px;
+}
+
+.today-row.current {
+  background: rgba(106, 168, 215, 0.08);
+  outline: 1px solid rgba(106, 168, 215, 0.3);
+}
+
+.today-hour {
+  font-size: 9px;
+  color: var(--text-muted);
+  min-width: 36px;
+  text-align: right;
+}
+
+.today-bar-track {
+  flex: 1;
+  height: 12px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.today-bar-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.today-count {
+  font-size: 9px;
+  color: var(--text-secondary);
+  min-width: 14px;
+  font-weight: 600;
+}
+
+.today-now-badge {
+  font-size: 7px;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Trend range toggle */
+.trend-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.trend-header h2 {
+  margin-bottom: 4px;
+}
+
+.trend-range-toggle {
+  display: flex;
+  gap: 2px;
+}
+
+.range-btn {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.15s;
+}
+
+.range-btn.active {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+}
+
+/* Loading placeholder */
+.loading-tab {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* RTL support */
+[dir="rtl"] .heatmap-grid {
+  direction: ltr; /* keep grid LTR even in RTL mode */
+}
+
+[dir="rtl"] .h-bar-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .v-timeline-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .today-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hourly-row {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .header-stats {
+  direction: rtl;
+}
+
+[dir="rtl"] .tab-nav {
+  direction: rtl;
+}
+
+[dir="rtl"] .lang-bar {
+  justify-content: flex-start;
+}
+
 /* ===== FOOTER ===== */
 
 .dashboard-footer {

@@ -26,6 +26,7 @@ const translations = {
   updated: { en: "Updated", es: "Actualiz.", he: "עדכון" },
 
   // Tabs
+  tab_now: { en: "Now", es: "Ahora", he: "עכשיו" },
   tab_heatmap: { en: "Heatmap", es: "Heatmap", he: "מפת חום" },
   tab_timeline: { en: "Timeline", es: "Timeline", he: "ציר זמן" },
   tab_byhour: { en: "By Hour", es: "Por Hora", he: "לפי שעה" },

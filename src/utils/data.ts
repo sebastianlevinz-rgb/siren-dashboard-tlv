@@ -72,16 +72,17 @@ export function buildHourlyDistribution(alerts: Alert[]): HourlyDistribution[] {
   });
 }
 
-// New color scale: teal-green (calm) -> yellow -> orange -> red -> dark red
+// Color scale: brighter at low end for better visibility
 export function getRiskColor(value: number, max: number): string {
   if (max === 0 || value === 0) return "#111b21";
   const ratio = value / max;
 
-  if (ratio < 0.15) return "#0d3b2e"; // very dark teal
-  if (ratio < 0.3) return "#1a6b4a";  // teal-green
-  if (ratio < 0.45) return "#3d8b37"; // green
-  if (ratio < 0.6) return "#b8a02e";  // yellow-green
-  if (ratio < 0.75) return "#d4822a"; // orange
+  if (ratio < 0.1) return "#1b5e4a";  // visible teal (was too dark before)
+  if (ratio < 0.2) return "#25795a";  // brighter teal
+  if (ratio < 0.35) return "#3d8b37"; // green
+  if (ratio < 0.5) return "#7da032";  // yellow-green
+  if (ratio < 0.65) return "#b8a02e"; // yellow
+  if (ratio < 0.8) return "#d4822a";  // orange
   if (ratio < 0.9) return "#c93d3d";  // red
   return "#8b1a1a";                    // dark red
 }
