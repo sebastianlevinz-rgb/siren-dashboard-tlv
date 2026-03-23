@@ -35,13 +35,11 @@ html, body {
   overscroll-behavior: none;
 }
 
-/* ===== TOP BAR ===== */
+/* ===== TOP NAV ===== */
 
-.top-bar {
+.top-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -51,18 +49,58 @@ html, body {
   background: rgba(15, 16, 22, 0.95);
 }
 
-.top-brand {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--text-primary);
+.top-nav-tabs {
+  display: flex;
+  flex: 1;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.lang-bar {
+.top-nav-tabs::-webkit-scrollbar { display: none; }
+
+.top-tab {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 12px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  font-family: var(--font-mono);
+}
+
+.top-tab-icon {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.top-tab-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.top-tab.active {
+  border-bottom-color: var(--accent);
+}
+
+.top-tab.active .top-tab-icon { opacity: 1; }
+.top-tab.active .top-tab-label { color: var(--accent); }
+
+.top-tab:hover .top-tab-label { color: var(--text-secondary); }
+
+.top-nav-lang {
   display: flex;
   gap: 3px;
+  padding: 0 10px;
+  flex-shrink: 0;
 }
+
+.lang-bar { display: flex; gap: 3px; }
 
 .lang-btn {
   font-family: var(--font-mono);
@@ -85,151 +123,48 @@ html, body {
   border-color: var(--accent);
 }
 
-/* ===== STATS BAR — always visible, tappable ===== */
+/* ===== HEATMAP STATS BAR (bottom of heatmap) ===== */
 
-.stats-bar {
+.hm-stats-bar {
   display: flex;
-  gap: 6px;
-  padding: 8px 16px;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border);
-  overflow-x: auto;
-  scrollbar-width: none;
-}
-
-.stats-bar::-webkit-scrollbar { display: none; }
-
-.stat-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 14px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.15s;
-  flex-shrink: 0;
-  font-family: var(--font-mono);
-}
-
-.stat-btn:hover, .stat-btn:active {
-  border-color: var(--accent);
-  background: rgba(106, 168, 215, 0.08);
-}
-
-.stat-btn-value {
-  font-size: 15px;
-  font-weight: 700;
-  color: var(--accent);
-}
-
-.stat-btn-value.small {
-  font-size: 10px;
-}
-
-.stat-btn-label {
-  font-size: 8px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.stat-updated {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 10px;
-  flex-shrink: 0;
-}
-
-/* ===== SWIPE DOTS ===== */
-
-.swipe-dots {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-  padding: 8px 0;
-  background: var(--bg-primary);
-}
-
-.swipe-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--border);
-  transition: all 0.2s;
-}
-
-.swipe-dot.active {
-  background: var(--accent);
-  width: 18px;
-  border-radius: 3px;
-}
-
-/* ===== BOTTOM NAV BAR ===== */
-
-.bottom-nav {
-  display: flex;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-  background: rgba(15, 16, 22, 0.97);
-  backdrop-filter: blur(12px);
+  gap: 8px;
+  margin-top: 20px;
+  padding-top: 16px;
   border-top: 1px solid var(--border);
-  padding: 4px 0;
-  padding-bottom: calc(4px + env(safe-area-inset-bottom, 0px));
 }
 
-.bottom-tab {
+.hm-stat {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
-  padding: 6px 2px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.15s;
-  font-family: var(--font-mono);
+  padding: 10px 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
 }
 
-.bottom-tab-icon {
-  font-size: 18px;
-  opacity: 0.5;
-  transition: opacity 0.15s;
-}
-
-.bottom-tab-label {
-  font-size: 8px;
-  color: var(--text-muted);
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-}
-
-.bottom-tab.active .bottom-tab-icon {
-  opacity: 1;
-}
-
-.bottom-tab.active .bottom-tab-label {
+.hm-stat-value {
+  font-size: 16px;
+  font-weight: 700;
   color: var(--accent);
 }
 
-.bottom-tab:active {
-  transform: scale(0.95);
+.hm-stat-label {
+  font-size: 8px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 /* ===== MAIN ===== */
 
 .dashboard-main {
   padding: 12px 16px;
-  padding-bottom: 80px; /* space for bottom nav */
   max-width: 1400px;
   margin: 0 auto;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 120px);
 }
 
 /* ===== PANELS ===== */
@@ -1121,10 +1056,34 @@ html, body {
   border: 1px solid var(--border);
   border-radius: 8px;
   border-left: 3px solid var(--success);
+  position: relative;
 }
 
-.life-tip.warning {
+.life-tip.danger {
   border-left-color: var(--risk-danger);
+  background: rgba(201, 61, 61, 0.06);
+}
+
+.tip-badge {
+  font-size: 14px;
+  font-weight: 700;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.tip-badge.ok {
+  color: var(--success);
+  background: rgba(26, 107, 74, 0.15);
+}
+
+.tip-badge.danger {
+  color: var(--risk-danger);
+  background: rgba(201, 61, 61, 0.15);
+  font-size: 16px;
 }
 
 .tip-emoji {
@@ -1378,7 +1337,6 @@ html, body {
 
 .dashboard-footer {
   padding: 16px 20px;
-  padding-bottom: 70px; /* above bottom nav */
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
@@ -1412,27 +1370,20 @@ html, body {
 /* ===== MOBILE — Aggressive optimization ===== */
 
 @media (max-width: 768px) {
-  .top-brand {
-    font-size: 9px;
-    letter-spacing: 1px;
+  .top-tab {
+    padding: 8px 8px;
   }
 
-  .stats-bar {
-    padding: 6px 10px;
-    gap: 4px;
+  .top-tab-icon {
+    font-size: 12px;
   }
 
-  .stat-btn {
-    padding: 4px 10px;
-  }
-
-  .stat-btn-value {
-    font-size: 13px;
+  .top-tab-label {
+    font-size: 8px;
   }
 
   .dashboard-main {
     padding: 8px 10px;
-    padding-bottom: 80px;
   }
 
   .panel {
@@ -1444,12 +1395,12 @@ html, body {
     font-size: 12px;
   }
 
-  .bottom-tab-icon {
-    font-size: 16px;
+  .hm-stats-bar {
+    gap: 6px;
   }
 
-  .bottom-tab-label {
-    font-size: 7px;
+  .hm-stat-value {
+    font-size: 14px;
   }
 
   /* Heatmap: tighter on mobile */

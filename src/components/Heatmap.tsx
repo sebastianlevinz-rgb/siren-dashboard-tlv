@@ -5,9 +5,15 @@ import { buildHeatmap, formatHour, getRiskColor } from "../utils/data";
 
 const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
 
-interface Props { alerts: Alert[]; lang: Lang; }
+interface Props {
+  alerts: Alert[];
+  lang: Lang;
+  total: number;
+  totalDays: number;
+  avg: string;
+}
 
-export default function Heatmap({ alerts, lang }: Props) {
+export default function Heatmap({ alerts, lang, total, totalDays, avg }: Props) {
   const [selectedCell, setSelectedCell] = useState<HeatmapCell | null>(null);
   const grid = useMemo(() => buildHeatmap(alerts), [alerts]);
   const maxCount = useMemo(() => Math.max(...grid.flat().map((c) => c.count), 1), [grid]);
@@ -18,7 +24,7 @@ export default function Heatmap({ alerts, lang }: Props) {
     return cells;
   }, [grid]);
 
-  // Filter out 1-alert cells — not meaningful
+  // Filter out 1-alert cells
   const worstGroups = useMemo(() => {
     const sorted = [...allCells].filter((c) => c.count > 1).sort((a, b) => b.count - a.count);
     const groups: { count: number; cells: HeatmapCell[] }[] = [];
@@ -30,53 +36,51 @@ export default function Heatmap({ alerts, lang }: Props) {
     return groups.slice(0, 4);
   }, [allCells]);
 
-  // Life tips based on safest windows (waking hours, 06-22)
+  // Life tips
   const lifeTips = useMemo(() => {
-    const wakingCells = allCells.filter((c) => c.hour >= 6 && c.hour <= 22);
     const byHour: Record<number, number> = {};
-    for (const c of wakingCells) {
+    for (const c of allCells.filter((c) => c.hour >= 6 && c.hour <= 22)) {
       byHour[c.hour] = (byHour[c.hour] || 0) + c.count;
     }
-
-    // Find safest 2-hour windows for each activity
-    const windowScore = (start: number, end: number) => {
-      let total = 0;
-      for (let h = start; h < end; h++) total += byHour[h] || 0;
-      return total;
+    const findMin = (start: number, end: number) => {
+      let best = { h: start, score: Infinity };
+      for (let h = start; h <= end; h++) {
+        const s = byHour[h] || 0;
+        if (s < best.score) best = { h, score: s };
+      }
+      return best;
     };
-
-    // Best shower time (morning 06-10)
-    let bestShower = { h: 6, score: Infinity };
-    for (let h = 6; h <= 9; h++) {
-      const s = (byHour[h] || 0);
-      if (s < bestShower.score) bestShower = { h, score: s };
-    }
-
-    // Best grocery/super time (avoid peak)
-    let bestSuper = { h: 8, score: Infinity };
-    for (let h = 8; h <= 20; h++) {
-      const s = windowScore(h, h + 1);
-      if (s < bestSuper.score) bestSuper = { h, score: s };
-    }
-
-    // Worst lunch time
-    let worstLunch = { h: 12, score: 0 };
-    for (let h = 11; h <= 14; h++) {
-      const s = (byHour[h] || 0);
-      if (s > worstLunch.score) worstLunch = { h, score: s };
-    }
-
-    // Best evening out (18-22)
-    let bestEvening = { h: 18, score: Infinity };
-    for (let h = 18; h <= 21; h++) {
-      const s = (byHour[h] || 0);
-      if (s < bestEvening.score) bestEvening = { h, score: s };
-    }
-
-    return { bestShower, bestSuper, worstLunch, bestEvening };
+    const findMax = (start: number, end: number) => {
+      let worst = { h: start, score: 0 };
+      for (let h = start; h <= end; h++) {
+        const s = byHour[h] || 0;
+        if (s > worst.score) worst = { h, score: s };
+      }
+      return worst;
+    };
+    return {
+      bestShower: findMin(6, 9),
+      bestSuper: findMin(8, 20),
+      worstLunch: findMax(11, 14),
+      bestEvening: findMin(18, 21),
+    };
   }, [allCells]);
 
   const plural = (n: number) => n === 1 ? t("alert_s", lang) : t("alerts_s", lang);
+
+  const tipLabels = {
+    en: { shower: "Best time to shower", super: "Safest grocery run", lunch: "Don't eat outside at", evening: "Safest evening out" },
+    es: { shower: "Mejor hora para banarse", super: "Mejor hora para el super", lunch: "No salgas a almorzar a las", evening: "Mejor hora para salir" },
+    he: { shower: "הזמן הכי בטוח להתקלח", super: "הזמן הכי בטוח לסופר", lunch: "אל תצא לאכול בשעה", evening: "הזמן הכי בטוח לצאת בערב" },
+  };
+  const tl = tipLabels[lang];
+
+  const statsLabels = {
+    en: { totalAlerts: "Total Alerts", period: "Period", avgDay: "Average / Day", days: "days" },
+    es: { totalAlerts: "Total Alertas", period: "Periodo", avgDay: "Promedio / Dia", days: "dias" },
+    he: { totalAlerts: "סך התרעות", period: "תקופה", avgDay: "ממוצע / יום", days: "ימים" },
+  };
+  const sl = statsLabels[lang];
 
   return (
     <div className="panel heatmap-panel">
@@ -118,6 +122,7 @@ export default function Heatmap({ alerts, lang }: Props) {
         </div>
       </div>
 
+      {/* Most dangerous */}
       <div className="top-worst">
         <h3>{t("most_dangerous", lang)}</h3>
         <div className="top-worst-list">
@@ -139,41 +144,38 @@ export default function Heatmap({ alerts, lang }: Props) {
         </div>
       </div>
 
-      {/* Life tips with humor */}
+      {/* Daily life tips */}
       <div className="life-tips">
         <h3>{lang === "he" ? "טיפים לחיי יומיום" : lang === "es" ? "Tips para la vida diaria" : "Daily Life Tips"}</h3>
         <div className="life-tips-grid">
-          <div className="life-tip">
+          <div className="life-tip ok">
             <span className="tip-emoji">🚿</span>
-            <span className="tip-text">
-              {lang === "he" ? "הזמן הכי בטוח להתקלח" : lang === "es" ? "Mejor hora para banarse" : "Best time to shower"}
-            </span>
+            <span className="tip-text">{tl.shower}</span>
             <span className="tip-value">{formatHour(lifeTips.bestShower.h)}</span>
+            <span className="tip-badge ok">✓</span>
           </div>
-          <div className="life-tip">
+          <div className="life-tip ok">
             <span className="tip-emoji">🛒</span>
-            <span className="tip-text">
-              {lang === "he" ? "הזמן הכי בטוח לסופר" : lang === "es" ? "Mejor hora para el super" : "Safest grocery run"}
-            </span>
+            <span className="tip-text">{tl.super}</span>
             <span className="tip-value">{formatHour(lifeTips.bestSuper.h)}</span>
+            <span className="tip-badge ok">✓</span>
           </div>
-          <div className="life-tip warning">
+          <div className="life-tip danger">
             <span className="tip-emoji">🍽️</span>
-            <span className="tip-text">
-              {lang === "he" ? "אל תצא לאכול בשעה" : lang === "es" ? "No salgas a almorzar a las" : "Skip outdoor lunch at"}
-            </span>
+            <span className="tip-text">{tl.lunch}</span>
             <span className="tip-value">{formatHour(lifeTips.worstLunch.h)}</span>
+            <span className="tip-badge danger">✕</span>
           </div>
-          <div className="life-tip">
+          <div className="life-tip ok">
             <span className="tip-emoji">🍻</span>
-            <span className="tip-text">
-              {lang === "he" ? "הזמן הכי בטוח לצאת בערב" : lang === "es" ? "Mejor hora para salir de noche" : "Safest evening out"}
-            </span>
+            <span className="tip-text">{tl.evening}</span>
             <span className="tip-value">{formatHour(lifeTips.bestEvening.h)}</span>
+            <span className="tip-badge ok">✓</span>
           </div>
         </div>
       </div>
 
+      {/* Detail panel on cell click */}
       {selectedCell && selectedCell.alerts.length > 0 && (
         <div className="heatmap-detail">
           <h3>{dayShort(selectedCell.day, lang)} {t("at_time", lang)} {formatHour(selectedCell.hour)} — {selectedCell.count} {plural(selectedCell.count)}</h3>
@@ -187,6 +189,22 @@ export default function Heatmap({ alerts, lang }: Props) {
           </div>
         </div>
       )}
+
+      {/* Stats summary at the bottom */}
+      <div className="hm-stats-bar">
+        <div className="hm-stat">
+          <span className="hm-stat-value">{total}</span>
+          <span className="hm-stat-label">{sl.totalAlerts}</span>
+        </div>
+        <div className="hm-stat">
+          <span className="hm-stat-value">{totalDays} {sl.days}</span>
+          <span className="hm-stat-label">{sl.period}</span>
+        </div>
+        <div className="hm-stat">
+          <span className="hm-stat-value">{avg}</span>
+          <span className="hm-stat-label">{sl.avgDay}</span>
+        </div>
+      </div>
     </div>
   );
 }
