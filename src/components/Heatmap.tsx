@@ -18,15 +18,62 @@ export default function Heatmap({ alerts, lang }: Props) {
     return cells;
   }, [grid]);
 
+  // Filter out 1-alert cells — not meaningful
   const worstGroups = useMemo(() => {
-    const sorted = [...allCells].filter((c) => c.count > 0).sort((a, b) => b.count - a.count);
+    const sorted = [...allCells].filter((c) => c.count > 1).sort((a, b) => b.count - a.count);
     const groups: { count: number; cells: HeatmapCell[] }[] = [];
     for (const c of sorted) {
       const g = groups.find((g) => g.count === c.count);
       if (g) g.cells.push(c);
       else groups.push({ count: c.count, cells: [c] });
     }
-    return groups.slice(0, 5);
+    return groups.slice(0, 4);
+  }, [allCells]);
+
+  // Life tips based on safest windows (waking hours, 06-22)
+  const lifeTips = useMemo(() => {
+    const wakingCells = allCells.filter((c) => c.hour >= 6 && c.hour <= 22);
+    const byHour: Record<number, number> = {};
+    for (const c of wakingCells) {
+      byHour[c.hour] = (byHour[c.hour] || 0) + c.count;
+    }
+
+    // Find safest 2-hour windows for each activity
+    const windowScore = (start: number, end: number) => {
+      let total = 0;
+      for (let h = start; h < end; h++) total += byHour[h] || 0;
+      return total;
+    };
+
+    // Best shower time (morning 06-10)
+    let bestShower = { h: 6, score: Infinity };
+    for (let h = 6; h <= 9; h++) {
+      const s = (byHour[h] || 0);
+      if (s < bestShower.score) bestShower = { h, score: s };
+    }
+
+    // Best grocery/super time (avoid peak)
+    let bestSuper = { h: 8, score: Infinity };
+    for (let h = 8; h <= 20; h++) {
+      const s = windowScore(h, h + 1);
+      if (s < bestSuper.score) bestSuper = { h, score: s };
+    }
+
+    // Worst lunch time
+    let worstLunch = { h: 12, score: 0 };
+    for (let h = 11; h <= 14; h++) {
+      const s = (byHour[h] || 0);
+      if (s > worstLunch.score) worstLunch = { h, score: s };
+    }
+
+    // Best evening out (18-22)
+    let bestEvening = { h: 18, score: Infinity };
+    for (let h = 18; h <= 21; h++) {
+      const s = (byHour[h] || 0);
+      if (s < bestEvening.score) bestEvening = { h, score: s };
+    }
+
+    return { bestShower, bestSuper, worstLunch, bestEvening };
   }, [allCells]);
 
   const plural = (n: number) => n === 1 ? t("alert_s", lang) : t("alerts_s", lang);
@@ -89,6 +136,41 @@ export default function Heatmap({ alerts, lang }: Props) {
               </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* Life tips with humor */}
+      <div className="life-tips">
+        <h3>{lang === "he" ? "טיפים לחיי יומיום" : lang === "es" ? "Tips para la vida diaria" : "Daily Life Tips"}</h3>
+        <div className="life-tips-grid">
+          <div className="life-tip">
+            <span className="tip-emoji">🚿</span>
+            <span className="tip-text">
+              {lang === "he" ? "הזמן הכי בטוח להתקלח" : lang === "es" ? "Mejor hora para banarse" : "Best time to shower"}
+            </span>
+            <span className="tip-value">{formatHour(lifeTips.bestShower.h)}</span>
+          </div>
+          <div className="life-tip">
+            <span className="tip-emoji">🛒</span>
+            <span className="tip-text">
+              {lang === "he" ? "הזמן הכי בטוח לסופר" : lang === "es" ? "Mejor hora para el super" : "Safest grocery run"}
+            </span>
+            <span className="tip-value">{formatHour(lifeTips.bestSuper.h)}</span>
+          </div>
+          <div className="life-tip warning">
+            <span className="tip-emoji">🍽️</span>
+            <span className="tip-text">
+              {lang === "he" ? "אל תצא לאכול בשעה" : lang === "es" ? "No salgas a almorzar a las" : "Skip outdoor lunch at"}
+            </span>
+            <span className="tip-value">{formatHour(lifeTips.worstLunch.h)}</span>
+          </div>
+          <div className="life-tip">
+            <span className="tip-emoji">🍻</span>
+            <span className="tip-text">
+              {lang === "he" ? "הזמן הכי בטוח לצאת בערב" : lang === "es" ? "Mejor hora para salir de noche" : "Safest evening out"}
+            </span>
+            <span className="tip-value">{formatHour(lifeTips.bestEvening.h)}</span>
+          </div>
         </div>
       </div>
 
