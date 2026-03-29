@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import type { Alert, HeatmapCell } from "../types";
 import { type Lang, t, dayShort, dayFull } from "../i18n";
-import { buildHeatmap, formatHour, getRiskColor } from "../utils/data";
+import { buildHeatmap, formatHour, getRiskColor, getDayOfWeekOccurrences } from "../utils/data";
 
 const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
 
@@ -33,13 +33,16 @@ function LifeTips({ lifeTips, lang, tl, totalDays, allCells, alerts }: {
   const vsAvg = (score: number) => avgPerHour > 0 ? (score / avgPerHour * 100).toFixed(0) : "0";
 
   // Extra patterns
+  const dowOccurrences = useMemo(() => getDayOfWeekOccurrences(alerts), [alerts]);
+
   const patterns = useMemo(() => {
-    // Safest & most dangerous day of week
-    const dayTotals = [0,1,2,3,4,5,6].map(d => ({
-      day: d, count: allCells.filter(c => c.day === d).reduce((a, c) => a + c.count, 0)
-    }));
-    const safestDay = dayTotals.reduce((a, b) => a.count <= b.count ? a : b);
-    const dangerDay = dayTotals.reduce((a, b) => a.count >= b.count ? a : b);
+    // Safest & most dangerous day of week (normalized by occurrences)
+    const dayTotals = [0,1,2,3,4,5,6].map(d => {
+      const count = allCells.filter(c => c.day === d).reduce((a, c) => a + c.count, 0);
+      return { day: d, count, avgPerDay: count / (dowOccurrences[d] || 1) };
+    });
+    const safestDay = dayTotals.reduce((a, b) => a.avgPerDay <= b.avgPerDay ? a : b);
+    const dangerDay = dayTotals.reduce((a, b) => a.avgPerDay >= b.avgPerDay ? a : b);
 
     // Quietest 3-hour window (daytime 6-21)
     let bestWindow = { start: 6, total: Infinity };
@@ -59,14 +62,16 @@ function LifeTips({ lifeTips, lang, tl, totalDays, allCells, alerts }: {
       if (t > peakCount) { peakH = h; peakCount = t; }
     }
 
-    // Weekend vs weekday
+    // Weekend vs weekday (normalized by actual calendar days)
     const weekdayAlerts = allCells.filter(c => c.day >= 1 && c.day <= 5).reduce((a, c) => a + c.count, 0);
     const weekendAlerts = allCells.filter(c => c.day === 0 || c.day === 6).reduce((a, c) => a + c.count, 0);
-    const weekdayAvg = (weekdayAlerts / 5).toFixed(1);
-    const weekendAvg = (weekendAlerts / 2).toFixed(1);
+    const numWeekdays = [1,2,3,4,5].reduce((a, d) => a + dowOccurrences[d], 0);
+    const numWeekends = dowOccurrences[0] + dowOccurrences[6];
+    const weekdayAvg = (weekdayAlerts / (numWeekdays || 1)).toFixed(1);
+    const weekendAvg = (weekendAlerts / (numWeekends || 1)).toFixed(1);
 
     return { safestDay, dangerDay, bestWindow, nightTotal, nightPct, peakH, peakCount, weekdayAvg, weekendAvg };
-  }, [allCells, alerts, totalAtHour]);
+  }, [allCells, alerts, totalAtHour, dowOccurrences]);
 
   const facts: Record<Lang, Record<string, string>> = {
     en: {
@@ -164,12 +169,12 @@ function LifeTips({ lifeTips, lang, tl, totalDays, allCells, alerts }: {
             <span className="pattern-icon">📅</span>
             <span className="pattern-label">{pl.safestDay}</span>
             <span className="pattern-value">{dayFull(patterns.safestDay.day, lang)}</span>
-            <span className="pattern-detail">{patterns.safestDay.count} {pl.alerts}</span>
+            <span className="pattern-detail">{patterns.safestDay.avgPerDay.toFixed(1)} {pl.avgPerDay}</span>
             {expanded === "safestDay" && (
               <div className="tip-fact">
-                {lang === "en" && `${dayFull(patterns.safestDay.day, lang)}s had only ${patterns.safestDay.count} alerts across the entire period. ${dayFull(patterns.dangerDay.day, lang)}s had ${patterns.dangerDay.count} — that's ${((patterns.dangerDay.count / (patterns.safestDay.count || 1))).toFixed(1)}x more. Schedule flexible activities on ${dayFull(patterns.safestDay.day, lang)}s.`}
-                {lang === "es" && `Los ${dayFull(patterns.safestDay.day, lang)} tuvieron solo ${patterns.safestDay.count} alertas en todo el periodo. Los ${dayFull(patterns.dangerDay.day, lang)} tuvieron ${patterns.dangerDay.count} — ${((patterns.dangerDay.count / (patterns.safestDay.count || 1))).toFixed(1)}x mas. Programa actividades flexibles los ${dayFull(patterns.safestDay.day, lang)}.`}
-                {lang === "he" && `ימי ${dayFull(patterns.safestDay.day, lang)} היו עם רק ${patterns.safestDay.count} התרעות בכל התקופה. ימי ${dayFull(patterns.dangerDay.day, lang)} היו עם ${patterns.dangerDay.count} — פי ${((patterns.dangerDay.count / (patterns.safestDay.count || 1))).toFixed(1)}. תכנן פעילויות גמישות ליום ${dayFull(patterns.safestDay.day, lang)}.`}
+                {lang === "en" && `${dayFull(patterns.safestDay.day, lang)}s average ${patterns.safestDay.avgPerDay.toFixed(1)} alerts/day. ${dayFull(patterns.dangerDay.day, lang)}s average ${patterns.dangerDay.avgPerDay.toFixed(1)} — that's ${(patterns.dangerDay.avgPerDay / (patterns.safestDay.avgPerDay || 1)).toFixed(1)}x more. Schedule flexible activities on ${dayFull(patterns.safestDay.day, lang)}s.`}
+                {lang === "es" && `Los ${dayFull(patterns.safestDay.day, lang)} promedian ${patterns.safestDay.avgPerDay.toFixed(1)} alertas/dia. Los ${dayFull(patterns.dangerDay.day, lang)} promedian ${patterns.dangerDay.avgPerDay.toFixed(1)} — ${(patterns.dangerDay.avgPerDay / (patterns.safestDay.avgPerDay || 1)).toFixed(1)}x mas. Programa actividades flexibles los ${dayFull(patterns.safestDay.day, lang)}.`}
+                {lang === "he" && `ימי ${dayFull(patterns.safestDay.day, lang)} ממוצע ${patterns.safestDay.avgPerDay.toFixed(1)} התרעות/יום. ימי ${dayFull(patterns.dangerDay.day, lang)} ממוצע ${patterns.dangerDay.avgPerDay.toFixed(1)} — פי ${(patterns.dangerDay.avgPerDay / (patterns.safestDay.avgPerDay || 1)).toFixed(1)}. תכנן פעילויות גמישות ליום ${dayFull(patterns.safestDay.day, lang)}.`}
               </div>
             )}
           </div>
@@ -177,12 +182,12 @@ function LifeTips({ lifeTips, lang, tl, totalDays, allCells, alerts }: {
             <span className="pattern-icon">📅</span>
             <span className="pattern-label">{pl.dangerDay}</span>
             <span className="pattern-value">{dayFull(patterns.dangerDay.day, lang)}</span>
-            <span className="pattern-detail">{patterns.dangerDay.count} {pl.alerts}</span>
+            <span className="pattern-detail">{patterns.dangerDay.avgPerDay.toFixed(1)} {pl.avgPerDay}</span>
             {expanded === "dangerDay" && (
               <div className="tip-fact">
-                {lang === "en" && `${dayFull(patterns.dangerDay.day, lang)}s are the most active day with ${patterns.dangerDay.count} alerts. That's ${((patterns.dangerDay.count / alerts.length) * 100).toFixed(0)}% of all alerts concentrated on one day of the week. Avoid non-essential outdoor plans.`}
-                {lang === "es" && `Los ${dayFull(patterns.dangerDay.day, lang)} son el dia mas activo con ${patterns.dangerDay.count} alertas. Eso es ${((patterns.dangerDay.count / alerts.length) * 100).toFixed(0)}% de todas las alertas en un solo dia. Evita planes al aire libre no esenciales.`}
-                {lang === "he" && `ימי ${dayFull(patterns.dangerDay.day, lang)} הם היום הכי פעיל עם ${patterns.dangerDay.count} התרעות. זה ${((patterns.dangerDay.count / alerts.length) * 100).toFixed(0)}% מכל ההתרעות ביום אחד. הימנע מתוכניות לא חיוניות בחוץ.`}
+                {lang === "en" && `${dayFull(patterns.dangerDay.day, lang)}s are the most active day with ${patterns.dangerDay.avgPerDay.toFixed(1)} alerts/day on average. That's ${(patterns.dangerDay.avgPerDay / (patterns.safestDay.avgPerDay || 1)).toFixed(1)}x more than ${dayFull(patterns.safestDay.day, lang)}s. Avoid non-essential outdoor plans.`}
+                {lang === "es" && `Los ${dayFull(patterns.dangerDay.day, lang)} son el dia mas activo con ${patterns.dangerDay.avgPerDay.toFixed(1)} alertas/dia en promedio. Eso es ${(patterns.dangerDay.avgPerDay / (patterns.safestDay.avgPerDay || 1)).toFixed(1)}x mas que los ${dayFull(patterns.safestDay.day, lang)}. Evita planes al aire libre no esenciales.`}
+                {lang === "he" && `ימי ${dayFull(patterns.dangerDay.day, lang)} הם היום הכי פעיל עם ממוצע ${patterns.dangerDay.avgPerDay.toFixed(1)} התרעות/יום. זה פי ${(patterns.dangerDay.avgPerDay / (patterns.safestDay.avgPerDay || 1)).toFixed(1)} מימי ${dayFull(patterns.safestDay.day, lang)}. הימנע מתוכניות לא חיוניות בחוץ.`}
               </div>
             )}
           </div>

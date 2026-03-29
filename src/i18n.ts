@@ -19,7 +19,7 @@ const translations = {
   day_saturday: { en: "Saturday", es: "Sabado", he: "שבת" },
 
   // Header
-  subtitle: { en: "Tel Aviv / Gush Dan — Feb 28 to Mar 23, 2026", es: "Tel Aviv / Gush Dan — 28 Feb al 23 Mar, 2026", he: "תל אביב / גוש דן — 28 בפבר׳ עד 23 במרץ 2026" },
+  subtitle: { en: "Tel Aviv / Gush Dan — Feb 28 to Mar 28, 2026", es: "Tel Aviv / Gush Dan — 28 Feb al 28 Mar, 2026", he: "תל אביב / גוש דן — 28 בפבר׳ עד 28 במרץ 2026" },
   alerts: { en: "Alerts", es: "Alertas", he: "התרעות" },
   period: { en: "Period", es: "Periodo", he: "תקופה" },
   avg_day: { en: "Avg/day", es: "Prom/dia", he: "ממוצע/יום" },
@@ -73,7 +73,7 @@ const translations = {
 
   // Tips
   tips_title: { en: "Recommendations", es: "Recomendaciones", he: "המלצות" },
-  tips_sub: { en: "Based on 24 days of conflict data (daytime 06-22h)", es: "Basado en 24 dias de conflicto (horario diurno 06-22h)", he: "מבוסס על 24 ימי עימות (שעות יום 06-22)" },
+  tips_sub: { en: "Based on {N} days of conflict data (daytime 06-22h)", es: "Basado en {N} dias de conflicto (horario diurno 06-22h)", he: "מבוסס על {N} ימי עימות (שעות יום 06-22)" },
   safest_window: { en: "Safest window to go out", es: "Mejor ventana para salir", he: "החלון הבטוח ביותר לצאת" },
   most_dangerous_window: { en: "Most dangerous window", es: "Ventana mas peligrosa", he: "החלון המסוכן ביותר" },
   last_3_trend: { en: "Last 3 days trend", es: "Tendencia ultimos 3 dias", he: "מגמת 3 ימים אחרונים" },

@@ -124,6 +124,21 @@ export function movingAverage(data: number[], window: number): number[] {
   });
 }
 
+/** Count how many times each day-of-week appears in the date range covered by alerts */
+export function getDayOfWeekOccurrences(alerts: Alert[]): number[] {
+  const dates = [...new Set(alerts.map(a => a.date))].sort();
+  if (dates.length === 0) return new Array(7).fill(1);
+  const first = new Date(dates[0] + "T12:00:00+02:00");
+  const last = new Date(dates[dates.length - 1] + "T12:00:00+02:00");
+  const totalDays = Math.round((last.getTime() - first.getTime()) / 86400000) + 1;
+  const counts = new Array(7).fill(0);
+  for (let i = 0; i < totalDays; i++) {
+    const d = new Date(first.getTime() + i * 86400000);
+    counts[d.getDay()]++;
+  }
+  return counts;
+}
+
 export function getRecommendations(alerts: Alert[]): {
   bestHour: { hour: number; percentage: number };
   worstHour: { hour: number; percentage: number };

@@ -37,7 +37,7 @@ export default function Recommendations({ alerts, lang }: Props) {
   return (
     <div className="panel rec-panel">
       <h2>{t("tips_title", lang)}</h2>
-      <p className="panel-subtitle">{t("tips_sub", lang)}</p>
+      <p className="panel-subtitle">{t("tips_sub", lang).replace("{N}", String(daily.length))}</p>
 
       <div className="rec-grid">
         <div className="rec-card best">
@@ -83,6 +83,7 @@ export default function Recommendations({ alerts, lang }: Props) {
           {SLOTS.map((slot) => {
             const hours = hourly.filter((h) => h.hour >= slot.start && h.hour < slot.end);
             const totalPct = hours.reduce((a, h) => a + h.percentage, 0);
+            const avgPctPerHour = totalPct / (hours.length || 1);
             const avgCount = hours.reduce((a, h) => a + h.count, 0) / (hours.length || 1);
             const risk = getRiskLevel(avgCount / maxHourly);
             return (
@@ -90,7 +91,7 @@ export default function Recommendations({ alerts, lang }: Props) {
                 <div className="franja-label">{t(slot.key, lang)}</div>
                 <div className="franja-hours">{formatHour(slot.start)}-{formatHour(slot.end)}</div>
                 <div className="franja-risk" style={{ color: getRiskBadgeColor(risk) }}>{risk}</div>
-                <div className="franja-pct">{totalPct.toFixed(1)}%</div>
+                <div className="franja-pct">{avgPctPerHour.toFixed(1)}% <span style={{ opacity: 0.5, fontSize: "0.85em" }}>/h</span></div>
               </div>
             );
           })}
