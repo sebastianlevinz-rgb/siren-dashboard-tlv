@@ -36,6 +36,9 @@ function LifeTips({ lifeTips, lang, tl, totalDays, allCells, alerts }: {
   const dowOccurrences = useMemo(() => getDayOfWeekOccurrences(alerts), [alerts]);
 
   const patterns = useMemo(() => {
+    const hourTotals = new Array(24).fill(0);
+    for (const c of allCells) hourTotals[c.hour] += c.count;
+
     // Safest & most dangerous day of week (normalized by occurrences)
     const dayTotals = [0,1,2,3,4,5,6].map(d => {
       const count = allCells.filter(c => c.day === d).reduce((a, c) => a + c.count, 0);
@@ -47,19 +50,18 @@ function LifeTips({ lifeTips, lang, tl, totalDays, allCells, alerts }: {
     // Quietest 3-hour window (daytime 6-21)
     let bestWindow = { start: 6, total: Infinity };
     for (let s = 6; s <= 19; s++) {
-      const tot = [s, s+1, s+2].reduce((sum, h) => sum + totalAtHour(h), 0);
+      const tot = hourTotals[s] + hourTotals[s+1] + hourTotals[s+2];
       if (tot < bestWindow.total) bestWindow = { start: s, total: tot };
     }
 
     // Night safety (0-5)
-    const nightTotal = allCells.filter(c => c.hour >= 0 && c.hour < 6).reduce((a, c) => a + c.count, 0);
+    const nightTotal = hourTotals.slice(0, 6).reduce((a, b) => a + b, 0);
     const nightPct = alerts.length > 0 ? ((nightTotal / alerts.length) * 100).toFixed(1) : "0";
 
     // Peak hour overall
     let peakH = 0, peakCount = 0;
     for (let h = 0; h < 24; h++) {
-      const t = totalAtHour(h);
-      if (t > peakCount) { peakH = h; peakCount = t; }
+      if (hourTotals[h] > peakCount) { peakH = h; peakCount = hourTotals[h]; }
     }
 
     // Weekend vs weekday (normalized by actual calendar days)
@@ -71,7 +73,7 @@ function LifeTips({ lifeTips, lang, tl, totalDays, allCells, alerts }: {
     const weekendAvg = (weekendAlerts / (numWeekends || 1)).toFixed(1);
 
     return { safestDay, dangerDay, bestWindow, nightTotal, nightPct, peakH, peakCount, weekdayAvg, weekendAvg };
-  }, [allCells, alerts, totalAtHour, dowOccurrences]);
+  }, [allCells, alerts, dowOccurrences]);
 
   const facts: Record<Lang, Record<string, string>> = {
     en: {
@@ -419,7 +421,7 @@ export default function Heatmap({ alerts, lang, total, totalDays, avg }: Props) 
           <div className="detail-list">
             {selectedCell.alerts.slice(0, 20).map((a) => (
               <div key={a.id} className="detail-item">
-                <span className="detail-time">{new Date(a.timestamp).toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit" })}</span>
+                <span className="detail-time">{a.date.slice(8)}/{a.date.slice(5,7)}</span>
                 <span className="detail-cities">{a.cities_en.join(", ")}</span>
               </div>
             ))}

@@ -1,16 +1,5 @@
 import type { Alert, HeatmapCell, DailySummary, HourlyDistribution } from "../types";
 
-export const DAY_NAMES = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"];
-export const DAY_NAMES_FULL = [
-  "Domingo",
-  "Lunes",
-  "Martes",
-  "Miercoles",
-  "Jueves",
-  "Viernes",
-  "Sabado",
-];
-
 export function buildHeatmap(alerts: Alert[]): HeatmapCell[][] {
   const grid: HeatmapCell[][] = Array.from({ length: 7 }, (_, day) =>
     Array.from({ length: 24 }, (_, hour) => ({
@@ -37,6 +26,19 @@ export function buildDailySummaries(alerts: Alert[]): DailySummary[] {
     const existing = byDate.get(alert.date) || [];
     existing.push(alert);
     byDate.set(alert.date, existing);
+  }
+
+  // Fill in zero-alert days between first and last date
+  const dates = [...byDate.keys()].sort();
+  if (dates.length >= 2) {
+    const start = new Date(dates[0] + "T12:00:00Z");
+    const end = new Date(dates[dates.length - 1] + "T12:00:00Z");
+    const days = Math.round((end.getTime() - start.getTime()) / 86400000);
+    for (let i = 0; i <= days; i++) {
+      const d = new Date(start.getTime() + i * 86400000);
+      const key = d.toISOString().slice(0, 10);
+      if (!byDate.has(key)) byDate.set(key, []);
+    }
   }
 
   return Array.from(byDate.entries())
@@ -128,8 +130,8 @@ export function movingAverage(data: number[], window: number): number[] {
 export function getDayOfWeekOccurrences(alerts: Alert[]): number[] {
   const dates = [...new Set(alerts.map(a => a.date))].sort();
   if (dates.length === 0) return new Array(7).fill(1);
-  const first = new Date(dates[0] + "T12:00:00+02:00");
-  const last = new Date(dates[dates.length - 1] + "T12:00:00+02:00");
+  const first = new Date(dates[0] + "T12:00:00Z");
+  const last = new Date(dates[dates.length - 1] + "T12:00:00Z");
   const totalDays = Math.round((last.getTime() - first.getTime()) / 86400000) + 1;
   const counts = new Array(7).fill(0);
   for (let i = 0; i < totalDays; i++) {

@@ -31,8 +31,15 @@ export default function Recommendations({ alerts, lang }: Props) {
   const trendColor = rec.trend === "up" ? "#c93d3d" : rec.trend === "down" ? "#1a6b4a" : "#b8a02e";
   const trendLabel = rec.trend === "up" ? t("increasing", lang) : rec.trend === "down" ? t("decreasing", lang) : t("stable", lang);
 
-  const todayAlerts = daily.length > 0 ? daily[daily.length - 1].count : 0;
-  const yesterdayAlerts = daily.length > 1 ? daily[daily.length - 2].count : 0;
+  // Use Israel time (UTC+2/+3) for "today" — toISOString is UTC and wrong after midnight
+  const now = new Date();
+  const israelOffset = 2 * 60; // IST minimum; close enough for date boundary
+  const israelNow = new Date(now.getTime() + (israelOffset + now.getTimezoneOffset()) * 60000);
+  const todayStr = israelNow.toISOString().slice(0, 10);
+  const yesterdayIsrael = new Date(israelNow.getTime() - 86400000);
+  const yesterday = yesterdayIsrael.toISOString().slice(0, 10);
+  const todayAlerts = daily.find(d => d.date === todayStr)?.count ?? 0;
+  const yesterdayAlerts = daily.find(d => d.date === yesterday)?.count ?? 0;
 
   return (
     <div className="panel rec-panel">

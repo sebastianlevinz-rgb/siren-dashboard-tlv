@@ -2,12 +2,10 @@ import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react
 import type { Alert } from "./types";
 import { type Lang, t } from "./i18n";
 import { buildDailySummaries } from "./utils/data";
-import { fetchFromLocalCSV } from "./utils/sheets";
 import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 
 const CACHE_KEY = "missilecast-alerts";
-const CACHE_TS_KEY = "missilecast-alerts-ts";
 
 const Heatmap = lazy(() => import("./components/Heatmap"));
 const Now = lazy(() => import("./components/Now"));
@@ -46,25 +44,16 @@ function App() {
 
     // Fetch fresh data in background
     try {
-      const data = await fetchFromLocalCSV();
-      if (data.length > 0) {
-        setAlerts(data);
-        try {
-          localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-          localStorage.setItem(CACHE_TS_KEY, String(Date.now()));
-        } catch { /* storage full */ }
-        return;
-      }
-    } catch { /* fallback */ }
-    try {
       const res = await fetch("/data/alerts.json");
       if (res.ok) {
         const data = await res.json();
-        setAlerts(data);
-        try {
-          localStorage.setItem(CACHE_KEY, JSON.stringify(data));
-          localStorage.setItem(CACHE_TS_KEY, String(Date.now()));
-        } catch { /* storage full */ }
+        if (data.length > 0) {
+          setAlerts(data);
+          try {
+            localStorage.setItem(CACHE_KEY, JSON.stringify(data));
+
+          } catch { /* storage full */ }
+        }
       }
     } catch { /* offline — cached data already shown */ }
   }, []);

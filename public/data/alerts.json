@@ -1895,5 +1895,18 @@
     "day_of_week": 6,
     "hour": 6,
     "date": "2026-03-28"
+  },
+  {
+    "id": "tz-00130",
+    "timestamp": "2026-03-29T15:39:00+02:00",
+    "unix": 1774791540,
+    "cities": [],
+    "cities_en": ["Gush Dan"],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 0,
+    "hour": 15,
+    "date": "2026-03-29"
   }
 ]

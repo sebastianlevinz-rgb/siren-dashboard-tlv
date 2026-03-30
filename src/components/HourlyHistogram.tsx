@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import type { Alert, RoutineWindow } from "../types";
-import { type Lang, t } from "../i18n";
+import { type Lang, t, tryT } from "../i18n";
 import { buildHourlyDistribution, formatHour } from "../utils/data";
 
 const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
@@ -14,16 +14,12 @@ function riskColor(risk: string): string {
   }
 }
 
-const RISK_LABELS: Record<string, "low" | "medium" | "high" | "extreme"> = {
-  low: "low", medium: "medium", high: "high", extreme: "extreme",
-};
-
 interface Props { alerts: Alert[]; lang: Lang; }
 
 export default function HourlyHistogram({ alerts, lang }: Props) {
   const [routine, setRoutine] = useState<RoutineWindow[]>([
-    { label: t("commute_to", lang), startHour: 7, endHour: 9 },
-    { label: t("commute_home", lang), startHour: 17, endHour: 19 },
+    { label: "commute_to", startHour: 7, endHour: 9 },
+    { label: "commute_home", startHour: 17, endHour: 19 },
   ]);
   const [editingRoutine, setEditingRoutine] = useState(false);
   const [newStart, setNewStart] = useState(8);
@@ -65,7 +61,7 @@ export default function HourlyHistogram({ alerts, lang }: Props) {
         {(["low", "medium", "high", "extreme"] as const).map((level) => (
           <span key={level} className="legend-item">
             <span className="legend-dot" style={{ backgroundColor: riskColor(level) }} />
-            {t(RISK_LABELS[level], lang)}
+            {t(level, lang)}
           </span>
         ))}
         <span className="legend-item"><span className="legend-dot routine-dot" />{t("your_routine", lang)}</span>
@@ -76,7 +72,7 @@ export default function HourlyHistogram({ alerts, lang }: Props) {
         <div className="routine-windows">
           {routineRisks.map((w, i) => (
             <div key={i} className="routine-card">
-              <div className="routine-label">{w.label}</div>
+              <div className="routine-label">{tryT(w.label, lang)}</div>
               <div className="routine-time">{formatHour(w.startHour)} - {formatHour(w.endHour)}</div>
               <div className="routine-risk">{t("cumulative_risk", lang)}: {w.totalPct.toFixed(1)}%</div>
               <button className="routine-remove" onClick={() => setRoutine(routine.filter((_, j) => j !== i))}>x</button>

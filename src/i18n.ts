@@ -18,13 +18,6 @@ const translations = {
   day_friday: { en: "Friday", es: "Viernes", he: "יום שישי" },
   day_saturday: { en: "Saturday", es: "Sabado", he: "שבת" },
 
-  // Header
-  subtitle: { en: "Tel Aviv / Gush Dan — Feb 28 to Mar 28, 2026", es: "Tel Aviv / Gush Dan — 28 Feb al 28 Mar, 2026", he: "תל אביב / גוש דן — 28 בפבר׳ עד 28 במרץ 2026" },
-  alerts: { en: "Alerts", es: "Alertas", he: "התרעות" },
-  period: { en: "Period", es: "Periodo", he: "תקופה" },
-  avg_day: { en: "Avg/day", es: "Prom/dia", he: "ממוצע/יום" },
-  updated: { en: "Updated", es: "Actualiz.", he: "עדכון" },
-
   // Tabs
   tab_now: { en: "Now", es: "Ahora", he: "עכשיו" },
   tab_heatmap: { en: "Heatmap", es: "Heatmap", he: "מפת חום" },
@@ -99,6 +92,11 @@ type Key = keyof typeof translations;
 
 export function t(key: Key, lang: Lang): string {
   return translations[key][lang];
+}
+
+export function tryT(key: string, lang: Lang): string {
+  const entry = translations[key as Key];
+  return entry ? entry[lang] : key;
 }
 
 export function dayShort(dayIndex: number, lang: Lang): string {

@@ -18,7 +18,7 @@ export default function DailyTimeline({ alerts, lang }: Props) {
       <div className="v-timeline">
         {days.map((day) => {
           const widthPct = (day.count / maxCount) * 100;
-          const dow = new Date(day.date + "T12:00:00+02:00").getDay();
+          const dow = day.alerts.length > 0 ? day.alerts[0].day_of_week : new Date(day.date + "T12:00:00Z").getDay();
           const isSelected = selectedDay?.date === day.date;
           return (
             <div key={day.date} className={`v-timeline-row ${isSelected ? "selected" : ""}`}
@@ -34,27 +34,30 @@ export default function DailyTimeline({ alerts, lang }: Props) {
         })}
       </div>
 
-      {selectedDay && (
-        <div className="timeline-detail">
-          <h3>{selectedDay.date} — {selectedDay.count} {t("alerts_s", lang)}</h3>
-          <div className="hourly-breakdown">
-            {Array.from({ length: 24 }, (_, h) => {
-              const hourAlerts = selectedDay.alerts.filter((a) => a.hour === h);
-              if (hourAlerts.length === 0) return null;
-              const maxH = Math.max(...Array.from({ length: 24 }, (_, hh) => selectedDay.alerts.filter((a) => a.hour === hh).length));
-              return (
-                <div key={h} className="hourly-row">
-                  <span className="hourly-time">{String(h).padStart(2, "0")}:00</span>
-                  <div className="hourly-bar-container">
-                    <div className="hourly-bar" style={{ width: `${(hourAlerts.length / maxH) * 100}%`, backgroundColor: getRiskColor(hourAlerts.length, maxH) }} />
-                  </div>
-                  <span className="hourly-count">{hourAlerts.length}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
+      {selectedDay && selectedDay.alerts.length > 0 && (() => {
+          const hourCounts = new Array(24).fill(0);
+          for (const a of selectedDay.alerts) hourCounts[a.hour]++;
+          const maxH = Math.max(...hourCounts);
+          return (
+            <div className="timeline-detail">
+              <h3>{selectedDay.date} — {selectedDay.count} {t("alerts_s", lang)}</h3>
+              <div className="hourly-breakdown">
+                {hourCounts.map((count, h) => {
+                  if (count === 0) return null;
+                  return (
+                    <div key={h} className="hourly-row">
+                      <span className="hourly-time">{String(h).padStart(2, "0")}:00</span>
+                      <div className="hourly-bar-container">
+                        <div className="hourly-bar" style={{ width: `${(count / maxH) * 100}%`, backgroundColor: getRiskColor(count, maxH) }} />
+                      </div>
+                      <span className="hourly-count">{count}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
     </div>
   );
 }
