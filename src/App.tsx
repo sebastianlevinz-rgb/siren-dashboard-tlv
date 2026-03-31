@@ -52,12 +52,12 @@ function App() {
   const [region, setRegion] = useState<RegionId>("all");
 
   const loadData = useCallback(async () => {
-    // Show cached data instantly
+    // Show cached data instantly (invalidate if missing regions field)
     try {
       const cached = localStorage.getItem(CACHE_KEY);
       if (cached) {
         const parsed = JSON.parse(cached) as Alert[];
-        if (parsed.length > 0) setAlerts(parsed);
+        if (parsed.length > 0 && parsed[0].regions) setAlerts(parsed);
       }
     } catch { /* ignore corrupt cache */ }
 

@@ -1594,6 +1594,14 @@ html, body {
   flex-wrap: wrap;
 }
 
+.used-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  align-self: center;
+}
+
 .used-tag {
   font-size: 9px;
   font-weight: 600;
