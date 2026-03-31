@@ -300,23 +300,24 @@ function main() {
   // Sort by timestamp
   classified.sort((a, b) => a.timestamp - b.timestamp);
 
-  // Deduplicate: same threat type within DEDUP_WINDOW_MINUTES = same event
+  // Deduplicate: any alarm within DEDUP_WINDOW_MINUTES = same event
+  // Threat types (MISIL, DRONE, MISIL_Y_DRONE) are merged — a barrage is a barrage
   const events = [];
   for (const msg of classified) {
     const lastEvent = events[events.length - 1];
     if (
       lastEvent &&
-      lastEvent.threat === msg.threat &&
       (msg.timestamp - lastEvent.timestamp) / 60000 <= DEDUP_WINDOW_MINUTES
     ) {
-      // Same event - merge regions and cities
+      // Same event - merge regions, cities, and threat types
       lastEvent.regions = [...new Set([...lastEvent.regions, ...msg.regions])];
       lastEvent.subRegions = [...new Set([...lastEvent.subRegions, ...msg.subRegions])];
       lastEvent.cities = [...new Set([...lastEvent.cities, ...msg.cities])];
+      lastEvent.threats.add(msg.threat);
       lastEvent.msgCount++;
     } else {
       events.push({
-        threat: msg.threat,
+        threats: new Set([msg.threat]),
         timestamp: msg.timestamp,
         localDate: msg.localDate,
         localHour: msg.localHour,
@@ -327,6 +328,15 @@ function main() {
         cities: [...msg.cities],
         msgCount: 1,
       });
+    }
+  }
+
+  // Resolve final threat type per event
+  for (const e of events) {
+    if (e.threats.has('MISIL') || e.threats.has('MISIL_Y_DRONE')) {
+      e.threat = e.threats.has('DRONE') || e.threats.has('MISIL_Y_DRONE') ? 'MISIL_Y_DRONE' : 'MISIL';
+    } else {
+      e.threat = 'DRONE';
     }
   }
 
