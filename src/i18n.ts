@@ -25,6 +25,7 @@ const translations = {
   tab_byhour: { en: "By Hour", es: "Por Hora", he: "לפי שעה" },
   tab_trend: { en: "Trend", es: "Tendencia", he: "מגמה" },
   tab_tips: { en: "Tips", es: "Tips", he: "טיפים" },
+  tab_arsenal: { en: "Arsenal", es: "Arsenal", he: "ארסנל" },
 
   // Regions
   region_all: { en: "All Israel", es: "Todo Israel", he: "כל ישראל" },
