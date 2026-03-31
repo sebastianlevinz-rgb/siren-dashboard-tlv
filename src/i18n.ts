@@ -30,7 +30,6 @@ const translations = {
   // Regions
   region_all: { en: "All Israel", es: "Todo Israel", he: "כל ישראל" },
   region_north: { en: "North", es: "Norte", he: "צפון" },
-  region_center: { en: "Center", es: "Centro", he: "מרכז" },
   region_gush_dan: { en: "Gush Dan", es: "Gush Dan", he: "גוש דן" },
   region_jerusalem: { en: "Jerusalem", es: "Jerusalem", he: "ירושלים" },
   region_south: { en: "South", es: "Sur", he: "דרום" },

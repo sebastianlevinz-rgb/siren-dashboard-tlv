@@ -1737,6 +1737,15 @@ html, body {
   background: var(--bg-secondary);
 }
 
+.dashboard-footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.dashboard-footer a:hover {
+  color: var(--text-primary);
+}
+
 /* ===== SCROLLBAR GLOBAL ===== */
 
 ::-webkit-scrollbar {

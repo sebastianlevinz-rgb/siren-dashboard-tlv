@@ -13,7 +13,7 @@ export interface Alert {
   regions: string[];
 }
 
-export type RegionId = "all" | "north" | "center" | "gush_dan" | "jerusalem" | "south";
+export type RegionId = "all" | "north" | "gush_dan" | "jerusalem" | "south";
 
 export interface HeatmapCell {
   day: number;

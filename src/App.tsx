@@ -29,10 +29,9 @@ const TABS: { id: TabId; icon: string; key: "tab_heatmap" | "tab_now" | "tab_tim
 
 const LANGS: Lang[] = ["en", "es", "he"];
 
-const REGIONS: { id: RegionId; key: "region_all" | "region_north" | "region_center" | "region_gush_dan" | "region_jerusalem" | "region_south" }[] = [
+const REGIONS: { id: RegionId; key: "region_all" | "region_north" | "region_gush_dan" | "region_jerusalem" | "region_south" }[] = [
   { id: "all", key: "region_all" },
   { id: "north", key: "region_north" },
-  { id: "center", key: "region_center" },
   { id: "gush_dan", key: "region_gush_dan" },
   { id: "jerusalem", key: "region_jerusalem" },
   { id: "south", key: "region_south" },
@@ -41,6 +40,7 @@ const REGIONS: { id: RegionId; key: "region_all" | "region_north" | "region_cent
 function filterByRegion(alerts: Alert[], region: RegionId): Alert[] {
   if (region === "all") return alerts;
   if (region === "north") return alerts.filter(a => a.regions?.includes("north") || a.regions?.includes("haifa"));
+  if (region === "gush_dan") return alerts.filter(a => a.regions?.includes("gush_dan") || a.regions?.includes("center"));
   return alerts.filter(a => a.regions?.includes(region));
 }
 
@@ -48,8 +48,7 @@ function getRegionCounts(alerts: Alert[]): Record<RegionId, number> {
   return {
     all: alerts.length,
     north: alerts.filter(a => a.regions?.includes("north") || a.regions?.includes("haifa")).length,
-    center: alerts.filter(a => a.regions?.includes("center")).length,
-    gush_dan: alerts.filter(a => a.regions?.includes("gush_dan")).length,
+    gush_dan: alerts.filter(a => a.regions?.includes("gush_dan") || a.regions?.includes("center")).length,
     jerusalem: alerts.filter(a => a.regions?.includes("jerusalem")).length,
     south: alerts.filter(a => a.regions?.includes("south")).length,
   };
@@ -160,7 +159,7 @@ function App() {
 
       <footer className="dashboard-footer">
         <span>Data: Tzofar Telegram @tzevaadom_en</span>
-        <span>Desarrollado por Sebastian Levin Z 🇦🇷</span>
+        <span>Desarrollado por Sebastian Levin Z 🇦🇷 · <a href="mailto:sebastianlevinz@gmail.com">Contact</a></span>
       </footer>
       <Analytics />
     </div>
