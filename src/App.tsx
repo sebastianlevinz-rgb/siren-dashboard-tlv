@@ -40,9 +40,19 @@ const REGIONS: { id: RegionId; key: "region_all" | "region_north" | "region_cent
 
 function filterByRegion(alerts: Alert[], region: RegionId): Alert[] {
   if (region === "all") return alerts;
-  // "north" includes both north and haifa macro-regions
   if (region === "north") return alerts.filter(a => a.regions?.includes("north") || a.regions?.includes("haifa"));
   return alerts.filter(a => a.regions?.includes(region));
+}
+
+function getRegionCounts(alerts: Alert[]): Record<RegionId, number> {
+  return {
+    all: alerts.length,
+    north: alerts.filter(a => a.regions?.includes("north") || a.regions?.includes("haifa")).length,
+    center: alerts.filter(a => a.regions?.includes("center")).length,
+    gush_dan: alerts.filter(a => a.regions?.includes("gush_dan")).length,
+    jerusalem: alerts.filter(a => a.regions?.includes("jerusalem")).length,
+    south: alerts.filter(a => a.regions?.includes("south")).length,
+  };
 }
 
 function App() {
@@ -80,6 +90,7 @@ function App() {
   useEffect(() => { loadData(); }, [loadData]);
   useEffect(() => { document.documentElement.dir = lang === "he" ? "rtl" : "ltr"; }, [lang]);
 
+  const regionCounts = useMemo(() => getRegionCounts(alerts), [alerts]);
   const filtered = useMemo(() => filterByRegion(alerts, region), [alerts, region]);
   const days = useMemo(() => buildDailySummaries(filtered), [filtered]);
   const total = filtered.length;
@@ -108,7 +119,7 @@ function App() {
             className={`region-btn ${region === r.id ? "active" : ""}`}
             onClick={() => setRegion(r.id)}
           >
-            {t(r.key, lang)}
+            {t(r.key, lang)} <span className="region-count">{regionCounts[r.id]}</span>
           </button>
         ))}
       </div>
