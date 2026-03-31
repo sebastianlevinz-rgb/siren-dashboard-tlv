@@ -26,6 +26,14 @@ const translations = {
   tab_trend: { en: "Trend", es: "Tendencia", he: "מגמה" },
   tab_tips: { en: "Tips", es: "Tips", he: "טיפים" },
 
+  // Regions
+  region_all: { en: "All Israel", es: "Todo Israel", he: "כל ישראל" },
+  region_north: { en: "North", es: "Norte", he: "צפון" },
+  region_center: { en: "Center", es: "Centro", he: "מרכז" },
+  region_gush_dan: { en: "Gush Dan", es: "Gush Dan", he: "גוש דן" },
+  region_jerusalem: { en: "Jerusalem", es: "Jerusalem", he: "ירושלים" },
+  region_south: { en: "South", es: "Sur", he: "דרום" },
+
   // Heatmap
   hm_title: { en: "Alerts by Day x Hour", es: "Alertas por Dia x Hora", he: "התרעות לפי יום x שעה" },
   hm_sub: { en: "Cumulative total. Starts at 06:00.", es: "Acumulado total. Empieza a las 06:00.", he: "סך מצטבר. מתחיל ב-06:00." },

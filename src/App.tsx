@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react";
-import type { Alert } from "./types";
+import type { Alert, RegionId } from "./types";
 import { type Lang, t } from "./i18n";
 import { buildDailySummaries } from "./utils/data";
 import { Analytics } from "@vercel/analytics/react";
@@ -27,10 +27,27 @@ const TABS: { id: TabId; icon: string; key: "tab_heatmap" | "tab_now" | "tab_tim
 
 const LANGS: Lang[] = ["en", "es", "he"];
 
+const REGIONS: { id: RegionId; key: "region_all" | "region_north" | "region_center" | "region_gush_dan" | "region_jerusalem" | "region_south" }[] = [
+  { id: "all", key: "region_all" },
+  { id: "north", key: "region_north" },
+  { id: "center", key: "region_center" },
+  { id: "gush_dan", key: "region_gush_dan" },
+  { id: "jerusalem", key: "region_jerusalem" },
+  { id: "south", key: "region_south" },
+];
+
+function filterByRegion(alerts: Alert[], region: RegionId): Alert[] {
+  if (region === "all") return alerts;
+  // "north" includes both north and haifa macro-regions
+  if (region === "north") return alerts.filter(a => a.regions?.includes("north") || a.regions?.includes("haifa"));
+  return alerts.filter(a => a.regions?.includes(region));
+}
+
 function App() {
   const [alerts, setAlerts] = useState<Alert[]>([]);
   const [activeTab, setActiveTab] = useState<TabId>("heatmap");
   const [lang, setLang] = useState<Lang>("en");
+  const [region, setRegion] = useState<RegionId>("all");
 
   const loadData = useCallback(async () => {
     // Show cached data instantly
@@ -61,8 +78,9 @@ function App() {
   useEffect(() => { loadData(); }, [loadData]);
   useEffect(() => { document.documentElement.dir = lang === "he" ? "rtl" : "ltr"; }, [lang]);
 
-  const days = useMemo(() => buildDailySummaries(alerts), [alerts]);
-  const total = alerts.length;
+  const filtered = useMemo(() => filterByRegion(alerts, region), [alerts, region]);
+  const days = useMemo(() => buildDailySummaries(filtered), [filtered]);
+  const total = filtered.length;
   const totalDays = days.length;
   const avg = (total / (totalDays || 1)).toFixed(1);
 
@@ -78,6 +96,19 @@ function App() {
             </button>
           ))}
         </div>
+      </div>
+
+      {/* Region selector */}
+      <div className="region-nav">
+        {REGIONS.map((r) => (
+          <button
+            key={r.id}
+            className={`region-btn ${region === r.id ? "active" : ""}`}
+            onClick={() => setRegion(r.id)}
+          >
+            {t(r.key, lang)}
+          </button>
+        ))}
       </div>
 
       {/* Tab nav */}
@@ -104,17 +135,17 @@ function App() {
             <div className="skel-block skel-row short" />
           </div>
         }>
-          {activeTab === "heatmap" && <Heatmap alerts={alerts} lang={lang} total={total} totalDays={totalDays} avg={avg} />}
-          {activeTab === "now" && <Now alerts={alerts} lang={lang} />}
-          {activeTab === "timeline" && <DailyTimeline alerts={alerts} lang={lang} />}
-          {activeTab === "histogram" && <HourlyHistogram alerts={alerts} lang={lang} />}
-          {activeTab === "trend" && <TrendChart alerts={alerts} lang={lang} />}
-          {activeTab === "tips" && <Recommendations alerts={alerts} lang={lang} />}
+          {activeTab === "heatmap" && <Heatmap alerts={filtered} lang={lang} total={total} totalDays={totalDays} avg={avg} />}
+          {activeTab === "now" && <Now alerts={filtered} lang={lang} />}
+          {activeTab === "timeline" && <DailyTimeline alerts={filtered} lang={lang} />}
+          {activeTab === "histogram" && <HourlyHistogram alerts={filtered} lang={lang} />}
+          {activeTab === "trend" && <TrendChart alerts={filtered} lang={lang} />}
+          {activeTab === "tips" && <Recommendations alerts={filtered} lang={lang} />}
         </Suspense>
       </main>
 
       <footer className="dashboard-footer">
-        <span>Data: Tzofar Telegram @tzevaadom_en | Gush Dan only</span>
+        <span>Data: Tzofar Telegram @tzevaadom_en</span>
         <span>Desarrollado por Sebastian Levin Z 🇦🇷</span>
       </footer>
       <Analytics />

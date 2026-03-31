@@ -64,6 +64,49 @@ html, body {
   gap: 3px;
 }
 
+/* ===== REGION NAV ===== */
+
+.region-nav {
+  display: flex;
+  gap: 4px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: sticky;
+  top: 42px; /* below header-bar */
+  z-index: 101;
+}
+
+.region-nav::-webkit-scrollbar { display: none; }
+
+.region-btn {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.region-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.region-btn.active {
+  background: var(--accent);
+  color: var(--bg-primary);
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
 /* ===== TAB NAV ===== */
 
 .tab-nav {
@@ -73,7 +116,7 @@ html, body {
   overflow-x: auto;
   scrollbar-width: none;
   position: sticky;
-  top: 42px; /* below header-bar */
+  top: 78px; /* below header-bar + region-nav */
   z-index: 100;
 }
 
@@ -1419,6 +1462,10 @@ html, body {
   flex-direction: row-reverse;
 }
 
+[dir="rtl"] .region-nav {
+  direction: rtl;
+}
+
 [dir="rtl"] .tab-nav {
   direction: rtl;
 }
@@ -1469,8 +1516,19 @@ html, body {
     padding: 8px 12px;
   }
 
-  .tab-nav {
+  .region-nav {
     top: 38px;
+    padding: 6px 10px;
+    gap: 3px;
+  }
+
+  .region-btn {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .tab-nav {
+    top: 68px;
   }
 
   .top-tab {

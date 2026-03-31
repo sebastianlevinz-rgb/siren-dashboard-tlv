@@ -10,7 +10,10 @@ export interface Alert {
   day_of_week: number; // 0=Sunday
   hour: number; // 0-23
   date: string; // YYYY-MM-DD
+  regions: string[];
 }
+
+export type RegionId = "all" | "north" | "center" | "gush_dan" | "jerusalem" | "south";
 
 export interface HeatmapCell {
   day: number;
