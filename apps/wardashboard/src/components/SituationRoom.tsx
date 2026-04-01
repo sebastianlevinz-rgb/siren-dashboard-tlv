@@ -1,107 +1,89 @@
 import { useState } from "react";
 import { type Lang } from "../i18n";
+import { COUNTRY_PATHS } from "../data/country-paths";
 
 interface Props { lang: Lang; }
 
-// ── FORCE DATA (will be updated with research) ──
-
 interface CarrierGroup {
   name: string;
-  strikeGroup: string;
-  position: { x: number; y: number }; // SVG coordinates on the map
+  tag: string;
+  pos: [number, number]; // SVG x,y
   location: Record<string, string>;
-  aircraft: number;
-  personnel: number;
-  escorts: string;
+  confirmed: boolean;
 }
 
-interface MilitaryBase {
+interface Base {
   name: string;
   country: string;
-  position: { x: number; y: number };
+  pos: [number, number];
   role: Record<string, string>;
 }
 
-interface KeyLocation {
+interface POI {
   name: string;
-  position: { x: number; y: number };
+  pos: [number, number];
+  type: "island" | "strait" | "nuclear" | "city";
   info: Record<string, string>;
-  type: "island" | "strait" | "target" | "city";
 }
 
 const CARRIERS: CarrierGroup[] = [
-  {
-    name: "USS Harry S. Truman (CVN-75)",
-    strikeGroup: "CSG-8",
-    position: { x: 520, y: 340 },
-    location: { en: "Arabian Sea — South of Strait of Hormuz", es: "Mar Arabigo — Sur del Estrecho de Hormuz", he: "הים הערבי — דרום מיצר הורמוז" },
-    aircraft: 90,
-    personnel: 7500,
-    escorts: "2 destroyers, 1 cruiser, 1 submarine (est.)",
-  },
-  {
-    name: "2nd CSG (unconfirmed)",
-    strikeGroup: "CSG-?",
-    position: { x: 480, y: 380 },
-    location: { en: "Gulf of Oman — Reported but unconfirmed by OSINT", es: "Golfo de Oman — Reportado pero no confirmado por OSINT", he: "מפרץ עומאן — דווח אך לא אושר ע\"י מודיעין גלוי" },
-    aircraft: 90,
-    personnel: 7500,
-    escorts: "Escort composition unknown",
-  },
+  { name: "USS Harry S. Truman (CVN-75)", tag: "CSG-8", pos: [560, 480], location: { en: "Arabian Sea — South of Hormuz", es: "Mar Arabigo — Sur de Hormuz", he: "ים ערב — דרום הורמוז" }, confirmed: true },
+  { name: "2nd CSG (unconfirmed)", tag: "CSG-?", pos: [520, 540], location: { en: "Gulf of Oman — Unconfirmed by OSINT", es: "Golfo de Oman — No confirmado", he: "מפרץ עומאן — לא מאושר" }, confirmed: false },
 ];
 
-const BASES: MilitaryBase[] = [
-  { name: "Al Udeid", country: "Qatar", position: { x: 410, y: 290 }, role: { en: "CENTCOM Forward HQ — CAOC air operations", es: "Cuartel avanzado CENTCOM — Operaciones aereas CAOC", he: "מפקדה קדמית CENTCOM — פעולות אוויריות CAOC" } },
-  { name: "Al Dhafra", country: "UAE", position: { x: 430, y: 305 }, role: { en: "F-35, F-22, tankers, ISR — Stealth forward base", es: "F-35, F-22, cisternas, ISR — Base stealth avanzada", he: "F-35, F-22, מכליות, ISR — בסיס חמקני קדמי" } },
-  { name: "Camp Arifjan", country: "Kuwait", position: { x: 370, y: 240 }, role: { en: "Army logistics hub — Ground forces staging", es: "Hub logistico del ejercito — Preparacion de fuerzas terrestres", he: "מרכז לוגיסטי צבאי — הכנת כוחות יבשה" } },
-  { name: "NSA Bahrain", country: "Bahrain", position: { x: 400, y: 270 }, role: { en: "US 5th Fleet HQ — Naval command center", es: "Cuartel de la 5ta Flota — Centro de comando naval", he: "מפקדת הצי ה-5 — מרכז פיקוד ימי" } },
-  { name: "Prince Sultan", country: "Saudi Arabia", position: { x: 310, y: 340 }, role: { en: "Patriot batteries, fighter squadrons", es: "Baterias Patriot, escuadrones de caza", he: "סוללות פטריוט, טייסות קרב" } },
-  { name: "Lemonnier", country: "Djibouti", position: { x: 200, y: 420 }, role: { en: "SOF, drones, ISR — Horn of Africa", es: "Fuerzas especiales, drones, ISR — Cuerno de Africa", he: "כוחות מיוחדים, מל\"טים, ISR — קרן אפריקה" } },
-  { name: "Diego Garcia", country: "BIOT", position: { x: 600, y: 520 }, role: { en: "B-2/B-52 bomber staging — Indian Ocean", es: "Base de bombarderos B-2/B-52 — Oceano Indico", he: "בסיס מפציצי B-2/B-52 — האוקיינוס ההודי" } },
+const BASES: Base[] = [
+  { name: "Al Udeid", country: "QAT", pos: [372, 540], role: { en: "CENTCOM HQ — CAOC air ops", es: "Cuartel CENTCOM — Ops aereas", he: "מפקדת CENTCOM — אוויר" } },
+  { name: "Al Dhafra", country: "UAE", pos: [420, 560], role: { en: "F-35, F-22, ISR — Stealth base", es: "F-35, F-22, ISR — Base stealth", he: "F-35, F-22 — בסיס חמקני" } },
+  { name: "Arifjan", country: "KWT", pos: [275, 435], role: { en: "Army logistics — Ground staging", es: "Logistica ejercito", he: "לוגיסטיקה יבשתית" } },
+  { name: "5th Fleet", country: "BHR", pos: [350, 510], role: { en: "US 5th Fleet HQ — Naval command", es: "5ta Flota — Comando naval", he: "צי 5 — פיקוד ימי" } },
+  { name: "Prince Sultan", country: "SAU", pos: [180, 530], role: { en: "Patriots, fighters", es: "Patriot, cazas", he: "פטריוט, קרב" } },
+  { name: "Diego Garcia", country: "BIOT", pos: [740, 710], role: { en: "B-2/B-52 bombers — Indian Ocean", es: "B-2/B-52 — Oceano Indico", he: "מפציצי B-2/B-52" } },
 ];
 
-const KEY_LOCATIONS: KeyLocation[] = [
-  { name: "Kharg Island", position: { x: 365, y: 250 }, type: "island", info: { en: "90% of Iran's oil exports. Primary strategic target.", es: "90% de las exportaciones de petroleo de Iran. Objetivo estrategico primario.", he: "90% מיצוא הנפט של איראן. יעד אסטרטגי עיקרי." } },
-  { name: "Strait of Hormuz", position: { x: 445, y: 310 }, type: "strait", info: { en: "21% of global oil transit. 33km wide at narrowest. Iran controls north shore.", es: "21% del transito mundial de petroleo. 33km de ancho minimo. Iran controla la costa norte.", he: "21% מהובלת הנפט העולמית. 33 ק\"מ ברוחב המינימלי. איראן שולטת בחוף הצפוני." } },
-  { name: "Tehran", position: { x: 420, y: 190 }, type: "city", info: { en: "Capital — Political command center", es: "Capital — Centro de comando politico", he: "בירה — מרכז פיקוד מדיני" } },
-  { name: "Bushehr", position: { x: 380, y: 265 }, type: "target", info: { en: "Nuclear power plant — Russian-built", es: "Planta nuclear — Construida por Rusia", he: "כור גרעיני — בניית רוסיה" } },
-  { name: "Isfahan", position: { x: 410, y: 220 }, type: "target", info: { en: "Uranium enrichment facility — Underground", es: "Instalacion de enriquecimiento de uranio — Subterranea", he: "מתקן העשרת אורניום — תת-קרקעי" } },
-  { name: "Natanz", position: { x: 405, y: 210 }, type: "target", info: { en: "Nuclear centrifuge site — Heavily fortified", es: "Sitio de centrifugas nucleares — Fuertemente fortificado", he: "אתר צנטריפוגות — מבוצר מאוד" } },
+const POIS: POI[] = [
+  { name: "Kharg Island", pos: [350, 395], type: "island", info: { en: "90% of Iran's oil exports", es: "90% del petroleo irani", he: "90% מיצוא הנפט" } },
+  { name: "Strait of Hormuz", pos: [480, 505], type: "strait", info: { en: "21% global oil transit — 33km wide", es: "21% transito mundial — 33km", he: "21% מהנפט העולמי — 33 ק\"מ" } },
+  { name: "Tehran", pos: [390, 220], type: "city", info: { en: "Capital — Command center", es: "Capital", he: "בירה — מרכז פיקוד" } },
+  { name: "Natanz", pos: [380, 280], type: "nuclear", info: { en: "Centrifuge site — Fortified underground", es: "Centrifugas — Subterraneo fortificado", he: "צנטריפוגות — תת-קרקעי מבוצר" } },
+  { name: "Isfahan", pos: [370, 300], type: "nuclear", info: { en: "Uranium enrichment — Underground", es: "Enriquecimiento — Subterraneo", he: "העשרת אורניום — תת-קרקעי" } },
+  { name: "Bushehr", pos: [335, 430], type: "nuclear", info: { en: "Nuclear reactor — Russian-built", es: "Reactor nuclear — Ruso", he: "כור גרעיני — רוסי" } },
+  { name: "Fordow", pos: [370, 260], type: "nuclear", info: { en: "Deep underground enrichment", es: "Enriquecimiento profundo", he: "העשרה עמוק תת-קרקעית" } },
+];
+
+const COUNTRY_LABELS: Record<string, { pos: [number, number]; name: string }> = {
+  IRN: { pos: [420, 320], name: "IRAN" },
+  IRQ: { pos: [170, 310], name: "IRAQ" },
+  SAU: { pos: [180, 650], name: "SAUDI ARABIA" },
+  PAK: { pos: [700, 400], name: "PAKISTAN" },
+  TUR: { pos: [80, 130], name: "TURKEY" },
+  OMN: { pos: [500, 660], name: "OMAN" },
+};
+
+const WATER_LABELS = [
+  { pos: [370, 470], name: "Persian Gulf" },
+  { pos: [540, 600], name: "Arabian Sea" },
+  { pos: [580, 440], name: "Gulf of Oman" },
 ];
 
 const TEXT = {
   title: { en: "SITUATION ROOM", es: "SALA DE SITUACION", he: "חדר מצב" },
-  sub: {
-    en: "US military positioning around Iran — April 2026",
-    es: "Posicionamiento militar de EEUU alrededor de Iran — Abril 2026",
-    he: "מערך צבאי אמריקאי סביב איראן — אפריל 2026",
-  },
-  disclaimer: {
-    en: "Based on open-source intelligence (OSINT) and public reports. Positions are approximate. Not official military data.",
-    es: "Basado en inteligencia de fuentes abiertas (OSINT) y reportes publicos. Posiciones son aproximadas. No son datos militares oficiales.",
-    he: "מבוסס על מודיעין גלוי (OSINT) ודיווחים פומביים. המיקומים משוערים. אלו אינם נתונים צבאיים רשמיים.",
-  },
-  carriers: { en: "CARRIER STRIKE GROUPS", es: "GRUPOS DE ATAQUE DE PORTAAVIONES", he: "כוחות שייט מוטסים" },
-  bases: { en: "US MILITARY BASES", es: "BASES MILITARES DE EEUU", he: "בסיסים צבאיים אמריקאיים" },
-  key_targets: { en: "KEY LOCATIONS", es: "UBICACIONES CLAVE", he: "מיקומים מרכזיים" },
-  personnel: { en: "personnel", es: "personal", he: "אנשי צוות" },
-  aircraft: { en: "aircraft", es: "aeronaves", he: "כלי טיס" },
-  force_summary: { en: "FORCE SUMMARY", es: "RESUMEN DE FUERZAS", he: "סיכום כוחות" },
-  total_carriers: { en: "Carrier Strike Groups", es: "Grupos de Portaaviones", he: "כוחות שייט מוטסים" },
-  total_aircraft: { en: "Combat Aircraft (est.)", es: "Aviones de Combate (est.)", he: "מטוסי קרב (הערכה)" },
-  total_personnel: { en: "CENTCOM Personnel (est.)", es: "Personal CENTCOM (est.)", he: "אנשי CENTCOM (הערכה)" },
-  total_bases: { en: "Forward Bases", es: "Bases Avanzadas", he: "בסיסים קדמיים" },
-  moon: { en: "Waxing Gibbous (~80%): Apr 2-3 — Good night visibility. Full Moon: Apr 12", es: "Luna Gibosa Creciente (~80%): Abr 2-3 — Buena visibilidad nocturna. Luna Llena: Abr 12", he: "ירח גדל (~80%): 2-3 באפריל — ראות לילה טובה. ירח מלא: 12 באפריל" },
-  kharg: { en: "KHARG ISLAND — 90% of Iran's oil exports", es: "ISLA KHARG — 90% de las exportaciones petroleras de Iran", he: "אי חארג — 90% מיצוא הנפט של איראן" },
-  hormuz: { en: "STRAIT OF HORMUZ — 21% of global oil transit", es: "ESTRECHO DE HORMUZ — 21% del transito mundial de petroleo", he: "מיצר הורמוז — 21% מהובלת הנפט העולמית" },
+  sub: { en: "US military positioning — Iran–Israel–US Conflict", es: "Posicionamiento militar — Conflicto Iran–Israel–EEUU", he: "מערך צבאי — עימות איראן–ישראל–ארה\"ב" },
+  updated: { en: "Last updated: Apr 2, 2026", es: "Actualizado: 2 Abr 2026", he: "עדכון אחרון: 2 באפריל 2026" },
+  disclaimer: { en: "Based on OSINT and public reports. Positions approximate.", es: "Basado en OSINT y reportes publicos. Posiciones aproximadas.", he: "מבוסס על מודיעין גלוי. מיקומים משוערים." },
+  carriers: { en: "CARRIERS", es: "PORTAAVIONES", he: "נושאות מטוסים" },
+  bases: { en: "US BASES", es: "BASES EEUU", he: "בסיסים אמריקאיים" },
+  nuclear: { en: "NUCLEAR SITES", es: "SITIOS NUCLEARES", he: "אתרים גרעיניים" },
+  oil: { en: "OIL / STRATEGIC", es: "PETROLEO / ESTRATEGICO", he: "נפט / אסטרטגי" },
+  moon: { en: "Waxing Gibbous ~80% — good night visibility", es: "Gibosa creciente ~80% — buena visibilidad", he: "ירח גדל ~80% — ראות לילה טובה" },
+  force: { en: "~45,000 CENTCOM personnel · 1-2 CSGs · 7 forward bases · ~180 aircraft", es: "~45,000 personal CENTCOM · 1-2 grupos · 7 bases · ~180 aviones", he: "~45,000 אנשי CENTCOM · 1-2 כוחות שייט · 7 בסיסים · ~180 מטוסים" },
 };
 
 export default function SituationRoom({ lang }: Props) {
-  const [selectedItem, setSelectedItem] = useState<string | null>(null);
+  const [selected, setSelected] = useState<string | null>(null);
 
-  const selectedCarrier = CARRIERS.find(c => c.name === selectedItem);
-  const selectedBase = BASES.find(b => b.name === selectedItem);
-  const selectedLocation = KEY_LOCATIONS.find(l => l.name === selectedItem);
+  const selCarrier = CARRIERS.find(c => c.name === selected);
+  const selBase = BASES.find(b => b.name === selected);
+  const selPOI = POIS.find(p => p.name === selected);
 
   return (
     <section className="wd-section wd-sitroom">
@@ -111,163 +93,124 @@ export default function SituationRoom({ lang }: Props) {
         <span className="wd-section-title">{TEXT.title[lang]}</span>
         <span className="wd-section-line" />
       </div>
-      <p className="wd-subtitle">{TEXT.sub[lang]} · <span style={{ color: "var(--text-muted)" }}>Last updated: Apr 2, 2026</span></p>
+      <p className="wd-subtitle">{TEXT.sub[lang]} · <span style={{ color: "var(--text-muted)" }}>{TEXT.updated[lang]}</span></p>
 
-      {/* Force Summary Cards */}
-      <div className="sr-summary">
-        <div className="sr-stat"><span className="sr-stat-val">1-2</span><span className="sr-stat-label">{TEXT.total_carriers[lang]}</span></div>
-        <div className="sr-stat"><span className="sr-stat-val">~180</span><span className="sr-stat-label">{TEXT.total_aircraft[lang]}</span></div>
-        <div className="sr-stat"><span className="sr-stat-val">~45,000</span><span className="sr-stat-label">{TEXT.total_personnel[lang]}</span></div>
-        <div className="sr-stat"><span className="sr-stat-val">7</span><span className="sr-stat-label">{TEXT.total_bases[lang]}</span></div>
-      </div>
+      {/* Force summary one-liner */}
+      <div className="sr-force-bar">{TEXT.force[lang]}</div>
 
-      {/* Moon phase alert */}
-      <div className="sr-moon-alert">
-        🌕 {TEXT.moon[lang]}
-      </div>
+      {/* Moon */}
+      <div className="sr-moon-alert">🌔 {TEXT.moon[lang]}</div>
 
-      {/* SVG Map */}
+      {/* SVG Map with real geography */}
       <div className="sr-map-wrap">
-        <svg viewBox="100 100 600 500" className="sr-map">
-          {/* Water */}
-          <rect x="100" y="100" width="600" height="500" fill="#0a1628" />
+        <svg viewBox="-120 0 900 760" className="sr-map">
+          {/* Ocean background */}
+          <rect x="-120" y="0" width="900" height="760" fill="#071220" />
 
-          {/* Simplified land masses */}
-          {/* Iran */}
-          <path d="M300,140 L480,140 L500,180 L490,220 L470,260 L450,300 L440,320 L430,310 L400,290 L380,270 L350,260 L330,240 L310,220 L290,200 L280,170 Z"
-            fill="#1a1a2e" stroke="#252840" strokeWidth="1.5" />
-          <text x="390" y="200" fill="#4a4d6a" fontSize="14" textAnchor="middle" fontWeight="600">IRAN</text>
+          {/* Country shapes — real GeoJSON outlines */}
+          {Object.entries(COUNTRY_PATHS).map(([code, path]) => (
+            <path key={code} d={path}
+              fill={code === "IRN" ? "#1a1a2e" : "#0f1118"}
+              stroke={code === "IRN" ? "#3a3a5e" : "#1a2030"}
+              strokeWidth={code === "IRN" ? 1.5 : 0.8}
+            />
+          ))}
 
-          {/* Arabian Peninsula (Saudi, UAE, Oman, Qatar) */}
-          <path d="M250,280 L350,260 L380,270 L400,290 L430,310 L440,320 L450,340 L460,380 L440,420 L400,460 L350,480 L300,480 L260,450 L240,400 L230,350 L240,300 Z"
-            fill="#12131c" stroke="#252840" strokeWidth="1.5" />
-          <text x="330" y="400" fill="#4a4d6a" fontSize="12" textAnchor="middle">SAUDI ARABIA</text>
+          {/* Country labels */}
+          {Object.entries(COUNTRY_LABELS).map(([, { pos, name }]) => (
+            <text key={name} x={pos[0]} y={pos[1]} fill="#2a2a4a" fontSize="13" textAnchor="middle" fontWeight="600" fontFamily="monospace">{name}</text>
+          ))}
 
-          {/* Iraq */}
-          <path d="M250,140 L300,140 L290,200 L280,230 L260,250 L250,280 L230,260 L220,220 L220,180 L230,150 Z"
-            fill="#12131c" stroke="#252840" strokeWidth="1.5" />
-          <text x="255" y="200" fill="#4a4d6a" fontSize="10" textAnchor="middle">IRAQ</text>
+          {/* Water labels */}
+          {WATER_LABELS.map(w => (
+            <text key={w.name} x={w.pos[0]} y={w.pos[1]} fill="#0d2a4a" fontSize="11" textAnchor="middle" fontStyle="italic" fontFamily="monospace">{w.name}</text>
+          ))}
 
-          {/* Pakistan */}
-          <path d="M500,180 L580,160 L620,200 L610,280 L570,340 L530,360 L490,340 L460,380 L450,340 L440,320 L450,300 L470,260 L490,220 Z"
-            fill="#12131c" stroke="#252840" strokeWidth="1.5" />
-          <text x="550" y="260" fill="#4a4d6a" fontSize="10" textAnchor="middle">PAKISTAN</text>
-
-          {/* Persian Gulf water label */}
-          <text x="390" y="280" fill="#1a3a5c" fontSize="10" textAnchor="middle" fontStyle="italic">Persian Gulf</text>
-
-          {/* Arabian Sea water label */}
-          <text x="520" y="420" fill="#1a3a5c" fontSize="10" textAnchor="middle" fontStyle="italic">Arabian Sea</text>
-
-          {/* Strait of Hormuz indicator */}
-          <line x1="435" y1="305" x2="455" y2="325" stroke="#c93d3d" strokeWidth="2" strokeDasharray="4,2" />
-          <circle cx="445" cy="315" r="12" fill="none" stroke="#c93d3d" strokeWidth="1.5" strokeDasharray="3,2" />
+          {/* Strait of Hormuz marker */}
+          <circle cx={480} cy={505} r={14} fill="none" stroke="#c93d3d" strokeWidth={1.5} strokeDasharray="4,2" />
 
           {/* Kharg Island */}
-          <circle cx="365" cy="252" r="6" fill="#d4822a" stroke="#fff" strokeWidth="1" />
-          <text x="365" y="243" fill="#d4822a" fontSize="8" textAnchor="middle" fontWeight="700">KHARG</text>
+          <circle cx={350} cy={395} r={5} fill="#d4822a" stroke="#fff" strokeWidth={1} />
+          <text x={350} y={385} fill="#d4822a" fontSize="8" textAnchor="middle" fontWeight="700" fontFamily="monospace">KHARG</text>
 
-          {/* Key Locations */}
-          {KEY_LOCATIONS.filter(l => l.type === "target" || l.type === "city").map(loc => (
-            <g key={loc.name} onClick={() => setSelectedItem(loc.name)} style={{ cursor: "pointer" }}>
-              <circle cx={loc.position.x} cy={loc.position.y} r={loc.type === "city" ? 5 : 4}
-                fill={loc.type === "city" ? "#7b7f9e" : "#c93d3d"} opacity={0.8} />
-              <text x={loc.position.x} y={loc.position.y - 8} fill="#7b7f9e" fontSize="7" textAnchor="middle">
-                {loc.name}
-              </text>
+          {/* Nuclear sites */}
+          {POIS.filter(p => p.type === "nuclear").map(p => (
+            <g key={p.name} onClick={() => setSelected(p.name)} style={{ cursor: "pointer" }}>
+              <circle cx={p.pos[0]} cy={p.pos[1]} r={4} fill="#a855f7" opacity={0.8} />
+              <text x={p.pos[0] + 8} y={p.pos[1] + 3} fill="#7b7f9e" fontSize="7" fontFamily="monospace">{p.name}</text>
             </g>
           ))}
 
-          {/* Military Bases */}
-          {BASES.map(base => (
-            <g key={base.name} onClick={() => setSelectedItem(base.name)} style={{ cursor: "pointer" }}>
-              <rect x={base.position.x - 5} y={base.position.y - 5} width="10" height="10"
-                fill="#4A90D9" opacity={selectedItem === base.name ? 1 : 0.7}
-                stroke="#fff" strokeWidth={selectedItem === base.name ? 1.5 : 0.5}
-                rx="2" />
-              <text x={base.position.x} y={base.position.y - 9} fill="#4A90D9" fontSize="7" textAnchor="middle" fontWeight="600">
-                {base.name}
-              </text>
+          {/* Tehran */}
+          <g onClick={() => setSelected("Tehran")} style={{ cursor: "pointer" }}>
+            <circle cx={390} cy={220} r={5} fill="#7b7f9e" />
+            <text x={390} y={210} fill="#9b9fbe" fontSize="9" textAnchor="middle" fontWeight="600" fontFamily="monospace">TEHRAN</text>
+          </g>
+
+          {/* US Bases */}
+          {BASES.map(b => (
+            <g key={b.name} onClick={() => setSelected(b.name)} style={{ cursor: "pointer" }}>
+              <rect x={b.pos[0] - 5} y={b.pos[1] - 5} width={10} height={10} rx={2}
+                fill="#4A90D9" opacity={selected === b.name ? 1 : 0.7}
+                stroke={selected === b.name ? "#fff" : "#4A90D9"} strokeWidth={selected === b.name ? 1.5 : 0.5} />
+              <text x={b.pos[0]} y={b.pos[1] - 10} fill="#4A90D9" fontSize="7" textAnchor="middle" fontWeight="600" fontFamily="monospace">{b.name}</text>
             </g>
           ))}
 
           {/* Carrier Strike Groups */}
-          {CARRIERS.map(carrier => (
-            <g key={carrier.name} onClick={() => setSelectedItem(carrier.name)} style={{ cursor: "pointer" }}>
-              {/* Pulsing circle */}
-              <circle cx={carrier.position.x} cy={carrier.position.y} r="18"
-                fill="none" stroke="#c93d3d" strokeWidth="1" opacity="0.4">
-                <animate attributeName="r" values="18;24;18" dur="3s" repeatCount="indefinite" />
+          {CARRIERS.map(c => (
+            <g key={c.name} onClick={() => setSelected(c.name)} style={{ cursor: "pointer" }}>
+              <circle cx={c.pos[0]} cy={c.pos[1]} r={18} fill="none" stroke="#c93d3d" strokeWidth={1} opacity={0.4}>
+                <animate attributeName="r" values="18;26;18" dur="3s" repeatCount="indefinite" />
                 <animate attributeName="opacity" values="0.4;0.1;0.4" dur="3s" repeatCount="indefinite" />
               </circle>
-              {/* Carrier icon */}
-              <polygon points={`${carrier.position.x - 10},${carrier.position.y} ${carrier.position.x + 10},${carrier.position.y} ${carrier.position.x + 12},${carrier.position.y - 3} ${carrier.position.x - 12},${carrier.position.y - 3}`}
-                fill={selectedItem === carrier.name ? "#c93d3d" : "#8b1a1a"} stroke="#c93d3d" strokeWidth="1" />
-              <text x={carrier.position.x} y={carrier.position.y - 16} fill="#c93d3d" fontSize="7" textAnchor="middle" fontWeight="700">
-                {carrier.strikeGroup}
+              <polygon
+                points={`${c.pos[0] - 12},${c.pos[1] + 2} ${c.pos[0] + 12},${c.pos[1] + 2} ${c.pos[0] + 14},${c.pos[1] - 2} ${c.pos[0] - 14},${c.pos[1] - 2}`}
+                fill={selected === c.name ? "#c93d3d" : "#6b1a1a"} stroke="#c93d3d" strokeWidth={1} />
+              <text x={c.pos[0]} y={c.pos[1] - 18} fill="#c93d3d" fontSize="8" textAnchor="middle" fontWeight="700" fontFamily="monospace">
+                {c.tag}{!c.confirmed ? " ?" : ""}
               </text>
             </g>
           ))}
         </svg>
       </div>
 
-      {/* Selection detail panel */}
-      {selectedCarrier && (
+      {/* Selected detail */}
+      {selCarrier && (
         <div className="sr-detail">
-          <div className="sr-detail-header">
-            <span className="sr-detail-icon">🚢</span>
-            <div>
-              <div className="sr-detail-name">{selectedCarrier.name}</div>
-              <div className="sr-detail-sub">{selectedCarrier.strikeGroup} — {selectedCarrier.location[lang]}</div>
-            </div>
-          </div>
-          <div className="sr-detail-stats">
-            <span>~{selectedCarrier.aircraft} {TEXT.aircraft[lang]}</span>
-            <span>~{selectedCarrier.personnel.toLocaleString()} {TEXT.personnel[lang]}</span>
-            <span>{selectedCarrier.escorts}</span>
+          <span className="sr-detail-icon">🚢</span>
+          <div>
+            <div className="sr-detail-name">{selCarrier.name}</div>
+            <div className="sr-detail-sub">{selCarrier.location[lang]}</div>
+            {!selCarrier.confirmed && <div className="sr-detail-warn">⚠ Unconfirmed — based on reports</div>}
           </div>
         </div>
       )}
-      {selectedBase && (
+      {selBase && (
         <div className="sr-detail">
-          <div className="sr-detail-header">
-            <span className="sr-detail-icon">🏗️</span>
-            <div>
-              <div className="sr-detail-name">{selectedBase.name} — {selectedBase.country}</div>
-              <div className="sr-detail-sub">{selectedBase.role[lang]}</div>
-            </div>
+          <span className="sr-detail-icon">🏗️</span>
+          <div>
+            <div className="sr-detail-name">{selBase.name} — {selBase.country}</div>
+            <div className="sr-detail-sub">{selBase.role[lang]}</div>
           </div>
         </div>
       )}
-      {selectedLocation && (
+      {selPOI && (
         <div className="sr-detail">
-          <div className="sr-detail-header">
-            <span className="sr-detail-icon">{selectedLocation.type === "island" ? "🏝️" : selectedLocation.type === "strait" ? "🌊" : selectedLocation.type === "city" ? "🏙️" : "⚛️"}</span>
-            <div>
-              <div className="sr-detail-name">{selectedLocation.name}</div>
-              <div className="sr-detail-sub">{selectedLocation.info[lang]}</div>
-            </div>
+          <span className="sr-detail-icon">{selPOI.type === "nuclear" ? "⚛️" : selPOI.type === "island" ? "🏝️" : selPOI.type === "strait" ? "🌊" : "🏙️"}</span>
+          <div>
+            <div className="sr-detail-name">{selPOI.name}</div>
+            <div className="sr-detail-sub">{selPOI.info[lang]}</div>
           </div>
         </div>
       )}
-
-      {/* Key intel callouts */}
-      <div className="sr-intel-cards">
-        <div className="sr-intel-card sr-intel-orange">
-          <span className="sr-intel-icon">🏝️</span>
-          <span className="sr-intel-text">{TEXT.kharg[lang]}</span>
-        </div>
-        <div className="sr-intel-card sr-intel-red">
-          <span className="sr-intel-icon">🌊</span>
-          <span className="sr-intel-text">{TEXT.hormuz[lang]}</span>
-        </div>
-      </div>
 
       {/* Legend */}
       <div className="sr-legend">
         <span className="sr-legend-item"><span className="sr-legend-dot" style={{ background: "#c93d3d" }} /> {TEXT.carriers[lang]}</span>
         <span className="sr-legend-item"><span className="sr-legend-dot" style={{ background: "#4A90D9", borderRadius: 2 }} /> {TEXT.bases[lang]}</span>
-        <span className="sr-legend-item"><span className="sr-legend-dot" style={{ background: "#d4822a" }} /> {TEXT.key_targets[lang]}</span>
+        <span className="sr-legend-item"><span className="sr-legend-dot" style={{ background: "#a855f7" }} /> {TEXT.nuclear[lang]}</span>
+        <span className="sr-legend-item"><span className="sr-legend-dot" style={{ background: "#d4822a" }} /> {TEXT.oil[lang]}</span>
       </div>
 
       <p className="sr-disclaimer">{TEXT.disclaimer[lang]}</p>
