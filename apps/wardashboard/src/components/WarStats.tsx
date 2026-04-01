@@ -34,21 +34,19 @@ export default function WarStats({ alerts }: Props) {
       if (gap > longestGap) longestGap = gap;
     }
 
-    // Weekly data with date ranges
-    const weekMs = 7 * 86400000;
-    const startMs = first.getTime();
-    const numWeeks = Math.ceil((last.getTime() - startMs) / weekMs) + 1;
+    // Weekly data with date ranges — group by date string to avoid timezone bugs
     const weeks: { start: string; end: string; total: number; missiles: number; drones: number }[] = [];
-    for (let w = 0; w < numWeeks; w++) {
-      const wStart = startMs + w * weekMs;
-      const wEnd = Math.min(wStart + weekMs - 86400000, last.getTime());
-      const wAlerts = alerts.filter(a => {
-        const t = new Date(a.timestamp).getTime();
-        return t >= wStart && t < wStart + weekMs;
-      });
+    for (let w = 0; ; w++) {
+      const wStartDate = new Date(first.getTime() + w * 7 * 86400000);
+      const wEndDate = new Date(wStartDate.getTime() + 6 * 86400000);
+      const wStartStr = wStartDate.toISOString().slice(0, 10);
+      const wEndStr = wEndDate.toISOString().slice(0, 10);
+      if (wStartStr > daily[daily.length - 1].date) break;
+      const endCap = wEndStr > daily[daily.length - 1].date ? daily[daily.length - 1].date : wEndStr;
+      const wAlerts = alerts.filter(a => a.date >= wStartStr && a.date <= endCap);
       weeks.push({
-        start: new Date(wStart).toISOString().slice(0, 10),
-        end: new Date(wEnd).toISOString().slice(0, 10),
+        start: wStartStr,
+        end: endCap,
         total: wAlerts.length,
         missiles: wAlerts.filter(a => a.threat === "missiles").length,
         drones: wAlerts.filter(a => a.threat === "hostile_aircraft").length,
