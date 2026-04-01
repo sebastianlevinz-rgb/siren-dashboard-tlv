@@ -1,56 +1,52 @@
-import { useState, lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
+import { useAlerts } from "./hooks/useAlerts";
+import Header from "./components/Header";
+import SituationNow from "./components/SituationNow";
 import "./App.css";
 
-const DailyBriefing = lazy(() => import("./components/DailyBriefing"));
-const WeeklySummary = lazy(() => import("./components/WeeklySummary"));
-const EventTimeline = lazy(() => import("./components/EventTimeline"));
-const ContentLab = lazy(() => import("./components/ContentLab"));
-
-type TabId = "today" | "week" | "timeline" | "content";
-
-const TABS: { id: TabId; icon: string; label: string }[] = [
-  { id: "today", icon: "📋", label: "Today" },
-  { id: "week", icon: "📊", label: "This Week" },
-  { id: "timeline", icon: "⏳", label: "Timeline" },
-  { id: "content", icon: "🎬", label: "Content Lab" },
-];
+const WeeklyHeatmap = lazy(() => import("./components/WeeklyHeatmap"));
+const WarTimeline = lazy(() => import("./components/WarTimeline"));
+const WarStats = lazy(() => import("./components/WarStats"));
+const EmergencyResources = lazy(() => import("./components/EmergencyResources"));
 
 function App() {
-  const [activeTab, setActiveTab] = useState<TabId>("today");
+  const { alerts, events, loading } = useAlerts();
 
   return (
     <div className="app">
-      <div className="header-bar">
-        <div>
-          <div className="header-brand">⚔️ WAR DASHBOARD</div>
-          <div className="header-tagline">Daily intelligence briefing on the Iran-Israel conflict</div>
-        </div>
-      </div>
+      <Header />
 
-      <nav className="tab-nav">
-        {TABS.map((tab) => (
-          <button
-            key={tab.id}
-            className={`top-tab ${activeTab === tab.id ? "active" : ""}`}
-            onClick={() => setActiveTab(tab.id)}
-          >
-            <span>{tab.icon}</span>
-            <span>{tab.label}</span>
-          </button>
-        ))}
-      </nav>
+      <main className="wd-main">
+        {loading ? (
+          <div className="wd-loading">
+            <div className="wd-loading-pulse" />
+            <span>Loading intelligence data...</span>
+          </div>
+        ) : (
+          <>
+            <SituationNow alerts={alerts} />
 
-      <main className="dashboard-main">
-        <Suspense fallback={<div className="panel"><p className="text-secondary">Loading...</p></div>}>
-          {activeTab === "today" && <DailyBriefing />}
-          {activeTab === "week" && <WeeklySummary />}
-          {activeTab === "timeline" && <EventTimeline />}
-          {activeTab === "content" && <ContentLab />}
-        </Suspense>
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <WeeklyHeatmap alerts={alerts} />
+            </Suspense>
+
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <WarTimeline alerts={alerts} events={events} />
+            </Suspense>
+
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <WarStats alerts={alerts} />
+            </Suspense>
+
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <EmergencyResources />
+            </Suspense>
+          </>
+        )}
       </main>
 
-      <footer className="dashboard-footer">
+      <footer className="wd-footer">
         <span>Data: Tzofar Telegram @tzevaadom_en</span>
         <span>By Sebastian Levin Z · <a href="mailto:sebastianlevinz@gmail.com">Contact</a></span>
       </footer>
