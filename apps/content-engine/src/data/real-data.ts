@@ -1,0 +1,41 @@
+// Auto-generated from alert data — do not edit manually
+import type { ReelData } from "../types";
+
+export const REAL_DATA: ReelData = {
+  daysOfWar: 32,
+  totalAlerts: 916,
+  avgPerDay: 28.6,
+  todayAlerts: 4,
+  yesterdayAlerts: 24,
+  todayVsYesterday: -83.3,
+  mostAlertsDay: { date: "March 26", count: 44 },
+  fewestAlertsDay: { date: "March 31", count: 4 },
+  longestCalmHours: 5.9,
+  missiles: 770,
+  drones: 146,
+  missilesPct: 84,
+  regions: [
+    { name: "North", count: 826, pct: 90.2 },
+    { name: "Gush Dan", count: 243, pct: 26.5 },
+    { name: "Jerusalem", count: 251, pct: 27.4 },
+    { name: "South", count: 229, pct: 25.0 },
+  ],
+  thisWeekTotal: 86,
+  lastWeekTotal: 229,
+  weekChange: -62.4,
+  weekNumber: 5,
+  peakHour: 14,
+  quietestHourStart: 3,
+  nightPctMissiles: 28,
+  dayPctMissiles: 72,
+  shabatAvg: 28.6,
+  weekdayAvg: 28.0,
+  latestEvent: { date: "March 28", title: "Relative calm — attack intensity drops 35%", before: 34, after: 28, changePct: -19 },
+  dailyCounts: [24,33,18,29,37,26,31,36,32,28,23,29,27,29,29,28,27,23,24,30,38,27,38,23,31,42,44,24,27,31,24,4],
+};
+
+export const AUDIO_DURATIONS: Record<string, number> = {
+  "daily-briefing": 720,
+  "weekly-comparison": 600,
+  "deadliest-hours": 630,
+};
