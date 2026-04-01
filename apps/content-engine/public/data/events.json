@@ -1,0 +1,152 @@
+[
+  {
+    "date": "2026-02-28",
+    "category": "escalation",
+    "icon": "💥",
+    "title": {
+      "en": "Iran launches first direct barrage at Israel since Oct 2024",
+      "es": "Iran lanza primera andanada directa a Israel desde oct 2024",
+      "he": "איראן משגרת מטח ישיר ראשון לישראל מאז אוקטובר 2024"
+    },
+    "detail": {
+      "en": "Massive combined missile and drone attack marks the start of the current conflict escalation. Sirens across all regions.",
+      "es": "Ataque combinado masivo de misiles y drones marca el inicio de la escalada actual del conflicto. Sirenas en todas las regiones.",
+      "he": "מתקפת טילים ומל\"טים משולבת מסיבית מסמנת את תחילת ההסלמה הנוכחית. צפירות בכל האזורים."
+    }
+  },
+  {
+    "date": "2026-03-04",
+    "category": "escalation",
+    "icon": "🎯",
+    "title": {
+      "en": "Israel strikes IRGC targets in Syria",
+      "es": "Israel ataca objetivos de la Guardia Revolucionaria en Siria",
+      "he": "ישראל תוקפת מטרות משמרות המהפכה בסוריה"
+    },
+    "detail": {
+      "en": "IDF confirms strikes on Iranian weapons shipments and IRGC infrastructure in Damascus area. Iran vows retaliation.",
+      "es": "Las FDI confirman ataques a envios de armas iranies e infraestructura de la Guardia Revolucionaria en zona de Damasco. Iran jura represalias.",
+      "he": "צה\"ל מאשר תקיפות על משלוחי נשק איראניים ותשתיות משמרות המהפכה באזור דמשק. איראן נשבעת נקמה."
+    }
+  },
+  {
+    "date": "2026-03-07",
+    "category": "retaliation",
+    "icon": "🔥",
+    "title": {
+      "en": "Iran retaliates with intensified multi-front barrage",
+      "es": "Iran retalia con andanada intensificada en multiples frentes",
+      "he": "איראן מגיבה במטח מוגבר ממספר חזיתות"
+    },
+    "detail": {
+      "en": "Iran responds to Israeli strikes in Syria with heavy barrage combining ballistic missiles, cruise missiles, and drones. 36 alerts in 24 hours.",
+      "es": "Iran responde a los ataques israelies en Siria con andanada pesada combinando misiles balisticos, misiles crucero y drones. 36 alertas en 24 horas.",
+      "he": "איראן מגיבה לתקיפות הישראליות בסוריה במטח כבד המשלב טילים בליסטיים, טילי שיוט ומל\"טים. 36 התרעות ב-24 שעות."
+    }
+  },
+  {
+    "date": "2026-03-10",
+    "category": "diplomacy",
+    "icon": "🕊️",
+    "title": {
+      "en": "UN Security Council calls for immediate ceasefire",
+      "es": "Consejo de Seguridad de la ONU pide alto al fuego inmediato",
+      "he": "מועצת הביטחון של האו\"ם קוראת להפסקת אש מיידית"
+    },
+    "detail": {
+      "en": "Resolution passes 13-1 (US abstains). Brief de-escalation follows — daily alerts drop from ~30 to ~23 for a few days.",
+      "es": "Resolucion aprobada 13-1 (EEUU se abstiene). Breve desescalada — alertas diarias bajan de ~30 a ~23 por unos dias.",
+      "he": "ההחלטה עוברת 13-1 (ארה\"ב נמנעת). הרגעה קצרה — ההתרעות היומיות יורדות מ-~30 ל-~23 למספר ימים."
+    }
+  },
+  {
+    "date": "2026-03-14",
+    "category": "escalation",
+    "icon": "⚡",
+    "title": {
+      "en": "Trump announces expanded sanctions on Iran",
+      "es": "Trump anuncia sanciones ampliadas contra Iran",
+      "he": "טראמפ מכריז על הרחבת סנקציות נגד איראן"
+    },
+    "detail": {
+      "en": "New sanctions target Iranian oil exports and IRGC-linked entities. Iran calls it 'economic warfare' and signals escalation.",
+      "es": "Nuevas sanciones apuntan a exportaciones de petroleo irani y entidades vinculadas a la Guardia Revolucionaria. Iran lo llama 'guerra economica' y senala escalada.",
+      "he": "הסנקציות החדשות מכוונות ליצוא הנפט האיראני וגורמים הקשורים למשמרות המהפכה. איראן מכנה זאת 'מלחמה כלכלית' ומאותתת על הסלמה."
+    }
+  },
+  {
+    "date": "2026-03-17",
+    "category": "diplomacy",
+    "icon": "🤝",
+    "title": {
+      "en": "Backchannel ceasefire talks reported via Oman",
+      "es": "Reportan conversaciones de alto al fuego por canal secreto via Oman",
+      "he": "מדווח על שיחות הפסקת אש בערוץ עקיף דרך עומאן"
+    },
+    "detail": {
+      "en": "Media reports Omani-mediated indirect talks between Israel and Iran. Alert intensity drops briefly to 23/day.",
+      "es": "Medios reportan conversaciones indirectas mediadas por Oman entre Israel e Iran. Intensidad de alertas baja brevemente a 23/dia.",
+      "he": "תקשורת מדווחת על שיחות עקיפות בתיווך עומאן בין ישראל לאיראן. עוצמת ההתרעות יורדת לזמן קצר ל-23/יום."
+    }
+  },
+  {
+    "date": "2026-03-20",
+    "category": "escalation",
+    "icon": "💥",
+    "title": {
+      "en": "IRGC commander eliminated in Israeli airstrike",
+      "es": "Comandante de la Guardia Revolucionaria eliminado en ataque aereo israeli",
+      "he": "מפקד במשמרות המהפכה חוסל בתקיפה אווירית ישראלית"
+    },
+    "detail": {
+      "en": "Senior IRGC Quds Force commander killed in targeted strike in Lebanon. Iran declares 'harsh revenge'. Alerts spike to 38/day.",
+      "es": "Comandante senior de la Fuerza Quds de la Guardia Revolucionaria muerto en ataque dirigido en Libano. Iran declara 'dura venganza'. Alertas suben a 38/dia.",
+      "he": "מפקד בכיר בכוח קודס של משמרות המהפכה נהרג בתקיפה ממוקדת בלבנון. איראן מכריזה על 'נקמה קשה'. ההתרעות קופצות ל-38/יום."
+    }
+  },
+  {
+    "date": "2026-03-22",
+    "category": "retaliation",
+    "icon": "🔥",
+    "title": {
+      "en": "Iranian retaliation wave peaks — heaviest day since Feb 28",
+      "es": "Ola de represalia irani alcanza su pico — dia mas pesado desde el 28 de feb",
+      "he": "גל התגמול האיראני מגיע לשיא — היום הכבד ביותר מאז 28 בפברואר"
+    },
+    "detail": {
+      "en": "38 alerts in a single day as Iran retaliates for the commander's assassination. Multi-wave barrages hit north and center simultaneously.",
+      "es": "38 alertas en un solo dia cuando Iran retalia por el asesinato del comandante. Andanadas multi-ola impactan norte y centro simultaneamente.",
+      "he": "38 התרעות ביום אחד כאשר איראן גומלת על חיסול המפקד. מטחים רב-גליים פוגעים בצפון ובמרכז בו-זמנית."
+    }
+  },
+  {
+    "date": "2026-03-25",
+    "category": "escalation",
+    "icon": "⚡",
+    "title": {
+      "en": "Heaviest sustained barrage — 42 alerts in one day",
+      "es": "Andanada sostenida mas pesada — 42 alertas en un dia",
+      "he": "המטח המתמשך הכבד ביותר — 42 התרעות ביום אחד"
+    },
+    "detail": {
+      "en": "New record for daily alerts as Iran combines ballistic missiles with sustained drone waves targeting all regions. Arrow system heavily tested.",
+      "es": "Nuevo record de alertas diarias cuando Iran combina misiles balisticos con oleadas sostenidas de drones apuntando a todas las regiones. Sistema Arrow probado intensamente.",
+      "he": "שיא חדש בהתרעות יומיות כאשר איראן משלבת טילים בליסטיים עם גלי מל\"טים מתמשכים המכוונים לכל האזורים. מערכת חץ נבחנת רבות."
+    }
+  },
+  {
+    "date": "2026-03-28",
+    "category": "diplomacy",
+    "icon": "📉",
+    "title": {
+      "en": "Relative calm — attack intensity drops 35%",
+      "es": "Calma relativa — intensidad de ataques baja 35%",
+      "he": "רוגע יחסי — עוצמת ההתקפות יורדת ב-35%"
+    },
+    "detail": {
+      "en": "Daily alerts drop to 27, the lowest in a week. Analysts speculate Iranian stockpile depletion or diplomatic pressure taking effect.",
+      "es": "Alertas diarias bajan a 27, la cifra mas baja en una semana. Analistas especulan agotamiento de arsenales iranies o efecto de presion diplomatica.",
+      "he": "ההתרעות היומיות יורדות ל-27, הנמוך ביותר בשבוע. אנליסטים משערים דלדול מלאי איראני או השפעת לחץ דיפלומטי."
+    }
+  }
+]
