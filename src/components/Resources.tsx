@@ -19,9 +19,9 @@ const TEXT = {
   },
   instructions_title: { en: "What to do when the siren sounds", es: "Que hacer cuando suena la sirena", he: "מה לעשות כששומעים צפירה" },
   step1: {
-    en: "You have 90 seconds (north) to 15 seconds (Gush Dan) to reach shelter",
-    es: "Tenes 90 segundos (norte) a 15 segundos (Gush Dan) para llegar a un refugio",
-    he: "יש לך 90 שניות (צפון) עד 15 שניות (גוש דן) להגיע למקלט",
+    en: "You have 15 seconds (south border) to 90 seconds (Gush Dan, Jerusalem) to reach shelter",
+    es: "Tenes 15 segundos (frontera sur) a 90 segundos (Gush Dan, Jerusalem) para llegar a un refugio",
+    he: "יש לך 15 שניות (עוטף עזה) עד 90 שניות (גוש דן, ירושלים) להגיע למקלט",
   },
   step2: {
     en: "Enter the nearest shelter, mamad (safe room), or stairwell",
@@ -96,10 +96,10 @@ const RESOURCES: Resource[] = [
 
 const SHELTER_TIMES = [
   { region: { en: "North (border)", es: "Norte (frontera)", he: "צפון (גבול)" }, seconds: 0, note: { en: "Immediate", es: "Inmediato", he: "מיידי" } },
+  { region: { en: "South (Gaza border)", es: "Sur (frontera Gaza)", he: "עוטף עזה" }, seconds: 15, note: null },
   { region: { en: "Haifa", es: "Haifa", he: "חיפה" }, seconds: 60, note: null },
-  { region: { en: "Gush Dan", es: "Gush Dan", he: "גוש דן" }, seconds: 15, note: null },
+  { region: { en: "Gush Dan", es: "Gush Dan", he: "גוש דן" }, seconds: 90, note: null },
   { region: { en: "Jerusalem", es: "Jerusalem", he: "ירושלים" }, seconds: 90, note: null },
-  { region: { en: "South (border)", es: "Sur (frontera)", he: "דרום (גבול)" }, seconds: 15, note: null },
 ];
 
 const URGENCY_COLORS: Record<string, string> = {

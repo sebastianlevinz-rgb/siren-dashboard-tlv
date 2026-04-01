@@ -19,9 +19,9 @@ const TEXT = {
   },
   night_title: { en: "Night vs Day", es: "Noche vs Dia", he: "לילה מול יום" },
   night_desc: {
-    en: "Drones prefer night (slow, avoid visual detection). Missiles don't care.",
-    es: "Los drones prefieren la noche (lentos, evitan deteccion visual). A los misiles no les importa.",
-    he: "מל\"טים מעדיפים לילה (איטיים, נמנעים מזיהוי חזותי). לטילים זה לא משנה.",
+    en: "How do missiles and drones distribute across night (22:00-06:00) vs daytime?",
+    es: "Como se distribuyen misiles y drones entre noche (22:00-06:00) y dia?",
+    he: "?איך מתפלגים טילים ומל\"טים בין לילה (22:00-06:00) ליום",
   },
   response_title: { en: "Retaliation Speed", es: "Velocidad de Represalia", he: "מהירות תגמול" },
   response_desc: {

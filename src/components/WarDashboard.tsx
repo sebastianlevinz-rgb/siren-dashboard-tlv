@@ -263,25 +263,27 @@ function EventsView({ alerts, lang }: { alerts: Alert[]; lang: Lang }) {
 
             <p className="war-event-detail">{ev.detail[lang] || ev.detail.en}</p>
 
-            {/* Before/After impact card */}
-            <div className="war-impact">
-              <div className="war-impact-box">
-                <span className="war-impact-val">{before.toFixed(1)}</span>
-                <span className="war-impact-label">{TEXT.before[lang]}</span>
+            {/* Before/After impact card — only show when we have before data */}
+            {before > 0 && (
+              <div className="war-impact">
+                <div className="war-impact-box">
+                  <span className="war-impact-val">{before.toFixed(1)}</span>
+                  <span className="war-impact-label">{TEXT.before[lang]}</span>
+                </div>
+                <div className="war-impact-arrow">
+                  <span style={{ color: change > 0 ? "#c93d3d" : change < -5 ? "#3d8b37" : "#b8a02e", fontSize: "18px" }}>
+                    {change > 5 ? "↗" : change < -5 ? "↘" : "→"}
+                  </span>
+                  <span className="war-impact-change" style={{ color: change > 0 ? "#c93d3d" : change < -5 ? "#3d8b37" : "#b8a02e" }}>
+                    {change > 0 ? "+" : ""}{change.toFixed(0)}%
+                  </span>
+                </div>
+                <div className="war-impact-box">
+                  <span className="war-impact-val">{after.toFixed(1)}</span>
+                  <span className="war-impact-label">{TEXT.after[lang]}</span>
+                </div>
               </div>
-              <div className="war-impact-arrow">
-                <span style={{ color: change > 0 ? "#c93d3d" : change < -5 ? "#3d8b37" : "#b8a02e", fontSize: "18px" }}>
-                  {change > 5 ? "→" : change < -5 ? "→" : "→"}
-                </span>
-                <span className="war-impact-change" style={{ color: change > 0 ? "#c93d3d" : change < -5 ? "#3d8b37" : "#b8a02e" }}>
-                  {change > 0 ? "+" : ""}{change.toFixed(0)}%
-                </span>
-              </div>
-              <div className="war-impact-box">
-                <span className="war-impact-val">{after.toFixed(1)}</span>
-                <span className="war-impact-label">{TEXT.after[lang]}</span>
-              </div>
-            </div>
+            )}
           </div>
         );
       })}
