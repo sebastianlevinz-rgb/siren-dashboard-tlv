@@ -12,42 +12,44 @@
     h3 { font-size: 12px; color: #7b7f9e; margin-bottom: 8px; }
     h1 { text-align: center; margin-bottom: 40px; color: #4A90D9; font-size: 24px; }
     .orange { color: #d4822a; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10px; margin-left: 6px; }
+    .tag-v2 { background: #4A90D9; color: white; }
   </style>
 </head>
 <body>
-  <h1>⚔️ WAR DASHBOARD — Reel Preview (10 videos)</h1>
+  <h1>⚔️ WAR DASHBOARD — All Reels</h1>
 
   <div class="section">
-    <div class="section-title">DATA REELS</div>
+    <div class="section-title">WAR DASHBOARD EXPLAINERS <span class="tag tag-v2">V2</span></div>
+    <div class="grid">
+      <div><h3>WD-1: What is War Dashboard?</h3><video src="output/wd-concept.mp4" controls></video></div>
+      <div><h3>WD-2: How it Works</h3><video src="output/wd-how.mp4" controls></video></div>
+      <div><h3>WD-3: Why It Exists</h3><video src="output/wd-why.mp4" controls></video></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">MISSILE PROBABILITY EXPLAINERS <span class="tag tag-v2">V2</span></div>
+    <div class="grid">
+      <div><h3>MP-1: What is Missile Probability?</h3><video src="output/mp-concept.mp4" controls></video></div>
+      <div><h3>MP-2: The Heatmap Explained</h3><video src="output/mp-heatmap.mp4" controls></video></div>
+      <div><h3>MP-3: Built During the War</h3><video src="output/mp-shelter.mp4" controls></video></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">THE COMBINATION <span class="tag tag-v2">V2</span></div>
+    <div class="grid grid-1">
+      <div><h3>COMBO: Two Tools, One Mission</h3><video src="output/combo.mp4" controls></video></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title" style="color: #7b7f9e">DATA REELS (original)</div>
     <div class="grid">
       <div><h3>1. Daily Briefing</h3><video src="output/daily-briefing.mp4" controls></video></div>
       <div><h3>2. Weekly Comparison</h3><video src="output/weekly-comparison.mp4" controls></video></div>
       <div><h3>3. Deadliest Hours</h3><video src="output/deadliest-hours.mp4" controls></video></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">WAR DASHBOARD EXPLAINERS</div>
-    <div class="grid">
-      <div><h3>A1. What is War Dashboard?</h3><video src="output/wd-concept.mp4" controls></video></div>
-      <div><h3>A2. How it Works</h3><video src="output/wd-how.mp4" controls></video></div>
-      <div><h3>A3. Why It Matters</h3><video src="output/wd-why.mp4" controls></video></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title orange">MISSILE PROBABILITY EXPLAINERS</div>
-    <div class="grid">
-      <div><h3>B1. What is Missile Probability?</h3><video src="output/mp-concept.mp4" controls></video></div>
-      <div><h3>B2. The Heatmap</h3><video src="output/mp-heatmap.mp4" controls></video></div>
-      <div><h3>B3. Built in a Shelter</h3><video src="output/mp-shelter.mp4" controls></video></div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-title">THE COMBINATION</div>
-    <div class="grid grid-1">
-      <div><h3>C1. Two Tools, One Mission</h3><video src="output/combo.mp4" controls></video></div>
     </div>
   </div>
 </body>

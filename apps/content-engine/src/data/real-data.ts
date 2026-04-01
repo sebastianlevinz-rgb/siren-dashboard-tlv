@@ -2,8 +2,8 @@
 import type { ReelData } from "../types";
 
 export const REAL_DATA: ReelData = {
-  daysOfWar: 32,
-  totalAlerts: 916,
+  daysOfWar: 33,
+  totalAlerts: 957,
   avgPerDay: 28.6,
   todayAlerts: 4,
   yesterdayAlerts: 24,
@@ -30,7 +30,7 @@ export const REAL_DATA: ReelData = {
   dayPctMissiles: 72,
   shabatAvg: 28.6,
   weekdayAvg: 28.0,
-  gushDanTotal: 243,
+  gushDanTotal: 250,
   latestEvent: { date: "March 28", title: "Relative calm — attack intensity drops 35%", before: 34, after: 28, changePct: -19 },
   dailyCounts: [24,33,18,29,37,26,31,36,32,28,23,29,27,29,29,28,27,23,24,30,38,27,38,23,31,42,44,24,27,31,24,4],
   zero: 0,
@@ -40,11 +40,11 @@ export const AUDIO_DURATIONS: Record<string, number> = {
   "daily-briefing": 720,
   "weekly-comparison": 600,
   "deadliest-hours": 630,
-  "wd-concept": 960,
-  "wd-how": 1080,
-  "wd-why": 1290,
+  "wd-concept": 1110,
+  "wd-how": 1200,
+  "wd-why": 1080,
   "mp-concept": 990,
-  "mp-heatmap": 1080,
-  "mp-shelter": 1020,
-  "combo": 1320,
+  "mp-heatmap": 990,
+  "mp-shelter": 1140,
+  "combo": 1260,
 };
