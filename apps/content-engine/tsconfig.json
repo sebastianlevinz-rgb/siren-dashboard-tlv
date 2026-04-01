@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@war/shared": ["../../packages/shared"],
+      "@war/shared/*": ["../../packages/shared/*"]
+    }
+  },
+  "include": ["src", "*.ts", "../../packages/shared"]
+}

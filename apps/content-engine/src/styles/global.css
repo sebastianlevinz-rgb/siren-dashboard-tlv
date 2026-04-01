@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'SF Mono', monospace;
+  background: #0a0a0f;
+  color: #d8dae5;
+  -webkit-font-smoothing: antialiased;
+}

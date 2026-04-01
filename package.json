@@ -4,9 +4,14 @@
   "scripts": {
     "dev:mp": "pnpm --filter @war/missile-probability dev",
     "dev:wd": "pnpm --filter @war/wardashboard dev",
+    "dev:ce": "pnpm --filter @war/content-engine dev",
     "build:mp": "pnpm --filter @war/missile-probability build",
     "build:wd": "pnpm --filter @war/wardashboard build",
-    "build:all": "pnpm -r build",
+    "build:all": "pnpm --filter @war/missile-probability --filter @war/wardashboard build",
+    "render": "pnpm --filter @war/content-engine render-all",
     "typecheck": "pnpm -r typecheck"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
   }
 }
