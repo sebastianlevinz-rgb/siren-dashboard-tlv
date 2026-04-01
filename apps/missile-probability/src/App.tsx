@@ -171,6 +171,12 @@ function App() {
         </Suspense>
       </main>
 
+      {/* Sticky shelter banner */}
+      <div className="mp-sticky-banner" onClick={() => window.open("https://www.google.com/maps/search/public+shelter+miklat+near+me", "_blank")}>
+        <span className="mp-banner-dot" />
+        {t("shelter_banner", lang)}
+      </div>
+
       <footer className="dashboard-footer">
         <span>Data: Tzofar Telegram @tzevaadom_en</span>
         <span>Desarrollado por Sebastian Levin Z 🇦🇷 · <a href="mailto:sebastianlevinz@gmail.com">Contact</a></span>

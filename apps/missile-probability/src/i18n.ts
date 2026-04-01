@@ -97,6 +97,7 @@ const translations = {
   slot_evening: { en: "Evening", es: "Noche", he: "ערב" },
   avg_risk_hour: { en: "avg risk/hour (daytime)", es: "riesgo prom/hora (diurno)", he: "סיכון ממוצע/שעה (יום)" },
   avg_risk: { en: "avg risk/hour", es: "riesgo prom/hora", he: "סיכון ממוצע/שעה" },
+  shelter_banner: { en: "KNOW YOUR NEAREST SHELTER", es: "CONOCE TU REFUGIO MAS CERCANO", he: "דע את המקלט הקרוב אליך" },
 } as const;
 
 type Key = keyof typeof translations;

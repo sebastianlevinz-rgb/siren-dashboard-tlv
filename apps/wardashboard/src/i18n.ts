@@ -3,6 +3,7 @@ export type Lang = "en" | "es" | "he";
 const T = {
   // Header
   tagline: { en: "Civilian Intelligence Briefing", es: "Informe de Inteligencia Civil", he: "תדריך מודיעין לאזרחים" },
+  war_name: { en: "Iran–Israel–US Conflict 2026", es: "Conflicto Iran–Israel–EEUU 2026", he: "עימות איראן–ישראל–ארה\"ב 2026" },
   active_conflict: { en: "ACTIVE CONFLICT", es: "CONFLICTO ACTIVO", he: "עימות פעיל" },
   missile_data: { en: "Missile Data", es: "Data Misiles", he: "נתוני טילים" },
   loading: { en: "Loading intelligence data...", es: "Cargando datos de inteligencia...", he: "...טוען נתוני מודיעין" },

@@ -65,6 +65,14 @@ html, body {
   text-transform: uppercase;
 }
 
+.wd-war-name {
+  font-size: 8px;
+  color: var(--risk-danger);
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
 .wd-header-right {
   display: flex;
   flex-direction: column;
@@ -1105,7 +1113,7 @@ html, body {
 /* ===== FOOTER ===== */
 
 .wd-footer {
-  padding: 16px 20px 44px;
+  padding: 16px 20px;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;

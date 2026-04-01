@@ -69,12 +69,6 @@ function App() {
         )}
       </main>
 
-      {/* Sticky emergency banner */}
-      <div className="wd-sticky-banner" onClick={() => window.open("https://www.google.com/maps/search/public+shelter+miklat+near+me", "_blank")}>
-        <span className="wd-banner-dot" />
-        {t("shelter_banner", lang)}
-      </div>
-
       <footer className="wd-footer">
         <span>{t("data_source", lang)}{lastDate && ` · ${t("through", lang)} ${lastDate}`}</span>
         <span>By Sebastian Levin Z · <a href="mailto:sebastianlevinz@gmail.com">Contact</a></span>

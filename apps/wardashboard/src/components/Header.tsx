@@ -14,6 +14,7 @@ export default function Header({ lang, onLangChange }: Props) {
       <div className="wd-header-left">
         <div className="wd-brand">⚔️ WAR DASHBOARD</div>
         <div className="wd-tagline">{t("tagline", lang)}</div>
+        <div className="wd-war-name">{t("war_name", lang)}</div>
       </div>
       <div className="wd-header-right">
         <div className="wd-lang-row">
