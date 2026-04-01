@@ -2,12 +2,13 @@ import { lazy, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { useAlerts } from "./hooks/useAlerts";
 import Header from "./components/Header";
-import SituationNow from "./components/SituationNow";
+import WarStats from "./components/WarStats";
 import "./App.css";
 
+const DailyIntensity = lazy(() => import("./components/DailyIntensity"));
+const RegionBreakdown = lazy(() => import("./components/RegionBreakdown"));
 const WeeklyHeatmap = lazy(() => import("./components/WeeklyHeatmap"));
 const WarTimeline = lazy(() => import("./components/WarTimeline"));
-const WarStats = lazy(() => import("./components/WarStats"));
 const EmergencyResources = lazy(() => import("./components/EmergencyResources"));
 
 function App() {
@@ -25,7 +26,15 @@ function App() {
           </div>
         ) : (
           <>
-            <SituationNow alerts={alerts} />
+            <WarStats alerts={alerts} />
+
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <DailyIntensity alerts={alerts} />
+            </Suspense>
+
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <RegionBreakdown alerts={alerts} />
+            </Suspense>
 
             <Suspense fallback={<div className="wd-section-skeleton" />}>
               <WeeklyHeatmap alerts={alerts} />
@@ -33,10 +42,6 @@ function App() {
 
             <Suspense fallback={<div className="wd-section-skeleton" />}>
               <WarTimeline alerts={alerts} events={events} />
-            </Suspense>
-
-            <Suspense fallback={<div className="wd-section-skeleton" />}>
-              <WarStats alerts={alerts} />
             </Suspense>
 
             <Suspense fallback={<div className="wd-section-skeleton" />}>
