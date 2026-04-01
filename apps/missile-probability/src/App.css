@@ -169,6 +169,18 @@ html, body {
 
 .top-tab:hover .top-tab-label { color: var(--text-secondary); }
 
+a.external-tab {
+  text-decoration: none;
+  color: inherit;
+}
+
+a.external-tab .top-tab-label {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+a.external-tab:hover .top-tab-label { color: var(--text-primary); }
+
 .lang-btn {
   font-family: var(--font-mono);
   font-size: 10px;

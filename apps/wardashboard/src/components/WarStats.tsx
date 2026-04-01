@@ -59,6 +59,9 @@ export default function WarStats({ alerts }: Props) {
       ? ((thisWeek.total - lastWeek.total) / lastWeek.total * 100)
       : null;
 
+    // Latest day with data
+    const latestDay = daily[daily.length - 1];
+
     return {
       daysOfWar,
       totalAlerts: alerts.length,
@@ -72,6 +75,7 @@ export default function WarStats({ alerts }: Props) {
       thisWeek,
       lastWeek,
       weekChange,
+      latestDay,
     };
   }, [alerts]);
 
@@ -115,6 +119,13 @@ export default function WarStats({ alerts }: Props) {
           <span><span className="wd-dot" style={{ background: "#c93d3d" }} /> Missiles {stats.missiles} ({stats.missilesPct}%)</span>
           <span><span className="wd-dot" style={{ background: "var(--accent)" }} /> Drones {stats.drones} ({100 - parseInt(stats.missilesPct)}%)</span>
         </div>
+      </div>
+
+      {/* Latest day highlight */}
+      <div className="wd-latest-day">
+        <span className="wd-latest-label">Latest data — {fmtDate(stats.latestDay.date)}</span>
+        <span className="wd-latest-count">{stats.latestDay.count} alerts</span>
+        <span className="wd-latest-breakdown">{stats.latestDay.missiles} missiles · {stats.latestDay.hostile_aircraft} drones</span>
       </div>
 
       {/* Key facts row */}

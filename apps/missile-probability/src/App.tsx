@@ -14,16 +14,15 @@ const HourlyHistogram = lazy(() => import("./components/HourlyHistogram"));
 const TrendChart = lazy(() => import("./components/TrendChart"));
 const Recommendations = lazy(() => import("./components/Recommendations"));
 const Arsenal = lazy(() => import("./components/Arsenal"));
-const WarDashboard = lazy(() => import("./components/WarDashboard"));
 const Patterns = lazy(() => import("./components/Patterns"));
 const Resources = lazy(() => import("./components/Resources"));
 
 type TabId = "heatmap" | "now" | "war" | "timeline" | "histogram" | "trend" | "patterns" | "tips" | "arsenal" | "resources";
 
-const TABS: { id: TabId; icon: string; key: string }[] = [
+const TABS: { id: TabId; icon: string; key: string; href?: string }[] = [
   { id: "heatmap", icon: "🟧", key: "tab_heatmap" },
   { id: "now", icon: "⚡", key: "tab_now" },
-  { id: "war", icon: "⚔️", key: "tab_war" },
+  { id: "war", icon: "⚔️", key: "tab_war", href: "https://wardashboard.live" },
   { id: "timeline", icon: "📊", key: "tab_timeline" },
   { id: "histogram", icon: "🕐", key: "tab_byhour" },
   { id: "trend", icon: "📈", key: "tab_trend" },
@@ -132,14 +131,21 @@ function App() {
       {/* Tab nav */}
       <nav className="tab-nav">
         {TABS.map((tab) => (
-          <button
-            key={tab.id}
-            className={`top-tab ${activeTab === tab.id ? "active" : ""}`}
-            onClick={() => setActiveTab(tab.id)}
-          >
-            <span className="top-tab-icon">{tab.icon}</span>
-            <span className="top-tab-label">{tryT(tab.key, lang)}</span>
-          </button>
+          tab.href ? (
+            <a key={tab.id} className="top-tab external-tab" href={tab.href} target="_blank" rel="noopener noreferrer">
+              <span className="top-tab-icon">{tab.icon}</span>
+              <span className="top-tab-label">{tryT(tab.key, lang)} ↗</span>
+            </a>
+          ) : (
+            <button
+              key={tab.id}
+              className={`top-tab ${activeTab === tab.id ? "active" : ""}`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              <span className="top-tab-icon">{tab.icon}</span>
+              <span className="top-tab-label">{tryT(tab.key, lang)}</span>
+            </button>
+          )
         ))}
       </nav>
 
@@ -155,7 +161,6 @@ function App() {
         }>
           {activeTab === "heatmap" && <Heatmap alerts={filtered} lang={lang} total={total} totalDays={totalDays} avg={avg} />}
           {activeTab === "now" && <Now alerts={filtered} lang={lang} />}
-          {activeTab === "war" && <WarDashboard alerts={filtered} lang={lang} />}
           {activeTab === "timeline" && <DailyTimeline alerts={filtered} lang={lang} />}
           {activeTab === "histogram" && <HourlyHistogram alerts={filtered} lang={lang} />}
           {activeTab === "trend" && <TrendChart alerts={filtered} lang={lang} />}

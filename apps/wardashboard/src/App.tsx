@@ -52,7 +52,7 @@ function App() {
       </main>
 
       <footer className="wd-footer">
-        <span>Data: Tzofar Telegram @tzevaadom_en</span>
+        <span>Data: Tzofar Telegram @tzevaadom_en{alerts.length > 0 && ` · Through ${alerts.sort((a, b) => b.date.localeCompare(a.date))[0].date}`}</span>
         <span>By Sebastian Levin Z · <a href="mailto:sebastianlevinz@gmail.com">Contact</a></span>
       </footer>
       <Analytics />

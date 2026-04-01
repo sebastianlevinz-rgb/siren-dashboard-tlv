@@ -12,10 +12,10 @@ function formatHour(h: number): string {
 
 export default function WeeklyHeatmap({ alerts }: Props) {
   const { grid, maxVal, peakHours, quietHours } = useMemo(() => {
-    // Last 7 days only
-    const now = Date.now();
-    const week = 7 * 24 * 60 * 60 * 1000;
-    const recent = alerts.filter(a => now - new Date(a.timestamp).getTime() < week);
+    // Last 7 days of DATA (not calendar) — works even if data is days old
+    const dates = [...new Set(alerts.map(a => a.date))].sort();
+    const last7dates = new Set(dates.slice(-7));
+    const recent = alerts.filter(a => last7dates.has(a.date));
 
     const g: number[][] = Array.from({ length: 7 }, () => new Array(24).fill(0));
     for (const a of recent) {
@@ -56,7 +56,7 @@ export default function WeeklyHeatmap({ alerts }: Props) {
         <span className="wd-section-line" />
       </div>
 
-      <p className="wd-subtitle">Alerts by day and hour — last 7 days</p>
+      <p className="wd-subtitle">Alerts by day and hour — last 7 days of data</p>
 
       <div className="wd-heatmap-wrap">
         <div className="wd-heatmap">

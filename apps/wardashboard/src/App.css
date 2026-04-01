@@ -69,7 +69,24 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 2px;
+  gap: 3px;
+}
+
+.wd-crosslink {
+  font-size: 9px;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.wd-crosslink:hover {
+  background: rgba(74, 144, 217, 0.1);
+  color: var(--text-primary);
 }
 
 .wd-date {
@@ -237,6 +254,36 @@ html, body {
 
 .wd-threat-split {
   margin-bottom: 14px;
+}
+
+/* Latest day highlight */
+.wd-latest-day {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(74, 144, 217, 0.06);
+  border: 1px solid rgba(74, 144, 217, 0.2);
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.wd-latest-label {
+  font-size: 10px;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.wd-latest-count {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.wd-latest-breakdown {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-left: auto;
 }
 
 .wd-threat-split-bar {
