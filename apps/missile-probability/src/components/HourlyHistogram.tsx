@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
-import type { Alert, RoutineWindow } from "../types";
+import type { Alert, RoutineWindow } from "@war/shared";
 import { type Lang, t, tryT } from "../i18n";
-import { buildHourlyDistribution, formatHour } from "../utils/data";
+import { buildHourlyDistribution, formatHour } from "@war/shared";
 
 const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
 

@@ -1,0 +1,21 @@
+/* ===== SHARED CSS VARIABLES — Dark Military Theme ===== */
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0f1016;
+  --bg-panel: #12131c;
+  --bg-card: #181a28;
+  --border: #252840;
+  --text-primary: #d8dae5;
+  --text-secondary: #7b7f9e;
+  --text-muted: #4a4d6a;
+  --accent: #6ea8d7;
+  --risk-calm: #1a6b4a;
+  --risk-low: #3d8b37;
+  --risk-medium: #b8a02e;
+  --risk-high: #d4822a;
+  --risk-danger: #c93d3d;
+  --risk-extreme: #8b1a1a;
+  --success: #1a6b4a;
+  --font-mono: ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+}

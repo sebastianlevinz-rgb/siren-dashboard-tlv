@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
-import type { Alert, DailySummary } from "../types";
+import type { Alert, DailySummary } from "@war/shared";
 import { type Lang, t, dayShort } from "../i18n";
-import { buildDailySummaries, formatDate, getRiskColor } from "../utils/data";
+import { buildDailySummaries, formatDate, getRiskColor } from "@war/shared";
 
 interface Props { alerts: Alert[]; lang: Lang; }
 

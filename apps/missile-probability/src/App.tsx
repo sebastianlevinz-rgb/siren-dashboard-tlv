@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react";
-import type { Alert, RegionId } from "./types";
+import type { Alert, RegionId } from "@war/shared";
 import { type Lang, t, tryT } from "./i18n";
-import { buildDailySummaries } from "./utils/data";
+import { buildDailySummaries } from "@war/shared";
 import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
 

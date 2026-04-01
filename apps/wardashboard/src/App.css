@@ -1,0 +1,169 @@
+/* ===== WAR DASHBOARD — Dark Military Theme ===== */
+
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0f1016;
+  --bg-panel: #12131c;
+  --bg-card: #181a28;
+  --border: #252840;
+  --text-primary: #d8dae5;
+  --text-secondary: #7b7f9e;
+  --text-muted: #4a4d6a;
+  --accent: #4A90D9;
+  --risk-calm: #1a6b4a;
+  --risk-low: #3d8b37;
+  --risk-medium: #b8a02e;
+  --risk-high: #d4822a;
+  --risk-danger: #c93d3d;
+  --risk-extreme: #8b1a1a;
+  --font-mono: ui-monospace, 'Cascadia Code', 'SF Mono', 'Fira Code', 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+}
+
+html, body {
+  font-family: var(--font-mono);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: rgba(15, 16, 22, 0.95);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.header-brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.header-tagline {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.tab-nav {
+  display: flex;
+  gap: 2px;
+  padding: 8px 12px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tab-nav::-webkit-scrollbar { display: none; }
+
+.top-tab {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.top-tab.active {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.top-tab:hover:not(.active) {
+  color: var(--text-primary);
+}
+
+.dashboard-main {
+  flex: 1;
+  padding: 12px;
+}
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.panel h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.panel-subtitle, .text-secondary {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.coming-soon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.coming-soon-icon {
+  font-size: 40px;
+  opacity: 0.6;
+}
+
+.coming-soon h3 {
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.coming-soon p {
+  font-size: 11px;
+  color: var(--text-muted);
+  max-width: 340px;
+  line-height: 1.6;
+}
+
+.dashboard-footer {
+  padding: 16px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 8px;
+  background: var(--bg-secondary);
+}
+
+.dashboard-footer a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.dashboard-footer a:hover {
+  color: var(--text-primary);
+}

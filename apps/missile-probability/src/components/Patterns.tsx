@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { Alert } from "../types";
+import type { Alert } from "@war/shared";
 import { type Lang, dayFull } from "../i18n";
 
 interface Props { alerts: Alert[]; lang: Lang; }

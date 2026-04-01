@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
-import type { Alert, HeatmapCell } from "../types";
+import type { Alert, HeatmapCell } from "@war/shared";
 import { type Lang, t, dayShort, dayFull } from "../i18n";
-import { buildHeatmap, formatHour, getRiskColor, getDayOfWeekOccurrences } from "../utils/data";
+import { buildHeatmap, formatHour, getRiskColor, getDayOfWeekOccurrences } from "@war/shared";
 
 const HOUR_ORDER = [...Array.from({ length: 18 }, (_, i) => i + 6), ...Array.from({ length: 6 }, (_, i) => i)];
 

@@ -1,7 +1,7 @@
 import { useMemo, useState, useEffect } from "react";
-import type { Alert } from "../types";
+import type { Alert } from "@war/shared";
 import { type Lang, t } from "../i18n";
-import { buildDailySummaries, movingAverage, formatDate } from "../utils/data";
+import { buildDailySummaries, movingAverage, formatDate } from "@war/shared";
 
 interface GeoEvent {
   date: string;
