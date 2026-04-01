@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import type { Alert } from "@war/shared";
 import { buildDailySummaries } from "@war/shared";
+import { type Lang, t } from "../i18n";
 
 interface GeoEvent {
   date: string;
@@ -10,18 +11,12 @@ interface GeoEvent {
   detail: Record<string, string>;
 }
 
-interface Props { alerts: Alert[]; events: GeoEvent[]; }
+interface Props { alerts: Alert[]; events: GeoEvent[]; lang: Lang; }
 
 const CAT_COLORS: Record<string, string> = {
   escalation: "#c93d3d",
   retaliation: "#d4822a",
   diplomacy: "#4A90D9",
-};
-
-const CAT_LABELS: Record<string, string> = {
-  escalation: "ESCALATION",
-  retaliation: "RETALIATION",
-  diplomacy: "DIPLOMACY",
 };
 
 function formatDate(d: string): string {
@@ -30,7 +25,7 @@ function formatDate(d: string): string {
   return `${months[parseInt(m)]} ${parseInt(day)}`;
 }
 
-export default function WarTimeline({ alerts, events }: Props) {
+export default function WarTimeline({ alerts, events, lang }: Props) {
   const byDate = useMemo(() => {
     const daily = buildDailySummaries(alerts);
     const map = new Map<string, number>();
@@ -38,7 +33,6 @@ export default function WarTimeline({ alerts, events }: Props) {
     return map;
   }, [alerts]);
 
-  // Most recent first
   const sorted = [...events].sort((a, b) => b.date.localeCompare(a.date));
 
   function get48hAvg(dateStr: string, direction: "before" | "after"): number {
@@ -53,12 +47,19 @@ export default function WarTimeline({ alerts, events }: Props) {
     return count > 0 ? sum / count : 0;
   }
 
+  const catKey = (c: string) => {
+    if (c === "escalation") return t("escalation", lang);
+    if (c === "retaliation") return t("retaliation", lang);
+    if (c === "diplomacy") return t("diplomacy", lang);
+    return c.toUpperCase();
+  };
+
   return (
     <section className="wd-section">
       <div className="wd-section-header">
         <span className="wd-section-line" />
-        <span className="wd-section-tag">SECTION 03</span>
-        <span className="wd-section-title">WAR TIMELINE</span>
+        <span className="wd-section-tag">{t("sec05", lang)}</span>
+        <span className="wd-section-title">{t("war_timeline", lang)}</span>
         <span className="wd-section-line" />
       </div>
 
@@ -71,29 +72,22 @@ export default function WarTimeline({ alerts, events }: Props) {
 
           return (
             <article key={ev.date} className="wd-tl-item">
-              {/* Date column */}
-              <div className="wd-tl-date">
-                <time>{formatDate(ev.date)}</time>
-              </div>
-
-              {/* Vertical line + dot */}
+              <div className="wd-tl-date"><time>{formatDate(ev.date)}</time></div>
               <div className="wd-tl-line">
                 <div className="wd-tl-dot" style={{ background: color }} />
                 {i < sorted.length - 1 && <div className="wd-tl-connector" />}
               </div>
-
-              {/* Content card */}
               <div className="wd-tl-card">
                 <div className="wd-tl-card-header">
                   <span className="wd-tl-icon">{ev.icon}</span>
-                  <span className="wd-tl-cat" style={{ background: color }}>{CAT_LABELS[ev.category] || ev.category.toUpperCase()}</span>
+                  <span className="wd-tl-cat" style={{ background: color }}>{catKey(ev.category)}</span>
                 </div>
-                <h3 className="wd-tl-title">{ev.title.en}</h3>
-                <p className="wd-tl-detail">{ev.detail.en}</p>
+                <h3 className="wd-tl-title">{ev.title[lang] || ev.title.en}</h3>
+                <p className="wd-tl-detail">{ev.detail[lang] || ev.detail.en}</p>
                 <div className="wd-tl-impact">
-                  <span className="wd-tl-impact-item">Day: {dayCount} alerts</span>
+                  <span className="wd-tl-impact-item">{t("day_label", lang)}: {dayCount} {t("alerts", lang)}</span>
                   {before > 0 && (
-                    <span className="wd-tl-impact-item">48h before: {before.toFixed(0)} → after: {after.toFixed(0)}</span>
+                    <span className="wd-tl-impact-item">{t("before_48h", lang)}: {before.toFixed(0)} → {t("after_48h", lang)}: {after.toFixed(0)}</span>
                   )}
                 </div>
               </div>

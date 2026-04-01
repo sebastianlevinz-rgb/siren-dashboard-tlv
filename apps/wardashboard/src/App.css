@@ -807,10 +807,107 @@ html, body {
   color: var(--text-muted);
 }
 
+/* ===== LANG SWITCHER ===== */
+
+.wd-lang-row {
+  display: flex;
+  gap: 2px;
+}
+
+.wd-lang-btn {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.wd-lang-btn.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.wd-lang-btn:hover:not(.active) {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
+/* ===== SHARE BUTTON ===== */
+
+.wd-share-btn {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border: 1px solid var(--accent);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.wd-share-btn:hover {
+  background: rgba(74, 144, 217, 0.1);
+  color: var(--text-primary);
+}
+
+/* ===== STICKY EMERGENCY BANNER ===== */
+
+.wd-sticky-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(201, 61, 61, 0.95);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.15s;
+}
+
+.wd-sticky-banner:hover {
+  background: rgba(201, 61, 61, 1);
+}
+
+.wd-banner-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #fff;
+  animation: pulse-dot 2s infinite;
+}
+
+/* ===== RTL SUPPORT ===== */
+
+[dir="rtl"] .wd-tl-date { text-align: left; }
+[dir="rtl"] .wd-region-pct { text-align: left; }
+[dir="rtl"] .wd-compare-label { text-align: right; }
+[dir="rtl"] .wd-wk-dates { text-align: right; }
+[dir="rtl"] .wd-latest-breakdown { margin-left: 0; margin-right: auto; }
+
 /* ===== FOOTER ===== */
 
 .wd-footer {
-  padding: 16px 20px;
+  padding: 16px 20px 44px;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
