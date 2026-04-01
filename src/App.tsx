@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useMemo, lazy, Suspense } from "react";
 import type { Alert, RegionId } from "./types";
-import { type Lang, t } from "./i18n";
+import { type Lang, t, tryT } from "./i18n";
 import { buildDailySummaries } from "./utils/data";
 import { Analytics } from "@vercel/analytics/react";
 import "./App.css";
@@ -14,17 +14,23 @@ const HourlyHistogram = lazy(() => import("./components/HourlyHistogram"));
 const TrendChart = lazy(() => import("./components/TrendChart"));
 const Recommendations = lazy(() => import("./components/Recommendations"));
 const Arsenal = lazy(() => import("./components/Arsenal"));
+const WarDashboard = lazy(() => import("./components/WarDashboard"));
+const Patterns = lazy(() => import("./components/Patterns"));
+const Resources = lazy(() => import("./components/Resources"));
 
-type TabId = "heatmap" | "now" | "timeline" | "histogram" | "trend" | "tips" | "arsenal";
+type TabId = "heatmap" | "now" | "war" | "timeline" | "histogram" | "trend" | "patterns" | "tips" | "arsenal" | "resources";
 
-const TABS: { id: TabId; icon: string; key: "tab_heatmap" | "tab_now" | "tab_timeline" | "tab_byhour" | "tab_trend" | "tab_tips" | "tab_arsenal" }[] = [
+const TABS: { id: TabId; icon: string; key: string }[] = [
   { id: "heatmap", icon: "🟧", key: "tab_heatmap" },
   { id: "now", icon: "⚡", key: "tab_now" },
+  { id: "war", icon: "⚔️", key: "tab_war" },
   { id: "timeline", icon: "📊", key: "tab_timeline" },
   { id: "histogram", icon: "🕐", key: "tab_byhour" },
   { id: "trend", icon: "📈", key: "tab_trend" },
+  { id: "patterns", icon: "🔍", key: "tab_patterns" },
   { id: "tips", icon: "💡", key: "tab_tips" },
   { id: "arsenal", icon: "🎯", key: "tab_arsenal" },
+  { id: "resources", icon: "🆘", key: "tab_resources" },
 ];
 
 const LANGS: Lang[] = ["en", "es", "he"];
@@ -132,7 +138,7 @@ function App() {
             onClick={() => setActiveTab(tab.id)}
           >
             <span className="top-tab-icon">{tab.icon}</span>
-            <span className="top-tab-label">{t(tab.key, lang)}</span>
+            <span className="top-tab-label">{tryT(tab.key, lang)}</span>
           </button>
         ))}
       </nav>
@@ -149,11 +155,14 @@ function App() {
         }>
           {activeTab === "heatmap" && <Heatmap alerts={filtered} lang={lang} total={total} totalDays={totalDays} avg={avg} />}
           {activeTab === "now" && <Now alerts={filtered} lang={lang} />}
+          {activeTab === "war" && <WarDashboard alerts={filtered} lang={lang} />}
           {activeTab === "timeline" && <DailyTimeline alerts={filtered} lang={lang} />}
           {activeTab === "histogram" && <HourlyHistogram alerts={filtered} lang={lang} />}
           {activeTab === "trend" && <TrendChart alerts={filtered} lang={lang} />}
+          {activeTab === "patterns" && <Patterns alerts={filtered} lang={lang} />}
           {activeTab === "tips" && <Recommendations alerts={filtered} lang={lang} />}
           {activeTab === "arsenal" && <Arsenal lang={lang} />}
+          {activeTab === "resources" && <Resources lang={lang} />}
         </Suspense>
       </main>
 
