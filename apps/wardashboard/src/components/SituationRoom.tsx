@@ -40,30 +40,23 @@ const CARRIERS: CarrierGroup[] = [
     escorts: "2 destroyers, 1 cruiser, 1 submarine (est.)",
   },
   {
-    name: "USS Carl Vinson (CVN-70)",
-    strikeGroup: "CSG-1",
-    position: { x: 390, y: 280 },
-    location: { en: "Persian Gulf — Central", es: "Golfo Persico — Centro", he: "המפרץ הפרסי — מרכז" },
+    name: "2nd CSG (unconfirmed)",
+    strikeGroup: "CSG-?",
+    position: { x: 480, y: 380 },
+    location: { en: "Gulf of Oman — Reported but unconfirmed by OSINT", es: "Golfo de Oman — Reportado pero no confirmado por OSINT", he: "מפרץ עומאן — דווח אך לא אושר ע\"י מודיעין גלוי" },
     aircraft: 90,
     personnel: 7500,
-    escorts: "2 destroyers, 1 cruiser",
-  },
-  {
-    name: "USS Abraham Lincoln (CVN-72)",
-    strikeGroup: "CSG-3",
-    position: { x: 160, y: 250 },
-    location: { en: "Red Sea / Suez approach", es: "Mar Rojo / Acceso a Suez", he: "ים סוף / גישה לסואץ" },
-    aircraft: 90,
-    personnel: 7500,
-    escorts: "3 destroyers, 1 cruiser",
+    escorts: "Escort composition unknown",
   },
 ];
 
 const BASES: MilitaryBase[] = [
-  { name: "Al Udeid", country: "Qatar", position: { x: 410, y: 290 }, role: { en: "CENTCOM Forward HQ — Air operations center", es: "Cuartel avanzado CENTCOM — Centro de operaciones aereas", he: "מפקדה קדמית CENTCOM — מרכז פעולות אוויריות" } },
-  { name: "Al Dhafra", country: "UAE", position: { x: 430, y: 305 }, role: { en: "F-35 & B-2 forward base — Stealth operations", es: "Base avanzada F-35 y B-2 — Operaciones stealth", he: "בסיס קדמי F-35 ו-B-2 — פעולות חמקניות" } },
-  { name: "Camp Arifjan", country: "Kuwait", position: { x: 370, y: 240 }, role: { en: "Army forward base — 15,000 troops", es: "Base avanzada del ejercito — 15,000 tropas", he: "בסיס קדמי צבאי — 15,000 חיילים" } },
+  { name: "Al Udeid", country: "Qatar", position: { x: 410, y: 290 }, role: { en: "CENTCOM Forward HQ — CAOC air operations", es: "Cuartel avanzado CENTCOM — Operaciones aereas CAOC", he: "מפקדה קדמית CENTCOM — פעולות אוויריות CAOC" } },
+  { name: "Al Dhafra", country: "UAE", position: { x: 430, y: 305 }, role: { en: "F-35, F-22, tankers, ISR — Stealth forward base", es: "F-35, F-22, cisternas, ISR — Base stealth avanzada", he: "F-35, F-22, מכליות, ISR — בסיס חמקני קדמי" } },
+  { name: "Camp Arifjan", country: "Kuwait", position: { x: 370, y: 240 }, role: { en: "Army logistics hub — Ground forces staging", es: "Hub logistico del ejercito — Preparacion de fuerzas terrestres", he: "מרכז לוגיסטי צבאי — הכנת כוחות יבשה" } },
   { name: "NSA Bahrain", country: "Bahrain", position: { x: 400, y: 270 }, role: { en: "US 5th Fleet HQ — Naval command center", es: "Cuartel de la 5ta Flota — Centro de comando naval", he: "מפקדת הצי ה-5 — מרכז פיקוד ימי" } },
+  { name: "Prince Sultan", country: "Saudi Arabia", position: { x: 310, y: 340 }, role: { en: "Patriot batteries, fighter squadrons", es: "Baterias Patriot, escuadrones de caza", he: "סוללות פטריוט, טייסות קרב" } },
+  { name: "Lemonnier", country: "Djibouti", position: { x: 200, y: 420 }, role: { en: "SOF, drones, ISR — Horn of Africa", es: "Fuerzas especiales, drones, ISR — Cuerno de Africa", he: "כוחות מיוחדים, מל\"טים, ISR — קרן אפריקה" } },
   { name: "Diego Garcia", country: "BIOT", position: { x: 600, y: 520 }, role: { en: "B-2/B-52 bomber staging — Indian Ocean", es: "Base de bombarderos B-2/B-52 — Oceano Indico", he: "בסיס מפציצי B-2/B-52 — האוקיינוס ההודי" } },
 ];
 
@@ -96,9 +89,9 @@ const TEXT = {
   force_summary: { en: "FORCE SUMMARY", es: "RESUMEN DE FUERZAS", he: "סיכום כוחות" },
   total_carriers: { en: "Carrier Strike Groups", es: "Grupos de Portaaviones", he: "כוחות שייט מוטסים" },
   total_aircraft: { en: "Combat Aircraft (est.)", es: "Aviones de Combate (est.)", he: "מטוסי קרב (הערכה)" },
-  total_personnel: { en: "Naval Personnel (est.)", es: "Personal Naval (est.)", he: "אנשי צי (הערכה)" },
+  total_personnel: { en: "CENTCOM Personnel (est.)", es: "Personal CENTCOM (est.)", he: "אנשי CENTCOM (הערכה)" },
   total_bases: { en: "Forward Bases", es: "Bases Avanzadas", he: "בסיסים קדמיים" },
-  moon: { en: "Full Moon: Apr 2-3 — Optimal for night operations", es: "Luna Llena: Abr 2-3 — Optimo para operaciones nocturnas", he: "ירח מלא: 2-3 באפריל — אופטימלי לפעולות לילה" },
+  moon: { en: "Waxing Gibbous (~80%): Apr 2-3 — Good night visibility. Full Moon: Apr 12", es: "Luna Gibosa Creciente (~80%): Abr 2-3 — Buena visibilidad nocturna. Luna Llena: Abr 12", he: "ירח גדל (~80%): 2-3 באפריל — ראות לילה טובה. ירח מלא: 12 באפריל" },
   kharg: { en: "KHARG ISLAND — 90% of Iran's oil exports", es: "ISLA KHARG — 90% de las exportaciones petroleras de Iran", he: "אי חארג — 90% מיצוא הנפט של איראן" },
   hormuz: { en: "STRAIT OF HORMUZ — 21% of global oil transit", es: "ESTRECHO DE HORMUZ — 21% del transito mundial de petroleo", he: "מיצר הורמוז — 21% מהובלת הנפט העולמית" },
 };
@@ -122,10 +115,10 @@ export default function SituationRoom({ lang }: Props) {
 
       {/* Force Summary Cards */}
       <div className="sr-summary">
-        <div className="sr-stat"><span className="sr-stat-val">3</span><span className="sr-stat-label">{TEXT.total_carriers[lang]}</span></div>
-        <div className="sr-stat"><span className="sr-stat-val">~270</span><span className="sr-stat-label">{TEXT.total_aircraft[lang]}</span></div>
-        <div className="sr-stat"><span className="sr-stat-val">~22,500</span><span className="sr-stat-label">{TEXT.total_personnel[lang]}</span></div>
-        <div className="sr-stat"><span className="sr-stat-val">5</span><span className="sr-stat-label">{TEXT.total_bases[lang]}</span></div>
+        <div className="sr-stat"><span className="sr-stat-val">1-2</span><span className="sr-stat-label">{TEXT.total_carriers[lang]}</span></div>
+        <div className="sr-stat"><span className="sr-stat-val">~180</span><span className="sr-stat-label">{TEXT.total_aircraft[lang]}</span></div>
+        <div className="sr-stat"><span className="sr-stat-val">~45,000</span><span className="sr-stat-label">{TEXT.total_personnel[lang]}</span></div>
+        <div className="sr-stat"><span className="sr-stat-val">7</span><span className="sr-stat-label">{TEXT.total_bases[lang]}</span></div>
       </div>
 
       {/* Moon phase alert */}
