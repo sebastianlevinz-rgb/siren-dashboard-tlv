@@ -24,11 +24,9 @@ const translations = {
   tab_timeline: { en: "Timeline", es: "Timeline", he: "ציר זמן" },
   tab_byhour: { en: "By Hour", es: "Por Hora", he: "לפי שעה" },
   tab_trend: { en: "Trend", es: "Tendencia", he: "מגמה" },
-  tab_tips: { en: "Tips", es: "Tips", he: "טיפים" },
-  tab_arsenal: { en: "Arsenal", es: "Arsenal", he: "ארסנל" },
   tab_war: { en: "War", es: "Guerra", he: "מלחמה" },
-  tab_patterns: { en: "Patterns", es: "Patrones", he: "תבניות" },
-  tab_resources: { en: "SOS", es: "SOS", he: "SOS" },
+  tab_insights: { en: "Insights", es: "Analisis", he: "תובנות" },
+  tab_info: { en: "Info", es: "Info", he: "מידע" },
 
   // Regions
   region_all: { en: "All Israel", es: "Todo Israel", he: "כל ישראל" },

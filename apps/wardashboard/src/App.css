@@ -925,14 +925,22 @@ html, body {
   gap: 6px;
 }
 
-.wd-reel-video {
+.wd-reel-placeholder {
   width: 100%;
+  aspect-ratio: 9/16;
   border-radius: 8px;
   border: 1px solid var(--border);
-  background: #000;
-  aspect-ratio: 9/16;
-  object-fit: cover;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-left-width: 3px;
 }
+
+.wd-reel-play { font-size: 28px; opacity: 0.5; }
+.wd-reel-soon { font-size: 9px; color: var(--text-muted); letter-spacing: 1px; }
 
 .wd-reel-title {
   font-size: 10px;

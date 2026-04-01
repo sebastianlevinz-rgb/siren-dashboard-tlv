@@ -17,7 +17,7 @@ const Arsenal = lazy(() => import("./components/Arsenal"));
 const Patterns = lazy(() => import("./components/Patterns"));
 const Resources = lazy(() => import("./components/Resources"));
 
-type TabId = "heatmap" | "now" | "war" | "timeline" | "histogram" | "trend" | "patterns" | "tips" | "arsenal" | "resources";
+type TabId = "heatmap" | "now" | "war" | "timeline" | "histogram" | "trend" | "insights" | "info";
 
 const TABS: { id: TabId; icon: string; key: string; href?: string }[] = [
   { id: "heatmap", icon: "🟧", key: "tab_heatmap" },
@@ -26,10 +26,8 @@ const TABS: { id: TabId; icon: string; key: string; href?: string }[] = [
   { id: "timeline", icon: "📊", key: "tab_timeline" },
   { id: "histogram", icon: "🕐", key: "tab_byhour" },
   { id: "trend", icon: "📈", key: "tab_trend" },
-  { id: "patterns", icon: "🔍", key: "tab_patterns" },
-  { id: "tips", icon: "💡", key: "tab_tips" },
-  { id: "arsenal", icon: "🎯", key: "tab_arsenal" },
-  { id: "resources", icon: "🆘", key: "tab_resources" },
+  { id: "insights", icon: "🔍", key: "tab_insights" },
+  { id: "info", icon: "📋", key: "tab_info" },
 ];
 
 const LANGS: Lang[] = ["en", "es", "he"];
@@ -164,10 +162,8 @@ function App() {
           {activeTab === "timeline" && <DailyTimeline alerts={filtered} lang={lang} />}
           {activeTab === "histogram" && <HourlyHistogram alerts={filtered} lang={lang} />}
           {activeTab === "trend" && <TrendChart alerts={filtered} lang={lang} />}
-          {activeTab === "patterns" && <Patterns alerts={filtered} lang={lang} />}
-          {activeTab === "tips" && <Recommendations alerts={filtered} lang={lang} />}
-          {activeTab === "arsenal" && <Arsenal lang={lang} />}
-          {activeTab === "resources" && <Resources lang={lang} />}
+          {activeTab === "insights" && <><Patterns alerts={filtered} lang={lang} /><Recommendations alerts={filtered} lang={lang} /></>}
+          {activeTab === "info" && <><Arsenal lang={lang} /><Resources lang={lang} /></>}
         </Suspense>
       </main>
 

@@ -148,5 +148,20 @@
       "es": "Alertas diarias bajan a 27, la cifra mas baja en una semana. Analistas especulan agotamiento de arsenales iranies o efecto de presion diplomatica.",
       "he": "ההתרעות היומיות יורדות ל-27, הנמוך ביותר בשבוע. אנליסטים משערים דלדול מלאי איראני או השפעת לחץ דיפלומטי."
     }
+  },
+  {
+    "date": "2026-04-01",
+    "category": "escalation",
+    "icon": "🇺🇸",
+    "title": {
+      "en": "US carrier strike group positioned near Strait of Hormuz — military buildup intensifies",
+      "es": "Grupo de ataque de portaaviones de EEUU posicionado cerca del Estrecho de Hormuz — se intensifica el despliegue militar",
+      "he": "כוח שייט מוטס אמריקאי ממוקם ליד מיצר הורמוז — ההתגייסות הצבאית מתעצמת"
+    },
+    "detail": {
+      "en": "USS Truman (CSG-8) confirmed in Arabian Sea. Reports of second carrier en route. US CENTCOM at heightened readiness. Daily alerts drop to 17 — lowest since the war began.",
+      "es": "USS Truman (CSG-8) confirmado en el Mar Arabigo. Reportes de segundo portaaviones en camino. CENTCOM de EEUU en alerta elevada. Alertas diarias bajan a 17 — la cifra mas baja desde el inicio de la guerra.",
+      "he": "USS Truman (CSG-8) מאושר בים הערבי. דיווחים על נושאת מטוסים שנייה בדרך. CENTCOM בכוננות מוגברת. ההתרעות היומיות יורדות ל-17 — הנמוך ביותר מאז תחילת המלחמה."
+    }
   }
 ]

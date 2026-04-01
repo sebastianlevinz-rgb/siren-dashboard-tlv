@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, useEffect, useMemo, lazy, Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { useAlerts } from "./hooks/useAlerts";
 import { type Lang, t } from "./i18n";
@@ -20,9 +20,12 @@ function App() {
 
   useEffect(() => { document.documentElement.dir = lang === "he" ? "rtl" : "ltr"; }, [lang]);
 
-  const lastDate = alerts.length > 0
-    ? [...alerts].sort((a, b) => b.date.localeCompare(a.date))[0].date
-    : "";
+  const lastDate = useMemo(() => {
+    if (alerts.length === 0) return "";
+    let max = alerts[0].date;
+    for (const a of alerts) if (a.date > max) max = a.date;
+    return max;
+  }, [alerts]);
 
   return (
     <div className="app">

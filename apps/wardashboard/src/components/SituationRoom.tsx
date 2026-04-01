@@ -111,7 +111,7 @@ export default function SituationRoom({ lang }: Props) {
         <span className="wd-section-title">{TEXT.title[lang]}</span>
         <span className="wd-section-line" />
       </div>
-      <p className="wd-subtitle">{TEXT.sub[lang]}</p>
+      <p className="wd-subtitle">{TEXT.sub[lang]} · <span style={{ color: "var(--text-muted)" }}>Last updated: Apr 2, 2026</span></p>
 
       {/* Force Summary Cards */}
       <div className="sr-summary">
