@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import WarStats from "./components/WarStats";
 import "./App.css";
 
+const SituationRoom = lazy(() => import("./components/SituationRoom"));
 const DailyIntensity = lazy(() => import("./components/DailyIntensity"));
 const RegionBreakdown = lazy(() => import("./components/RegionBreakdown"));
 const WeeklyHeatmap = lazy(() => import("./components/WeeklyHeatmap"));
@@ -35,6 +36,10 @@ function App() {
           </div>
         ) : (
           <>
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <SituationRoom lang={lang} />
+            </Suspense>
+
             <WarStats alerts={alerts} lang={lang} />
 
             <Suspense fallback={<div className="wd-section-skeleton" />}>
