@@ -30,12 +30,21 @@ export const REAL_DATA: ReelData = {
   dayPctMissiles: 72,
   shabatAvg: 28.6,
   weekdayAvg: 28.0,
+  gushDanTotal: 243,
   latestEvent: { date: "March 28", title: "Relative calm — attack intensity drops 35%", before: 34, after: 28, changePct: -19 },
   dailyCounts: [24,33,18,29,37,26,31,36,32,28,23,29,27,29,29,28,27,23,24,30,38,27,38,23,31,42,44,24,27,31,24,4],
+  zero: 0,
 };
 
 export const AUDIO_DURATIONS: Record<string, number> = {
-  "daily-briefing": 720,
-  "weekly-comparison": 600,
-  "deadliest-hours": 630,
+  "daily-briefing": 150,
+  "weekly-comparison": 150,
+  "deadliest-hours": 150,
+  "wd-concept": 960,
+  "wd-how": 1080,
+  "wd-why": 1290,
+  "mp-concept": 990,
+  "mp-heatmap": 1080,
+  "mp-shelter": 1020,
+  "combo": 1320,
 };

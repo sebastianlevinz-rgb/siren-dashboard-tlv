@@ -4,18 +4,51 @@
   <title>War Dashboard Reels — Preview</title>
   <style>
     body { background: #0a0a0f; color: white; font-family: monospace; padding: 20px; }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1200px; margin: 0 auto; }
+    .section { max-width: 1200px; margin: 0 auto 40px; }
+    .section-title { font-size: 18px; color: #4A90D9; margin-bottom: 16px; letter-spacing: 2px; border-bottom: 1px solid #252840; padding-bottom: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-1 { grid-template-columns: 1fr; max-width: 400px; }
     video { width: 100%; border-radius: 8px; border: 1px solid #252840; }
-    h2 { font-size: 14px; color: #7b7f9e; margin-bottom: 8px; }
-    h1 { text-align: center; margin-bottom: 30px; color: #4A90D9; }
+    h3 { font-size: 12px; color: #7b7f9e; margin-bottom: 8px; }
+    h1 { text-align: center; margin-bottom: 40px; color: #4A90D9; font-size: 24px; }
+    .orange { color: #d4822a; }
   </style>
 </head>
 <body>
-  <h1>⚔️ WAR DASHBOARD — Reel Preview</h1>
-  <div class="grid">
-    <div><h2>Reel 1: Daily Briefing</h2><video src="output/daily-briefing.mp4" controls></video></div>
-    <div><h2>Reel 2: Weekly Comparison</h2><video src="output/weekly-comparison.mp4" controls></video></div>
-    <div><h2>Reel 3: Deadliest Hours</h2><video src="output/deadliest-hours.mp4" controls></video></div>
+  <h1>⚔️ WAR DASHBOARD — Reel Preview (10 videos)</h1>
+
+  <div class="section">
+    <div class="section-title">DATA REELS</div>
+    <div class="grid">
+      <div><h3>1. Daily Briefing</h3><video src="output/daily-briefing.mp4" controls></video></div>
+      <div><h3>2. Weekly Comparison</h3><video src="output/weekly-comparison.mp4" controls></video></div>
+      <div><h3>3. Deadliest Hours</h3><video src="output/deadliest-hours.mp4" controls></video></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">WAR DASHBOARD EXPLAINERS</div>
+    <div class="grid">
+      <div><h3>A1. What is War Dashboard?</h3><video src="output/wd-concept.mp4" controls></video></div>
+      <div><h3>A2. How it Works</h3><video src="output/wd-how.mp4" controls></video></div>
+      <div><h3>A3. Why It Matters</h3><video src="output/wd-why.mp4" controls></video></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title orange">MISSILE PROBABILITY EXPLAINERS</div>
+    <div class="grid">
+      <div><h3>B1. What is Missile Probability?</h3><video src="output/mp-concept.mp4" controls></video></div>
+      <div><h3>B2. The Heatmap</h3><video src="output/mp-heatmap.mp4" controls></video></div>
+      <div><h3>B3. Built in a Shelter</h3><video src="output/mp-shelter.mp4" controls></video></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">THE COMBINATION</div>
+    <div class="grid grid-1">
+      <div><h3>C1. Two Tools, One Mission</h3><video src="output/combo.mp4" controls></video></div>
+    </div>
   </div>
 </body>
 </html>

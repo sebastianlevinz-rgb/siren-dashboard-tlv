@@ -1,5 +1,6 @@
 import { Composition, Series, Audio, staticFile } from "remotion";
 import { REEL_CONFIGS } from "./data/reel-configs";
+import { PROMO_REEL_CONFIGS } from "./data/promo-reel-configs";
 import { REAL_DATA, AUDIO_DURATIONS } from "./data/real-data";
 import { IntroScene } from "./components/scenes/IntroScene";
 import { BigNumberScene } from "./components/scenes/BigNumberScene";
@@ -15,7 +16,7 @@ import type { ReelData, ReelScene } from "./types";
 
 const data = REAL_DATA;
 
-const AUDIO_REELS = new Set(["daily-briefing", "weekly-comparison", "deadliest-hours"]);
+const AUDIO_REELS = new Set(["daily-briefing","weekly-comparison","deadliest-hours","wd-concept","wd-how","wd-why","mp-concept","mp-heatmap","mp-shelter","combo"]);
 
 function renderScene(scene: ReelScene) {
   switch (scene.type) {
@@ -83,6 +84,40 @@ function getFact(key: string): string {
     calmBody: `The longest gap between alerts was ${data.longestCalmHours} hours.`,
     sirenTitle: "When the siren sounds",
     sirenBody: "Go to shelter immediately.\nStay for 10 minutes after the last alert.",
+      wdConcept1Title: "A Civilian Intelligence Briefing",
+    wdConcept1Body: "Military-grade data analysis designed for ordinary people",
+    wdConcept2Title: "Real Data, Not Speculation",
+    wdConcept2Body: "Every alert logged, timestamped, and categorized from official sources",
+    wdConcept3Title: "Built by Civilians, for Civilians",
+    wdConcept3Body: "No agenda. No ads. Just data you can trust.",
+    wdHow1Title: "Updated Daily",
+    wdHow1Body: "New data processed every day with automated analysis",
+    wdWhy1Title: "4 Million People in Gush Dan",
+    wdWhy1Body: "The Tel Aviv metro area lives under constant missile threat",
+    wdWhy2Title: "Everyone Deserves to Understand",
+    wdWhy2Body: "Your neighbor, your grandmother, your coworker — clarity saves lives",
+    wdWhy3Title: "Knowledge is Protection",
+    wdWhy3Body: "When you know the pattern, you make better decisions",
+    mpConcept1Title: "When is Your Safest Window?",
+    mpConcept1Body: "See exactly which hours have the lowest alert frequency",
+    mpConcept2Title: "Plan Your Day Around Data",
+    mpConcept2Body: "Not fear. Not rumor. Data from the Home Front Command.",
+    mpHeatmap1Title: "Peak: 2PM. Quietest: 2-5AM",
+    mpHeatmap1Body: "Clear patterns emerge from weeks of alert data",
+    mpHeatmap2Title: "Check Before You Leave",
+    mpHeatmap2Body: "Patterns tend to repeat. The heatmap is your daily guide.",
+    mpShelter1Title: "Built During the War",
+    mpShelter1Body: "From a mamad in Tel Aviv, when answers were needed",
+    mpShelter2Title: "Open Source. Free. No Ads.",
+    mpShelter2Body: "No agenda. Just a civilian project born from necessity.",
+    mpShelter3Title: "Now You Can Too",
+    mpShelter3Body: "The same tool that helped me is now available to everyone",
+    combo1Title: "Two Tools, One Mission",
+    combo1Body: "Keeping 9 million Israelis informed with real data",
+    combo2Title: "Missile Probability",
+    combo2Body: "When is it safest to go outside? Your personal risk calculator.",
+    combo3Title: "War Dashboard",
+    combo3Body: "What's happening and why? Your daily intelligence briefing.",
   };
   return facts[key] || key;
 }
@@ -104,7 +139,7 @@ function getStatCard(key: string): { value: number; label: string; suffix?: stri
 export function RemotionRoot() {
   return (
     <>
-      {REEL_CONFIGS.map((reel) => {
+      {[...REEL_CONFIGS, ...PROMO_REEL_CONFIGS].map((reel) => {
         const hasAudio = AUDIO_REELS.has(reel.id);
         const totalFrames = hasAudio && AUDIO_DURATIONS[reel.id]
           ? AUDIO_DURATIONS[reel.id]

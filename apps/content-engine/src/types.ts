@@ -35,6 +35,8 @@ export interface ReelData {
   dayPctMissiles: number;
   shabatAvg: number;
   weekdayAvg: number;
+  gushDanTotal: number;
   latestEvent: { date: string; title: string; before: number; after: number; changePct: number } | null;
   dailyCounts: number[];
+  zero: number;
 }
