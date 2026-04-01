@@ -11,6 +11,7 @@ const RegionBreakdown = lazy(() => import("./components/RegionBreakdown"));
 const WeeklyHeatmap = lazy(() => import("./components/WeeklyHeatmap"));
 const WarTimeline = lazy(() => import("./components/WarTimeline"));
 const EmergencyResources = lazy(() => import("./components/EmergencyResources"));
+const ReelsGallery = lazy(() => import("./components/ReelsGallery"));
 
 function App() {
   const { alerts, events, loading } = useAlerts();
@@ -50,6 +51,10 @@ function App() {
 
             <Suspense fallback={<div className="wd-section-skeleton" />}>
               <WarTimeline alerts={alerts} events={events} lang={lang} />
+            </Suspense>
+
+            <Suspense fallback={<div className="wd-section-skeleton" />}>
+              <ReelsGallery lang={lang} />
             </Suspense>
 
             <Suspense fallback={<div className="wd-section-skeleton" />}>

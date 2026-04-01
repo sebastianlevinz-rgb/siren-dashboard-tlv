@@ -903,6 +903,35 @@ html, body {
   animation: pulse-dot 2s infinite;
 }
 
+/* ===== REELS GALLERY ===== */
+
+.wd-reels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.wd-reel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.wd-reel-video {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #000;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+}
+
+.wd-reel-title {
+  font-size: 10px;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
 /* ===== RTL SUPPORT ===== */
 
 [dir="rtl"] .wd-tl-date { text-align: left; }
