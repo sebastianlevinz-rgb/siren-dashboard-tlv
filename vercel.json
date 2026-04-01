@@ -1,0 +1,6 @@
+{
+  "framework": "vite",
+  "installCommand": "pnpm install",
+  "buildCommand": "pnpm build:mp",
+  "outputDirectory": "apps/missile-probability/dist"
+}
