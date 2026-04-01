@@ -37,9 +37,9 @@ export const REAL_DATA: ReelData = {
 };
 
 export const AUDIO_DURATIONS: Record<string, number> = {
-  "daily-briefing": 150,
-  "weekly-comparison": 150,
-  "deadliest-hours": 150,
+  "daily-briefing": 720,
+  "weekly-comparison": 600,
+  "deadliest-hours": 630,
   "wd-concept": 960,
   "wd-how": 1080,
   "wd-why": 1290,

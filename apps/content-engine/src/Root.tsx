@@ -18,6 +18,20 @@ const data = REAL_DATA;
 
 const AUDIO_REELS = new Set(["daily-briefing","weekly-comparison","deadliest-hours","wd-concept","wd-how","wd-why","mp-concept","mp-heatmap","mp-shelter","combo"]);
 
+// Background music mapping: reel ID → bg audio file + volume (0-1)
+const BG_MUSIC: Record<string, { file: string; volume: number }> = {
+  "daily-briefing": { file: "bg-data-analysis.mp3", volume: 0.12 },
+  "weekly-comparison": { file: "bg-data-analysis.mp3", volume: 0.12 },
+  "deadliest-hours": { file: "bg-data-analysis.mp3", volume: 0.12 },
+  "wd-concept": { file: "bg-daily-briefing.mp3", volume: 0.15 },
+  "wd-how": { file: "bg-daily-briefing.mp3", volume: 0.15 },
+  "wd-why": { file: "bg-daily-briefing.mp3", volume: 0.15 },
+  "mp-concept": { file: "bg-breaking-alert.mp3", volume: 0.13 },
+  "mp-heatmap": { file: "bg-data-analysis.mp3", volume: 0.12 },
+  "mp-shelter": { file: "bg-breaking-alert.mp3", volume: 0.13 },
+  "combo": { file: "bg-outro-safe.mp3", volume: 0.15 },
+};
+
 function renderScene(scene: ReelScene) {
   switch (scene.type) {
     case "intro":
@@ -156,6 +170,7 @@ export function RemotionRoot() {
             component={() => (
               <>
                 {hasAudio && <Audio src={staticFile(`audio/reel-${reel.id}.mp3`)} startFrom={30} />}
+                {BG_MUSIC[reel.id] && <Audio src={staticFile(`audio/${BG_MUSIC[reel.id].file}`)} volume={BG_MUSIC[reel.id].volume} />}
                 <Series>
                   {reel.scenes.map((scene, i) => (
                     <Series.Sequence key={i} durationInFrames={Math.round(scene.durationInFrames * scale)}>
