@@ -924,6 +924,42 @@ html, body {
   margin-right: 4px;
 }
 
+/* Annotated trend events */
+.trend-events {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 0 4px;
+}
+
+.trend-event-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  font-size: 9px;
+  color: var(--text-secondary);
+  cursor: default;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.trend-event-tag.active {
+  background: var(--bg-secondary);
+  border-color: var(--text-muted);
+  color: var(--text-primary);
+}
+
+.trend-event-icon { font-size: 12px; }
+
+.trend-event-text strong {
+  color: var(--text-primary);
+  margin-right: 4px;
+}
+
 .legend-line.total { background: var(--accent); }
 .legend-line.ma { background: #fff; border-top: 2px dashed #fff; height: 0; }
 .legend-line.missiles { background: var(--risk-danger); }
