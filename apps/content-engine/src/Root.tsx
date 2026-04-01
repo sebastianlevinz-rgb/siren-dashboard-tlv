@@ -1,4 +1,5 @@
 import { Composition, Series, Audio, staticFile } from "remotion";
+import { FINAL_VIDEOS } from "./data/final-videos";
 import { REEL_CONFIGS } from "./data/reel-configs";
 import { PROMO_REEL_CONFIGS } from "./data/promo-reel-configs";
 import { EXPLAINER_CONFIGS, type ExplainerScene } from "./data/explainer-configs";
@@ -235,10 +236,45 @@ export function RemotionRoot() {
           />
         );
       })}
+      {/* Final 4 videos */}
+      {FINAL_VIDEOS.map((vid) => (
+        <Composition
+          key={vid.id}
+          id={vid.id}
+          component={() => {
+            const scenes = [
+              { type: "typing-hook" as const, durationInFrames: 90, props: { text: vid.title } },
+              { type: "heatmap" as const, durationInFrames: Math.round(vid.frames * 0.2), props: { caption: "" } },
+              { type: "trend" as const, durationInFrames: Math.round(vid.frames * 0.2), props: { caption: "" } },
+              { type: "text" as const, durationInFrames: Math.round(vid.frames * 0.2), props: { line1: "Data-driven.", line2: "Not speculation." } },
+              { type: "disclaimer" as const, durationInFrames: Math.round(vid.frames * 0.15), props: { text: "wardashboard.live\nmissileprobability.com" } },
+              { type: "outro" as const, durationInFrames: Math.round(vid.frames * 0.15), props: { url: "wardashboard.live", accent: "#4A90D9" } },
+            ];
+            const totalSceneFrames = scenes.reduce((s, sc) => s + sc.durationInFrames, 0);
+            const scale = vid.frames / totalSceneFrames;
+            return (
+              <>
+                <Audio src={staticFile(`audio/${vid.id}.mp3`)} startFrom={30} />
+                <MusicFadeOut file={vid.music} baseVolume={0.2} />
+                <Series>
+                  {scenes.map((scene, i) => (
+                    <Series.Sequence key={i} durationInFrames={Math.round(scene.durationInFrames * scale)}>
+                      {renderExplainerScene(scene, "#4A90D9")}
+                    </Series.Sequence>
+                  ))}
+                </Series>
+              </>
+            );
+          }}
+          durationInFrames={vid.frames}
+          fps={30}
+          width={1080}
+          height={1920}
+        />
+      ))}
     </>
   );
 }
-
 // Heatmap grid for V2 scenes
 const heatGrid = (() => {
   const grid = Array.from({ length: 7 }, () => new Array(24).fill(0));

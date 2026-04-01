@@ -911,41 +911,43 @@ html, body {
   animation: pulse-dot 2s infinite;
 }
 
-/* ===== REELS GALLERY ===== */
+/* ===== VIDEO BRIEFINGS ===== */
 
-.wd-reels-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+.wd-videos-list {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
 }
 
-.wd-reel-card {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.wd-reel-placeholder {
-  width: 100%;
-  aspect-ratio: 9/16;
-  border-radius: 8px;
-  border: 1px solid var(--border);
+.wd-video-card {
   background: var(--bg-card);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  border-left-width: 3px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.wd-reel-play { font-size: 28px; opacity: 0.5; }
-.wd-reel-soon { font-size: 9px; color: var(--text-muted); letter-spacing: 1px; }
+.wd-video-player {
+  width: 100%;
+  display: block;
+  background: #000;
+  max-height: 300px;
+}
 
-.wd-reel-title {
-  font-size: 10px;
-  color: var(--text-secondary);
-  text-align: center;
+.wd-video-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.wd-video-title {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.wd-video-duration {
+  font-size: 9px;
+  color: var(--text-muted);
 }
 
 /* ===== SITUATION ROOM ===== */
