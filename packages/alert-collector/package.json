@@ -1,0 +1,21 @@
+{
+  "name": "@war/alert-collector",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx src/start.ts",
+    "export": "npx tsx -e \"import('./src/exporter.js').then(m => m.exportAll())\"",
+    "push": "npx tsx -e \"import('./src/pusher.js').then(m => m.pushToGithub())\"",
+    "import-telegram": "npx tsx src/import-telegram.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/node": "^24.12.0",
+    "tsx": "^4.19.0",
+    "typescript": "~5.9.3"
+  }
+}

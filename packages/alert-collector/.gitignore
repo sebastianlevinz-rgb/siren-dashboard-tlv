@@ -1,0 +1,5 @@
+data/alerts.db
+data/alerts.db-journal
+data/alerts.db-wal
+node_modules
+dist

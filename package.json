@@ -9,9 +9,10 @@
     "build:wd": "pnpm --filter @war/wardashboard build",
     "build:all": "pnpm --filter @war/missile-probability --filter @war/wardashboard build",
     "render": "pnpm --filter @war/content-engine render-all",
+    "start:collector": "pnpm --filter @war/alert-collector start",
     "typecheck": "pnpm -r typecheck"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild"]
+    "onlyBuiltDependencies": ["esbuild", "better-sqlite3"]
   }
 }
