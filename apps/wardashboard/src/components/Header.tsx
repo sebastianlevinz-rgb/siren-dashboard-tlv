@@ -23,9 +23,6 @@ export default function Header({ lang, onLangChange }: Props) {
             </button>
           ))}
         </div>
-        <a href="https://missileprobability.com" target="_blank" rel="noopener noreferrer" className="wd-crosslink">
-          🚀 {t("missile_data", lang)} ↗
-        </a>
         <time className="wd-date">{dateStr}</time>
         <span className="wd-status">
           <span className="wd-status-dot" />

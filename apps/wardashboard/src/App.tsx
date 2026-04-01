@@ -60,7 +60,7 @@ function App() {
       </main>
 
       {/* Sticky emergency banner */}
-      <div className="wd-sticky-banner" onClick={() => window.open("https://www.oref.org.il/en/shelters", "_blank")}>
+      <div className="wd-sticky-banner" onClick={() => window.open("https://www.google.com/maps/search/public+shelter+miklat+near+me", "_blank")}>
         <span className="wd-banner-dot" />
         {t("shelter_banner", lang)}
       </div>

@@ -80,6 +80,12 @@ export default function WeeklyHeatmap({ alerts, lang }: Props) {
           <span className="wd-hm-insight-value" style={{ color: "var(--risk-calm)" }}>{quietHours}</span>
         </div>
       </div>
+
+      <div className="wd-hm-crosslink">
+        <a href="https://missileprobability.com" target="_blank" rel="noopener noreferrer" className="wd-crosslink">
+          🚀 {t("missile_data", lang)} — {t("detailed_stats", lang)} ↗
+        </a>
+      </div>
     </section>
   );
 }

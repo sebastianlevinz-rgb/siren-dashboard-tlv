@@ -316,7 +316,7 @@ html, body {
 
 .wd-facts-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
   margin-bottom: 16px;
 }
@@ -618,6 +618,13 @@ html, body {
 .wd-hm-insight-value {
   font-size: 12px;
   font-weight: 700;
+}
+
+.wd-hm-crosslink {
+  text-align: center;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
 }
 
 /* ===== SECTION 3: WAR TIMELINE ===== */

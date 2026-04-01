@@ -29,7 +29,8 @@ const T = {
   drones: { en: "Drones", es: "Drones", he: 'מל"טים' },
   latest_data: { en: "Latest data", es: "Ultimo dato", he: "נתון אחרון" },
   alerts: { en: "alerts", es: "alertas", he: "התרעות" },
-  deadliest_day: { en: "Deadliest day", es: "Dia mas letal", he: "היום הקטלני ביותר" },
+  most_alerts_day: { en: "Day with most alerts", es: "Dia con mas alertas", he: "היום עם הכי הרבה התרעות" },
+  fewest_alerts_day: { en: "Day with fewest alerts", es: "Dia con menos alertas", he: "היום עם הכי מעט התרעות" },
   longest_calm: { en: "Longest calm", es: "Calma mas larga", he: "השקט הארוך ביותר" },
   hours: { en: "hours", es: "horas", he: "שעות" },
   weekly_evolution: { en: "WEEKLY EVOLUTION", es: "EVOLUCION SEMANAL", he: "התפתחות שבועית" },
@@ -57,6 +58,7 @@ const T = {
   heatmap_sub: { en: "Alerts by day and hour — last 7 days of data", es: "Alertas por dia y hora — ultimos 7 dias de datos", he: "התרעות לפי יום ושעה — 7 ימי נתונים אחרונים" },
   peak_hours: { en: "Peak hours", es: "Horas pico", he: "שעות שיא" },
   quietest: { en: "Quietest window", es: "Ventana mas tranquila", he: "החלון השקט ביותר" },
+  detailed_stats: { en: "detailed hourly stats & probabilities", es: "estadisticas y probabilidades por hora", he: "סטטיסטיקות והסתברויות שעתיות" },
 
   // Timeline
   day_label: { en: "Day", es: "Dia", he: "יום" },

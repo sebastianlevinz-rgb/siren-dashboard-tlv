@@ -23,7 +23,9 @@ export default function WarStats({ alerts, lang }: Props) {
     const first = new Date(daily[0].date + "T12:00:00Z");
     const last = new Date(daily[daily.length - 1].date + "T12:00:00Z");
     const daysOfWar = Math.round((last.getTime() - first.getTime()) / 86400000) + 1;
-    const deadliest = [...daily].sort((a, b) => b.count - a.count)[0];
+    const sortedByCount = [...daily].sort((a, b) => b.count - a.count);
+    const mostAlerts = sortedByCount[0];
+    const fewestAlerts = sortedByCount[sortedByCount.length - 1];
     const missiles = alerts.filter(a => a.threat === "missiles").length;
     const drones = alerts.filter(a => a.threat === "hostile_aircraft").length;
 
@@ -34,7 +36,8 @@ export default function WarStats({ alerts, lang }: Props) {
       if (gap > longestGap) longestGap = gap;
     }
 
-    const weeks: { start: string; end: string; total: number; missiles: number; drones: number }[] = [];
+    // Weekly data
+    const weeks: { start: string; end: string; total: number; days: number; missiles: number; drones: number }[] = [];
     for (let w = 0; ; w++) {
       const wStartDate = new Date(first.getTime() + w * 7 * 86400000);
       const wEndDate = new Date(wStartDate.getTime() + 6 * 86400000);
@@ -42,8 +45,9 @@ export default function WarStats({ alerts, lang }: Props) {
       if (wStartStr > daily[daily.length - 1].date) break;
       const endCap = wEndDate.toISOString().slice(0, 10) > daily[daily.length - 1].date ? daily[daily.length - 1].date : wEndDate.toISOString().slice(0, 10);
       const wAlerts = alerts.filter(a => a.date >= wStartStr && a.date <= endCap);
+      const wDays = daily.filter(d => d.date >= wStartStr && d.date <= endCap).length;
       weeks.push({
-        start: wStartStr, end: endCap, total: wAlerts.length,
+        start: wStartStr, end: endCap, total: wAlerts.length, days: wDays,
         missiles: wAlerts.filter(a => a.threat === "missiles").length,
         drones: wAlerts.filter(a => a.threat === "hostile_aircraft").length,
       });
@@ -51,25 +55,55 @@ export default function WarStats({ alerts, lang }: Props) {
 
     const thisWeek = weeks[weeks.length - 1];
     const lastWeek = weeks.length >= 2 ? weeks[weeks.length - 2] : null;
-    const weekChange = lastWeek && lastWeek.total > 0 ? ((thisWeek.total - lastWeek.total) / lastWeek.total * 100) : null;
+
+    // Proportional comparison: compare same number of days
+    // If this week has 4 days, compare against the first 4 days of last week
+    let weekChange: number | null = null;
+    let lastWeekProportional: number | null = null;
+    if (lastWeek && thisWeek.days < 7 && thisWeek.days > 0) {
+      // Get first N days of last week to match
+      const lwDays = daily
+        .filter(d => d.date >= lastWeek.start && d.date <= lastWeek.end)
+        .slice(0, thisWeek.days);
+      lastWeekProportional = lwDays.reduce((s, d) => s + d.count, 0);
+      if (lastWeekProportional > 0) {
+        weekChange = ((thisWeek.total - lastWeekProportional) / lastWeekProportional) * 100;
+      }
+    } else if (lastWeek && lastWeek.total > 0) {
+      lastWeekProportional = lastWeek.total;
+      weekChange = ((thisWeek.total - lastWeek.total) / lastWeek.total) * 100;
+    }
+
     const latestDay = daily[daily.length - 1];
 
-    return { daysOfWar, totalAlerts: alerts.length, avgPerDay: (alerts.length / daysOfWar).toFixed(1), deadliestDay: deadliest, calmHours: (longestGap / 3600).toFixed(1), missiles, drones, missilesPct: ((missiles / alerts.length) * 100).toFixed(0), weeks, thisWeek, lastWeek, weekChange, latestDay };
+    return {
+      daysOfWar, totalAlerts: alerts.length,
+      avgPerDay: (alerts.length / daysOfWar).toFixed(1),
+      mostAlerts, fewestAlerts,
+      calmHours: (longestGap / 3600).toFixed(1),
+      missiles, drones,
+      missilesPct: ((missiles / alerts.length) * 100).toFixed(0),
+      weeks, thisWeek, lastWeek, lastWeekProportional, weekChange, latestDay,
+    };
   }, [alerts]);
 
   if (!stats) return null;
 
   const maxWeekly = Math.max(...stats.weeks.map(w => w.total), 1);
-  const maxWkCompare = Math.max(stats.thisWeek.total, stats.lastWeek?.total || 0, 1);
+  const maxWkCompare = Math.max(stats.thisWeek.total, stats.lastWeekProportional || 0, 1);
 
   function handleShare() {
-    const text = `⚔️ War Dashboard — Day ${stats!.daysOfWar}\n${stats!.totalAlerts} alerts | ${stats!.avgPerDay}/day avg\n${stats!.missiles} missiles, ${stats!.drones} drones\nDeadliest: ${fmtDate(stats!.deadliestDay.date)} (${stats!.deadliestDay.count})\n\nhttps://wardashboard.live`;
+    const text = `⚔️ War Dashboard — Day ${stats!.daysOfWar}\n${stats!.totalAlerts} alerts | ${stats!.avgPerDay}/day avg\n${stats!.missiles} missiles, ${stats!.drones} drones\n\nhttps://wardashboard.live`;
     if (navigator.share) {
       navigator.share({ title: "War Dashboard", text }).catch(() => {});
     } else {
       navigator.clipboard.writeText(text).catch(() => {});
     }
   }
+
+  const compareLabel = stats.thisWeek.days < 7
+    ? `${t("this_week", lang)} (${stats.thisWeek.days}d) vs ${t("last_week", lang)} (${stats.thisWeek.days}d)`
+    : t("this_week_vs_last", lang);
 
   return (
     <section className="wd-section">
@@ -115,10 +149,17 @@ export default function WarStats({ alerts, lang }: Props) {
 
       <div className="wd-facts-row">
         <div className="wd-fact">
-          <span className="wd-fact-icon">💀</span>
+          <span className="wd-fact-icon">📈</span>
           <div>
-            <span className="wd-fact-value">{fmtDate(stats.deadliestDay.date)} — {stats.deadliestDay.count} {t("alerts", lang)}</span>
-            <span className="wd-fact-label">{t("deadliest_day", lang)}</span>
+            <span className="wd-fact-value">{fmtDate(stats.mostAlerts.date)} — {stats.mostAlerts.count} {t("alerts", lang)}</span>
+            <span className="wd-fact-label">{t("most_alerts_day", lang)}</span>
+          </div>
+        </div>
+        <div className="wd-fact">
+          <span className="wd-fact-icon">📉</span>
+          <div>
+            <span className="wd-fact-value">{fmtDate(stats.fewestAlerts.date)} — {stats.fewestAlerts.count} {t("alerts", lang)}</span>
+            <span className="wd-fact-label">{t("fewest_alerts_day", lang)}</span>
           </div>
         </div>
         <div className="wd-fact">
@@ -137,7 +178,7 @@ export default function WarStats({ alerts, lang }: Props) {
             const missilePct = w.total > 0 ? (w.missiles / w.total) * 100 : 0;
             return (
               <div key={i} className="wd-wk-row">
-                <span className="wd-wk-dates">{fmtDateRange(w.start, w.end)}</span>
+                <span className="wd-wk-dates">{fmtDateRange(w.start, w.end)}{w.days < 7 ? ` (${w.days}d)` : ""}</span>
                 <div className="wd-wk-bar-bg">
                   <div className="wd-wk-bar" style={{ width: `${(w.total / maxWeekly) * 100}%` }}>
                     <div className="wd-wk-bar-m" style={{ width: `${missilePct}%` }} />
@@ -155,10 +196,10 @@ export default function WarStats({ alerts, lang }: Props) {
         </div>
       </div>
 
-      {stats.lastWeek && (
+      {stats.lastWeekProportional !== null && (
         <div className="wd-compare-section">
           <div className="wd-compare-header">
-            <span>{t("this_week_vs_last", lang)}</span>
+            <span>{compareLabel}</span>
             {stats.weekChange !== null && (
               <span className="wd-compare-badge" style={{ color: stats.weekChange > 0 ? "var(--risk-danger)" : stats.weekChange < -5 ? "var(--risk-calm)" : "var(--risk-medium)" }}>
                 {stats.weekChange > 0 ? "↑" : stats.weekChange < -5 ? "↓" : "→"} {Math.abs(stats.weekChange).toFixed(0)}%
@@ -173,8 +214,8 @@ export default function WarStats({ alerts, lang }: Props) {
             </div>
             <div className="wd-compare-row">
               <span className="wd-compare-label">{t("last_week", lang)}</span>
-              <div className="wd-compare-bar-bg"><div className="wd-compare-bar last" style={{ width: `${(stats.lastWeek.total / maxWkCompare) * 100}%` }} /></div>
-              <span className="wd-compare-val">{stats.lastWeek.total}</span>
+              <div className="wd-compare-bar-bg"><div className="wd-compare-bar last" style={{ width: `${(stats.lastWeekProportional / maxWkCompare) * 100}%` }} /></div>
+              <span className="wd-compare-val">{stats.lastWeekProportional}</span>
             </div>
           </div>
         </div>
