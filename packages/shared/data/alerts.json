@@ -28420,5 +28420,124 @@
     "regions": [
       "north"
     ]
+  },
+  {
+    "id": "oref-00958",
+    "timestamp": "2026-04-02T11:49:43.000Z",
+    "unix": 1775130583,
+    "cities": [
+      "תל חי",
+      "כפר גלעדי",
+      "מטולה"
+    ],
+    "cities_en": [
+      "תל חי",
+      "כפר גלעדי",
+      "מטולה"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 14,
+    "date": "2026-04-02",
+    "regions": []
+  },
+  {
+    "id": "oref-00959",
+    "timestamp": "2026-04-02T12:05:34.000Z",
+    "unix": 1775131534,
+    "cities": [
+      "שלומי",
+      "ראש הנקרה"
+    ],
+    "cities_en": [
+      "שלומי",
+      "ראש הנקרה"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 15,
+    "date": "2026-04-02",
+    "regions": []
+  },
+  {
+    "id": "oref-00960",
+    "timestamp": "2026-04-02T12:06:32.000Z",
+    "unix": 1775131592,
+    "cities": [
+      "בצת",
+      "חוף בצת"
+    ],
+    "cities_en": [
+      "בצת",
+      "חוף בצת"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 15,
+    "date": "2026-04-02",
+    "regions": []
+  },
+  {
+    "id": "oref-00961",
+    "timestamp": "2026-04-02T12:16:28.000Z",
+    "unix": 1775132188,
+    "cities": [
+      "אזור תעשייה קריית ביאליק",
+      "כפר מסריק",
+      "אזור תעשייה שער נעמן",
+      "עכו - אזור תעשייה",
+      "קריית ביאליק"
+    ],
+    "cities_en": [
+      "אזור תעשייה קריית ביאליק",
+      "כפר מסריק",
+      "אזור תעשייה שער נעמן",
+      "עכו - אזור תעשייה",
+      "קריית ביאליק"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 15,
+    "date": "2026-04-02",
+    "regions": [
+      "gush_dan",
+      "north"
+    ]
+  },
+  {
+    "id": "oref-00962",
+    "timestamp": "2026-04-02T12:17:14.000Z",
+    "unix": 1775132234,
+    "cities": [
+      "ג'דידה מכר",
+      "עין המפרץ",
+      "עכו - רמות ים",
+      "עכו",
+      "בית העלמין החדש עכו"
+    ],
+    "cities_en": [
+      "ג'דידה מכר",
+      "עין המפרץ",
+      "עכו - רמות ים",
+      "עכו",
+      "בית העלמין החדש עכו"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 15,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
   }
 ]

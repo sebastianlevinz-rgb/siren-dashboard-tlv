@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "2026-04-02T11:59:04.511Z",
-  "totalAlerts": 957,
-  "totalDays": 33,
-  "avgPerDay": 29,
+  "lastUpdated": "2026-04-02T12:39:44.933Z",
+  "totalAlerts": 962,
+  "totalDays": 34,
+  "avgPerDay": 28.3,
   "dateRange": {
     "start": "2026-02-28",
-    "end": "2026-04-01"
+    "end": "2026-04-02"
   },
   "deadliestDay": {
     "date": "2026-03-26",
     "count": 44
   },
-  "missiles": 806,
-  "drones": 151,
+  "missiles": 809,
+  "drones": 153,
   "byRegion": {
-    "north": 761,
+    "north": 763,
     "haifa": 105,
     "jerusalem": 256,
-    "gush_dan": 250,
+    "gush_dan": 251,
     "south": 235
   },
   "byHour": [
@@ -35,8 +35,8 @@
     33,
     51,
     58,
-    61,
-    47,
+    62,
+    51,
     50,
     55,
     44,
