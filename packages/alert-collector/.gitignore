@@ -1,5 +1,6 @@
 data/alerts.db
 data/alerts.db-journal
 data/alerts.db-wal
+data/alerts.db-shm
 node_modules
 dist

@@ -62,6 +62,12 @@ export async function fetchHistory(): Promise<number> {
       return 0;
     }
 
+    // Guard: if server returned HTML instead of JSON, skip
+    if (text.trim().startsWith("<")) {
+      log("History: received HTML instead of JSON — endpoint may require auth");
+      return 0;
+    }
+
     const data = JSON.parse(text);
     const alerts = Array.isArray(data) ? data : [data];
 
