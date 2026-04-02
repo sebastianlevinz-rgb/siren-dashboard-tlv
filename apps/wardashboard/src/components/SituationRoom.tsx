@@ -68,7 +68,7 @@ const WATER_LABELS = [
 const TEXT = {
   title: { en: "SITUATION ROOM", es: "SALA DE SITUACION", he: "חדר מצב" },
   sub: { en: "US military positioning — Iran–Israel–US Conflict", es: "Posicionamiento militar — Conflicto Iran–Israel–EEUU", he: "מערך צבאי — עימות איראן–ישראל–ארה\"ב" },
-  updated: { en: "Last updated: Apr 2, 2026", es: "Actualizado: 2 Abr 2026", he: "עדכון אחרון: 2 באפריל 2026" },
+  updated: { en: `Last updated: ${new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}`, es: `Actualizado: ${new Date().toLocaleDateString("es-AR", { day: "numeric", month: "short", year: "numeric" })}`, he: `עדכון אחרון: ${new Date().toLocaleDateString("he-IL")}` },
   disclaimer: { en: "Based on OSINT and public reports. Positions approximate.", es: "Basado en OSINT y reportes publicos. Posiciones aproximadas.", he: "מבוסס על מודיעין גלוי. מיקומים משוערים." },
   carriers: { en: "CARRIERS", es: "PORTAAVIONES", he: "נושאות מטוסים" },
   bases: { en: "US BASES", es: "BASES EEUU", he: "בסיסים אמריקאיים" },
