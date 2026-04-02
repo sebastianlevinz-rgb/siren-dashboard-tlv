@@ -7,6 +7,7 @@ import { SpringIn } from "../components/common/SpringIn";
 import { AnimatedNumber } from "../components/common/AnimatedNumber";
 import { TypeWriter } from "../components/common/TypeWriter";
 import { MusicFadeOut } from "../components/common/MusicFadeOut";
+import { PhotoScene } from "../components/common/PhotoScene";
 import { TrendV2 } from "../components/scenes/v2/TrendV2";
 import { REAL_DATA } from "../data/real-data";
 
@@ -32,12 +33,12 @@ export function FinalWD() {
 
         {/* 3-6s: "957 alerts. Dozens of regions hit." */}
         <Series.Sequence durationInFrames={90}>
-          <S>
+          <PhotoScene image="explosion.jpg" darken={0.75} zoomDirection="in">
             <SpringIn direction="scale">
               <AnimatedNumber value={REAL_DATA.totalAlerts} fontSize={140} color={A} />
               <div style={{ fontSize: 32, color: "#7b7f9e", textAlign: "center", marginTop: 12 }}>ALERTS</div>
             </SpringIn>
-          </S>
+          </PhotoScene>
         </Series.Sequence>
 
         {/* 6-9s: "But what is actually happening?" */}
@@ -96,7 +97,7 @@ export function FinalWD() {
 
         {/* 27-32s: "Situation room — US military positioning" */}
         <Series.Sequence durationInFrames={150}>
-          <S>
+          <PhotoScene image="war-room.jpg" darken={0.8} zoomDirection="out">
             <SpringIn direction="scale">
               <div style={{ fontSize: 36, color: A, letterSpacing: 3, textAlign: "center", marginBottom: 16 }}>SITUATION ROOM</div>
               <div style={{ fontSize: 28, color: "#7b7f9e", textAlign: "center", lineHeight: 1.6 }}>
@@ -108,7 +109,7 @@ export function FinalWD() {
                 <SpringIn delay={20}><div style={{ fontSize: 36, textAlign: "center" }}>✈️</div></SpringIn>
               </div>
             </SpringIn>
-          </S>
+          </PhotoScene>
         </Series.Sequence>
 
         {/* 32-38s: "Region breakdowns, daily intensity" */}

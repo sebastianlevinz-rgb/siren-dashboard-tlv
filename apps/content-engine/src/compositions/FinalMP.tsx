@@ -8,12 +8,12 @@ import { SpringIn } from "../components/common/SpringIn";
 import { AnimatedNumber } from "../components/common/AnimatedNumber";
 import { TypeWriter } from "../components/common/TypeWriter";
 import { MusicFadeOut } from "../components/common/MusicFadeOut";
+import { PhotoScene } from "../components/common/PhotoScene";
 import { HeatmapV2 } from "../components/scenes/v2/HeatmapV2";
 import { REAL_DATA } from "../data/real-data";
 
 const A = "#d4822a"; // MP orange accent
 
-// Build heatmap grid from data
 const grid = Array.from({ length: 7 }, () => new Array(24).fill(0));
 REAL_DATA.dailyCounts.forEach((count, i) => {
   const day = (i + 5) % 7;
@@ -33,22 +33,22 @@ export function FinalMP() {
       <Series>
         {/* 0-3s: "250 missile alerts in the Tel Aviv metro" */}
         <Series.Sequence durationInFrames={90}>
-          <Scene>
+          <PhotoScene image="city-night.jpg" darken={0.7} panDirection="left">
             <SpringIn direction="scale">
               <AnimatedNumber value={250} fontSize={160} color={A} />
               <div style={{ fontSize: 32, color: "#7b7f9e", marginTop: 16, textAlign: "center", letterSpacing: 2 }}>ALERTS IN GUSH DAN</div>
             </SpringIn>
-          </Scene>
+          </PhotoScene>
         </Series.Sequence>
 
         {/* 3-5.5s: "since February 28th" */}
         <Series.Sequence durationInFrames={75}>
-          <Scene>
+          <PhotoScene image="explosion.jpg" darken={0.8} zoomDirection="out">
             <SpringIn>
               <div style={{ fontSize: 48, fontWeight: 700, textAlign: "center", color: "#d8dae5" }}>Since February 28</div>
               <div style={{ fontSize: 36, color: "#7b7f9e", textAlign: "center", marginTop: 12 }}>33 days of conflict</div>
             </SpringIn>
-          </Scene>
+          </PhotoScene>
         </Series.Sequence>
 
         {/* 5.5-8s: "But here's the thing — they follow a pattern" */}
@@ -124,7 +124,7 @@ export function FinalMP() {
 
         {/* 36-44s: "Built during the war, from a shelter" */}
         <Series.Sequence durationInFrames={240}>
-          <Scene>
+          <PhotoScene image="shield.jpg" darken={0.8} zoomDirection="out">
             <SpringIn>
               <div style={{ fontSize: 36, color: "#7b7f9e", textAlign: "center", lineHeight: 1.6 }}>
                 Built during the war.
@@ -140,7 +140,7 @@ export function FinalMP() {
                 Open source. Free.{"\n"}No ads. No tracking.
               </div>
             </SpringIn>
-          </Scene>
+          </PhotoScene>
         </Series.Sequence>
 
         {/* 44-50s: "Just organized data for civilians" */}
