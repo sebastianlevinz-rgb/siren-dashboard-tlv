@@ -5,7 +5,7 @@
 import fs from "fs";
 import path from "path";
 import { CONFIG } from "../config.js";
-import { getAllAlerts, getAlertCount } from "./db.js";
+import { initDB, getAllAlerts } from "./db.js";
 
 function log(msg: string) {
   const ts = new Date().toISOString().slice(0, 19).replace("T", " ");
@@ -13,6 +13,7 @@ function log(msg: string) {
 }
 
 export function exportAll(): void {
+  initDB();
   const alerts = getAllAlerts();
   log(`Exporting ${alerts.length} alerts...`);
 

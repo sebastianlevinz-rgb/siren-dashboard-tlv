@@ -69,17 +69,32 @@ export async function fetchHistory(): Promise<number> {
     }
 
     const data = JSON.parse(text);
-    const alerts = Array.isArray(data) ? data : [data];
+    const entries = Array.isArray(data) ? data : [data];
+
+    // Filter to relevant categories (1=rockets, 2=hostile aircraft)
+    const relevant = entries.filter((e: { category: number }) => e.category === 1 || e.category === 2);
+
+    // Group by timestamp (entries in same minute = same event)
+    const groups = new Map<string, { alertDate: string; category: number; cities: string[] }>();
+    for (const entry of relevant) {
+      // Round to minute for grouping
+      const key = entry.alertDate.slice(0, 16) + "|" + entry.category;
+      const existing = groups.get(key);
+      if (existing) {
+        existing.cities.push(entry.data);
+      } else {
+        groups.set(key, { alertDate: entry.alertDate, category: entry.category, cities: [entry.data] });
+      }
+    }
 
     let recovered = 0;
-    for (const raw of alerts) {
-      if (!raw.data) continue;
+    for (const [, group] of groups) {
+      const timestamp = new Date(group.alertDate.replace(" ", "T") + "+03:00"); // Israel time
+      const parsed = parseOrefAlert(
+        { cat: String(group.category), data: group.cities },
+        timestamp
+      );
 
-      // History items have alertDate field
-      const timestamp = raw.alertDate ? new Date(raw.alertDate) : new Date();
-      const parsed = parseOrefAlert(raw, timestamp);
-
-      // Skip non-war alerts (before Feb 28)
       if (parsed.date < CONFIG.WAR_START) continue;
 
       const inserted = insertAlert(parsed);

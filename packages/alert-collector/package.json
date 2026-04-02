@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "npx tsx src/start.ts",
-    "export": "npx tsx -e \"import('./src/exporter.js').then(m => m.exportAll())\"",
-    "push": "npx tsx -e \"import('./src/pusher.js').then(m => m.pushToGithub())\"",
+    "update": "npx tsx src/update-now.ts",
     "import-telegram": "npx tsx src/import-telegram.ts"
   },
   "dependencies": {

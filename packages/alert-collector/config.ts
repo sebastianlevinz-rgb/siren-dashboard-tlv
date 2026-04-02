@@ -23,7 +23,7 @@ export const CONFIG = {
 
   // Pikud HaOref API
   OREF_ALERTS_URL: "https://www.oref.org.il/WarningMessages/alert/alerts.json",
-  OREF_HISTORY_URL: "https://www.oref.org.il/WarningMessages/History/AlertsHistory.json",
+  OREF_HISTORY_URL: "https://www.oref.org.il/WarningMessages/alert/History/AlertsHistory.json",
   OREF_HEADERS: {
     "X-Requested-With": "XMLHttpRequest",
     "Referer": "https://www.oref.org.il/",
