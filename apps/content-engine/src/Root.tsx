@@ -1,5 +1,8 @@
 import { Composition, Series, Audio, staticFile } from "remotion";
-import { FINAL_VIDEOS } from "./data/final-videos";
+import { FinalMP as FinalMPComp } from "./compositions/FinalMP";
+import { FinalWD as FinalWDComp } from "./compositions/FinalWD";
+import { FinalSituation as FinalSituationComp } from "./compositions/FinalSituation";
+import { FinalWeekly as FinalWeeklyComp } from "./compositions/FinalWeekly";
 import { REEL_CONFIGS } from "./data/reel-configs";
 import { PROMO_REEL_CONFIGS } from "./data/promo-reel-configs";
 import { EXPLAINER_CONFIGS, type ExplainerScene } from "./data/explainer-configs";
@@ -236,42 +239,11 @@ export function RemotionRoot() {
           />
         );
       })}
-      {/* Final 4 videos */}
-      {FINAL_VIDEOS.map((vid) => (
-        <Composition
-          key={vid.id}
-          id={vid.id}
-          component={() => {
-            const scenes = [
-              { type: "typing-hook" as const, durationInFrames: 90, props: { text: vid.title } },
-              { type: "heatmap" as const, durationInFrames: Math.round(vid.frames * 0.2), props: { caption: "" } },
-              { type: "trend" as const, durationInFrames: Math.round(vid.frames * 0.2), props: { caption: "" } },
-              { type: "text" as const, durationInFrames: Math.round(vid.frames * 0.2), props: { line1: "Data-driven.", line2: "Not speculation." } },
-              { type: "disclaimer" as const, durationInFrames: Math.round(vid.frames * 0.15), props: { text: "wardashboard.live\nmissileprobability.com" } },
-              { type: "outro" as const, durationInFrames: Math.round(vid.frames * 0.15), props: { url: "wardashboard.live", accent: "#4A90D9" } },
-            ];
-            const totalSceneFrames = scenes.reduce((s, sc) => s + sc.durationInFrames, 0);
-            const scale = vid.frames / totalSceneFrames;
-            return (
-              <>
-                <Audio src={staticFile(`audio/${vid.id}.mp3`)} startFrom={30} />
-                <MusicFadeOut file={vid.music} baseVolume={0.2} />
-                <Series>
-                  {scenes.map((scene, i) => (
-                    <Series.Sequence key={i} durationInFrames={Math.round(scene.durationInFrames * scale)}>
-                      {renderExplainerScene(scene, "#4A90D9")}
-                    </Series.Sequence>
-                  ))}
-                </Series>
-              </>
-            );
-          }}
-          durationInFrames={vid.frames}
-          fps={30}
-          width={1080}
-          height={1920}
-        />
-      ))}
+      {/* Final 4 videos — dedicated compositions with scene-matched animations */}
+      <Composition id="final-mp" component={FinalMPComp} durationInFrames={1890} fps={30} width={1080} height={1920} />
+      <Composition id="final-wd" component={FinalWDComp} durationInFrames={1980} fps={30} width={1080} height={1920} />
+      <Composition id="final-situation" component={FinalSituationComp} durationInFrames={2550} fps={30} width={1080} height={1920} />
+      <Composition id="final-weekly" component={FinalWeeklyComp} durationInFrames={2760} fps={30} width={1080} height={1920} />
     </>
   );
 }
