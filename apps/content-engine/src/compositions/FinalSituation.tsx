@@ -1,34 +1,49 @@
-import { Series, Audio, staticFile } from "remotion";
-import { SpringIn } from "../components/common/SpringIn";
-import { AnimatedNumber } from "../components/common/AnimatedNumber";
-import { TypeWriter } from "../components/common/TypeWriter";
-import { MusicFadeOut } from "../components/common/MusicFadeOut";
-import { PhotoScene } from "../components/common/PhotoScene";
-import { ReelLayoutV2 } from "../components/ReelLayoutV2";
+import { Audio, staticFile } from 'remotion';
+import { TransitionSeries, linearTiming } from '@remotion/transitions';
+import { fade } from '@remotion/transitions/fade';
+import { slide } from '@remotion/transitions/slide';
+import { wipe } from '@remotion/transitions/wipe';
+import { DarkScene } from '../components/anim/DarkScene';
+import { AnimatedMap } from '../components/anim/AnimatedMap';
+import { GlowNumber } from '../components/anim/GlowNumber';
+import { AnimatedBars } from '../components/anim/AnimatedBars';
+import { SlidingText } from '../components/anim/SlidingText';
+import { TypeWriter } from '../components/common/TypeWriter';
+import { MusicFadeOut } from '../components/common/MusicFadeOut';
 
-const A = "#4A90D9";
-function Dark({ children }: { children: React.ReactNode }) { return <ReelLayoutV2 accentColor={A}>{children}</ReelLayoutV2>; }
-function Stat({ icon, value, label, delay = 0 }: { icon: string; value: string; label: string; delay?: number }) {
-  return <SpringIn delay={delay} direction="left"><div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 12 }}><span style={{ fontSize: 36 }}>{icon}</span><div><div style={{ fontSize: 32, fontWeight: 700, color: "#d8dae5" }}>{value}</div><div style={{ fontSize: 20, color: "#4a4d6a" }}>{label}</div></div></div></SpringIn>;
-}
+const A = '#4A90D9';
+const T = linearTiming({ durationInFrames: 12 });
 
 export function FinalSituation() {
   return (<>
-    <Audio src={staticFile("audio/final-situation.mp3")} startFrom={15} />
-    <MusicFadeOut file="bg-data-analysis.mp3" baseVolume={0.18} />
-    <Series>
-      <Series.Sequence durationInFrames={90}><PhotoScene image="radar.jpg" darken={0.8}><TypeWriter text="SITUATION REPORT" fontSize={56} color={A} /><SpringIn delay={30}><div style={{ fontSize: 32, color: "#c93d3d", textAlign: "center", marginTop: 12, letterSpacing: 3 }}>APRIL 2026</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={120}><PhotoScene image="carrier.jpg" darken={0.6} panDirection="left"><SpringIn><div style={{ fontSize: 44, fontWeight: 800, textAlign: "center" }}>USS Harry S. Truman</div><div style={{ fontSize: 32, color: "#c93d3d", textAlign: "center", marginTop: 8 }}>CSG-8 — Arabian Sea</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={90}><PhotoScene image="ocean.jpg" darken={0.75} zoomDirection="out"><SpringIn><div style={{ fontSize: 44, fontWeight: 700, textAlign: "center", color: "#d4822a" }}>2nd Carrier en route</div><div style={{ fontSize: 28, color: "#d4822a", textAlign: "center", marginTop: 12 }}>⚠ UNCONFIRMED</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={180}><PhotoScene image="military.jpg" darken={0.82} panDirection="right"><div style={{ fontSize: 32, color: A, letterSpacing: 3, textAlign: "center", marginBottom: 20 }}>7 FORWARD BASES</div><Stat icon="🇶🇦" value="Al Udeid, Qatar" label="CENTCOM HQ" delay={0} /><Stat icon="🇦🇪" value="Al Dhafra, UAE" label="F-35 Stealth" delay={6} /><Stat icon="🇰🇼" value="Camp Arifjan" label="Ground forces" delay={12} /><Stat icon="🇧🇭" value="NSA Bahrain" label="5th Fleet HQ" delay={18} /></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={180}><PhotoScene image="jet.jpg" darken={0.8} panDirection="left"><Stat icon="🇸🇦" value="Prince Sultan" label="Patriots + fighters" delay={0} /><Stat icon="🇩🇯" value="Lemonnier" label="Special ops + drones" delay={8} /><Stat icon="🌊" value="Diego Garcia" label="B-2 / B-52 bombers" delay={16} /></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={180}><PhotoScene image="war-room.jpg" darken={0.8} zoomDirection="out"><div style={{ fontSize: 32, color: A, letterSpacing: 3, textAlign: "center", marginBottom: 24 }}>FORCE SUMMARY</div><div style={{ textAlign: "center" }}><SpringIn><AnimatedNumber value={45000} fontSize={72} color={A} prefix="~" /><div style={{ fontSize: 24, color: "#7b7f9e", marginTop: 4 }}>CENTCOM Personnel</div></SpringIn></div><div style={{ textAlign: "center", marginTop: 20 }}><SpringIn delay={15}><AnimatedNumber value={180} fontSize={72} color="#c93d3d" prefix="~" /><div style={{ fontSize: 24, color: "#7b7f9e", marginTop: 4 }}>Combat Aircraft</div></SpringIn></div></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={210}><PhotoScene image="explosion.jpg" darken={0.75}><SpringIn direction="scale"><div style={{ fontSize: 48, textAlign: "center" }}>🏝️</div><div style={{ fontSize: 48, fontWeight: 800, textAlign: "center", color: "#d4822a" }}>KHARG ISLAND</div><AnimatedNumber value={90} fontSize={120} color="#d4822a" suffix="%" /><div style={{ fontSize: 32, color: "#d8dae5", textAlign: "center", marginTop: 8 }}>of Iran's oil exports</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={210}><PhotoScene image="ocean.jpg" darken={0.7} panDirection="left" zoomDirection="out"><SpringIn direction="scale"><div style={{ fontSize: 48, fontWeight: 800, textAlign: "center", color: "#c93d3d" }}>STRAIT OF HORMUZ</div><AnimatedNumber value={21} fontSize={120} color="#c93d3d" suffix="%" /><div style={{ fontSize: 32, color: "#d8dae5", textAlign: "center", marginTop: 8 }}>of global oil transit</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={240}><PhotoScene image="radar.jpg" darken={0.85} zoomDirection="out"><SpringIn><div style={{ fontSize: 36, color: A, letterSpacing: 3, textAlign: "center", marginBottom: 24 }}>LIKELY TARGETS</div></SpringIn><SpringIn delay={10}><div style={{ fontSize: 36, color: "#d4822a", textAlign: "center", marginBottom: 16 }}>🏝️ Kharg — Oil chokepoint</div></SpringIn><SpringIn delay={20}><div style={{ fontSize: 36, color: "#c93d3d", textAlign: "center", marginBottom: 16 }}>🌊 Hormuz — Shipping lane</div></SpringIn><SpringIn delay={30}><div style={{ fontSize: 36, color: "#a855f7", textAlign: "center" }}>⚛️ Natanz — Nuclear</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={240}><PhotoScene image="city-night.jpg" darken={0.7} panDirection="right"><SpringIn direction="scale"><AnimatedNumber value={17} fontSize={160} color="#1a6b4a" /><div style={{ fontSize: 36, color: "#7b7f9e", textAlign: "center", marginTop: 12 }}>ALERTS APR 1</div><div style={{ fontSize: 32, color: "#1a6b4a", textAlign: "center", marginTop: 8 }}>Lowest since war began</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={300}><PhotoScene image="shield.jpg" darken={0.8}><SpringIn><div style={{ fontSize: 44, fontWeight: 700, textAlign: "center", color: "#d8dae5", lineHeight: 1.4 }}>Calm before the storm?</div><div style={{ fontSize: 44, fontWeight: 700, textAlign: "center", color: A, lineHeight: 1.4, marginTop: 16 }}>Or genuine de-escalation?</div></SpringIn></PhotoScene></Series.Sequence>
-      <Series.Sequence durationInFrames={420}><Dark><SpringIn direction="scale"><div style={{ fontSize: 80, textAlign: "center", marginBottom: 24 }}>⚔️</div><div style={{ fontSize: 48, fontWeight: 700, textAlign: "center", color: A, letterSpacing: 2 }}>wardashboard.live</div><div style={{ fontSize: 28, color: "#4a4d6a", textAlign: "center", marginTop: 16 }}>Follow the data.</div></SpringIn></Dark></Series.Sequence>
-    </Series>
+    <Audio src={staticFile('audio/final-situation.mp3')} startFrom={15} />
+    <MusicFadeOut file='bg-data-analysis.mp3' baseVolume={0.18} />
+    <TransitionSeries>
+      <TransitionSeries.Sequence durationInFrames={90}><DarkScene accent='#c93d3d' showGrid><TypeWriter text='SITUATION REPORT' fontSize={56} color='#c93d3d' /><SlidingText from='bottom' delay={30}><div style={{ fontSize: 32, color: A, textAlign: 'center', marginTop: 12, letterSpacing: 3 }}>APRIL 2026</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={wipe()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={120}><DarkScene showGrid><AnimatedMap showCarriers carrierPosition='approaching' showHormuz label='USS TRUMAN APPROACHING' /></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={fade()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={90}><DarkScene showGrid><AnimatedMap showCarriers carrierPosition='arrived' showHormuz showKharg label='ARABIAN SEA' /></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={slide({ direction: 'from-left' })} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={120}><DarkScene accent='#d4822a'><SlidingText from='left'><div style={{ fontSize: 48, fontWeight: 700, textAlign: 'center', color: '#d4822a' }}>2nd Carrier</div></SlidingText><SlidingText from='right' delay={10}><div style={{ fontSize: 36, color: '#7b7f9e', textAlign: 'center', marginTop: 8 }}>Reported en route</div></SlidingText><SlidingText from='bottom' delay={20}><div style={{ fontSize: 24, color: '#d4822a', textAlign: 'center', marginTop: 16 }}>UNCONFIRMED</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={wipe()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={180}><DarkScene showGrid><SlidingText from='top'><div style={{ fontSize: 32, color: A, letterSpacing: 3, textAlign: 'center', marginBottom: 16 }}>7 FORWARD BASES</div></SlidingText><AnimatedBars bars={[{label:'Al Udeid QAT',value:100,color:A},{label:'Al Dhafra UAE',value:85,color:A},{label:'Arifjan KWT',value:70,color:A},{label:'5th Fleet BHR',value:90,color:A},{label:'Prince Sultan SAU',value:60,color:A},{label:'Lemonnier DJI',value:45,color:A}]} /></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={fade()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={120}><DarkScene accent='#c93d3d'><SlidingText from='bottom'><div style={{ fontSize: 40, fontWeight: 800, textAlign: 'center', color: '#c93d3d' }}>DIEGO GARCIA</div></SlidingText><SlidingText from='bottom' delay={10}><div style={{ fontSize: 28, color: '#7b7f9e', textAlign: 'center', marginTop: 8 }}>B-2 Stealth Bombers</div></SlidingText><SlidingText from='bottom' delay={20}><div style={{ fontSize: 24, color: '#4a4d6a', textAlign: 'center', marginTop: 4 }}>Indian Ocean Strike Range</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={slide({ direction: 'from-right' })} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={120}><DarkScene showGrid><div style={{display:'flex',flexDirection:'column',gap:30,alignItems:'center'}}><GlowNumber value={45000} label='CENTCOM PERSONNEL' color={A} size={72} prefix='~' /><GlowNumber value={180} label='COMBAT AIRCRAFT' color='#c93d3d' size={72} prefix='~' /></div></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={wipe()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={180}><DarkScene showGrid accent='#d4822a'><AnimatedMap showKharg highlightRegion='kharg' label='KHARG ISLAND' /><SlidingText from='bottom' delay={20}><div style={{ fontSize: 28, color: '#d4822a', textAlign: 'center', marginTop: 12 }}>90% of Iran oil exports</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={fade()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={180}><DarkScene showGrid accent='#c93d3d'><AnimatedMap showHormuz highlightRegion='hormuz' label='STRAIT OF HORMUZ' /><SlidingText from='bottom' delay={20}><div style={{ fontSize: 28, color: '#c93d3d', textAlign: 'center', marginTop: 12 }}>21% of global oil transit</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={slide({ direction: 'from-bottom' })} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={240}><DarkScene showGrid><AnimatedMap showCarriers carrierPosition='arrived' showBases showKharg showHormuz showAttackLines highlightRegion='iran' label='IRAN SURROUNDED' /></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={wipe()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={180}><DarkScene accent='#1a6b4a'><GlowNumber value={17} label='ALERTS APR 1' color='#1a6b4a' size={140} /><SlidingText from='bottom' delay={20}><div style={{ fontSize: 32, color: '#1a6b4a', textAlign: 'center', marginTop: 12 }}>Lowest since war began</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={fade()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={240}><DarkScene><SlidingText from='left'><div style={{ fontSize: 48, fontWeight: 700, textAlign: 'center', color: '#d8dae5', lineHeight: 1.4 }}>Calm before the storm?</div></SlidingText><SlidingText from='right' delay={15}><div style={{ fontSize: 48, fontWeight: 700, textAlign: 'center', color: A, lineHeight: 1.4, marginTop: 16 }}>Or genuine de-escalation?</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+      <TransitionSeries.Transition presentation={fade()} timing={T} />
+      <TransitionSeries.Sequence durationInFrames={510}><DarkScene showGrid><SlidingText from='bottom'><div style={{ fontSize: 48, fontWeight: 700, textAlign: 'center', color: A, letterSpacing: 2, marginTop: 30 }}>wardashboard.live</div></SlidingText></DarkScene></TransitionSeries.Sequence>
+    </TransitionSeries>
   </>);
 }

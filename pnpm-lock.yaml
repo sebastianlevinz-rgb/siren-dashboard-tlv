@@ -16,8 +16,17 @@ importers:
       '@remotion/cli':
         specifier: ^4.0.0
         version: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@remotion/motion-blur':
+        specifier: ^4.0.443
+        version: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@remotion/noise':
+        specifier: ^4.0.443
+        version: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@remotion/renderer':
         specifier: ^4.0.0
+        version: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@remotion/transitions':
+        specifier: ^4.0.443
         version: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@war/shared':
         specifier: workspace:*
@@ -723,6 +732,18 @@ packages:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
 
+  '@remotion/motion-blur@4.0.443':
+    resolution: {integrity: sha512-2K6QKg3pM0aAPIs2GvnODHcRj7G8xvgYSFDSyhFGWs1xFPUQa/MepkAis8Snh9ec4UJE4QtUj7gdRd5wE3htxw==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@remotion/noise@4.0.443':
+    resolution: {integrity: sha512-tJmglt//8USjaothiKGIY3hqlrxzr6SX1h75+MLocelA1T/naBERuLcDaFj8ItAdA5IvBrkCLg8bcGKxkC97rQ==}
+
+  '@remotion/paths@4.0.443':
+    resolution: {integrity: sha512-HKJssEUKgG/0SrIJOfc1HCyUUgxLK0/ymcB+caejaAlZtL0GuKq0tYGiY0WBlQYcPqjkB8HaCrUH0qnrJnIZ+w==}
+
   '@remotion/player@4.0.443':
     resolution: {integrity: sha512-R7dftiGaIHXMXG7HwHjuvpV63NgLlPRzDtM/RrMWSYj3yLZdqDhjCFvbNIhPoydekCj1D1yVyBt0Uk8pdeMGiA==}
     peerDependencies:
@@ -731,6 +752,12 @@ packages:
 
   '@remotion/renderer@4.0.443':
     resolution: {integrity: sha512-c3xewrcaNXqc0TRr1NrSMh3kMu8mqO7EgY2KdXNDTpRAE9OMCoSQpbW1YaDpYPqRC8FgHxnjDEO6CU709hvnyQ==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@remotion/shapes@4.0.443':
+    resolution: {integrity: sha512-s1nHTE3GDyrDm/Jq5j2NyDKKcuxTeshXW0uDOxvjvDccdvX7Orh+F0FV13X6hU83QAkl1mh3+nwFPRyIJlMmuQ==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -746,6 +773,12 @@ packages:
 
   '@remotion/studio@4.0.443':
     resolution: {integrity: sha512-8IRAQssFRnQHImKUu31LiPABcKaDVMWsPrdc4UGT0QSDQZvUqOtrOvPUPiKmhadgKNLASq2ZvEZARqmucbS3uw==}
+    peerDependencies:
+      react: '>=16.8.0'
+      react-dom: '>=16.8.0'
+
+  '@remotion/transitions@4.0.443':
+    resolution: {integrity: sha512-9FdlvwqxbrKCZNN8a4A6S8CpC6pYQ64AZ8yg5s1EaNOMRyoAYaQPRW9X0xXSAfTttq5YRAnceQEDTUgWQZUAxw==}
     peerDependencies:
       react: '>=16.8.0'
       react-dom: '>=16.8.0'
@@ -1959,6 +1992,9 @@ packages:
   simple-get@4.0.1:
     resolution: {integrity: sha512-brv7p5WgH0jmQJr1ZDDfKDOSeWWg+OVypG99A/5vYGPqJ6pxiaHLy8nxtFjBA7oMa01ebA9gfh1uMCFqOuXxvA==}
 
+  simplex-noise@4.0.1:
+    resolution: {integrity: sha512-zl/+bdSqW7HJOQ0oDbxrNYaF4F5ik0i7M6YOYmEoIJNtg16NpvWaTTM1Y7oV/7T0jFljawLgYPS81Uu2rsfo1A==}
+
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
@@ -2711,6 +2747,22 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
       remotion: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
+  '@remotion/motion-blur@4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      remotion: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+
+  '@remotion/noise@4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      remotion: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      simplex-noise: 4.0.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@remotion/paths@4.0.443': {}
+
   '@remotion/player@4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       react: 19.2.4
@@ -2740,6 +2792,12 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  '@remotion/shapes@4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@remotion/paths': 4.0.443
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@remotion/streaming@4.0.443': {}
 
@@ -2796,6 +2854,14 @@ snapshots:
       - bufferutil
       - supports-color
       - utf-8-validate
+
+  '@remotion/transitions@4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@remotion/paths': 4.0.443
+      '@remotion/shapes': 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      remotion: 4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
 
   '@remotion/web-renderer@4.0.443(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
@@ -3962,6 +4028,8 @@ snapshots:
       decompress-response: 6.0.0
       once: 1.4.0
       simple-concat: 1.0.1
+
+  simplex-noise@4.0.1: {}
 
   sisteransi@1.0.5: {}
 
