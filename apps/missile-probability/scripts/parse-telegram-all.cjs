@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 // ---- CONFIG ----
-const EXPORT_DIR = path.join(__dirname, '..', '..', '..', 'ChatExport_2026-04-02');
+const EXPORT_DIR = path.join(__dirname, '..', '..', '..', 'ChatExport_2026-04-04');
 const HTML_FILES = ['messages.html', 'messages2.html', 'messages3.html', 'messages4.html', 'messages5.html'];
 const START_DATE_STR = '2026-02-28';
 const DEDUP_WINDOW_MINUTES = 10;

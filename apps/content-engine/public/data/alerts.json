@@ -22934,5 +22934,1009 @@
     "regions": [
       "north"
     ]
+  },
+  {
+    "id": "tg-00993",
+    "timestamp": "2026-04-02T16:24:00+02:00",
+    "unix": 1775139840,
+    "cities": [],
+    "cities_en": [
+      "Margaliot",
+      "Metulla",
+      "Kfar Giladi",
+      "Kfar Yuval",
+      "Misgav Am",
+      "Ma'ayan Baruch",
+      "Tel Hai",
+      "Kiryat Shmona"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 16,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-00994",
+    "timestamp": "2026-04-02T16:46:00+02:00",
+    "unix": 1775141160,
+    "cities": [],
+    "cities_en": [
+      "Metulla",
+      "Kfar Giladi",
+      "Kfar Yuval",
+      "Misgav Am",
+      "Hanita",
+      "Ben Ami",
+      "Gesher HaZiv",
+      "Nahariya",
+      "Sa'ar",
+      "Evron"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 16,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-00995",
+    "timestamp": "2026-04-02T17:04:00+02:00",
+    "unix": 1775142240,
+    "cities": [],
+    "cities_en": [
+      "Betzet",
+      "Shlomi",
+      "Rosh HaNikra",
+      "Milouot Industrial Zone North",
+      "Betzet Beach",
+      "Lehman",
+      "Hof Achziv"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 17,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-00996",
+    "timestamp": "2026-04-02T17:29:00+02:00",
+    "unix": 1775143740,
+    "cities": [],
+    "cities_en": [
+      "Kiryat Shmona",
+      "Kfar Giladi",
+      "Metulla"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 17,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-00997",
+    "timestamp": "2026-04-02T17:48:00+02:00",
+    "unix": 1775144880,
+    "cities": [],
+    "cities_en": [],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 17,
+    "date": "2026-04-02",
+    "regions": [
+      "gush_dan",
+      "jerusalem",
+      "south"
+    ]
+  },
+  {
+    "id": "tg-00998",
+    "timestamp": "2026-04-02T18:16:00+02:00",
+    "unix": 1775146560,
+    "cities": [],
+    "cities_en": [
+      "Kfar Vradim",
+      "Ma'a lot Tarshicha",
+      "Bi'ina",
+      "Deir al-Asad",
+      "Karmiel",
+      "Majd al-Krum",
+      "Pelekh",
+      "Tuval",
+      "Lavon",
+      "Gita"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 18,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-00999",
+    "timestamp": "2026-04-02T18:53:00+02:00",
+    "unix": 1775148780,
+    "cities": [],
+    "cities_en": [
+      "Ramat Magshimim",
+      "Haspin",
+      "Yonatan",
+      "Nov",
+      "Natur",
+      "Avnei Eitan",
+      "Eliad",
+      "Gshur",
+      "Misgav Am"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 18,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01000",
+    "timestamp": "2026-04-02T19:13:00+02:00",
+    "unix": 1775149980,
+    "cities": [],
+    "cities_en": [
+      "Ramat Dalton Industrial Zone",
+      "Dalton",
+      "Kerem Ben Zimra",
+      "Korazim Vered HaGalil",
+      "Elifelet",
+      "Amnon",
+      "Amiad",
+      "Ramat Korazim Regional Center",
+      "Biriyeh",
+      "Kadita"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 19,
+    "date": "2026-04-02",
+    "regions": [
+      "north",
+      "jerusalem",
+      "gush_dan",
+      "south"
+    ]
+  },
+  {
+    "id": "tg-01001",
+    "timestamp": "2026-04-02T19:28:00+02:00",
+    "unix": 1775150880,
+    "cities": [],
+    "cities_en": [
+      "Beit She'an",
+      "Hamadia",
+      "Ganey Hugga",
+      "Reshafim",
+      "Shluchot",
+      "Shlafim",
+      "Kfar Ruppin",
+      "Maoz Haim",
+      "Neve Eitan",
+      "Ein HaNatziv"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 19,
+    "date": "2026-04-02",
+    "regions": [
+      "north",
+      "gush_dan",
+      "jerusalem",
+      "south"
+    ]
+  },
+  {
+    "id": "tg-01002",
+    "timestamp": "2026-04-02T19:39:00+02:00",
+    "unix": 1775151540,
+    "cities": [],
+    "cities_en": [
+      "Nimrod"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 4,
+    "hour": 19,
+    "date": "2026-04-02",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01003",
+    "timestamp": "2026-04-03T02:07:00+02:00",
+    "unix": 1775174820,
+    "cities": [],
+    "cities_en": [
+      "Dishon",
+      "Malkia"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 2,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01004",
+    "timestamp": "2026-04-03T02:28:00+02:00",
+    "unix": 1775176080,
+    "cities": [],
+    "cities_en": [
+      "Kfar Yuval"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 2,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01005",
+    "timestamp": "2026-04-03T03:14:00+02:00",
+    "unix": 1775178840,
+    "cities": [],
+    "cities_en": [],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 3,
+    "date": "2026-04-03",
+    "regions": [
+      "gush_dan",
+      "jerusalem",
+      "south"
+    ]
+  },
+  {
+    "id": "tg-01006",
+    "timestamp": "2026-04-03T05:49:00+02:00",
+    "unix": 1775188140,
+    "cities": [],
+    "cities_en": [
+      "Even Menachem",
+      "Eilon",
+      "Goren",
+      "Gornot HaGalil",
+      "Hila",
+      "Mi'ilya",
+      "Abirim",
+      "Zarit",
+      "Shomera",
+      "Shtula"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 5,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01007",
+    "timestamp": "2026-04-03T06:04:00+02:00",
+    "unix": 1775189040,
+    "cities": [],
+    "cities_en": [
+      "Malkia"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 6,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01008",
+    "timestamp": "2026-04-03T06:18:00+02:00",
+    "unix": 1775189880,
+    "cities": [],
+    "cities_en": [
+      "Metulla",
+      "Kiryat Shmona",
+      "Tel Hai"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 6,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01009",
+    "timestamp": "2026-04-03T08:00:00+02:00",
+    "unix": 1775196000,
+    "cities": [],
+    "cities_en": [
+      "Metulla"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 8,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01010",
+    "timestamp": "2026-04-03T08:20:00+02:00",
+    "unix": 1775197200,
+    "cities": [],
+    "cities_en": [
+      "Kiryat Shmona",
+      "Tel Hai",
+      "Kfar Giladi",
+      "Kfar Yuval",
+      "Misgav Am",
+      "Gonen"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 8,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01011",
+    "timestamp": "2026-04-03T08:57:00+02:00",
+    "unix": 1775199420,
+    "cities": [],
+    "cities_en": [
+      "Kiryat Shmona",
+      "Misgav Am",
+      "Metulla",
+      "Tel Hai",
+      "Kfar Giladi",
+      "Margaliot",
+      "Beit Hillel",
+      "Kfar Yuval"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 8,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01012",
+    "timestamp": "2026-04-03T09:12:00+02:00",
+    "unix": 1775200320,
+    "cities": [],
+    "cities_en": [
+      "Kiryat Shmona",
+      "Kfar Yuval",
+      "Tel Hai",
+      "Ghajar",
+      "Kfar Giladi",
+      "Metulla",
+      "Ma'ayan Baruch",
+      "HaGoshrim",
+      "Margaliot",
+      "Beit Hillel"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 9,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01013",
+    "timestamp": "2026-04-03T09:32:00+02:00",
+    "unix": 1775201520,
+    "cities": [],
+    "cities_en": [
+      "Maona",
+      "Mi'ilya",
+      "Ma'a lot Tarshicha",
+      "Abirim",
+      "Zarit",
+      "Arab al-Aramshe",
+      "Shomera",
+      "Dafna",
+      "Kfar Yuval",
+      "Ma'ayan Baruch"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 9,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01014",
+    "timestamp": "2026-04-03T10:03:00+02:00",
+    "unix": 1775203380,
+    "cities": [],
+    "cities_en": [
+      "Misgav Am"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 10,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01015",
+    "timestamp": "2026-04-03T10:53:00+02:00",
+    "unix": 1775206380,
+    "cities": [],
+    "cities_en": [],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 10,
+    "date": "2026-04-03",
+    "regions": [
+      "haifa",
+      "north",
+      "gush_dan"
+    ]
+  },
+  {
+    "id": "tg-01016",
+    "timestamp": "2026-04-03T11:46:00+02:00",
+    "unix": 1775209560,
+    "cities": [],
+    "cities_en": [
+      "Margaliot",
+      "Kiryat Shmona"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 11,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01017",
+    "timestamp": "2026-04-03T13:20:00+02:00",
+    "unix": 1775215200,
+    "cities": [],
+    "cities_en": [
+      "Kfar Giladi",
+      "Kfar Yuval",
+      "Kiryat Shmona",
+      "Tel Hai",
+      "Metulla"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 13,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01018",
+    "timestamp": "2026-04-03T13:56:00+02:00",
+    "unix": 1775217360,
+    "cities": [],
+    "cities_en": [
+      "Misgav Am"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 13,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01019",
+    "timestamp": "2026-04-03T14:26:00+02:00",
+    "unix": 1775219160,
+    "cities": [],
+    "cities_en": [
+      "Kfar Shamai",
+      "Amirim",
+      "Shefer",
+      "Safed - City"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 14,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01020",
+    "timestamp": "2026-04-03T15:51:00+02:00",
+    "unix": 1775224260,
+    "cities": [],
+    "cities_en": [
+      "Kerem Ben Zimra",
+      "Yir'on",
+      "Avivim"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 15,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01021",
+    "timestamp": "2026-04-03T16:10:00+02:00",
+    "unix": 1775225400,
+    "cities": [],
+    "cities_en": [
+      "Argaman",
+      "Yafit",
+      "Petza'el",
+      "Shlomtsiyon",
+      "Hamra",
+      "Mekhora",
+      "Ma'aleh Ephraim",
+      "Masua",
+      "Havat Ganot",
+      "Rashash Farm"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 16,
+    "date": "2026-04-03",
+    "regions": [
+      "gush_dan",
+      "jerusalem",
+      "south"
+    ]
+  },
+  {
+    "id": "tg-01022",
+    "timestamp": "2026-04-03T16:35:00+02:00",
+    "unix": 1775226900,
+    "cities": [],
+    "cities_en": [
+      "Avivim",
+      "Baram",
+      "Yir'on"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 16,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01023",
+    "timestamp": "2026-04-03T17:06:00+02:00",
+    "unix": 1775228760,
+    "cities": [],
+    "cities_en": [
+      "Ramat Dalton Industrial Zone",
+      "Dalton",
+      "Safed - City",
+      "Safed - 'Akbara",
+      "Biriyeh",
+      "Or HaGanuz",
+      "Bar Yochai",
+      "Kadita"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 17,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01024",
+    "timestamp": "2026-04-03T18:00:00+02:00",
+    "unix": 1775232000,
+    "cities": [],
+    "cities_en": [
+      "Nahariya",
+      "Sa'ar",
+      "Gesher HaZiv",
+      "Hof Achziv",
+      "Metzuba",
+      "Shlomi",
+      "Milouot Industrial Zone North",
+      "Betzet",
+      "Lehman",
+      "Avivim"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 18,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01025",
+    "timestamp": "2026-04-03T18:26:00+02:00",
+    "unix": 1775233560,
+    "cities": [],
+    "cities_en": [
+      "Zalmon Prison",
+      "Hukok",
+      "Kalanit",
+      "Kfar Hanania",
+      "Moran",
+      "Kadarim"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 18,
+    "date": "2026-04-03",
+    "regions": [
+      "north",
+      "haifa",
+      "gush_dan"
+    ]
+  },
+  {
+    "id": "tg-01026",
+    "timestamp": "2026-04-03T18:47:00+02:00",
+    "unix": 1775234820,
+    "cities": [],
+    "cities_en": [
+      "Nahariya",
+      "Shavei Zion",
+      "Eliad",
+      "Afik",
+      "Gshur",
+      "Mevo Hama",
+      "Bnei Yehuda Industrial Zone",
+      "Avnei Eitan",
+      "Haspin",
+      "Metzar"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 18,
+    "date": "2026-04-03",
+    "regions": [
+      "north",
+      "haifa",
+      "gush_dan"
+    ]
+  },
+  {
+    "id": "tg-01027",
+    "timestamp": "2026-04-03T19:31:00+02:00",
+    "unix": 1775237460,
+    "cities": [],
+    "cities_en": [
+      "Metulla",
+      "Kfar Giladi",
+      "Kfar Yuval",
+      "Ma'ayan Baruch",
+      "Tel Hai",
+      "Misgav Am",
+      "Kiryat Shmona",
+      "Beit Hillel",
+      "HaGoshrim",
+      "Margaliot"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 19,
+    "date": "2026-04-03",
+    "regions": [
+      "north",
+      "haifa"
+    ]
+  },
+  {
+    "id": "tg-01028",
+    "timestamp": "2026-04-03T21:16:00+02:00",
+    "unix": 1775243760,
+    "cities": [],
+    "cities_en": [
+      "Avivim",
+      "Yir'on"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 21,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01029",
+    "timestamp": "2026-04-03T22:58:00+02:00",
+    "unix": 1775249880,
+    "cities": [],
+    "cities_en": [
+      "Haifa - Bat Galim",
+      "Kiryat Eliezer",
+      "Haifa - Carmel",
+      "Hadar and Downtown Lower City",
+      "Haifa - West",
+      "Haifa - Bay",
+      "Haifa - Ramot HaCarmel and Neveh Sha'anan",
+      "Haifa - Kiryat Haim & Kiryat Shmuel",
+      "Kiryat Yam",
+      "Kiryat Motzkin"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 22,
+    "date": "2026-04-03",
+    "regions": [
+      "north",
+      "haifa",
+      "gush_dan"
+    ]
+  },
+  {
+    "id": "tg-01030",
+    "timestamp": "2026-04-03T23:38:00+02:00",
+    "unix": 1775252280,
+    "cities": [],
+    "cities_en": [
+      "Avivim"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 5,
+    "hour": 23,
+    "date": "2026-04-03",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01031",
+    "timestamp": "2026-04-04T00:03:00+02:00",
+    "unix": 1775253780,
+    "cities": [],
+    "cities_en": [
+      "Milouot Industrial Zone North",
+      "Betzet",
+      "Betzet Beach",
+      "Lehman",
+      "Metzuba",
+      "Rosh HaNikra",
+      "Shlomi",
+      "Gesher HaZiv",
+      "Nahariya",
+      "Sa'ar"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 0,
+    "date": "2026-04-04",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01032",
+    "timestamp": "2026-04-04T00:34:00+02:00",
+    "unix": 1775255640,
+    "cities": [],
+    "cities_en": [
+      "Avivim",
+      "Yir'on"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 0,
+    "date": "2026-04-04",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01033",
+    "timestamp": "2026-04-04T01:04:00+02:00",
+    "unix": 1775257440,
+    "cities": [],
+    "cities_en": [
+      "Betzet Beach",
+      "Milouot Industrial Zone North",
+      "Betzet",
+      "Lehman",
+      "Rosh HaNikra",
+      "Hof Achziv"
+    ],
+    "threat": "hostile_aircraft",
+    "threat_code": 5,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 1,
+    "date": "2026-04-04",
+    "regions": [
+      "north"
+    ]
+  },
+  {
+    "id": "tg-01034",
+    "timestamp": "2026-04-04T01:31:00+02:00",
+    "unix": 1775259060,
+    "cities": [],
+    "cities_en": [
+      "Beer Sheva - North",
+      "Beer Sheva - West",
+      "Beer Sheva - South",
+      "Beer Sheva - East",
+      "Hatzerim",
+      "Omer",
+      "Nevatim",
+      "Wadi el Na'am South",
+      "Dead Sea Hotels - Center",
+      "Ein Bokek"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 1,
+    "date": "2026-04-04",
+    "regions": [
+      "south"
+    ]
+  },
+  {
+    "id": "tg-01035",
+    "timestamp": "2026-04-04T02:01:00+02:00",
+    "unix": 1775260860,
+    "cities": [],
+    "cities_en": [],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 2,
+    "date": "2026-04-04",
+    "regions": [
+      "gush_dan",
+      "jerusalem",
+      "south"
+    ]
+  },
+  {
+    "id": "tg-01036",
+    "timestamp": "2026-04-04T07:27:00+02:00",
+    "unix": 1775280420,
+    "cities": [],
+    "cities_en": [
+      "Zivon",
+      "Dovev",
+      "Sassa"
+    ],
+    "threat": "missiles",
+    "threat_code": 0,
+    "isDrill": false,
+    "day_of_week": 6,
+    "hour": 7,
+    "date": "2026-04-04",
+    "regions": [
+      "north"
+    ]
   }
 ]
